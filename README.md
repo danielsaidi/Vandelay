@@ -24,6 +24,13 @@ pod "Vandelay"
 
 Daniel Saidi, daniel.saidi@gmail.com
 
+
+## Troubleshooting
+
+If CocoaPods run into stale cache, type `cd ~/Library/Caches/CocoaPods/Pods` then `open .` and remove all
+folders that refer to Vandelay.
+
+
 ## License
 
 Vandelay is available under the MIT license. See the LICENSE file for more info.
