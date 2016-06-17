@@ -31,7 +31,7 @@ Dropbox integrations to Vandelay.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'Classes/**/*.{swift}'
   
   # s.resource_bundles = {
   #   'Vandelay' => ['Assets/*.png']
