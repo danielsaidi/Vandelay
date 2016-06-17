@@ -23,17 +23,17 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/daniel.aidi/vandelay'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT', :file => '../LICENSE' }
   s.author           = { 'Daniel Saidi' => 'daniel.saidi@gmail.com' }
   s.source           = { :git => 'https://github.com/danielsaidi/vandelay.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/danielsaidi'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Vandelay/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   # s.resource_bundles = {
-  #   'Vandelay' => ['Vandelay/Assets/*.png']
+  #   'Vandelay' => ['Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

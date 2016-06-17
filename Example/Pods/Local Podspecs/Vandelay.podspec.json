@@ -6,7 +6,7 @@
   "homepage": "https://github.com/daniel.aidi/vandelay",
   "license": {
     "type": "MIT",
-    "file": "LICENSE"
+    "file": "../LICENSE"
   },
   "authors": {
     "Daniel Saidi": "daniel.saidi@gmail.com"
@@ -18,5 +18,5 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Vandelay/Classes/**/*"
+  "source_files": "Classes/**/*"
 }

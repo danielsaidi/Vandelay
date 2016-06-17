@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Vandelay'
+  s.name             = 'VandelayDropbox'
   s.version          = '0.1.0'
   s.summary          = 'A short description of Vandelay.'
 
@@ -23,20 +23,21 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/daniel.aidi/vandelay'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT', :file => '../LICENSE' }
   s.author           = { 'Daniel Saidi' => 'daniel.saidi@gmail.com' }
   s.source           = { :git => 'https://github.com/danielsaidi/vandelay.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/danielsaidi'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Vandelay/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   # s.resource_bundles = {
-  #   'Vandelay' => ['Vandelay/Assets/*.png']
+  #   'Vandelay' => ['Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SwiftyDropbox', '~> 3.0.0'
+  s.dependency 'Vandelay', '~> 0.1'
 end

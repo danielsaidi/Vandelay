@@ -1,0 +1,6 @@
+framework module VandelayDropbox {
+  umbrella header "VandelayDropbox-umbrella.h"
+
+  export *
+  module * { export * }
+}

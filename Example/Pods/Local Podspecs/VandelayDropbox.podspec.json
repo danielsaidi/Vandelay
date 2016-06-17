@@ -1,0 +1,30 @@
+{
+  "name": "VandelayDropbox",
+  "version": "0.1.0",
+  "summary": "A short description of Vandelay.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/daniel.aidi/vandelay",
+  "license": {
+    "type": "MIT",
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Daniel Saidi": "daniel.saidi@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/danielsaidi/vandelay.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Classes/**/*",
+  "dependencies": {
+    "SwiftyDropbox": [
+      "~> 3.0.0"
+    ],
+    "Vandelay": [
+      "~> 0.1"
+    ]
+  }
+}
