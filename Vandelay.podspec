@@ -18,8 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Vandelay is an importer/exporter for iOS. It can be used to import
-and export data between places.
+Vandelay is an importer/exporter for iOS. It can be used to import and export data
+in various ways. It supports platform-independent JSON-serialized data, as well as
+iOS-specific NSData (e.g. if you want to export serialized image data).
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'
@@ -31,7 +32,7 @@ and export data between places.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Classes/**/*.{swift}'
+  s.source_files = 'Vandelay/Classes/**/*.{swift}'
   
   # s.resource_bundles = {
   #   'Vandelay' => ['Assets/*.png']

@@ -18,8 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Vandelay is an importer/exporter for iOS. VandelayDropbox adds
-Dropbox integrations to Vandelay.
+Vandelay is an importer/exporter for iOS. VandelayDropbox adds Dropbox integrations
+to Vandelay, letting you export serialized JSON data and more complex NSData to the
+Dropbox folder used by your app.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'
@@ -31,7 +32,7 @@ Dropbox integrations to Vandelay.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Classes/**/*.{swift}'
+  s.source_files = 'VandelayDropbox/Classes/**/*'
   
   # s.resource_bundles = {
   #   'Vandelay' => ['Assets/*.png']
