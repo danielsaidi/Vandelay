@@ -6,6 +6,12 @@
 //  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This class can be used to generate a random file name.
+ 
+ */
+
 import Foundation
 
 public class RandomFileNameGenerator: NSObject, FileNameGenerator {

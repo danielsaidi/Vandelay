@@ -8,7 +8,17 @@
 
 import Foundation
 
-public protocol DataExporter: class, ExportContext {
+/*
+ 
+ This protocol is implemented by all Vandelay exporters
+ that can be used to export NSData. Use a data exporter
+ when your data cannot be serialized in other ways, e.g.
+ if an object contains NSData properties that result in
+ nil when exported to e.g. JSON.
+ 
+ */
+
+public protocol DataExporter: class, Exporter {
     
     func exportData(data: NSData, completion: ((result: ExportResult) -> ()))
 }

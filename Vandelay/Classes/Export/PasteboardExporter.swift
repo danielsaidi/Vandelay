@@ -1,5 +1,5 @@
 //
-//  ClipboardExporter.swift
+//  PasteboardExporter.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2015-11-22.
@@ -8,17 +8,17 @@
 
 /*
  
- This is a simple exporter that should only be used to
- export strings or a serialized data to the clipboard.
+ This exporter can be used to export to the pasteboard.
+ It only supports string export.
  
  */
 
 
 import UIKit
 
-public class ClipboardExporter: NSObject, StringExporter {
+public class PasteboardExporter: NSObject, StringExporter {
     
-    public var context: String? { return "Clipboard" }
+    public var exportMethod: String? { return "Pasteboard" }
 
     public func exportString(string: String, completion: ((result: ExportResult) -> ())) {
         UIPasteboard.generalPasteboard().string = string

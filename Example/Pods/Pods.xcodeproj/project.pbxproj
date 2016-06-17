@@ -100,7 +100,7 @@
 		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5126C67472EA61D61C0353921FEC1B9E /* Foundation.framework */; };
 		91ED5B067FCA3CBD48E3114672941051 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA3973D8B50648B0B78AF8D231A1436 /* MatcherProtocols.swift */; };
 		935FD5ACD87E996FED7EFAB2341FA1F3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710A7EB61C37BA088C68C22A02F879B9 /* Alamofire.framework */; };
-		941F48AE5E29335BC8BF3CB870938C4C /* ExportContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3650C7BB7744A2096975F599A8DA2F5 /* ExportContext.swift */; };
+		941F48AE5E29335BC8BF3CB870938C4C /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3650C7BB7744A2096975F599A8DA2F5 /* Exporter.swift */; };
 		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 213A38BA661326BC0C4EEC8C50001D27 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96ED0CCA721955637A88FE0C9737EC56 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC42AA804DB4690B8582A7DBF6519C /* SourceLocation.swift */; };
 		9B5DE58927557CE87968C051D2A1C47E /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E29EA8C53F1D3A897C6BEFA2E8BAA /* BeLogical.swift */; };
@@ -126,7 +126,7 @@
 		B9D2E426B5CA226D60A78A71FA289D4C /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCFB620634AC093288195C552E1CF7 /* AsyncMatcherWrapper.swift */; };
 		BA87191E1039B26E3B9EB791AD14BA5B /* ExportState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52879B0C03A267295029FC2D828BB1E /* ExportState.swift */; };
 		BB8C3A0D415E96590C5E936E6D441F78 /* VandelayDropbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45AABED11B9CAED63BC1450F4E7A5494 /* VandelayDropbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC202DCE0FA4AD5A93F33820C403D3A9 /* ClipboardExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E38C8FFF56F7E14069164540EF1DD /* ClipboardExporter.swift */; };
+		BC202DCE0FA4AD5A93F33820C403D3A9 /* PasteboardExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E38C8FFF56F7E14069164540EF1DD /* PasteboardExporter.swift */; };
 		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB60304243A5B53302AD78FD088127 /* Notifications.swift */; };
 		BF7558F9E13F9F286CDFEE7F644BA09C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC6075425D847DD73FA4B291D84DB3 /* XCTest.framework */; };
 		C0360006FAB50A2C4F64F245275394F5 /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E99E70FF65C55B5CF42C490892757 /* NSBundle+CurrentTestBundle.swift */; };
@@ -293,7 +293,7 @@
 		41CCFB620634AC093288195C552E1CF7 /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Sources/Nimble/Wrappers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
 		42777A8088011EB28B4BAA37B601CC73 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45589BE0C8C1A72D6E5D8A8C755D3538 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
-		458E38C8FFF56F7E14069164540EF1DD /* ClipboardExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClipboardExporter.swift; sourceTree = "<group>"; };
+		458E38C8FFF56F7E14069164540EF1DD /* PasteboardExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasteboardExporter.swift; sourceTree = "<group>"; };
 		45AABED11B9CAED63BC1450F4E7A5494 /* VandelayDropbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VandelayDropbox-umbrella.h"; sourceTree = "<group>"; };
 		45C8DC1E6B1F4A494824629C8270D7DA /* Callsite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Callsite.swift; path = Sources/Quick/Callsite.swift; sourceTree = "<group>"; };
 		4D035902F2983FDAD8B5826D017D82E6 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
@@ -366,7 +366,7 @@
 		9DF6A59F07F1B6880FA400097E1F7FFB /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		A12ED44D2BC2139553BA0F22B222BADD /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Sources/Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
 		A23613BBAD595434831B189548A78DDB /* Pods-Vandelay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vandelay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A3650C7BB7744A2096975F599A8DA2F5 /* ExportContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExportContext.swift; sourceTree = "<group>"; };
+		A3650C7BB7744A2096975F599A8DA2F5 /* Exporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		A493814E6AE414EE2A8CEED20009BCEC /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
 		A509548E18A39B3E1C00FBAD5559BB10 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		A5C427BC5BFE470243AC10AE22AF7164 /* VandelayDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VandelayDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -809,15 +809,15 @@
 		BC09CA62C0A1CA194885FE48C91CF657 /* Export */ = {
 			isa = PBXGroup;
 			children = (
-				458E38C8FFF56F7E14069164540EF1DD /* ClipboardExporter.swift */,
 				4D430BC5723344E80D98551FC3039B71 /* DataExporter.swift */,
 				0FA9469CF6F7C54610C43D4D5BA56F80 /* EmailExporter.swift */,
+				A3650C7BB7744A2096975F599A8DA2F5 /* Exporter.swift */,
 				5781EEB010305D42479122100F561202 /* ExportAlertController.swift */,
-				A3650C7BB7744A2096975F599A8DA2F5 /* ExportContext.swift */,
 				39F0500BB4E39895C49550676FC6BAB3 /* ExportDataProvider.swift */,
 				560B18B46D9A7417341EAFAF455B0FD1 /* ExportResult.swift */,
 				B52879B0C03A267295029FC2D828BB1E /* ExportState.swift */,
 				906CE399C67A8F5A1898B0A09BD98FAA /* FileExporter.swift */,
+				458E38C8FFF56F7E14069164540EF1DD /* PasteboardExporter.swift */,
 				705E71D2FD46A30BB0A35B87642B6028 /* StringExporter.swift */,
 			);
 			path = Export;
@@ -1274,11 +1274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC202DCE0FA4AD5A93F33820C403D3A9 /* ClipboardExporter.swift in Sources */,
+				BC202DCE0FA4AD5A93F33820C403D3A9 /* PasteboardExporter.swift in Sources */,
 				6F54B871930662A422E97D3F9002E25D /* DataExporter.swift in Sources */,
 				5D5840F28DD715D8E139F70620587FE4 /* EmailExporter.swift in Sources */,
 				E5ADE1D2ED5C17204E4A7FED483872AF /* ExportAlertController.swift in Sources */,
-				941F48AE5E29335BC8BF3CB870938C4C /* ExportContext.swift in Sources */,
+				941F48AE5E29335BC8BF3CB870938C4C /* Exporter.swift in Sources */,
 				63E341A9E548C55D877EDBCDB2146258 /* ExportDataProvider.swift in Sources */,
 				82A70E48AEE08AB7F6E1ABB88CAA36F7 /* ExportResult.swift in Sources */,
 				BA87191E1039B26E3B9EB791AD14BA5B /* ExportState.swift in Sources */,

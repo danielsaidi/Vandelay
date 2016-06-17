@@ -6,6 +6,12 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This class can be used to generate a static file name.
+ 
+ */
+
 import Foundation
 
 public class StaticFileNameGenerator: NSObject, FileNameGenerator {

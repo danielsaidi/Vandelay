@@ -11,11 +11,10 @@
  This exporter can be used to save strings and data to
  the local file system.
  
- The file name generator that you must provide, can be
- any of the file name generators that are available in
- Vandelay, or any custom generator you like. Just make
- sure to use a non-random generator if you plan to use
- the file for syncing data across devices.
+ Use the fileName initializer if your file should have
+ the same name at all times. If you need to generate a
+ file name in a smarter way, use the fileNameGenerator
+ initializer.
  
  */
 
@@ -27,6 +26,10 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Initialization
     
+    public convenience init(fileName: String) {
+        self.init(fileNameGenerator: StaticFileNameGenerator(fileName: fileName))
+    }
+    
     public init(fileNameGenerator: FileNameGenerator) {
         self.fileNameGenerator = fileNameGenerator
         super.init()
@@ -36,7 +39,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Properties
     
-    public var context: String? { return "File" }
+    public var exportMethod: String? { return "File" }
     
     private var fileNameGenerator: FileNameGenerator
     

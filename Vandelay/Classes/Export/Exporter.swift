@@ -1,19 +1,26 @@
 //
-//  ExportContext.swift
+//  Exporter.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2016-06-02.
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This protocol gives Vandelay exporters access to some
+ general exporter functions.
+ 
+ */
+
 import UIKit
 
-public protocol ExportContext {
+public protocol Exporter {
     
-    var context: String? { get }
+    var exportMethod: String? { get }
 }
 
-public extension ExportContext {
+public extension Exporter {
     
     public func getResultWithError(error: NSError) -> ExportResult {
         let result = ExportResult(state: .Failed)

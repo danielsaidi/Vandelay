@@ -8,10 +8,12 @@
 
 /*
  
+ This alert controller can be used to easily display a
+ list of export options to the app user.
+ 
  When using this alert class, you must remember to set
  the dataProvider and completion properties. If you do
- not, the alert will cause a crash when a button other
- than the cancel button is tapped.
+ not, the app will crash whenever a user taps a button.
  
  */
 
@@ -25,7 +27,6 @@ public class ExportAlertController: UIAlertController {
     
     public var completion: ((result: ExportResult) -> ())!
     public var dataProvider: ExportDataProvider!
-    
     
     
     

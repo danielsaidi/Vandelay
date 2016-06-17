@@ -11,11 +11,10 @@
  This exporter can be used to send strings and data as
  e-mail attachments.
  
- The file name generator that you must provide, can be
- any of the file name generators that are available in
- Vandelay, or any custom generator you like. Just make
- sure to use a non-random generator if you plan to use
- the file for syncing data across devices.
+ Use the fileName initializer if your file should have
+ the same name at all times. If you need to generate a
+ file name in a smarter way, use the fileNameGenerator
+ initializer.
  
  */
 
@@ -27,6 +26,10 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     
     // MARK: Initialization
     
+    public convenience init(fileName: String) {
+        self.init(fileNameGenerator: StaticFileNameGenerator(fileName: fileName))
+    }
+    
     public convenience init(fileNameGenerator: FileNameGenerator) {
         self.init()
         self.fileNameGenerator = fileNameGenerator
@@ -36,7 +39,7 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     
     // MARK: Properties
     
-    public var context: String? { return "Email" }
+    public var exportMethod: String? { return "Email" }
     
     public var emailBody = ""
     public var emailSubject = ""

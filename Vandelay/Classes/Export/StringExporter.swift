@@ -8,7 +8,15 @@
 
 import Foundation
 
-public protocol StringExporter: class, ExportContext {
+/*
+ 
+ This protocol is implemented by all Vandelay exporters
+ that can be used to export strings, or serialized data
+ such as JSON serialized objects or collections.
+ 
+ */
+
+public protocol StringExporter: class, Exporter {
     
     func exportString(string: String, completion: ((result: ExportResult) -> ()))
 }
