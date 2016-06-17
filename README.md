@@ -25,10 +25,13 @@ pod "Vandelay"
 Daniel Saidi, daniel.saidi@gmail.com
 
 
-## Troubleshooting
+## CocoaPods
 
-If CocoaPods run into stale cache, type `cd ~/Library/Caches/CocoaPods/Pods` then `open .` and remove all
-folders that refer to Vandelay.
+To lint the project, run `pod lib lint` resp. `pod spec link Vandelay.podspec`.
+
+To verify that the correct files are pulled from GitHub, type `cd ~/Library/Caches/CocoaPods/Pods`
+then type `open .`. Verify that the content in the Vandelay folders are valid. To clean the cache,
+run `pod cache clean Vandelay`.
 
 
 ## License
