@@ -13,11 +13,11 @@ public class RandomFileNameGenerator: NSObject, FileNameGenerator {
     
     // MARK: Initialization
     
-    override init() {
+    public override init() {
         super.init()
     }
     
-    init(fileExtension: String) {
+    public init(fileExtension: String) {
         self.fileExtension = fileExtension
         super.init()
     }

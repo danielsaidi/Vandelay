@@ -13,12 +13,12 @@ public class StaticFileNameGenerator: NSObject, FileNameGenerator {
     
     // MARK: Initialization
     
-    init(fileName: String) {
+    public init(fileName: String) {
         self.fileName = fileName
         super.init()
     }
     
-    init(fileName: String, fileExtension: String) {
+    public init(fileName: String, fileExtension: String) {
         self.fileName = "\(fileName).\(fileExtension)"
         super.init()
     }
