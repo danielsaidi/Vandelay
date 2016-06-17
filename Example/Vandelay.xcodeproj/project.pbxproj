@@ -166,12 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Vandelay_Example" */;
 			buildPhases = (
-				10625E8B3B6A633791C0910A /* 📦 Check Pods Manifest.lock */,
+				10625E8B3B6A633791C0910A /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				7536F78EC571C489D294B355 /* 📦 Embed Pods Frameworks */,
-				D33DD80E125B88D9C486ECE5 /* 📦 Copy Pods Resources */,
+				7536F78EC571C489D294B355 /* [CP] Embed Pods Frameworks */,
+				D33DD80E125B88D9C486ECE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,12 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Vandelay_Tests" */;
 			buildPhases = (
-				60FABCA6DFA82414158F98D4 /* 📦 Check Pods Manifest.lock */,
+				60FABCA6DFA82414158F98D4 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				5308A29EFBDEDCA8BAB32B97 /* 📦 Embed Pods Frameworks */,
-				CC11EF44B91BBA21A9EFB5ED /* 📦 Copy Pods Resources */,
+				5308A29EFBDEDCA8BAB32B97 /* [CP] Embed Pods Frameworks */,
+				CC11EF44B91BBA21A9EFB5ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,14 +262,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10625E8B3B6A633791C0910A /* 📦 Check Pods Manifest.lock */ = {
+		10625E8B3B6A633791C0910A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,14 +277,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5308A29EFBDEDCA8BAB32B97 /* 📦 Embed Pods Frameworks */ = {
+		5308A29EFBDEDCA8BAB32B97 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,14 +292,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vandelay_Tests/Pods-Vandelay_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60FABCA6DFA82414158F98D4 /* 📦 Check Pods Manifest.lock */ = {
+		60FABCA6DFA82414158F98D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,14 +307,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7536F78EC571C489D294B355 /* 📦 Embed Pods Frameworks */ = {
+		7536F78EC571C489D294B355 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,14 +322,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vandelay_Example/Pods-Vandelay_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CC11EF44B91BBA21A9EFB5ED /* 📦 Copy Pods Resources */ = {
+		CC11EF44B91BBA21A9EFB5ED /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,14 +337,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vandelay_Tests/Pods-Vandelay_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D33DD80E125B88D9C486ECE5 /* 📦 Copy Pods Resources */ = {
+		D33DD80E125B88D9C486ECE5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

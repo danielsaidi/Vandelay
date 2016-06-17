@@ -1,8 +1,8 @@
 use_frameworks!
 
 target 'Vandelay_Example' do
-  pod 'Vandelay', :path => '../Vandelay'
-  pod 'VandelayDropbox', :path => '../VandelayDropbox'
+  pod 'Vandelay', :path => '../'
+  pod 'VandelayDropbox', :path => '../'
 
   target 'Vandelay_Tests' do
     inherit! :search_paths
