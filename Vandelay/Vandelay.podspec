@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Vandelay'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Vandelay.'
+  s.summary          = 'Vandelay is an importer/exporter for iOS.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,16 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Vandelay is an importer/exporter for iOS. It can be used to import
+and export data between places.
                        DESC
 
-  s.homepage         = 'https://github.com/daniel.aidi/vandelay'
+  s.homepage         = 'https://github.com/danielsaidi/vandelay'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => '../LICENSE' }
   s.author           = { 'Daniel Saidi' => 'daniel.saidi@gmail.com' }
   s.source           = { :git => 'https://github.com/danielsaidi/vandelay.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/danielsaidi'
+  s.social_media_url = 'https://twitter.com/danielsaidi'
 
   s.ios.deployment_target = '8.0'
 
