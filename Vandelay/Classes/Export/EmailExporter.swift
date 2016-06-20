@@ -12,9 +12,8 @@
  e-mail attachments.
  
  Use the fileName initializer if your file should have
- the same name at all times. If you need to generate a
- file name in a smarter way, use the fileNameGenerator
- initializer.
+ the same name at all times. Use the fileNameGenerator
+ initializer if you require dynamic file names.
  
  */
 

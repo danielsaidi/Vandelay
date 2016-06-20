@@ -9,7 +9,8 @@
 /*
  
  This protocol gives Vandelay exporters access to some
- general exporter functions.
+ basic exporter functions. You should not implement it
+ directly, if you create your own exporter.
  
  */
 

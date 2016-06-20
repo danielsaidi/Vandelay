@@ -36,7 +36,8 @@ public class ExportAlertController: UIAlertController {
         let action = UIAlertAction(title: title, style: .Default) { action in
             self.dataProvider.getExportData({ data in
                 if (data == nil) {
-                    let result = exporter.getResultWithErrorMessage("ExportAlertController did not receive any data.")
+                    let error = "ExportAlertController did not receive any data."
+                    let result = exporter.getResultWithErrorMessage(error)
                     self.completion?(result: result)
                 } else {
                     exporter.exportData(data!, completion: self.completion)
@@ -50,7 +51,8 @@ public class ExportAlertController: UIAlertController {
         let action = UIAlertAction(title: title, style: .Default) { action in
             self.dataProvider.getExportDataString({ string in
                 if (string == nil) {
-                    let result = exporter.getResultWithErrorMessage("ExportAlertController did not receive a string.")
+                    let error = "ExportAlertController did not receive a string."
+                    let result = exporter.getResultWithErrorMessage(error)
                     self.completion?(result: result)
                 } else {
                     exporter.exportString(string!, completion: self.completion)

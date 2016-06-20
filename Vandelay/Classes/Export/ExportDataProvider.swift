@@ -11,12 +11,11 @@ import Foundation
 /*
  
  This class must be implemented by one or more classes
- in your app. It is used to provide Vandelay exporters
- with data. 
+ in your app, if you use the export alert class. It is
+ used to provide Vandelay exporters with data.
  
  If you only use string export, you can leave the data
- method blank. If you only use data export, you can do
- the same for the string method.
+ method blank, and vice versa.
  
  */
 

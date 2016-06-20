@@ -9,7 +9,7 @@
 /*
  
  This exporter can be used to export to the pasteboard.
- It only supports string export.
+ It only supports strings.
  
  */
 

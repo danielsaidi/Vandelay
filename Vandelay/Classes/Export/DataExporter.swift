@@ -14,7 +14,7 @@ import Foundation
  that can be used to export NSData. Use a data exporter
  when your data cannot be serialized in other ways, e.g.
  if an object contains NSData properties that result in
- nil when exported to e.g. JSON.
+ nil when serialized to e.g. JSON (images, for intance).
  
  */
 
