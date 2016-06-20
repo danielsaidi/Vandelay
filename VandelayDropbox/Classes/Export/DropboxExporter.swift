@@ -8,18 +8,23 @@
 
 /*
  
- When using this exporter, make sure that Dropbox have
- been properly setup for your app, as specified in the
- Dropbox iOS docs. Dropbox.setupWithAppKey(..) must be
- called when the app is started. Also make sure to add
- CFBundleURLTypes and LSApplicationQueriesSchemes into
- the Info.plist file.
+ This exporter can be used to export strings and large
+ data blobs. Since Dropbox exports are async, you will
+ receive two callbacks for successful exports - one to
+ tell you that the export begun and one to tell you if
+ the export succeeded or failed.
  
- The file name generator that you must provide, can be
- any of the file name generators that are available in
- Vandelay, or any custom generator you like. Just make
- sure to use a non-random generator if you plan to use
- the file for syncing data across devices.
+ When using this exporter, make sure that Dropbox have
+ been properly setup, as specified in the docs:
+ 
+ - Create an app in the Dropbox developer portal
+ - Call Dropbox.setupWithAppKey(..) when the app is started
+ - Add CFBundleURLTypes to Info.plist
+ - Add LSApplicationQueriesSchemes to Info.plist
+ 
+ Use the fileName initializer if your file should have
+ the same name at all times. Use the fileNameGenerator
+ initializer if you require dynamic file names.
  
  */
 
@@ -32,6 +37,10 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     
     
     // MARK: Initialization
+    
+    public convenience init(fileName: String) {
+        self.init(fileNameGenerator: StaticFileNameGenerator(fileName: fileName))
+    }
     
     public init(fileNameGenerator: FileNameGenerator) {
         self.fileNameGenerator = fileNameGenerator
@@ -53,7 +62,8 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     public func exportData(data: NSData, completion: ((result: ExportResult) -> ())) {
         let vc = getTopmostViewController()
         if (vc == nil) {
-            completion(result: getResultWithErrorMessage("DropboxExporter could not find topmost view controller"))
+            let error = "DropboxExporter could not find topmost view controller"
+            completion(result: getResultWithErrorMessage(error))
             return
         }
         
@@ -68,7 +78,8 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     public func exportString(string: String, completion: ((result: ExportResult) -> ())) {
         let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         if (data == nil) {
-            completion(result: getResultWithErrorMessage("DropboxExporter could not create data from string"))
+            let error = "DropboxExporter could not create data from string"
+            completion(result: getResultWithErrorMessage(error))
             return
         }
         

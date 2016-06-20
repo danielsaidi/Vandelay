@@ -54,7 +54,8 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     public func exportData(data: NSData, completion: ((result: ExportResult) -> ())) {
         let vc = getTopmostViewController()
         if (vc == nil) {
-            completion(result: getResultWithErrorMessage("EmailExporter could not find topmost view controller"))
+            let error = "EmailExporter could not find topmost view controller"
+            completion(result: getResultWithErrorMessage(error))
             return
         }
         
@@ -64,7 +65,8 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     public func exportString(string: String, completion: ((result: ExportResult) -> ())) {
         let data = string.dataUsingEncoding(NSUTF8StringEncoding)
         if (data == nil) {
-            completion(result: getResultWithErrorMessage("EmailExporter could not serialize string to data"))
+            let error = "EmailExporter could not serialize string to data"
+            completion(result: getResultWithErrorMessage(error))
             return
         }
         

@@ -45,7 +45,6 @@
 		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318649E10259C1B40F8EFFAD216D1489 /* Manager.swift */; };
 		40AA957678CE4B82C3EAD66C01373A75 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3E239FC4E529B117E9A96EBFA9749 /* Auth.swift */; };
 		415F29FE4E9D970954C46CD3CF4AE345 /* SatisfyAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CAE560F8B7BC1500D47C186E8B8A6A /* SatisfyAnyOf.swift */; };
-		41D1F4BD28D8E9D095B1B91CE484769F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E123770C4E092B4A34A6654EEFFEAA09 /* ReplaceMe.swift */; };
 		447CB2D9094DFB4CF49507F735151C45 /* Pods-Vandelay_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF25220BC6C1438A3FF26630BA9751B5 /* Pods-Vandelay_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47CBCE8837CE75AE1B7484A63CE387ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5126C67472EA61D61C0353921FEC1B9E /* Foundation.framework */; };
 		486B74C8EFEB68AD25CE128F3051E432 /* ObjCExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869DDFC716566C668022CACDB07F33E /* ObjCExpectation.swift */; };
@@ -413,7 +412,6 @@
 		DA7E6A4165E86C6EB1BCEB4AAD5252D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCE2E9CFFA956F5F3129FFB2411CCFA5 /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Sources/Nimble/Wrappers/MatcherFunc.swift; sourceTree = "<group>"; };
 		DDB165E7A1BD84CBE2692D84733F4ED8 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		E123770C4E092B4A34A6654EEFFEAA09 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		E214C0DF977DA039FF7E7EC36275D00B /* Pods_Vandelay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vandelay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3610AC256B8FD82AA4D456E02AD6947 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		E4697B79FD6EAA8FEB438C7FD94DC91D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -891,7 +889,6 @@
 		F9E038123CE032144A2355EDDF21CE28 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E123770C4E092B4A34A6654EEFFEAA09 /* ReplaceMe.swift */,
 				58E01E84FAA66E06BE5E6B4EECC09D6E /* Export */,
 			);
 			path = Classes;
@@ -1312,7 +1309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EAB2DEAB258F95E2681768E621A3EA5 /* DropboxExporter.swift in Sources */,
-				41D1F4BD28D8E9D095B1B91CE484769F /* ReplaceMe.swift in Sources */,
 				C8BA8E9FA16353E69D4CA0E1337D6076 /* VandelayDropbox-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
