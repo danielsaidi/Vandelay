@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BA8135C1D17B87A007772B1 /* UIImage_Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8135B1D17B87A007772B1 /* UIImage_Resize.swift */; };
+		3BA8136A1D196A0E007772B1 /* UIImage_Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA813691D196A0E007772B1 /* UIImage_Resize.swift */; };
+		3BADF0511D19E28200C2AEE3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04A1D19E28200C2AEE3 /* Photo.swift */; };
+		3BADF0521D19E28200C2AEE3 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04B1D19E28200C2AEE3 /* PhotoRepository.swift */; };
+		3BADF0531D19E28200C2AEE3 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */; };
+		3BADF0541D19E28200C2AEE3 /* TodoItemMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04E1D19E28200C2AEE3 /* TodoItemMemoryRepository.swift */; };
+		3BADF0551D19E28200C2AEE3 /* TodoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04F1D19E28200C2AEE3 /* TodoItemRepository.swift */; };
+		3BADF0561D19E28200C2AEE3 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF0501D19E28200C2AEE3 /* TodoViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* MainViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -30,11 +36,17 @@
 
 /* Begin PBXFileReference section */
 		08F4BB091EE9A8F0B82D3AE3 /* Vandelay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Vandelay.podspec; path = ../Vandelay.podspec; sourceTree = "<group>"; };
-		3BA8135B1D17B87A007772B1 /* UIImage_Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage_Resize.swift; path = ../../../../wally/wally/General/Extensions/UIImage_Resize.swift; sourceTree = "<group>"; };
+		3BA813691D196A0E007772B1 /* UIImage_Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_Resize.swift; sourceTree = "<group>"; };
+		3BADF04A1D19E28200C2AEE3 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3BADF04B1D19E28200C2AEE3 /* PhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		3BADF04E1D19E28200C2AEE3 /* TodoItemMemoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemMemoryRepository.swift; sourceTree = "<group>"; };
+		3BADF04F1D19E28200C2AEE3 /* TodoItemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemRepository.swift; sourceTree = "<group>"; };
+		3BADF0501D19E28200C2AEE3 /* TodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Vandelay_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vandelay_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -71,35 +83,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3BA813571D17B82B007772B1 /* Model */ = {
+		3BA8135A1D17B846007772B1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3BA813581D17B82B007772B1 /* Photos */,
-				3BA813591D17B82B007772B1 /* Todo */,
+				3BA813691D196A0E007772B1 /* UIImage_Resize.swift */,
 			);
-			path = Model;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		3BA813581D17B82B007772B1 /* Photos */ = {
+		3BADF0491D19E28200C2AEE3 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				3BADF04A1D19E28200C2AEE3 /* Photo.swift */,
+				3BADF04B1D19E28200C2AEE3 /* PhotoRepository.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
 		};
-		3BA813591D17B82B007772B1 /* Todo */ = {
+		3BADF04C1D19E28200C2AEE3 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */,
+				3BADF04E1D19E28200C2AEE3 /* TodoItemMemoryRepository.swift */,
+				3BADF04F1D19E28200C2AEE3 /* TodoItemRepository.swift */,
+				3BADF0501D19E28200C2AEE3 /* TodoViewController.swift */,
 			);
-			path = Todo;
-			sourceTree = "<group>";
-		};
-		3BA8135A1D17B846007772B1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				3BA8135B1D17B87A007772B1 /* UIImage_Resize.swift */,
-			);
-			path = Utils;
+			path = TodoList;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -126,10 +135,11 @@
 		607FACD21AFB9204008FA782 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				3BA813571D17B82B007772B1 /* Model */,
+				3BADF0491D19E28200C2AEE3 /* Photos */,
+				3BADF04C1D19E28200C2AEE3 /* TodoList */,
 				3BA8135A1D17B846007772B1 /* Utils */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD71AFB9204008FA782 /* MainViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -394,8 +404,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				3BA8135C1D17B87A007772B1 /* UIImage_Resize.swift in Sources */,
+				3BADF0551D19E28200C2AEE3 /* TodoItemRepository.swift in Sources */,
+				3BADF0561D19E28200C2AEE3 /* TodoViewController.swift in Sources */,
+				3BADF0541D19E28200C2AEE3 /* TodoItemMemoryRepository.swift in Sources */,
+				3BADF0511D19E28200C2AEE3 /* Photo.swift in Sources */,
+				3BADF0521D19E28200C2AEE3 /* PhotoRepository.swift in Sources */,
+				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
+				3BA8136A1D196A0E007772B1 /* UIImage_Resize.swift in Sources */,
+				3BADF0531D19E28200C2AEE3 /* TodoItem.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

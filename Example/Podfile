@@ -3,11 +3,10 @@ use_frameworks!
 target 'Vandelay_Example' do
   pod 'Vandelay', :path => '../'
   pod 'VandelayDropbox', :path => '../'
-
+  
   target 'Vandelay_Tests' do
     inherit! :search_paths
-
-    pod 'Quick', '~> 0.8'
     pod 'Nimble', '~> 3.0'
+    pod 'Quick', '~> 0.8'
   end
 end
