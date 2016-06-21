@@ -9,7 +9,7 @@
 /*
  
  This alert controller can be used to easily display a
- list of export options to the user.
+ list of export options to the user of the app.
  
  When using this alert class, you must remember to set
  the dataProvider and completion properties. If you do

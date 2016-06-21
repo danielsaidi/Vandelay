@@ -9,11 +9,11 @@
 /*
  
  This alert controller can be used to easily display a
- list of import options to the app user.
+ list of import options to the user of the app.
  
  When using this alert class, you must remember to set
- the dataReceiver and completion properties. If you do
- not, the app will crash whenever a user taps a button.
+ the completion property. If you do not, the class can
+ not notify you with info on how the import is going.
  
  */
 
@@ -25,8 +25,7 @@ public class ImportAlertController: UIAlertController {
     
     // MARK: Properties
     
-    public var completion: ((result: ImportResult) -> ())!
-    public var dataProvider: ImportDataHandler!
+    public var completion: ((result: ImportResult) -> ())?
     
     
     
