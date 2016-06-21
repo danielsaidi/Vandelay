@@ -105,7 +105,7 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     
     public func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult sendResult: MFMailComposeResult, error: NSError?) {
         controller.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-        let result = ExportResult(state: getExportStateForSendResult(sendResult))
+        let result = getResultWithState(getExportStateForSendResult(sendResult))
         result.error = error
         completion?(result: result)
     }

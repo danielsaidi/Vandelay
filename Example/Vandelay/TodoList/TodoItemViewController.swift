@@ -1,5 +1,5 @@
 //
-//  TodoViewController.swift
+//  TodoItemViewController.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2016-06-21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodoViewController: UITableViewController {
+class TodoItemViewController: UITableViewController {
     
     
     // MARK: View lifecycle

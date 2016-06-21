@@ -26,6 +26,7 @@ public extension Exporter {
     public func getResultWithError(error: NSError) -> ExportResult {
         let result = ExportResult(state: .Failed)
         result.error = error
+        result.exportMethod = exportMethod
         return result
     }
     
@@ -38,7 +39,14 @@ public extension Exporter {
     
     public func getResultWithFilePath(filePath: String) -> ExportResult {
         let result = ExportResult(state: .Completed)
+        result.exportMethod = exportMethod
         result.filePath = filePath
+        return result
+    }
+    
+    public func getResultWithState(state: ExportState) -> ExportResult {
+        let result = ExportResult(state: state)
+        result.exportMethod = exportMethod
         return result
     }
     
