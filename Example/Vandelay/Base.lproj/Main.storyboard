@@ -158,6 +158,10 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="exportPhotoAlbumCell" destination="YfL-u0-dSV" id="G2G-Pf-xjM"/>
+                        <outlet property="exportTodoItemsCell" destination="nlI-TU-SBV" id="ave-tc-YXR"/>
+                        <outlet property="importPhotoAlbumCell" destination="JLp-tH-KIF" id="enV-Zr-uHF"/>
+                        <outlet property="importTodoItemsCell" destination="bc0-nK-zCN" id="7fa-md-fed"/>
                         <outlet property="photoAlbumCell" destination="Pvk-7z-sZj" id="rPg-vc-jSJ"/>
                         <outlet property="todoItemCell" destination="RqO-AH-gOn" id="dBX-gQ-hPU"/>
                     </connections>

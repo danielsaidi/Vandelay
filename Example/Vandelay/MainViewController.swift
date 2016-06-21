@@ -54,6 +54,10 @@ class MainViewController: UITableViewController {
     
     // MARK: Outlets
     
+    @IBOutlet weak var exportPhotoAlbumCell: UITableViewCell!
+    @IBOutlet weak var exportTodoItemsCell: UITableViewCell!
+    @IBOutlet weak var importPhotoAlbumCell: UITableViewCell!
+    @IBOutlet weak var importTodoItemsCell: UITableViewCell!
     @IBOutlet weak var photoAlbumCell: UITableViewCell!
     @IBOutlet weak var todoItemCell: UITableViewCell!
     
@@ -63,7 +67,19 @@ class MainViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        switch cell {
+        case exportPhotoAlbumCell: fallthrough
+        case exportTodoItemsCell: fallthrough
+        case importPhotoAlbumCell: fallthrough
+        case importTodoItemsCell:
+            let title = "Coming soon"
+            let message = "We are working on this"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+        default: break
+        }
     }
-
 }
 
