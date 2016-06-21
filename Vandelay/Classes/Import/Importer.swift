@@ -37,7 +37,7 @@ public extension Importer {
         return getResultWithError(error)
     }
     
-    public func getResultWithState(state: ExportState) -> ImportResult {
+    public func getResultWithState(state: ImportState) -> ImportResult {
         let result = ImportResult(state: state)
         result.importMethod = importMethod
         return result

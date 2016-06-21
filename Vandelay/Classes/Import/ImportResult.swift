@@ -1,5 +1,5 @@
 //
-//  DataImportResult.swift
+//  ImportResult.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2016-06-22.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class DataImportResult: NSObject {
+public class ImportResult: NSObject {
     
     public init(state: ImportState) {
         self.state = state
@@ -18,4 +18,5 @@ public class DataImportResult: NSObject {
     public var error: NSError?
     public var importMethod: String?
     public var state: ImportState
+    public var string: String?
 }

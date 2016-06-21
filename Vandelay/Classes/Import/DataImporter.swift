@@ -18,5 +18,5 @@ import Foundation
 
 public protocol DataImporter: class {
     
-    func importData(completion: ((result: DataImportResult) -> ())?)
+    func importData(completion: ((result: ImportResult) -> ())?)
 }
