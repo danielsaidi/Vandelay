@@ -9,5 +9,8 @@
 import UIKit
 
 protocol PhotoRepository {
-
+    func addPhoto(photo: Photo)
+    func deletePhoto(photo: Photo)
+    func getPhotos() -> [Photo]
+    func getPhoto(id: String) -> Photo?
 }

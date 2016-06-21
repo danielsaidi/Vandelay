@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TodoItemRepository {
-    func createTodoItemWithName(name: String) -> TodoItem
+    func addTodoItem(item: TodoItem)
     func deleteTodoItem(item: TodoItem)
     func getTodoItems() -> [TodoItem]
     func getTodoItem(id: String) -> TodoItem?

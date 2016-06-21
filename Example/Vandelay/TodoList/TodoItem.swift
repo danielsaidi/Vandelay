@@ -27,8 +27,10 @@ class TodoItem: NSObject {
     
     // MARK: Initialization
     
-    override init() {
+    init(name: String) {
         super.init()
+        id = UuidGenerator().generateUniqueId()
+        self.name = name
     }
     
     required init(dict: [String : AnyObject]) {

@@ -10,6 +10,9 @@ import UIKit
 
 class TodoViewController: UITableViewController {
     
+    
+    // MARK: View lifecycle
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         reloadData()
@@ -21,9 +24,9 @@ class TodoViewController: UITableViewController {
     
     var repository: TodoItemRepository?
     
+    private var hasItems: Bool { return items.count > 0 }
     private var items = [TodoItem]()
     
-    private var hasItems: Bool { return items.count > 0 }
     
     
     
@@ -36,8 +39,8 @@ class TodoViewController: UITableViewController {
         alert.addTextFieldWithConfigurationHandler(nil)
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
-            let name = alert.textFields![0].text!
-            self.repository?.createTodoItemWithName(name)
+            let item = TodoItem(name: alert.textFields![0].text!)
+            self.repository?.addTodoItem(item)
             self.reloadData()
         }))
         presentViewController(alert, animated: true, completion: nil)

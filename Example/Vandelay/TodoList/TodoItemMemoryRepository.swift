@@ -9,38 +9,31 @@
 import UIKit
 import Vandelay
 
-class TodoItemMemoryRepository : TodoItemRepository {
+class TodoItemMemoryRepository : NSObject, TodoItemRepository {
     
     
     // MARK: Properties
     
-    private var items = [TodoItem]()
+    private var items = [String : TodoItem]()
     
     
     // MARK: Public functions
     
-    func createTodoItemWithName(name: String) -> TodoItem {
-        let item = TodoItem()
-        item.id = UuidGenerator().generateUniqueId()
-        item.name = name
-        
-        items.append(item)
-        
-        return item
+    func addTodoItem(item: TodoItem) {
+        items[item.id] = item
     }
     
     func deleteTodoItem(item: TodoItem) {
-        let index = items.indexOf(item)
-        if (index != nil) {
-            items.removeAtIndex(index!)
-        }
+        items.removeValueForKey(item.id)
     }
     
     func getTodoItems() -> [TodoItem] {
-        return items
+        return items.values.sort({ item1, item2 -> Bool in
+            item1.name < item2.name
+        })
     }
     
     func getTodoItem(id: String) -> TodoItem? {
-        return items.filter { $0.id == id }.first
+        return items[id]
     }
 }

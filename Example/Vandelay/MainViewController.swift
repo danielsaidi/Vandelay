@@ -11,19 +11,20 @@ import Vandelay
 
 class MainViewController: UITableViewController {
 
+    
+    // MARK: View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        photoRepository = PhotoMemoryRepository()
         todoItemRepository = TodoItemMemoryRepository()
-        
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(animated: Bool) {
         let items = todoItemRepository.getTodoItems()
+        let photos = photoRepository.getPhotos()
         todoItemCell.detailTextLabel?.text = "\(items.count) items"
+        photoAlbumCell.detailTextLabel?.text = "\(photos.count) items"
     }
     
     
@@ -31,7 +32,10 @@ class MainViewController: UITableViewController {
     // MARK: Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        switch segue.identifier! {
+        switch segue.identifier ?? "" {
+        case "PhotoSegue":
+            let vc = segue.destinationViewController as! PhotoViewController
+            vc.repository = self.photoRepository
         case "TodoSegue":
             let vc = segue.destinationViewController as! TodoViewController
             vc.repository = self.todoItemRepository
@@ -44,6 +48,7 @@ class MainViewController: UITableViewController {
     // MARK: Properties
     
     var todoItemRepository: TodoItemRepository!
+    var photoRepository: PhotoRepository!
     
     
     

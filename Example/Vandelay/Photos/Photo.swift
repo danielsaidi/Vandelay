@@ -20,14 +20,17 @@
  */
 
 import UIKit
+import Vandelay
 
 class Photo: NSObject, NSCoding {
 
     
     // MARK: Initialization
     
-    override init () {
+    init(image: UIImage) {
         super.init()
+        id = UuidGenerator().generateUniqueId()
+        self.image = image
     }
     
     required init?(coder: NSCoder) {
