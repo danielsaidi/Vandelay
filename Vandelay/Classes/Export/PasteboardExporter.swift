@@ -8,8 +8,8 @@
 
 /*
  
- This exporter can be used to export to the pasteboard.
- It only supports strings.
+ This exporter can export strings and serialized data
+ to the pasteboard.
  
  */
 

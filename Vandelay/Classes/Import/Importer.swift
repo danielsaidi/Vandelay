@@ -1,9 +1,9 @@
 //
 //  Importer.swift
-//  Pods
+//  Vandelay
 //
 //  Created by Daniel Saidi on 2016-06-22.
-//
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -23,6 +23,13 @@ public protocol Importer {
 
 public extension Importer {
     
+    public func getResultWithData(data: NSData) -> ImportResult {
+        let result = ImportResult(state: .Completed)
+        result.data = data
+        result.importMethod = importMethod
+        return result
+    }
+    
     public func getResultWithError(error: NSError) -> ImportResult {
         let result = ImportResult(state: .Failed)
         result.error = error
@@ -39,6 +46,13 @@ public extension Importer {
     
     public func getResultWithState(state: ImportState) -> ImportResult {
         let result = ImportResult(state: state)
+        result.importMethod = importMethod
+        return result
+    }
+    
+    public func getResultWithString(string: String) -> ImportResult {
+        let result = ImportResult(state: .Completed)
+        result.string = string
         result.importMethod = importMethod
         return result
     }

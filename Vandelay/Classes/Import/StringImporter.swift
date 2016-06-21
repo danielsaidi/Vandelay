@@ -16,7 +16,7 @@
 
 import Foundation
 
-public protocol StringImporter: class {
+public protocol StringImporter: class, Importer {
     
     func importString(completion: ((result: ImportResult) -> ())?)
 }
