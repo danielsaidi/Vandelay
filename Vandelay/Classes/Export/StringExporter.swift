@@ -6,8 +6,6 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
-import Foundation
-
 /*
  
  This protocol is implemented by all Vandelay exporters
@@ -15,6 +13,8 @@ import Foundation
  such as JSON serialized objects or collections.
  
  */
+
+import Foundation
 
 public protocol StringExporter: class, Exporter {
     

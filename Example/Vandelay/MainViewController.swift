@@ -3,7 +3,7 @@
 //  Vandelay
 //
 //  Created by Daniel Saidi on 06/07/2016.
-//  Copyright (c) 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 import UIKit

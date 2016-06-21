@@ -13,7 +13,6 @@
  
  */
 
-
 import UIKit
 
 public class PasteboardExporter: NSObject, StringExporter {

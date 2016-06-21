@@ -17,8 +17,7 @@
  
  */
 
-
-import UIKit
+import Foundation
 
 public class FileExporter: NSObject, DataExporter, StringExporter {
     

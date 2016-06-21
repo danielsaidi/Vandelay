@@ -3,7 +3,7 @@
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2016-06-20.
-//  Copyright © 2016 CocoaPods. All rights reserved.
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 /*

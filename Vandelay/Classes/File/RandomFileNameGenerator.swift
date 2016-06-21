@@ -3,14 +3,8 @@
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2015-11-04.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
-
-/*
- 
- This class can be used to generate a random file name.
- 
- */
 
 import Foundation
 

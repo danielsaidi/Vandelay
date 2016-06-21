@@ -1,16 +1,10 @@
 //
 //  StaticFileNameGenerator.swift
-//  wally
+//  Vandelay
 //
 //  Created by Daniel Saidi on 2016-06-02.
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
-
-/*
- 
- This class can be used to generate a static file name.
- 
- */
 
 import Foundation
 

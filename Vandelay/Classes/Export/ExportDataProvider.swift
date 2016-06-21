@@ -6,8 +6,6 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
-import Foundation
-
 /*
  
  This class must be implemented by one or more classes
@@ -18,6 +16,8 @@ import Foundation
  method blank, and vice versa.
  
  */
+
+import Foundation
 
 public protocol ExportDataProvider: class {
     

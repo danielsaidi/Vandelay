@@ -3,7 +3,7 @@
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2015-11-05.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -16,7 +16,6 @@
  initializer if you require dynamic file names.
  
  */
-
 
 import MessageUI
 

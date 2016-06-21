@@ -6,8 +6,6 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
-import Foundation
-
 /*
  
  This protocol is implemented by all Vandelay exporters
@@ -17,6 +15,8 @@ import Foundation
  nil when serialized to e.g. JSON (images, for intance).
  
  */
+
+import Foundation
 
 public protocol DataExporter: class, Exporter {
     
