@@ -95,12 +95,14 @@ class MainViewController: UITableViewController, ExportDataProvider {
         let alert = ExportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
         alert.dataProvider = self
         alert.completion = exportCompletedWithResult
-        alert.addDataExporter(EmailExporter(fileName: photoFileName), withTitle: "As an e-mail attachment")
+        alert.addDataExporter(FileExporter(fileName: photoFileName), withTitle: "To a local file")
+        alert.addDataExporter(DropboxExporter(fileName: photoFileName), withTitle: "To a Dropbox file")
+        alert.addStringExporter(EmailExporter(fileName: photoFileName), withTitle: "As an e-mail attachment")
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    private func exportTodoItems() {
+    private func exportTodoList() {
         let title = "Export Todo List"
         let message = "How do you want to export this list?"
         let alert = ExportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
@@ -144,11 +146,37 @@ class MainViewController: UITableViewController, ExportDataProvider {
         }
     }
     
-    private func importTodoItems() {
-        let title = "Import Todo List items"
-        let message = "How do you want to import todo list items?"
+    private func importPhotoAlbum() {
+        let title = "Import Photo Album"
+        let message = "How do you want to import?"
         let alert = ImportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
-        alert.completion = importTodoItemsCompletedWithResult
+        alert.completion = importPhotoAlbumCompletedWithResult
+        alert.addDataImporter(FileImporter(fileName: photoFileName), withTitle: "From a local file")
+        alert.addDataImporter(DropboxImporter(fileName: photoFileName), withTitle: "From a Dropbox file")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    private func importPhotoAlbumCompletedWithResult(result: ImportResult) {
+        if let data = result.data {
+            let obj = NSKeyedUnarchiver.unarchiveObjectWithData(data)
+            if let photos = obj as? [Photo] {
+                photos.forEach { self.photoRepository.addPhoto($0) }
+                reloadData()
+            } else {
+                alertTitle("Error", andMessage: "Invalid data")
+                return
+            }
+        }
+        
+        alertTitle("Hey!", andMessage: getImportMessageForResult(result))
+    }
+    
+    private func importTodoList() {
+        let title = "Import Todo List"
+        let message = "How do you want to import?"
+        let alert = ImportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        alert.completion = importTodoListCompletedWithResult
         alert.addStringImporter(PasteboardImporter(), withTitle: "From the pasteboard")
         alert.addStringImporter(FileImporter(fileName: todoFileName), withTitle: "From a local file")
         alert.addStringImporter(DropboxImporter(fileName: todoFileName), withTitle: "From a Dropbox file")
@@ -156,37 +184,32 @@ class MainViewController: UITableViewController, ExportDataProvider {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    private func importTodoItemsCompletedWithResult(result: ImportResult) {
-        if (result.string != nil) {
-            importTodoItemsFromString(result.string!)
-        }
-        
-        reloadData()
-        
-        let title = "Hey!"
-        let message = getImportMessageForResult(result)
-        alertTitle(title, andMessage: message)
-    }
-    
-    private func importTodoItemsFromString(string: String) {
-        let jsonResult = JsonSerializer().deserializeString(string)
-        if (jsonResult.error != nil) {
-            print(jsonResult.error!.description)
-        } else {
+    private func importTodoListCompletedWithResult(result: ImportResult) {
+        if let string = result.string {
+            let jsonResult = JsonSerializer().deserializeString(string)
+            if (jsonResult.error != nil) {
+                alertTitle("Error", andMessage: "Could not parse Todo List JSON")
+                return
+            }
+            
             if let arr = jsonResult.result as? [[String : AnyObject]] {
                 let items = arr.map { TodoItem(dict: $0) }
                 items.forEach { self.todoItemRepository.addTodoItem($0) }
+                reloadData()
             } else {
-                print("Invalid data in string")
+                alertTitle("Error", andMessage: "Invalid data in JSON")
+                return
             }
         }
+        
+        alertTitle("Hey!", andMessage: getImportMessageForResult(result))
     }
     
     private func reloadData() {
         let items = todoItemRepository.getTodoItems()
         let photos = photoRepository.getPhotos()
         todoItemCell.detailTextLabel?.text = "\(items.count) items"
-        photoAlbumCell.detailTextLabel?.text = "\(photos.count) items"
+        photoAlbumCell.detailTextLabel?.text = "\(photos.count) photos"
     }
     
     
@@ -216,14 +239,9 @@ class MainViewController: UITableViewController, ExportDataProvider {
         let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
         switch cell {
         case exportPhotoAlbumCell: exportPhotoAlbum()
-        case exportTodoItemsCell: exportTodoItems()
-        case importTodoItemsCell: importTodoItems()
-        case importPhotoAlbumCell:
-            let title = "Coming soon"
-            let message = "We are working on this"
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            presentViewController(alert, animated: true, completion: nil)
+        case exportTodoItemsCell: exportTodoList()
+        case importTodoItemsCell: importTodoList()
+        case importPhotoAlbumCell: importPhotoAlbum()
         default: break
         }
     }
