@@ -30,6 +30,7 @@ class MainViewController: UITableViewController, ExportDataProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.titleView = UIImageView(image: UIImage(named: "NavBarLogo"))
     }
     
     override func viewWillAppear(animated: Bool) {
