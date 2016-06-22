@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B24150B1D1A738F003EB17D /* TodoItemImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B24150A1D1A738F003EB17D /* TodoItemImporter.swift */; };
 		3BA8136A1D196A0E007772B1 /* UIImage_Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA813691D196A0E007772B1 /* UIImage_Resize.swift */; };
 		3BADF0511D19E28200C2AEE3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04A1D19E28200C2AEE3 /* Photo.swift */; };
-		3BADF0521D19E28200C2AEE3 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04B1D19E28200C2AEE3 /* PhotoRepository.swift */; };
 		3BADF0531D19E28200C2AEE3 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */; };
-		3BADF0541D19E28200C2AEE3 /* TodoItemMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04E1D19E28200C2AEE3 /* TodoItemMemoryRepository.swift */; };
-		3BADF0551D19E28200C2AEE3 /* TodoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04F1D19E28200C2AEE3 /* TodoItemRepository.swift */; };
+		3BADF0541D19E28200C2AEE3 /* TodoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04E1D19E28200C2AEE3 /* TodoItemRepository.swift */; };
 		3BADF0561D19E28200C2AEE3 /* TodoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF0501D19E28200C2AEE3 /* TodoItemViewController.swift */; };
-		3BADF0581D19E3AE00C2AEE3 /* PhotoMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF0571D19E3AE00C2AEE3 /* PhotoMemoryRepository.swift */; };
+		3BADF0581D19E3AE00C2AEE3 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF0571D19E3AE00C2AEE3 /* PhotoRepository.swift */; };
 		3BADF05A1D19E63300C2AEE3 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF0591D19E63300C2AEE3 /* PhotoViewController.swift */; };
 		3BADF05C1D19E8A600C2AEE3 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF05B1D19E8A600C2AEE3 /* PhotoCollectionViewCell.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -39,14 +38,13 @@
 
 /* Begin PBXFileReference section */
 		08F4BB091EE9A8F0B82D3AE3 /* Vandelay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Vandelay.podspec; path = ../Vandelay.podspec; sourceTree = "<group>"; };
+		3B24150A1D1A738F003EB17D /* TodoItemImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemImporter.swift; sourceTree = "<group>"; };
 		3BA813691D196A0E007772B1 /* UIImage_Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_Resize.swift; sourceTree = "<group>"; };
 		3BADF04A1D19E28200C2AEE3 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		3BADF04B1D19E28200C2AEE3 /* PhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
 		3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		3BADF04E1D19E28200C2AEE3 /* TodoItemMemoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemMemoryRepository.swift; sourceTree = "<group>"; };
-		3BADF04F1D19E28200C2AEE3 /* TodoItemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemRepository.swift; sourceTree = "<group>"; };
+		3BADF04E1D19E28200C2AEE3 /* TodoItemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemRepository.swift; sourceTree = "<group>"; };
 		3BADF0501D19E28200C2AEE3 /* TodoItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemViewController.swift; sourceTree = "<group>"; };
-		3BADF0571D19E3AE00C2AEE3 /* PhotoMemoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMemoryRepository.swift; sourceTree = "<group>"; };
+		3BADF0571D19E3AE00C2AEE3 /* PhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
 		3BADF0591D19E63300C2AEE3 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		3BADF05B1D19E8A600C2AEE3 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Vandelay_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vandelay_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,8 +100,7 @@
 			children = (
 				3BADF04A1D19E28200C2AEE3 /* Photo.swift */,
 				3BADF05B1D19E8A600C2AEE3 /* PhotoCollectionViewCell.swift */,
-				3BADF0571D19E3AE00C2AEE3 /* PhotoMemoryRepository.swift */,
-				3BADF04B1D19E28200C2AEE3 /* PhotoRepository.swift */,
+				3BADF0571D19E3AE00C2AEE3 /* PhotoRepository.swift */,
 				3BADF0591D19E63300C2AEE3 /* PhotoViewController.swift */,
 			);
 			path = Photos;
@@ -113,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */,
-				3BADF04E1D19E28200C2AEE3 /* TodoItemMemoryRepository.swift */,
-				3BADF04F1D19E28200C2AEE3 /* TodoItemRepository.swift */,
+				3B24150A1D1A738F003EB17D /* TodoItemImporter.swift */,
+				3BADF04E1D19E28200C2AEE3 /* TodoItemRepository.swift */,
 				3BADF0501D19E28200C2AEE3 /* TodoItemViewController.swift */,
 			);
 			path = TodoList;
@@ -413,17 +410,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BADF0551D19E28200C2AEE3 /* TodoItemRepository.swift in Sources */,
 				3BADF0561D19E28200C2AEE3 /* TodoItemViewController.swift in Sources */,
-				3BADF0541D19E28200C2AEE3 /* TodoItemMemoryRepository.swift in Sources */,
+				3BADF0541D19E28200C2AEE3 /* TodoItemRepository.swift in Sources */,
 				3BADF0511D19E28200C2AEE3 /* Photo.swift in Sources */,
-				3BADF0521D19E28200C2AEE3 /* PhotoRepository.swift in Sources */,
 				3BADF05C1D19E8A600C2AEE3 /* PhotoCollectionViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
+				3B24150B1D1A738F003EB17D /* TodoItemImporter.swift in Sources */,
 				3BA8136A1D196A0E007772B1 /* UIImage_Resize.swift in Sources */,
 				3BADF0531D19E28200C2AEE3 /* TodoItem.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				3BADF0581D19E3AE00C2AEE3 /* PhotoMemoryRepository.swift in Sources */,
+				3BADF0581D19E3AE00C2AEE3 /* PhotoRepository.swift in Sources */,
 				3BADF05A1D19E63300C2AEE3 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

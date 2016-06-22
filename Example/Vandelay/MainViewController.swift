@@ -17,15 +17,10 @@ class MainViewController: UITableViewController, ExportDataProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoRepository = PhotoMemoryRepository()
-        todoItemRepository = TodoItemMemoryRepository()
     }
     
     override func viewWillAppear(animated: Bool) {
-        let items = todoItemRepository.getTodoItems()
-        let photos = photoRepository.getPhotos()
-        todoItemCell.detailTextLabel?.text = "\(items.count) items"
-        photoAlbumCell.detailTextLabel?.text = "\(photos.count) items"
+        reloadData()
     }
     
     
@@ -48,8 +43,8 @@ class MainViewController: UITableViewController, ExportDataProvider {
     
     // MARK: Properties
     
-    var todoItemRepository: TodoItemRepository!
-    var photoRepository: PhotoRepository!
+    var todoItemRepository = TodoItemRepository()
+    var photoRepository = PhotoRepository()
     
     
     
@@ -73,6 +68,7 @@ class MainViewController: UITableViewController, ExportDataProvider {
         alert.dataProvider = self
         alert.completion = exportCompletedWithResult
         alert.addDataExporter(EmailExporter(fileName: "photos.vandelay"), withTitle: "As an e-mail attachment")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -86,6 +82,7 @@ class MainViewController: UITableViewController, ExportDataProvider {
         alert.addStringExporter(FileExporter(fileName: "todoList.vandelay"), withTitle: "To a local file")
         alert.addStringExporter(DropboxExporter(fileName: "todoList.vandelay"), withTitle: "To a Dropbox file")
         alert.addStringExporter(EmailExporter(fileName: "todoList.vandelay"), withTitle: "As an e-mail attachment")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -106,13 +103,29 @@ class MainViewController: UITableViewController, ExportDataProvider {
         case .Cancelled:
             return "Your export was cancelled."
         case .Completed:
-            return "Your data was exported, using the \"\(result.exportMethod!)\" export method"
+            return "Your data was exported, using the \"\(result.exportMethod!)\" method"
         case .Failed:
             return "Your export failed with error \(result.error?.description)."
         case .InProgress:
             return "Your export is in progress. Please wait."
         }
     }
+    
+    private func importTodoItems() {
+        let importer = TodoItemImporter(repository: todoItemRepository)
+        importer.importTodoItemsWithCompletion { (result) in
+            self.reloadData()
+        }
+    }
+    
+    
+    private func reloadData() {
+        let items = todoItemRepository.getTodoItems()
+        let photos = photoRepository.getPhotos()
+        todoItemCell.detailTextLabel?.text = "\(items.count) items"
+        photoAlbumCell.detailTextLabel?.text = "\(photos.count) items"
+    }
+    
     
     
     
@@ -141,8 +154,8 @@ class MainViewController: UITableViewController, ExportDataProvider {
         switch cell {
         case exportPhotoAlbumCell: exportPhotoAlbum()
         case exportTodoItemsCell: exportTodoItems()
-        case importPhotoAlbumCell: fallthrough
-        case importTodoItemsCell:
+        case importTodoItemsCell: importTodoItems()
+        case importPhotoAlbumCell:
             let title = "Coming soon"
             let message = "We are working on this"
             let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)

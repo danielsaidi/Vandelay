@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Dropbox.setupWithAppKey("XXX")
+        Dropbox.setupWithAppKey("4j6q36uumkro49k")
         return true
     }
     

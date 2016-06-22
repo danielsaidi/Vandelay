@@ -7,10 +7,33 @@
 //
 
 import UIKit
+import Vandelay
 
-protocol PhotoRepository {
-    func addPhoto(photo: Photo)
-    func deletePhoto(photo: Photo)
-    func getPhotos() -> [Photo]
-    func getPhoto(id: String) -> Photo?
+class PhotoRepository : NSObject {
+    
+    
+    // MARK: Properties
+    
+    private var photos = [String : Photo]()
+    
+    
+    // MARK: Public functions
+    
+    func addPhoto(photo: Photo) {
+        photos[photo.id] = photo
+    }
+    
+    func deletePhoto(photo: Photo) {
+        photos.removeValueForKey(photo.id)
+    }
+    
+    func getPhotos() -> [Photo] {
+        return photos.values.sort({ photo1, photo2 -> Bool in
+            photo1.id < photo2.id
+        })
+    }
+    
+    func getPhoto(id: String) -> Photo? {
+        return photos[id]
+    }
 }

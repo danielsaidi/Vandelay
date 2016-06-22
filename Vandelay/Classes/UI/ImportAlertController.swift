@@ -33,30 +33,18 @@ public class ImportAlertController: UIAlertController {
     
     public func addDataImporter(importer: DataImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .Default) { action in
-            /*self.dataProvider.getExportData({ data in
-                if (data == nil) {
-                    let error = "ImportAlertController did not receive any data."
-                    let result = exporter.getResultWithErrorMessage(error)
-                    self.completion?(result: result)
-                } else {
-                    exporter.exportData(data!, completion: self.completion)
-                }
-            })*/
+            importer.importData({ result in
+                self.completion?(result: result)
+            })
         }
         self.addAction(action)
     }
     
-    public func addStringImporter(exporter: StringImporter, withTitle title: String) {
+    public func addStringImporter(importer: StringImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .Default) { action in
-            /*self.dataProvider.getExportDataString({ string in
-                if (string == nil) {
-                    let error = "ExportAlertController did not receive a string."
-                    let result = exporter.getResultWithErrorMessage(error)
-                    self.completion?(result: result)
-                } else {
-                    exporter.exportString(string!, completion: self.completion)
-                }
-            })*/
+            importer.importString({ result in
+                self.completion?(result: result)
+            })
         }
         self.addAction(action)
     }
