@@ -45,27 +45,27 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())) {
+    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())?) {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let fileName = fileNameGenerator.getFileName()
         let filePath = "\(paths.first!)/\(fileName)"
         do {
             try data.writeToFile(filePath, options: .AtomicWrite)
         } catch {
-            completion(result: self.getResultWithError(error as NSError))
+            completion?(result: self.getResultWithError(error as NSError))
         }
-        completion(result: getResultWithFilePath(filePath))
+        completion?(result: getResultWithFilePath(filePath))
     }
     
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())) {
+    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let fileName = fileNameGenerator.getFileName()
         let filePath = "\(paths.first!)/\(fileName)"
         do {
             try string.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding)
         } catch {
-            completion(result: self.getResultWithError(error as NSError))
+            completion?(result: self.getResultWithError(error as NSError))
         }
-        completion(result: getResultWithFilePath(filePath))
+        completion?(result: getResultWithFilePath(filePath))
     }
 }

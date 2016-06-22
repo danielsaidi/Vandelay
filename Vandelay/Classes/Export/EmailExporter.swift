@@ -44,28 +44,28 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     public var fileNameGenerator: FileNameGenerator!
     
     private var mailComposer: MFMailComposeViewController!
-    private var completion: ((result: ExportResult) -> ())!
+    private var completion: ((result: ExportResult) -> ())?
     
     
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())) {
+    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())?) {
         let vc = getTopmostViewController()
         if (vc == nil) {
             let error = "EmailExporter could not find topmost view controller"
-            completion(result: getResultWithErrorMessage(error))
+            completion?(result: getResultWithErrorMessage(error))
             return
         }
         
         sendData(data, fromViewController: vc!, completion: completion)
     }
     
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())) {
+    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
         let data = string.dataUsingEncoding(NSUTF8StringEncoding)
         if (data == nil) {
             let error = "EmailExporter could not serialize string to data"
-            completion(result: getResultWithErrorMessage(error))
+            completion?(result: getResultWithErrorMessage(error))
             return
         }
         
@@ -86,7 +86,7 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
         }
     }
     
-    private func sendData(data: NSData, fromViewController vc: UIViewController, completion: ((result: ExportResult) -> ())) {
+    private func sendData(data: NSData, fromViewController vc: UIViewController, completion: ((result: ExportResult) -> ())?) {
         mailComposer = MFMailComposeViewController()
         mailComposer.mailComposeDelegate = self
         mailComposer.setSubject(emailSubject)

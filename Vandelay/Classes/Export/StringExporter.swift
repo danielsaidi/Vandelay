@@ -18,5 +18,5 @@ import Foundation
 
 public protocol StringExporter: class, Exporter {
     
-    func exportString(string: String, completion: ((result: ExportResult) -> ()))
+    func exportString(string: String, completion: ((result: ExportResult) -> ())?)
 }

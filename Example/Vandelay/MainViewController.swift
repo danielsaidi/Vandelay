@@ -6,6 +6,19 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This class intentionally contains most of the code to
+ handle the export and import of todo items and photos,
+ so that you do not have to jump between many files to
+ follow what happens.
+ 
+ When you build your own app, it is strongly suggested
+ that you break up the functionality in smaller pieces,
+ like a TodoItemExporter and a TodoItemImporter.
+ 
+ */
+
 import UIKit
 import Vandelay
 import VandelayDropbox

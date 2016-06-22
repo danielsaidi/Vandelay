@@ -1,5 +1,5 @@
 //
-//  DropboxDataExporterDefault.swift
+//  DropboxExporter.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2015-11-03.
@@ -85,27 +85,27 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())) {
+    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())?) {
         let vc = getTopmostViewController()
         if (vc == nil) {
             let error = "DropboxExporter could not find topmost view controller"
-            completion(result: getResultWithErrorMessage(error))
+            completion?(result: getResultWithErrorMessage(error))
             return
         }
         
         if (willAuthorizeFromViewController(vc!)) {
-            completion(result: ExportResult(state: .Cancelled))
+            completion?(result: ExportResult(state: .Cancelled))
             return
         }
         
         uploadData(data, completion: completion)
     }
     
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())) {
+    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
         let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         if (data == nil) {
             let error = "DropboxExporter could not create data from string"
-            completion(result: getResultWithErrorMessage(error))
+            completion?(result: getResultWithErrorMessage(error))
             return
         }
         
@@ -116,22 +116,22 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     
     // MARK: Private functions
     
-    private func uploadData(data: NSData, completion: ((result: ExportResult) -> ())) {
+    private func uploadData(data: NSData, completion: ((result: ExportResult) -> ())?) {
         let client = DropboxClient.sharedClient!
         let fileName = fileNameGenerator.getFileName()
         let path = "/\(fileName)"
         
         let inProgressResult = ExportResult(state: .InProgress)
         inProgressResult.filePath = fileName
-        completion(result: inProgressResult)
+        completion?(result: inProgressResult)
         
         client.files.upload(path: path, mode: .Overwrite, mute: true, body: data).response {
             response, error in
             if (error == nil && response != nil) {
-                completion(result: self.getResultWithFilePath(fileName))
+                completion?(result: self.getResultWithFilePath(fileName))
             } else {
                 let message = error!.description
-                completion(result: self.getResultWithErrorMessage(message))
+                completion?(result: self.getResultWithErrorMessage(message))
             }
         }
     }
