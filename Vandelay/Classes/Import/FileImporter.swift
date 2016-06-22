@@ -1,15 +1,15 @@
 //
-//  FileExporter.swift
+//  FileImporter.swift
 //  Vandelay
 //
-//  Created by Daniel Saidi on 2016-06-02.
+//  Created by Daniel Saidi on 2016-06-22.
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 /*
  
- This exporter can be used to save strings and data to
- the local file system.
+ This importer can be used to load strings and data in
+ files on the local file system.
  
  Use the fileName initializer if your file should have
  the same name at all times. Use the fileNameGenerator
@@ -17,9 +17,10 @@
  
  */
 
-import Foundation
 
-public class FileExporter: NSObject, DataExporter, StringExporter {
+import UIKit
+
+public class FileImporter: NSObject, DataImporter, StringImporter {
     
     
     // MARK: Initialization
@@ -37,7 +38,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Properties
     
-    public var exportMethod: String? { return "File" }
+    public var importMethod: String? { return "File" }
     
     private var fileNameGenerator: FileNameGenerator
     
@@ -45,26 +46,25 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())?) {
-        let filePath = getFilePath()
+    public func importData(completion: ((result: ImportResult) -> ())?) {
         do {
-            try data.writeToFile(filePath, options: .AtomicWrite)
+            let filePath = getFilePath()
+            let data = try NSData(contentsOfFile: filePath, options: .DataReadingUncached)
+            completion?(result: getResultWithData(data))
         } catch {
             completion?(result: self.getResultWithError(error as NSError))
         }
-        completion?(result: getResultWithFilePath(filePath))
     }
     
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
-        let filePath = getFilePath()
+    public func importString(completion: ((result: ImportResult) -> ())?) {
         do {
-            try string.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding)
+            let filePath = getFilePath()
+            let string = try String(contentsOfFile: filePath)
+            completion?(result: getResultWithString(string))
         } catch {
             completion?(result: self.getResultWithError(error as NSError))
         }
-        completion?(result: getResultWithFilePath(filePath))
     }
-    
     
     
     // MARK: Private functions
