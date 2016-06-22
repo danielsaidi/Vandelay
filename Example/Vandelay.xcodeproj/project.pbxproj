@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B24150B1D1A738F003EB17D /* TodoItemImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B24150A1D1A738F003EB17D /* TodoItemImporter.swift */; };
 		3BA8136A1D196A0E007772B1 /* UIImage_Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA813691D196A0E007772B1 /* UIImage_Resize.swift */; };
 		3BADF0511D19E28200C2AEE3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04A1D19E28200C2AEE3 /* Photo.swift */; };
 		3BADF0531D19E28200C2AEE3 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */; };
@@ -38,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		08F4BB091EE9A8F0B82D3AE3 /* Vandelay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Vandelay.podspec; path = ../Vandelay.podspec; sourceTree = "<group>"; };
-		3B24150A1D1A738F003EB17D /* TodoItemImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemImporter.swift; sourceTree = "<group>"; };
 		3BA813691D196A0E007772B1 /* UIImage_Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_Resize.swift; sourceTree = "<group>"; };
 		3BADF04A1D19E28200C2AEE3 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				3BADF04D1D19E28200C2AEE3 /* TodoItem.swift */,
-				3B24150A1D1A738F003EB17D /* TodoItemImporter.swift */,
 				3BADF04E1D19E28200C2AEE3 /* TodoItemRepository.swift */,
 				3BADF0501D19E28200C2AEE3 /* TodoItemViewController.swift */,
 			);
@@ -415,7 +412,6 @@
 				3BADF0511D19E28200C2AEE3 /* Photo.swift in Sources */,
 				3BADF05C1D19E8A600C2AEE3 /* PhotoCollectionViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
-				3B24150B1D1A738F003EB17D /* TodoItemImporter.swift in Sources */,
 				3BA8136A1D196A0E007772B1 /* UIImage_Resize.swift in Sources */,
 				3BADF0531D19E28200C2AEE3 /* TodoItem.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

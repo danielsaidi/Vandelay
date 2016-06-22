@@ -111,13 +111,54 @@ class MainViewController: UITableViewController, ExportDataProvider {
         }
     }
     
-    private func importTodoItems() {
-        let importer = TodoItemImporter(repository: todoItemRepository)
-        importer.importTodoItemsWithCompletion { (result) in
-            self.reloadData()
+    func getImportMessageForResult(result: ImportResult) -> String {
+        switch result.state {
+        case .Cancelled:
+            return "Your import was cancelled."
+        case .Completed:
+            return "Your data was imported, using the \"\(result.importMethod!)\" method"
+        case .Failed:
+            return "Your import failed with error \(result.error?.description)."
+        case .InProgress:
+            return "Your import is in progress. Please wait."
         }
     }
     
+    private func importTodoItems() {
+        let title = "Import Todo List items"
+        let message = "How do you want to import todo list items?"
+        let alert = ImportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        alert.completion = importTodoItemsCompletedWithResult
+        alert.addStringImporter(PasteboardImporter(), withTitle: "From the pasteboard")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    private func importTodoItemsCompletedWithResult(result: ImportResult) {
+        let title = "Hey!"
+        let message = getImportMessageForResult(result)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+        
+        if (result.string != nil) {
+            importTodoItemsFromString(result.string!)
+        }
+    }
+    
+    private func importTodoItemsFromString(string: String) {
+        let jsonResult = JsonSerializer().deserializeString(string)
+        if (jsonResult.error != nil) {
+            print(jsonResult.error!.description)
+        } else {
+            if let arr = jsonResult.result as? [[String : AnyObject]] {
+                let items = arr.map { TodoItem(dict: $0) }
+                items.forEach { self.todoItemRepository.addTodoItem($0) }
+            } else {
+                print("Invalid data in string")
+            }
+        }
+    }
     
     private func reloadData() {
         let items = todoItemRepository.getTodoItems()

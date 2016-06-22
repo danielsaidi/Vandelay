@@ -9,8 +9,9 @@
 ## What is Vandelay?
 
 Vandelay is a data importer/exporter for iOS. It can be used to import (soon) and export data in
-various ways, such as:
+various ways. Currently, it supports:
 
+ - UIPase
  - Copy to and paste from the pasteboard
  - Send as an e-mail attachment
  - Send in a message
