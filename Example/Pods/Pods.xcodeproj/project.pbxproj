@@ -43,6 +43,7 @@
 		36B06B8A36CBA28C0387275710A97B29 /* PasteboardImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8929514CC03FF54AA1D284AF6BD642 /* PasteboardImporter.swift */; };
 		38F5CE4B4C59A81734A93E32D35B696E /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D59A24E91435FAB452D93BE4BF711 /* FailureMessage.swift */; };
 		3B27C5F81D1B2E6700B7D5CF /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B27C5F61D1B2E4600B7D5CF /* FileImporter.swift */; };
+		3B27C5FB1D1B32F500B7D5CF /* DropboxImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B27C5F91D1B32AE00B7D5CF /* DropboxImporter.swift */; };
 		3C5F14E6D4EF30D00A9FA89959A1D336 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35372D5CA5E19973CEFE3ED457FDF8B9 /* Vandelay.framework */; };
 		3D1BB98DEA422D8F173613EC715488B9 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26135DE54F9F1404C3F84407F71BFFBF /* PostNotification.swift */; };
 		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D035902F2983FDAD8B5826D017D82E6 /* ResponseSerialization.swift */; };
@@ -299,6 +300,7 @@
 		36F66BAC40C09A598FA4A2D1D962C492 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
 		392DC9B26F7CA09312B5BF55A6F87A5A /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Quick/Filter.swift; sourceTree = "<group>"; };
 		3B27C5F61D1B2E4600B7D5CF /* FileImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileImporter.swift; sourceTree = "<group>"; };
+		3B27C5F91D1B32AE00B7D5CF /* DropboxImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxImporter.swift; sourceTree = "<group>"; };
 		3B97A4D725DB450869D6E89B334293FD /* Pods-Vandelay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vandelay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3CE7A63BFD9E02C5BB1D693571E27BFA /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		3D21B58A78FBB6A5CCBC70AAD302D372 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/Quick/World.h; sourceTree = "<group>"; };
@@ -600,6 +602,7 @@
 		3B27C5F11D1B2B4300B7D5CF /* Import */ = {
 			isa = PBXGroup;
 			children = (
+				3B27C5F91D1B32AE00B7D5CF /* DropboxImporter.swift */,
 			);
 			path = Import;
 			sourceTree = "<group>";
@@ -1470,6 +1473,7 @@
 			files = (
 				BF4DC7FD38E58A09A5D4304B90584371 /* DropboxExporter.swift in Sources */,
 				DC235449304E8944C4973168D391280D /* VandelayDropbox-dummy.m in Sources */,
+				3B27C5FB1D1B32F500B7D5CF /* DropboxImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

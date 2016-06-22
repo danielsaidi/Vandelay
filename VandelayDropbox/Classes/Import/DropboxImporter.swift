@@ -1,5 +1,5 @@
 //
-//  DropboxExporter.swift
+//  DropboxImporter.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2015-11-03.
@@ -8,11 +8,11 @@
 
 /*
  
- This exporter can be used to export strings and large
- data blobs to Dropbox.
+ This importer can be used to import strings and large
+ data blobs from Dropbox.
  
- Since Dropbox exports are async, you will receive two
- callbacks; one to tell you that the export begun, and
+ Since Dropbox imports are async, you will receive two
+ callbacks; one to tell you that the import begun, and
  one to tell you if it succeeded or failed.
  
  Use the fileName initializer if your file should have
@@ -59,7 +59,7 @@ import Foundation
 import SwiftyDropbox
 import Vandelay
 
-public class DropboxExporter : NSObject, DataExporter, StringExporter {
+public class DropboxImporter : NSObject, DataImporter, StringImporter {
     
     
     // MARK: Initialization
@@ -77,7 +77,7 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     
     // MARK: Properties
     
-    public var exportMethod: String? { return "Dropbox" }
+    public var importMethod: String? { return "Dropbox" }
     
     private var fileNameGenerator: FileNameGenerator
     
@@ -85,10 +85,10 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())?) {
+    public func importData(completion: ((result: ImportResult) -> ())?) {
         let vc = getTopmostViewController()
         if (vc == nil) {
-            let error = "DropboxExporter could not find topmost view controller"
+            let error = "DropboxImporter could not find topmost view controller"
             completion?(result: getResultWithErrorMessage(error))
             return
         }
@@ -98,41 +98,55 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
             return
         }
         
-        uploadData(data, completion: completion)
+        downloadData(completion)
     }
     
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
-        let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        if (data == nil) {
-            let error = "DropboxExporter could not create data from string"
-            completion?(result: getResultWithErrorMessage(error))
-            return
+    public func importString(completion: ((result: ImportResult) -> ())?) {
+        importData { (result) in
+            if (result.data != nil) {
+                if let string = String(data: result.data!, encoding: NSUTF8StringEncoding) {
+                    completion?(result: self.getResultWithString(string))
+                } else {
+                    completion?(result: self.getResultWithErrorMessage("Dropbox file did not contain valid content."))
+                }
+            } else {
+                completion?(result: result)
+            }
         }
-        
-        exportData(data!, completion: completion)
     }
     
     
     
     // MARK: Private functions
     
-    private func uploadData(data: NSData, completion: ((result: ExportResult) -> ())?) {
+    private func downloadData(completion: ((result: ImportResult) -> ())?) {
         let client = DropboxClient.sharedClient!
         let fileName = fileNameGenerator.getFileName()
-        let path = "/\(fileName)"
+        let filePath = "/\(fileName)"
         
-        let inProgressResult = getResultWithState(.InProgress)
-        inProgressResult.filePath = fileName
-        completion?(result: inProgressResult)
+        completion?(result: ImportResult(state: .InProgress))
         
-        client.files.upload(path: path, mode: .Overwrite, mute: true, body: data).response {
-            response, error in
-            if (error == nil && response != nil) {
-                completion?(result: self.getResultWithFilePath(fileName))
+        let destination = getDownloadDestination()
+        
+        client.files.download(path: filePath, destination: destination).response { response, error in
+            if let (metadata, url) = response {
+                if let data = NSData(contentsOfURL: url) {
+                    completion?(result: self.getResultWithData(data))
+                } else {
+                    completion?(result: self.getResultWithErrorMessage("No data in file \(url)"))
+                }
             } else {
-                let message = error!.description
-                completion?(result: self.getResultWithErrorMessage(message))
+                completion?(result: self.getResultWithErrorMessage(error?.description ?? "Error downloading file"))
             }
+        }
+    }
+    
+    private func getDownloadDestination() -> ((NSURL, NSHTTPURLResponse) -> NSURL) {
+        return { temporaryURL, response in
+            let fileManager = NSFileManager.defaultManager()
+            let directoryURL = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+            let pathComponent = "\(NSUUID().UUIDString)-\(response.suggestedFilename!)"
+            return directoryURL.URLByAppendingPathComponent(pathComponent)
         }
     }
     

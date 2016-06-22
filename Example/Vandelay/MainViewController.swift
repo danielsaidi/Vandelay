@@ -151,6 +151,7 @@ class MainViewController: UITableViewController, ExportDataProvider {
         alert.completion = importTodoItemsCompletedWithResult
         alert.addStringImporter(PasteboardImporter(), withTitle: "From the pasteboard")
         alert.addStringImporter(FileImporter(fileName: todoFileName), withTitle: "From a local file")
+        alert.addStringImporter(DropboxImporter(fileName: todoFileName), withTitle: "From a Dropbox file")
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
