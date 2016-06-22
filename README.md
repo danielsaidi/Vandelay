@@ -1,11 +1,11 @@
+![Vandelay logo](Assets/logo-900.png "Vandelay")
+
 # Vandelay
 
 [![CI Status](http://img.shields.io/travis/Daniel Saidi/Vandelay.svg?style=flat)](https://travis-ci.org/Daniel Saidi/Vandelay)
 [![Version](https://img.shields.io/cocoapods/v/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
 [![License](https://img.shields.io/cocoapods/l/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
 [![Platform](https://img.shields.io/cocoapods/p/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
-
-![Vandelay logo](Assets/logo-900.png "Vandelay")
 
 
 ## What is Vandelay?
