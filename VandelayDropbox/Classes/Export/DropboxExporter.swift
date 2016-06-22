@@ -9,22 +9,48 @@
 /*
  
  This exporter can be used to export strings and large
- data blobs. Since Dropbox exports are async, you will
- receive two callbacks for successful exports - one to
- tell you that the export begun and one to tell you if
- the export succeeded or failed.
+ data blobs to Dropbox.
  
- When using this exporter, make sure that Dropbox have
- been properly setup, as specified in the docs:
- 
- - Create an app in the Dropbox developer portal
- - Call Dropbox.setupWithAppKey(..) when the app is started
- - Add CFBundleURLTypes to Info.plist
- - Add LSApplicationQueriesSchemes to Info.plist
+ Since Dropbox exports are async, you will receive two
+ callbacks; one to tell you that the export begun, and
+ one to tell you if it succeeded or failed.
  
  Use the fileName initializer if your file should have
  the same name at all times. Use the fileNameGenerator
  initializer if you require dynamic file names.
+ 
+ */
+
+/*
+ 
+ Instructions:
+ 
+ When using this exporter, make sure that Dropbox have
+ been properly setup, as specified in the docs:
+ 
+ https://www.dropbox.com/developers/documentation/swift#overview
+ https://www.dropbox.com/developers/documentation/swift#install
+ https://www.dropbox.com/developers/documentation/swift#tutorial
+ 
+ - Create an app in the Dropbox developer portal
+ - Install SwiftyDropbox, preferably with CocoaPods (see install link above)
+ - Import SwiftyDropbox and call Dropbox.setupWithAppKey("...") at app launch
+ - Go to the app target's Info tab and add a URL Type with URL Scheme "db-<APP KEY>"
+ - Open info.plist and add LSApplicationQueriesSchemes (see tutorial link above)
+ 
+ Finally Dropbox requires that the user authorizes the
+ app to be used with Dropbox. Whenever an app requires
+ this authorization to be made, Dropbox will open in a
+ separate app or browser, ask for permission, then pop
+ back to the app.
+ 
+ For this to work, the app must handle the Dropbox url
+ in the AppDelegate class. Have a look at how the demo
+ app handles this.
+ 
+ If you do not handle this callback url, your app will
+ never be authorized, and will just keep on asking for
+ permission.
  
  */
 

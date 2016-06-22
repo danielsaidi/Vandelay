@@ -8,6 +8,7 @@
 
 import UIKit
 import Vandelay
+import VandelayDropbox
 
 class MainViewController: UITableViewController, ExportDataProvider {
 
@@ -82,8 +83,9 @@ class MainViewController: UITableViewController, ExportDataProvider {
         alert.dataProvider = self
         alert.completion = exportCompletedWithResult
         alert.addStringExporter(PasteboardExporter(), withTitle: "To the pasteboard")
-        alert.addStringExporter(EmailExporter(fileName: "todoList.vandelay"), withTitle: "As an e-mail attachment")
         alert.addStringExporter(FileExporter(fileName: "todoList.vandelay"), withTitle: "To a local file")
+        alert.addStringExporter(DropboxExporter(fileName: "todoList.vandelay"), withTitle: "To a Dropbox file")
+        alert.addStringExporter(EmailExporter(fileName: "todoList.vandelay"), withTitle: "As an e-mail attachment")
         presentViewController(alert, animated: true, completion: nil)
     }
     
