@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
 [![Platform](https://img.shields.io/cocoapods/p/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
 
+![Vandelay logo](assets/logo-900.png "Vandelay")
+
 
 ## What is Vandelay?
 
