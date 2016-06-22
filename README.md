@@ -56,10 +56,14 @@ string importer imports strings, while a data importer imports NSData.
 Vandelay comes with support for exporting to and importing from a Dropbox app folder. This means
 that an app can use Vandelay and Dropbox to sync user data to the user's personal Dropbox folder.
 
-Dropbox import and export requires a but of setting up. To use the Dropbox importer and exporter,
-first create a Dropbox developer account, then create a Dropbox app for your iOS app.  When this
-is done, follow the instructions in the DropboxExporter class or read the official documentation
-at [the Dropbox website](https://www.dropbox.com/developers/documentation/swift).
+Dropbox import and export requires a little setting up. First create a Dropbox developer account,
+then create a Dropbox app for your app.  After that, follow Dropbox's install guide and tutorial:
+
+- [Install Guide](https://www.dropbox.com/developers/documentation/swift#install)
+- [Tutorial](https://www.dropbox.com/developers/documentation/swift#tutorial)
+
+You can also check the Dropbox importer and exporter class files for more instructions on how to
+setup Dropbox.
 
 
 
