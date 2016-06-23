@@ -96,19 +96,20 @@ pod "VandelayDropbox"
 
 
 
-## Author
-
-Daniel Saidi, daniel.saidi@gmail.com
-
-
-
 ## CocoaPods
 
-To lint the project, run `pod lib lint` resp. `pod spec link Vandelay.podspec`.
+To lint the project, run `pod lib lint` resp. `pod spec link Vandelay.podspec`. However, there is
+a risk that sometimes you will hit a cache when linting.
 
 To verify that the correct files are pulled from GitHub, type `cd ~/Library/Caches/CocoaPods/Pods`
 then type `open .`. Verify that the content in the Vandelay folders are valid. To clean the cache,
 run `pod cache clean Vandelay`.
+
+
+
+## Author
+
+Daniel Saidi, daniel.saidi@gmail.com
 
 
 
