@@ -8,19 +8,15 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Vandelay'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Vandelay is an importer/exporter for iOS.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
-Vandelay is an importer/exporter for iOS. It can be used to import and export data
-in various ways. It supports platform-independent JSON-serialized data, as well as
-iOS-specific NSData (e.g. if you want to export serialized image data).
+Vandelay is an importer / exporter for iOS, that can be used to import and 
+export data in various ways.
+
+Vandelay supports exporting and importing strings, serialized JSON and iOS
+encoded NSData (e.g. if you have to export objects with data properties).
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'

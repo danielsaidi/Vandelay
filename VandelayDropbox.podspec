@@ -8,19 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VandelayDropbox'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Vandelay is an importer/exporter for iOS.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
-Vandelay is an importer/exporter for iOS. VandelayDropbox adds Dropbox integrations
-to Vandelay, letting you export serialized JSON data and more complex NSData to the
-Dropbox folder used by your app.
+VandelayDropbox adds Dropbox integrations to Vandelay and lets you export
+strings, serialized JSON and encoded NSData to your app's Dropbox folder.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'
@@ -41,5 +34,5 @@ Dropbox folder used by your app.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'SwiftyDropbox', '~> 3.0.0'
-  s.dependency 'Vandelay', '~> 0.1.0'
+  s.dependency 'Vandelay', '~> 0.2.0'
 end
