@@ -98,12 +98,10 @@ pod "VandelayDropbox"
 
 ## CocoaPods
 
-To lint the project, run `pod lib lint` resp. `pod spec link Vandelay.podspec`. However, there is
-a risk that sometimes you will hit a cache when linting.
-
-To verify that the correct files are pulled from GitHub, type `cd ~/Library/Caches/CocoaPods/Pods`
-then type `open .`. Verify that the content in the Vandelay folders are valid. To clean the cache,
-run `pod cache clean Vandelay`.
+When running `pod lib lint` resp. `pod spec lint` for the Vandelay and VandelayDropbox pods, you
+have a risk of hitting an old cache. To verify that the correct files are downloaded from GitHub,
+type `cd ~/Library/Caches/CocoaPods/Pods` then `open .`. Verify that the content in the Vandelay
+folders are valid. To clean the cache, run `pod cache clean Vandelay`.
 
 
 
