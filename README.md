@@ -10,38 +10,40 @@
 
 ## What is Vandelay?
 
-Vandelay is an importer / exporter for iOS that can be used to import and export data in various
-ways. It currently supports:
+Vandelay is an importer / exporter library for iOS. It can be used to import and export data in various
+ways.
 
-Exporting to:
+Vandelay currently supports:
 
- - UIPasteboard
- - E-mail file attachment
- - Local file
- - Dropbox app folder
-
-Importing from:
+**Exporting** to:
 
  - UIPasteboard
  - E-mail file attachment
  - Local file
  - Dropbox app folder
 
-Vandelay comes with a couple of importers and exporters, some ui components as well as some data
-related functionality, like object serialization, file name generators, unique id generation etc.
+**Importing** from:
+
+ - UIPasteboard
+ - E-mail file attachment
+ - Local file
+ - Dropbox app folder
+
+Vandelay comes with a couple of importers and exporters, some UI components as well as some core
+functionality like serialization, file name generators, unique id generation etc.
 
 
 ### Exporting data
 
-A Vandelay exporter can either implement the StringExporter or DataExporter protocol, or both. A
-string exporter exports strings, while a data exporter exports encoded NSData.
+Vandelay exporters can implement the StringExporter or DataExporter protocols, or both. A string
+exporter exports strings (duh), while a data exporter exports encoded NSData.
 
 Since strings are platform-independent, use string exporters whenever possible. For instance, an
 object or collection that can be serialized to JSON, should be exported with a string exporter.
 
-Data exporters, however, can export any objects that can be encoded to NSData, e.g. objects with
-NSData properties that become nil when being serialized. This exported data can only be imported
-on platforms that support NSData, like iOS.
+Data exporters, however, can export any NSData serializable object, e.g. objects with properties
+that become nil when being serialized. This exported data can only be imported on platforms that
+support NSData, like iOS.
 
 
 ### Importing data
@@ -79,6 +81,9 @@ You can then open the example app (use the generated workspace) and run the app.
 
 ## Installation
 
+
+### Cocoapods
+
 Vandelay is available through [CocoaPods](http://cocoapods.org). To install Vandelay, simply add
 the following line to your Podfile:
 
@@ -86,22 +91,15 @@ the following line to your Podfile:
 pod "Vandelay"
 ```
 
+
 ### Dropbox
 
-Dropbox support can be installed as a separate pod. To install VandelayDropbox, add this as well: 
+Dropbox support is installed as a separate pod. To install VandelayDropbox, add this line to the
+Podfile:
 
 ```ruby
 pod "VandelayDropbox"
 ```
-
-
-
-## CocoaPods
-
-When running `pod lib lint` resp. `pod spec lint` for the Vandelay and VandelayDropbox pods, you
-have a risk of hitting an old cache. To verify that the correct files are downloaded from GitHub,
-type `cd ~/Library/Caches/CocoaPods/Pods` then `open .`. Verify that the content in the Vandelay
-folders are valid. To clean the cache, run `pod cache clean Vandelay`.
 
 
 
