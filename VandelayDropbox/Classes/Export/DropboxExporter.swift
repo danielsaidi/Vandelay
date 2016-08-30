@@ -32,25 +32,22 @@
  https://www.dropbox.com/developers/documentation/swift#install
  https://www.dropbox.com/developers/documentation/swift#tutorial
  
+ In short, these documents tell you that you should:
+ 
  - Create an app in the Dropbox developer portal
- - Install SwiftyDropbox, preferably with CocoaPods (see install link above)
+ - Install SwiftyDropbox, preferably with CocoaPods
  - Import SwiftyDropbox and call Dropbox.setupWithAppKey("...") at app launch
  - Go to the app target's Info tab and add a URL Type with URL Scheme "db-<APP KEY>"
- - Open info.plist and add LSApplicationQueriesSchemes (see tutorial link above)
+ - Open info.plist and add the LSApplicationQueriesSchemes from the tutorial
+ - In the app, then ask the user for permission to let Dropbox be used in the app
+ - Handle the callback url that is received once the user has approved or denied permission
  
- Finally Dropbox requires that the user authorizes the
- app to be used with Dropbox. Whenever an app requires
- this authorization to be made, Dropbox will open in a
- separate app or browser, ask for permission, then pop
- back to the app.
+ SwiftyDropbox is automatically added to projects that
+ installs VandelayDropbox with CocoaPods.
  
- For this to work, the app must handle the Dropbox url
- in the AppDelegate class. Have a look at how the demo
- app handles this.
- 
- If you do not handle this callback url, your app will
- never be authorized, and will just keep on asking for
- permission.
+ If you do not handle the callback, the app will never
+ be authorized and will keep asking for the permission
+ everytime the Dropbox exporter or importer is used.
  
  */
 
