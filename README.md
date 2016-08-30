@@ -102,6 +102,12 @@ pod "VandelayDropbox"
 ```
 
 
+## Versioning
+
+Vandelay versions < 1.0.0 will have breaking changes between minor versions. This means that e.g.
+Vandelay 0.3 will not be compatible with Vandelay 0.2.
+
+
 
 ## Author
 
