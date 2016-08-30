@@ -8,8 +8,8 @@
 
 /*
  
- This exporter can be used to send strings and data as
- e-mail attachments.
+ This exporter can export strings and data to an email
+ attachment.
  
  Use the fileName initializer if your file should have
  the same name at all times. Use the fileNameGenerator

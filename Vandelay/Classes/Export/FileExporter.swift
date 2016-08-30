@@ -8,8 +8,8 @@
 
 /*
  
- This exporter can be used to save strings and data to
- the local file system.
+ This exporter can export strings and data to files in
+ the app's document directory.
  
  Use the fileName initializer if your file should have
  the same name at all times. Use the fileNameGenerator

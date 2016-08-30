@@ -8,9 +8,8 @@
 
 /*
  
- This class must be implemented by one or more classes
- in your app, if you use the export alert class. It is
- used to provide Vandelay exporters with data.
+ This protocol can be implemented by classes, that can
+ be used to provide Vandelay with exportable data.
  
  If you only use string export, you can leave the data
  method blank, and vice versa.

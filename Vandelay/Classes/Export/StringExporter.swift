@@ -9,8 +9,7 @@
 /*
  
  This protocol is implemented by all Vandelay exporters
- that can be used to export strings, or serialized data
- such as JSON serialized objects or collections.
+ that can export strings, e.g. JSON serialized objects.
  
  */
 

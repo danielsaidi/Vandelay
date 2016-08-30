@@ -9,8 +9,8 @@
 /*
  
  This protocol is implemented by all Vandelay importers
- that can be used to import NSData. Use a data importer
- when you have exported data with a data exporter.
+ that can import NSData. Use data importers for objects
+ that cannot be serialized to strings or JSON.
  
  */
 

@@ -8,8 +8,7 @@
 
 /*
  
- This exporter can import strings and serialized data
- from the pasteboard.
+ This importer can import strings from the pasteboard.
  
  */
 

@@ -8,9 +8,8 @@
 
 /*
  
- This protocol is implemented by all Vandelay exporters
- that can be used to import strings, or serialized data
- such as JSON serialized objects or collections.
+ This protocol is implemented by all Vandelay importers
+ that can import strings, e.g. JSON serialized objects.
  
  */
 

@@ -8,8 +8,8 @@
 
 /*
  
- This importer can be used to load strings and data in
- files on the local file system.
+ This exporter can import strings and data from a file
+ in the app's document directory.
  
  Use the fileName initializer if your file should have
  the same name at all times. Use the fileNameGenerator
