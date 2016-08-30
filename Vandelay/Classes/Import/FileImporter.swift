@@ -38,7 +38,7 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     
     // MARK: Properties
     
-    public var importMethod: String? { return "File" }
+    public private(set) var importMethod = "File"
     
     private var fileNameGenerator: FileNameGenerator
     

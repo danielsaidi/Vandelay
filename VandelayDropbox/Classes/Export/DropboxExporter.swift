@@ -77,7 +77,7 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     
     // MARK: Properties
     
-    public var exportMethod: String? { return "Dropbox" }
+    public private(set) var exportMethod = "Dropbox"
     
     private var fileNameGenerator: FileNameGenerator
     

@@ -77,7 +77,7 @@ public class DropboxImporter : NSObject, DataImporter, StringImporter {
     
     // MARK: Properties
     
-    public var importMethod: String? { return "Dropbox" }
+    public private(set) var importMethod = "Dropbox"
     
     private var fileNameGenerator: FileNameGenerator
     

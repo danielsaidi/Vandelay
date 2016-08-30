@@ -8,9 +8,9 @@
 
 /*
  
- This protocol gives Vandelay exporters access to some
- basic exporter functions. You should not implement it
- directly, if you create your own exporter.
+ This protocol gives Vandelay exporters access to core
+ export functionality. It should not be implemented by
+ classes outside of Vandelay.
  
  */
 
@@ -18,7 +18,7 @@ import UIKit
 
 public protocol Exporter {
     
-    var exportMethod: String? { get }
+    var exportMethod: String { get }
 }
 
 public extension Exporter {

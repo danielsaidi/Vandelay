@@ -15,6 +15,12 @@
  the same name at all times. Use the fileNameGenerator
  initializer if you require dynamic file names.
  
+ Note that there is no corresponding email importer to
+ this exporter. Instead, an app you must make your app
+ handle certain file types, then detect whenever these
+ kind of files are tapped, e.g. in an e-mail. When the
+ file is opened by the app, read and import the data.
+ 
  */
 
 import MessageUI
@@ -37,7 +43,7 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     
     // MARK: Properties
     
-    public var exportMethod: String? { return "Email" }
+    public private(set) var exportMethod = "Email"
     
     public var emailBody = ""
     public var emailSubject = ""

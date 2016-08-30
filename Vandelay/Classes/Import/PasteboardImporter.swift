@@ -17,7 +17,7 @@ import UIKit
 
 public class PasteboardImporter: NSObject, StringImporter {
 
-    public var importMethod: String? { return "Pasteboard" }
+    public private(set) var importMethod = "Pasteboard"
     
     public func importString(completion: ((result: ImportResult) -> ())?) {
         let string = UIPasteboard.generalPasteboard().string

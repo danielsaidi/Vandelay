@@ -8,9 +8,9 @@
 
 /*
  
- This protocol gives Vandelay importers access to some
- basic importer functions. You should not implement it
- directly, if you create your own importer.
+ This protocol gives Vandelay importers access to core
+ import functionality. It should not be implemented by
+ classes outside of Vandelay.
  
  */
 
@@ -18,7 +18,7 @@ import UIKit
 
 public protocol Importer {
     
-    var importMethod: String? { get }
+    var importMethod: String { get }
 }
 
 public extension Importer {

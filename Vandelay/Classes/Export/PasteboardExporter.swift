@@ -17,7 +17,7 @@ import UIKit
 
 public class PasteboardExporter: NSObject, StringExporter {
     
-    public var exportMethod: String? { return "Pasteboard" }
+    public private(set) var exportMethod = "Pasteboard"
 
     public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
         UIPasteboard.generalPasteboard().string = string

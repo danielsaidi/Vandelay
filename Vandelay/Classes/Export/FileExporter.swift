@@ -37,7 +37,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Properties
     
-    public var exportMethod: String? { return "File" }
+    public private(set) var exportMethod = "File"
     
     private var fileNameGenerator: FileNameGenerator
     
