@@ -1,11 +1,3 @@
-#
-# Be sure to run `pod lib lint Vandelay.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'Vandelay'
   s.version          = '0.3.0'
@@ -24,7 +16,6 @@ This means that 0.3.0 will not be compatible with 0.2.0, and so on.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Daniel Saidi' => 'daniel.saidi@gmail.com' }
   s.source           = { :git => 'https://github.com/danielsaidi/vandelay.git', :tag => s.version.to_s }
@@ -34,11 +25,6 @@ This means that 0.3.0 will not be compatible with 0.2.0, and so on.
 
   s.source_files = 'Vandelay/Classes/**/*.{swift}'
   
-  # s.resource_bundles = {
-  #   'Vandelay' => ['Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
