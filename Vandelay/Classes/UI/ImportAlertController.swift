@@ -31,6 +31,11 @@ public class ImportAlertController: UIAlertController {
     
     // MARK: Public functions
     
+    public func addCancelActionWithTitle(title: String) {
+        let action = UIAlertAction(title: title, style: .Cancel) { action in }
+        addAction(action)
+    }
+
     public func addDataImporter(importer: DataImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .Default) { action in
             importer.importData({ result in
