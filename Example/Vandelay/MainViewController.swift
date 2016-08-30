@@ -23,7 +23,7 @@ import UIKit
 import Vandelay
 import VandelayDropbox
 
-class MainViewController: UITableViewController, ExportDataProvider {
+class MainViewController: UITableViewController, DataProvider, StringProvider {
 
     
     // MARK: View lifecycle
@@ -93,12 +93,12 @@ class MainViewController: UITableViewController, ExportDataProvider {
     private func exportPhotoAlbum() {
         let title = "Export Photo Album"
         let message = "How do you want to export this album?"
-        let alert = ExportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        let alert = DataExportAlert(title: title, message: message, preferredStyle: .ActionSheet)
         alert.dataProvider = self
         alert.completion = exportCompletedWithResult
-        alert.addDataExporter(FileExporter(fileName: photoFileName), withTitle: "To a local file")
-        alert.addDataExporter(DropboxExporter(fileName: photoFileName), withTitle: "To a Dropbox file")
-        alert.addStringExporter(EmailExporter(fileName: photoFileName), withTitle: "As an e-mail attachment")
+        alert.addExporter(FileExporter(fileName: photoFileName), withTitle: "To a local file")
+        alert.addExporter(DropboxExporter(fileName: photoFileName), withTitle: "To a Dropbox file")
+        alert.addExporter(EmailExporter(fileName: photoFileName), withTitle: "As an e-mail attachment")
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
@@ -106,13 +106,13 @@ class MainViewController: UITableViewController, ExportDataProvider {
     private func exportTodoList() {
         let title = "Export Todo List"
         let message = "How do you want to export this list?"
-        let alert = ExportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        let alert = StringExportAlert(title: title, message: message, preferredStyle: .ActionSheet)
         alert.dataProvider = self
         alert.completion = exportCompletedWithResult
-        alert.addStringExporter(PasteboardExporter(), withTitle: "To the pasteboard")
-        alert.addStringExporter(FileExporter(fileName: todoFileName), withTitle: "To a local file")
-        alert.addStringExporter(DropboxExporter(fileName: todoFileName), withTitle: "To a Dropbox file")
-        alert.addStringExporter(EmailExporter(fileName: todoFileName), withTitle: "As an e-mail attachment")
+        alert.addExporter(PasteboardExporter(), withTitle: "To the pasteboard")
+        alert.addExporter(FileExporter(fileName: todoFileName), withTitle: "To a local file")
+        alert.addExporter(DropboxExporter(fileName: todoFileName), withTitle: "To a Dropbox file")
+        alert.addExporter(EmailExporter(fileName: todoFileName), withTitle: "As an e-mail attachment")
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
@@ -216,7 +216,7 @@ class MainViewController: UITableViewController, ExportDataProvider {
     
     
     
-    // MARK: ExportDataProvider
+    // MARK: DataProvider
     
     func getExportData(completion: ((data: NSData?) -> ())) {
         let photos = photoRepository.getPhotos()
@@ -224,7 +224,11 @@ class MainViewController: UITableViewController, ExportDataProvider {
         completion(data: data)
     }
     
-    func getExportDataString(completion: ((string: String?) -> ())) {
+    
+    
+    // MARK: StringProvider
+    
+    func getExportString(completion: ((string: String?) -> ())) {
         let items = todoItemRepository.getTodoItems()
         let dicts = items.map { $0.toDictionary() }
         let json = JsonSerializer().serializeObject(dicts).result
