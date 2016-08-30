@@ -13,24 +13,6 @@
 Vandelay is an importer / exporter library for iOS that can be used to
 import and export data in various ways.
 
-Vandelay currently supports:
-
-**Exporting** to:
-
- - UIPasteboard (string)
- - E-mail file attachment (data | string)
- - Local file (data | string)
- - Dropbox app folder (data | string)
-
-**Importing** from:
-
- - UIPasteboard (string)
- - Local file (data | string)
- - Dropbox app folder (data | string)
-
-Vandelay provides some importers and exporters, some UI components and
-core functionality, like serialization.
-
 
 
 ## Exporting data
@@ -74,6 +56,18 @@ best to use strings whenever possible, but NSData is way more powerful.
 
 
 
+## UI helpers
+
+To make exporting and importing data with Vandelay easier, you can use
+the import and export alert controllers that come with the library.
+
+The `ExportAlertController` and `ImportAlertController` classes can be
+used to show the app user a list of exporter and importer options. Set
+the delegate property of these classes to detect when the user selects
+an exporter or importer, then export and import data using it.
+
+
+
 ## Dropbox
 
 Vandelay comes with additional support for Dropbox export/import. This
@@ -93,28 +87,14 @@ good to go, you can use the Dropbox importer and exporter classes.
 
 
 
-## UI helpers
-
-To make exporting and importing data with Vandelay easier, you can use
-the alert classes that come with the library.
-
-The `DataExportAlert` and `StringExportAlert` classes can be used when
-you should display a list of exporter options to the user. The classes
-require a dataSource that provide the selected exporter with data.
-
-The `DataImportAlert` and `StringImportAlert` classes can be used when
-you should display a list of importer options to the user. The classes
-require a delegate that handles the imported data.
-
-
-
 ## Example Project
 
-Vandelay comes with an example project that lets you export and import strings and data. You can
-import and export todo list items as string data, and photos as NSData.
+Vandelay comes with an example project that lets you export and import
+todo lists (strings) and photo albums (data).
 
-To run the example project, just clone the repo and run `pod install` from the Example directory.
-You can then open the example app (use the generated workspace) and run the app.
+To run the example app, clone this repo and run `pod install` from the
+Example directory. You can then open up the project (use the generated
+workspace) and run the app.
 
 
 
@@ -123,28 +103,30 @@ You can then open the example app (use the generated workspace) and run the app.
 
 ### Cocoapods
 
-Vandelay is available through [CocoaPods](http://cocoapods.org). To install Vandelay, simply add
-the following line to your Podfile:
+Vandelay is available through [CocoaPods](http://cocoapods.org/). Just
+add the following line to your Podfile and run `pod install` to add it
+to your project.
 
 ```ruby
 pod "Vandelay"
 ```
-
+ 
 
 ### Dropbox
 
-Dropbox support is installed as a separate pod. To install VandelayDropbox, add this line to the
-Podfile:
+Dropbox support is added as a separate pod. To install VandelayDropbox,
+just add the following line to your Podfile:
 
 ```ruby
 pod "VandelayDropbox"
 ```
 
 
+
 ## Versioning
 
-Vandelay versions < 1.0.0 will have breaking changes between minor versions. This means that e.g.
-Vandelay 0.3 will not be compatible with Vandelay 0.2.
+Versions < 1.0.0 will have breaking changes between minor versions, so
+Vandelay 0.3.0 will probably not be compatible with Vandelay 0.2.0.
 
 
 
