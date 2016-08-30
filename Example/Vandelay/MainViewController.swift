@@ -107,7 +107,7 @@ class MainViewController: UITableViewController, DataProvider, StringProvider {
         let title = "Export Todo List"
         let message = "How do you want to export this list?"
         let alert = StringExportAlert(title: title, message: message, preferredStyle: .ActionSheet)
-        alert.dataProvider = self
+        alert.stringProvider = self
         alert.completion = exportCompletedWithResult
         alert.addExporter(PasteboardExporter(), withTitle: "To the pasteboard")
         alert.addExporter(FileExporter(fileName: todoFileName), withTitle: "To a local file")

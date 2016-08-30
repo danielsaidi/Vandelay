@@ -11,7 +11,8 @@
  This alert controller can be used to present the user
  with a list of options for exporting data.
  
- You must set the dataProvider and completion property.
+ When you use this class, you must remember to set the
+ dataProvider and completion properties.
  
  */
 

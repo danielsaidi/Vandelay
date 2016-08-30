@@ -11,7 +11,8 @@
  This alert controller can be used to present the user
  with a list of options for exporting string data.
  
- You must set the dataProvider and completion property.
+ When you use this class, you must remember to set the
+ stringProvider and completion properties.
  
  */
 
@@ -23,7 +24,7 @@ public class StringExportAlert: VandelayAlert {
     // MARK: Properties
     
     public var completion: ((result: ExportResult) -> ())!
-    public var dataProvider: StringProvider!
+    public var stringProvider: StringProvider!
     
     
     
@@ -31,7 +32,7 @@ public class StringExportAlert: VandelayAlert {
     
     public func addExporter(exporter: StringExporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .Default) { action in
-            self.dataProvider.getExportString({ string in
+            self.stringProvider.getExportString({ string in
                 if (string == nil) {
                     let error = "StringExportAlert: The data provider did not return any data."
                     let result = exporter.getResultWithErrorMessage(error)
