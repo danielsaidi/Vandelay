@@ -14,7 +14,7 @@ public class ExportResult: NSObject {
         self.state = state
     }
     
-    public var exportMethod: String?
+    public var exportMethod = ""
     public var error: NSError?
     public var filePath: String?
     public var state: ExportState

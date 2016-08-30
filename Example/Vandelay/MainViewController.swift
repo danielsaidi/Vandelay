@@ -126,7 +126,7 @@ class MainViewController: UITableViewController, ExportDataProvider {
         case .Cancelled:
             return "Your export was cancelled."
         case .Completed:
-            return "Your data was exported, using the \"\(result.exportMethod!)\" method"
+            return "Your data was exported, using the \"\(result.exportMethod)\" method"
         case .Failed:
             return "Your export failed with error \(result.error?.description ?? "N/A")."
         case .InProgress:
