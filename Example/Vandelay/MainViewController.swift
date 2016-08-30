@@ -139,7 +139,7 @@ class MainViewController: UITableViewController, ExportDataProvider {
         case .Cancelled:
             return "Your import was cancelled."
         case .Completed:
-            return "Your data was imported, using the \"\(result.importMethod!)\" method"
+            return "Your data was imported, using the \"\(result.importMethod)\" method"
         case .Failed:
             return "Your import failed with error \(result.error?.description ?? "N/A")."
         case .InProgress:
