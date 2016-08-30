@@ -10,7 +10,8 @@
  
  This protocol is implemented by all Vandelay exporters
  that can export NSData. Use data exporters for objects
- that cannot be serialized.
+ that cannot be serialized, such as objects with NSData
+ properties.
  
  */
 

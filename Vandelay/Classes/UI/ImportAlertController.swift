@@ -1,56 +1,47 @@
 //
-//  ImportAlertController.swift
+//  DataImportAlertController.swift
 //  Vandelay
 //
-//  Created by Daniel Saidi on 2016-06-22.
+//  Created by Daniel Saidi on 2016-08-30.
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 /*
  
- This alert controller can be used to easily display a
- list of import options to the user of the app.
+ This alert controller can be used to present the user
+ with options for importing data.
  
- When using this alert class, you must remember to set
- the completion property. If you do not, the class can
- not notify you with info on how the import is going.
+ Add one or several importers with addDataImporter and
+ addStringImporter functions, then set the delegate to
+ detect when the user selects an importer.
  
  */
 
-
 import UIKit
+
+
+public protocol ImportAlertControllerDelegate: class {
+    func alertController(controller: ImportAlertController, didPickDataImporter importer: DataImporter)
+    func alertController(controller: ImportAlertController, didPickStringImporter importer: StringImporter)
+}
+
 
 public class ImportAlertController: UIAlertController {
     
-    
-    // MARK: Properties
-    
-    public var completion: ((result: ImportResult) -> ())?
+    weak public var delegate: ImportAlertControllerDelegate?
     
     
-    
-    // MARK: Public functions
-    
-    public func addCancelActionWithTitle(title: String) {
-        let action = UIAlertAction(title: title, style: .Cancel) { action in }
-        addAction(action)
-    }
-
     public func addDataImporter(importer: DataImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .Default) { action in
-            importer.importData({ result in
-                self.completion?(result: result)
-            })
+            self.delegate?.alertController(self, didPickDataImporter: importer)
         }
-        self.addAction(action)
+        addAction(action)
     }
     
     public func addStringImporter(importer: StringImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .Default) { action in
-            importer.importString({ result in
-                self.completion?(result: result)
-            })
+            self.delegate?.alertController(self, didPickStringImporter: importer)
         }
-        self.addAction(action)
+        addAction(action)
     }
 }
