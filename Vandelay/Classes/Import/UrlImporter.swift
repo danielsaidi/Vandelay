@@ -14,9 +14,9 @@
  */
 
 
-import UIKit
+import Foundation
 
-public class UrlImporter: NSObject, DataImporter, StringImporter {
+public class UrlImporter: NSObject, DataImporter {
     
     
     // MARK: Initialization
@@ -39,24 +39,16 @@ public class UrlImporter: NSObject, DataImporter, StringImporter {
     // MARK: Public functions
     
     public func importData(completion: ((result: ImportResult) -> ())?) {
-        do {
-            let data = try NSData(contentsOfURL: url)
-            if (data != nil) {
-                completion?(result: getResultWithData(data!))
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url) { (data, response, error) in
+            if (error != nil) {
+                completion?(result: self.getResultWithError(error!))
+            } else if (data != nil) {
+                completion?(result: self.getResultWithData(data!))
             } else {
-                completion?(result: self.getResultWithErrorMessage("No data in url \(url)"))
+                completion?(result: self.getResultWithErrorMessage("No data in url \(self.url)"))
             }
-        } catch {
-            completion?(result: self.getResultWithError(error as NSError))
         }
-    }
-    
-    public func importString(completion: ((result: ImportResult) -> ())?) {
-        do {
-            let string = try String(contentsOfURL: url)
-            completion?(result: getResultWithString(string))
-        } catch {
-            completion?(result: self.getResultWithError(error as NSError))
-        }
+        task.resume()
     }
 }
