@@ -161,7 +161,7 @@ class MainViewController: UITableViewController, ExportAlertControllerDelegate, 
     private func exportTodoListWithExporter(exporter: StringExporter) {
         let items = todoItemRepository.getTodoItems()
         let dicts = items.map { $0.toDictionary() }
-        let json = JsonSerializer().serializeObject(dicts).result
+        let json = JsonObjectSerializer().serializeObject(dicts).result
         exporter.exportString(json!) { result in
             self.exportCompletedWithResult(result)
         }
@@ -235,7 +235,7 @@ class MainViewController: UITableViewController, ExportAlertControllerDelegate, 
             }
             
             if let string = result.string {
-                let jsonResult = JsonSerializer().deserializeString(string)
+                let jsonResult = JsonObjectSerializer().deserializeString(string)
                 if (jsonResult.error != nil) {
                     self.alertTitle("Error", andMessage: "Could not parse JSON")
                     return

@@ -1,5 +1,5 @@
 //
-//  Serializer.swift
+//  ObjectSerializer.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2015-03-21.
@@ -15,7 +15,7 @@
 
 import UIKit
 
-public protocol Serializer {
+public protocol ObjectSerializer {
     
     func deserializeString(string: String) -> (result: AnyObject?, error: NSError?)
     func serializeObject(object: AnyObject) -> (result: String?, error: NSError?)

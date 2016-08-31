@@ -23,8 +23,8 @@
 		154882721545C9B4D3535BFCCF5AFEA6 /* StringExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC4A1AB9A852A82C3F7D945DBBC3C31 /* StringExporter.swift */; };
 		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCD8B5A6DFA62D29733E7B9B610D42 /* Timeline.swift */; };
 		182F2C898572B79D603972EE879D926E /* RandomFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9CD4D55EAE28B3563D64187C4B6969 /* RandomFileNameGenerator.swift */; };
-		1AC2381AF6D77E8FC479F5A7A94E1223 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D786B7368EC3A712AA3E44866271024 /* Serializer.swift */; };
-		1B28FB701B1BD801203E94BB9F7635A6 /* JsonSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FAC08A5FB19A4DA6BC25F6C84EDF85 /* JsonSerializer.swift */; };
+		1AC2381AF6D77E8FC479F5A7A94E1223 /* ObjectSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D786B7368EC3A712AA3E44866271024 /* ObjectSerializer.swift */; };
+		1B28FB701B1BD801203E94BB9F7635A6 /* JsonObjectSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FAC08A5FB19A4DA6BC25F6C84EDF85 /* JsonObjectSerializer.swift */; };
 		1CFF722FD234B1E5E8B099BECEFF33A2 /* SwiftyDropbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0B29F50D12627D862AC9FE12824E6D /* SwiftyDropbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D66CC9D1EA008E1C3F635685BB4B9E2 /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8804C6D8C938D293CA76FBC97E65BFF /* FileImporter.swift */; };
 		1ED8C77E9422C66BBF56E6C10D5826F0 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = B78067C25DA8BD78E321914B51ADCB92 /* NMBExceptionCapture.m */; };
@@ -43,6 +43,8 @@
 		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F853C1F061D6E12FF526ACD1049D5A5 /* NetworkReachabilityManager.swift */; };
 		355B99114871467C0BD8484887040254 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5CFFC0C29A3AD1811E2844E26E14C /* DSL.swift */; };
 		38F5CE4B4C59A81734A93E32D35B696E /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D59A24E91435FAB452D93BE4BF711 /* FailureMessage.swift */; };
+		3BA582EE1D7709E000EF76A0 /* Base64StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA582ED1D7709E000EF76A0 /* Base64StringEncoder.swift */; };
+		3BA582F01D7709FD00EF76A0 /* StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA582EF1D7709FD00EF76A0 /* StringEncoder.swift */; };
 		3C5F14E6D4EF30D00A9FA89959A1D336 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35372D5CA5E19973CEFE3ED457FDF8B9 /* Vandelay.framework */; };
 		3D1BB98DEA422D8F173613EC715488B9 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26135DE54F9F1404C3F84407F71BFFBF /* PostNotification.swift */; };
 		3DF3B34D1CD1A59E206D9AC9CEDD7D60 /* EmailExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA0273438DC712CB85F0156E2D151E /* EmailExporter.swift */; };
@@ -271,7 +273,7 @@
 		1BC6096B6FAC62CB3A20EF3FADB14FC7 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
 		1BE4266FF40C73B2247FD02FD2280DC6 /* CurrentTestCaseTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CurrentTestCaseTracker.m; path = Sources/Nimble/objc/CurrentTestCaseTracker.m; sourceTree = "<group>"; };
 		1BF81110A4E0B154019528AD6E363ED3 /* DataImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataImporter.swift; sourceTree = "<group>"; };
-		1D786B7368EC3A712AA3E44866271024 /* Serializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
+		1D786B7368EC3A712AA3E44866271024 /* ObjectSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ObjectSerializer.swift; sourceTree = "<group>"; };
 		1DF89853A6E89AEBA95D2E0E6CA5E3C6 /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Sources/Quick/QuickSpec.h; sourceTree = "<group>"; };
 		1E0E9A468A0B3DE2A2FF32B1977E3EFD /* Vandelay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Vandelay.xcconfig; sourceTree = "<group>"; };
 		1F3D93720B82C25D5589E99E3F4FA1C2 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Sources/Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
@@ -300,6 +302,8 @@
 		36F66BAC40C09A598FA4A2D1D962C492 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
 		392DC9B26F7CA09312B5BF55A6F87A5A /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Quick/Filter.swift; sourceTree = "<group>"; };
 		3B97A4D725DB450869D6E89B334293FD /* Pods-Vandelay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vandelay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3BA582ED1D7709E000EF76A0 /* Base64StringEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64StringEncoder.swift; sourceTree = "<group>"; };
+		3BA582EF1D7709FD00EF76A0 /* StringEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEncoder.swift; sourceTree = "<group>"; };
 		3CE7A63BFD9E02C5BB1D693571E27BFA /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		3D21B58A78FBB6A5CCBC70AAD302D372 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/Quick/World.h; sourceTree = "<group>"; };
 		41CCFB620634AC093288195C552E1CF7 /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Sources/Nimble/Wrappers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
@@ -453,7 +457,7 @@
 		F10F9AC7C81DBFD37E61E1A0A264AF6F /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/Nimble/Expression.swift; sourceTree = "<group>"; };
 		F13D0643EB8BE2CA2880EA941311C7E8 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		F2A9E2D10DECE0C0276C13A211B4CC4C /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Nimble.modulemap; sourceTree = "<group>"; };
-		F5FAC08A5FB19A4DA6BC25F6C84EDF85 /* JsonSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JsonSerializer.swift; sourceTree = "<group>"; };
+		F5FAC08A5FB19A4DA6BC25F6C84EDF85 /* JsonObjectSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JsonObjectSerializer.swift; sourceTree = "<group>"; };
 		F767BF334F44B8B66C721C4401F4C6D3 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Sources/Quick/DSL/World+DSL.h"; sourceTree = "<group>"; };
 		FA2C9B125D02F9BEF4846EDF0D11E73D /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
 		FC840CDDF4C9A55F59E48DAF4FB442E7 /* SwiftyDropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyDropbox.h; path = Source/SwiftyDropbox.h; sourceTree = "<group>"; };
@@ -577,6 +581,15 @@
 				B01C21F5D0ED21B2D77A26F469FF0477 /* Pods-Vandelay_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3BA582EC1D7709B900EF76A0 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				3BA582ED1D7709E000EF76A0 /* Base64StringEncoder.swift */,
+				3BA582EF1D7709FD00EF76A0 /* StringEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 		3F441605801E1688FC1644A17B476E81 /* Development Pods */ = {
@@ -850,6 +863,7 @@
 		A27284F88046373A0BF7B1851B9B0D2F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3BA582EC1D7709B900EF76A0 /* Encoding */,
 				0CE9F5040B4DF7782E14BD6B7C2D1395 /* Export */,
 				74658EE86EE18405BD107B3315CA0DEC /* File */,
 				BCFB24C54C310706F9A28005BF260618 /* Id */,
@@ -863,8 +877,8 @@
 		AED72653EC4AA42E8295EB133680D60F /* Serialization */ = {
 			isa = PBXGroup;
 			children = (
-				F5FAC08A5FB19A4DA6BC25F6C84EDF85 /* JsonSerializer.swift */,
-				1D786B7368EC3A712AA3E44866271024 /* Serializer.swift */,
+				F5FAC08A5FB19A4DA6BC25F6C84EDF85 /* JsonObjectSerializer.swift */,
+				1D786B7368EC3A712AA3E44866271024 /* ObjectSerializer.swift */,
 			);
 			path = Serialization;
 			sourceTree = "<group>";
@@ -1370,11 +1384,13 @@
 				5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */,
 				095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */,
 				4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */,
+				3BA582F01D7709FD00EF76A0 /* StringEncoder.swift in Sources */,
 				C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */,
 				34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */,
 				BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */,
 				C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */,
 				EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */,
+				3BA582EE1D7709E000EF76A0 /* Base64StringEncoder.swift in Sources */,
 				62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */,
 				3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */,
 				AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */,
@@ -1460,11 +1476,11 @@
 				5C04B76D7F1F15F90424D1E91AF67B2B /* Importer.swift in Sources */,
 				5E0DCFD7A0CB034153314E956B7743F7 /* ImportResult.swift in Sources */,
 				933AF2C7F7FF333EA6ACA83091B24D6B /* ImportState.swift in Sources */,
-				1B28FB701B1BD801203E94BB9F7635A6 /* JsonSerializer.swift in Sources */,
+				1B28FB701B1BD801203E94BB9F7635A6 /* JsonObjectSerializer.swift in Sources */,
 				B9B3E47EF7265B03AB403C0B0ECA14AB /* PasteboardExporter.swift in Sources */,
 				05945531705FB79824B99EFD5F01718A /* PasteboardImporter.swift in Sources */,
 				182F2C898572B79D603972EE879D926E /* RandomFileNameGenerator.swift in Sources */,
-				1AC2381AF6D77E8FC479F5A7A94E1223 /* Serializer.swift in Sources */,
+				1AC2381AF6D77E8FC479F5A7A94E1223 /* ObjectSerializer.swift in Sources */,
 				0C5456C4A6CE29797F530FE7AA5252BC /* StaticFileNameGenerator.swift in Sources */,
 				154882721545C9B4D3535BFCCF5AFEA6 /* StringExporter.swift in Sources */,
 				C49F620884018CBB29940FA2D991E190 /* StringImporter.swift in Sources */,

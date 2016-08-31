@@ -1,5 +1,5 @@
 //
-//  JsonSerializer.swift
+//  JsonObjectSerializer.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2015-03-21.
@@ -18,7 +18,7 @@
 
 import UIKit
 
-public class JsonSerializer: NSObject, Serializer {
+public class JsonObjectSerializer: NSObject, ObjectSerializer {
 
     public func deserializeString(string: String) -> (result: AnyObject?, error: NSError?) {
         do {
