@@ -1,8 +1,8 @@
 {
   "name": "VandelayDropbox",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "summary": "Vandelay is an importer/exporter for iOS.",
-  "description": "VandelayDropbox adds Dropbox integrations to Vandelay and lets you export\nstrings, serialized JSON and encoded NSData to your app's Dropbox folder.",
+  "description": "VandelayDropbox adds Dropbox integrations to Vandelay, and lets you export\nstrings, serialized JSON and encoded NSData to your app's Dropbox folder.",
   "homepage": "https://github.com/danielsaidi/vandelay",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/danielsaidi/vandelay.git",
-    "tag": "0.2.0"
+    "tag": "0.3.0"
   },
   "social_media_url": "https://twitter.com/danielsaidi",
   "platforms": {
@@ -25,7 +25,7 @@
       "~> 3.0.0"
     ],
     "Vandelay": [
-      "~> 0.2.0"
+      "~> 0.3.0"
     ]
   }
 }
