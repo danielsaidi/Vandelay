@@ -47,6 +47,7 @@
 		3BA582F01D7709FD00EF76A0 /* StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA582EF1D7709FD00EF76A0 /* StringEncoder.swift */; };
 		3BA582F51D7713C700EF76A0 /* ExportAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA582F11D77139A00EF76A0 /* ExportAlertController.swift */; };
 		3BA582F61D7713CA00EF76A0 /* ImportAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA582F31D7713B300EF76A0 /* ImportAlertController.swift */; };
+		3BA582F91D77159900EF76A0 /* UrlImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA582F71D7714BD00EF76A0 /* UrlImporter.swift */; };
 		3C5F14E6D4EF30D00A9FA89959A1D336 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35372D5CA5E19973CEFE3ED457FDF8B9 /* Vandelay.framework */; };
 		3D1BB98DEA422D8F173613EC715488B9 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26135DE54F9F1404C3F84407F71BFFBF /* PostNotification.swift */; };
 		3DF3B34D1CD1A59E206D9AC9CEDD7D60 /* EmailExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA0273438DC712CB85F0156E2D151E /* EmailExporter.swift */; };
@@ -306,6 +307,7 @@
 		3BA582EF1D7709FD00EF76A0 /* StringEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEncoder.swift; sourceTree = "<group>"; };
 		3BA582F11D77139A00EF76A0 /* ExportAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportAlertController.swift; sourceTree = "<group>"; };
 		3BA582F31D7713B300EF76A0 /* ImportAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportAlertController.swift; sourceTree = "<group>"; };
+		3BA582F71D7714BD00EF76A0 /* UrlImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlImporter.swift; sourceTree = "<group>"; };
 		3CE7A63BFD9E02C5BB1D693571E27BFA /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		3D21B58A78FBB6A5CCBC70AAD302D372 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/Quick/World.h; sourceTree = "<group>"; };
 		41CCFB620634AC093288195C552E1CF7 /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Sources/Nimble/Wrappers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
@@ -613,6 +615,7 @@
 				569AADA39A5988C7AF62F8DCD84A8735 /* ImportState.swift */,
 				DEED3768F9935233696F751ADB5B7CB6 /* PasteboardImporter.swift */,
 				C3AE79BF7E50BB212AD1FD14EE97594B /* StringImporter.swift */,
+				3BA582F71D7714BD00EF76A0 /* UrlImporter.swift */,
 			);
 			path = Import;
 			sourceTree = "<group>";
@@ -1462,6 +1465,7 @@
 				73293791620A2D5E0E1EDA6C31E136C4 /* FileExporter.swift in Sources */,
 				1D66CC9D1EA008E1C3F635685BB4B9E2 /* FileImporter.swift in Sources */,
 				606F1AB38208F3E480AACB6B268AADAD /* FileNameGenerator.swift in Sources */,
+				3BA582F91D77159900EF76A0 /* UrlImporter.swift in Sources */,
 				A3F48D69CC0CA1B41D488B015FA4EDDC /* IdGenerator.swift in Sources */,
 				5C04B76D7F1F15F90424D1E91AF67B2B /* Importer.swift in Sources */,
 				5E0DCFD7A0CB034153314E956B7743F7 /* ImportResult.swift in Sources */,
