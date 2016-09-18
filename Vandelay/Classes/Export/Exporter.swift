@@ -23,6 +23,16 @@ public protocol Exporter {
 
 public extension Exporter {
     
+    public var topmostViewController: UIViewController? {
+        guard var vc = UIApplication.shared.keyWindow?.rootViewController else { return nil }
+        while let pvc = vc.presentedViewController {
+            vc = pvc
+        }
+        return vc
+    }
+    
+    
+    
     public func getResult(withError error: NSError) -> ExportResult {
         let result = ExportResult(state: .failed)
         result.error = error

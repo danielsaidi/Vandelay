@@ -19,13 +19,14 @@
 
 import Foundation
 
-public class FileExporter: NSObject{/* TODO , DataExporter, StringExporter {
+public class FileExporter: NSObject, DataExporter, StringExporter {
     
      
     // MARK: Initialization
     
     public convenience init(fileName: String) {
-        self.init(fileNameGenerator: StaticFileNameGenerator(fileName: fileName))
+        let generator = StaticFileNameGenerator(fileName: fileName)
+        self.init(fileNameGenerator: generator)
     }
     
     public init(fileNameGenerator: FileNameGenerator) {
@@ -45,37 +46,40 @@ public class FileExporter: NSObject{/* TODO , DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func export(data: Data, completion: ((_ result: ExportResult) -> ())?) {
-        let filePath = getFilePath()
+    public func exportData(_ data: Data, completion: ((_ result: ExportResult) -> ())?) {
         do {
-            try data.write(to: withFilePath, options: .atomicWrite)
+            let filePath = getPath()!
+            let url = URL(string: filePath)!
+            try data.write(to: url, options: .atomicWrite)
+            let result = getResult(withFilePath: filePath)
+            completion?(result)
         } catch {
-            completion?(self.getResult(withError: error))
+            let errorMessage = "Could not export data to local file."
+            completion?(self.getResult(withErrorMessage: errorMessage))
         }
-        completion?(getResult(withFilePath: filePath))
     }
     
-    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
-        guard
-            let filePath = getFilePath(),
-            let url = URL(string: filePath) else {
-                let result = getResult(withErrorMessage: "foo")
-                completion(getResult(withErrorMessage: "Could not generate a valid file url"))
+    public func exportString(_ string: String, completion: ((_ result: ExportResult) -> ())?) {
+        do {
+            let filePath = getPath()!
+            let url = URL(string: filePath)!
+            try string.write(to: url, atomically: true, encoding: .utf8)
+            let result = getResult(withFilePath: filePath)
+            completion?(result)
+        } catch {
+            let errorMessage = "Could not export data to local file."
+            completion?(self.getResult(withErrorMessage: errorMessage))
         }
-        
-        string.write(to: url, atomically: true, encoding: .utf8)
-        completion?(getResult(withFilePath: filePath))
     }
     
     
     
     // MARK: Private functions
     
-    private func getFilePath() -> String? {
+    private func getPath() -> String? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         guard paths.count > 0 else { return nil }
         let fileName = fileNameGenerator.getFileName()
         return "\(paths.first!)/\(fileName)"
     }
- */
 }

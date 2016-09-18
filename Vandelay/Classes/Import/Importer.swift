@@ -23,6 +23,15 @@ public protocol Importer {
 
 public extension Importer {
     
+    public var topmostViewController: UIViewController? {
+        guard var vc = UIApplication.shared.keyWindow?.rootViewController else { return nil }
+        while let pvc = vc.presentedViewController {
+            vc = pvc
+        }
+        return vc
+    }
+    
+    
     public func getResult(withData data: Data) -> ImportResult {
         let result = ImportResult(state: .completed)
         result.data = data

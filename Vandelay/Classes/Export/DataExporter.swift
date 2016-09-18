@@ -19,5 +19,5 @@ import Foundation
 
 public protocol DataExporter: class, Exporter {
     
-    func export(_ data: Data, completion: ((_ result: ExportResult) -> ())?)
+    func exportData(_ data: Data, completion: ((_ result: ExportResult) -> ())?)
 }
