@@ -7,7 +7,7 @@
 import Foundation
 
 /// Datatypes and serializers for the team_policies namespace
-open class TeamPolicies {
+public class TeamPolicies {
     /// The EmmState union
     public enum EmmState: CustomStringConvertible {
         /// Emm token is disabled
@@ -23,9 +23,9 @@ open class TeamPolicies {
             return "\(SerializeUtil.prepareJSONForSerialization(EmmStateSerializer().serialize(self)))"
         }
     }
-    open class EmmStateSerializer: JSONSerializer {
+    public class EmmStateSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: EmmState) -> JSON {
+        public func serialize(_ value: EmmState) -> JSON {
             switch value {
                 case .disabled:
                     var d = [String: JSON]()
@@ -45,7 +45,7 @@ open class TeamPolicies {
                     return .dictionary(d)
             }
         }
-        open func deserialize(_ json: JSON) -> EmmState {
+        public func deserialize(_ json: JSON) -> EmmState {
             switch json {
                 case .dictionary(let d):
                     let tag = Serialization.getTag(d)
@@ -80,9 +80,9 @@ open class TeamPolicies {
             return "\(SerializeUtil.prepareJSONForSerialization(SharedFolderJoinPolicySerializer().serialize(self)))"
         }
     }
-    open class SharedFolderJoinPolicySerializer: JSONSerializer {
+    public class SharedFolderJoinPolicySerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: SharedFolderJoinPolicy) -> JSON {
+        public func serialize(_ value: SharedFolderJoinPolicy) -> JSON {
             switch value {
                 case .fromTeamOnly:
                     var d = [String: JSON]()
@@ -98,7 +98,7 @@ open class TeamPolicies {
                     return .dictionary(d)
             }
         }
-        open func deserialize(_ json: JSON) -> SharedFolderJoinPolicy {
+        public func deserialize(_ json: JSON) -> SharedFolderJoinPolicy {
             switch json {
                 case .dictionary(let d):
                     let tag = Serialization.getTag(d)
@@ -131,9 +131,9 @@ open class TeamPolicies {
             return "\(SerializeUtil.prepareJSONForSerialization(SharedFolderMemberPolicySerializer().serialize(self)))"
         }
     }
-    open class SharedFolderMemberPolicySerializer: JSONSerializer {
+    public class SharedFolderMemberPolicySerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: SharedFolderMemberPolicy) -> JSON {
+        public func serialize(_ value: SharedFolderMemberPolicy) -> JSON {
             switch value {
                 case .team:
                     var d = [String: JSON]()
@@ -149,7 +149,7 @@ open class TeamPolicies {
                     return .dictionary(d)
             }
         }
-        open func deserialize(_ json: JSON) -> SharedFolderMemberPolicy {
+        public func deserialize(_ json: JSON) -> SharedFolderMemberPolicy {
             switch json {
                 case .dictionary(let d):
                     let tag = Serialization.getTag(d)
@@ -187,9 +187,9 @@ open class TeamPolicies {
             return "\(SerializeUtil.prepareJSONForSerialization(SharedLinkCreatePolicySerializer().serialize(self)))"
         }
     }
-    open class SharedLinkCreatePolicySerializer: JSONSerializer {
+    public class SharedLinkCreatePolicySerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: SharedLinkCreatePolicy) -> JSON {
+        public func serialize(_ value: SharedLinkCreatePolicy) -> JSON {
             switch value {
                 case .defaultPublic:
                     var d = [String: JSON]()
@@ -209,7 +209,7 @@ open class TeamPolicies {
                     return .dictionary(d)
             }
         }
-        open func deserialize(_ json: JSON) -> SharedLinkCreatePolicy {
+        public func deserialize(_ json: JSON) -> SharedLinkCreatePolicy {
             switch json {
                 case .dictionary(let d):
                     let tag = Serialization.getTag(d)
@@ -232,32 +232,32 @@ open class TeamPolicies {
     }
 
     /// Policies governing team members.
-    open class TeamMemberPolicies: CustomStringConvertible {
+    public class TeamMemberPolicies: CustomStringConvertible {
         /// Policies governing sharing.
-        open let sharing: TeamPolicies.TeamSharingPolicies
+        public let sharing: TeamPolicies.TeamSharingPolicies
         /// This describes the Enterprise Mobility Management (EMM) state for this team. This information can be used to
         /// understand if an organization is integrating with a third-party EMM vendor to further manage and apply
         /// restrictions upon the team's Dropbox usage on mobile devices. This is a new feature and in the future we'll
         /// be adding more new fields and additional documentation.
-        open let emmState: TeamPolicies.EmmState
+        public let emmState: TeamPolicies.EmmState
         public init(sharing: TeamPolicies.TeamSharingPolicies, emmState: TeamPolicies.EmmState) {
             self.sharing = sharing
             self.emmState = emmState
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(TeamMemberPoliciesSerializer().serialize(self)))"
         }
     }
-    open class TeamMemberPoliciesSerializer: JSONSerializer {
+    public class TeamMemberPoliciesSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: TeamMemberPolicies) -> JSON {
+        public func serialize(_ value: TeamMemberPolicies) -> JSON {
             let output = [ 
             "sharing": TeamPolicies.TeamSharingPoliciesSerializer().serialize(value.sharing),
             "emm_state": TeamPolicies.EmmStateSerializer().serialize(value.emmState),
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> TeamMemberPolicies {
+        public func deserialize(_ json: JSON) -> TeamMemberPolicies {
             switch json {
                 case .dictionary(let dict):
                     let sharing = TeamPolicies.TeamSharingPoliciesSerializer().deserialize(dict["sharing"] ?? .null)
@@ -270,25 +270,25 @@ open class TeamPolicies {
     }
 
     /// Policies governing sharing within and outside of the team.
-    open class TeamSharingPolicies: CustomStringConvertible {
+    public class TeamSharingPolicies: CustomStringConvertible {
         /// Who can join folders shared by team members.
-        open let sharedFolderMemberPolicy: TeamPolicies.SharedFolderMemberPolicy
+        public let sharedFolderMemberPolicy: TeamPolicies.SharedFolderMemberPolicy
         /// Which shared folders team members can join.
-        open let sharedFolderJoinPolicy: TeamPolicies.SharedFolderJoinPolicy
+        public let sharedFolderJoinPolicy: TeamPolicies.SharedFolderJoinPolicy
         /// What is the visibility of newly created shared links.
-        open let sharedLinkCreatePolicy: TeamPolicies.SharedLinkCreatePolicy
+        public let sharedLinkCreatePolicy: TeamPolicies.SharedLinkCreatePolicy
         public init(sharedFolderMemberPolicy: TeamPolicies.SharedFolderMemberPolicy, sharedFolderJoinPolicy: TeamPolicies.SharedFolderJoinPolicy, sharedLinkCreatePolicy: TeamPolicies.SharedLinkCreatePolicy) {
             self.sharedFolderMemberPolicy = sharedFolderMemberPolicy
             self.sharedFolderJoinPolicy = sharedFolderJoinPolicy
             self.sharedLinkCreatePolicy = sharedLinkCreatePolicy
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(TeamSharingPoliciesSerializer().serialize(self)))"
         }
     }
-    open class TeamSharingPoliciesSerializer: JSONSerializer {
+    public class TeamSharingPoliciesSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: TeamSharingPolicies) -> JSON {
+        public func serialize(_ value: TeamSharingPolicies) -> JSON {
             let output = [ 
             "shared_folder_member_policy": TeamPolicies.SharedFolderMemberPolicySerializer().serialize(value.sharedFolderMemberPolicy),
             "shared_folder_join_policy": TeamPolicies.SharedFolderJoinPolicySerializer().serialize(value.sharedFolderJoinPolicy),
@@ -296,7 +296,7 @@ open class TeamPolicies {
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> TeamSharingPolicies {
+        public func deserialize(_ json: JSON) -> TeamSharingPolicies {
             switch json {
                 case .dictionary(let dict):
                     let sharedFolderMemberPolicy = TeamPolicies.SharedFolderMemberPolicySerializer().deserialize(dict["shared_folder_member_policy"] ?? .null)

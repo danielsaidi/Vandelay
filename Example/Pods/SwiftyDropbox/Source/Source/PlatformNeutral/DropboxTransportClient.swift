@@ -5,12 +5,12 @@
 import Foundation
 import Alamofire
 
-open class DropboxTransportClient {
+public class DropboxTransportClient {
     static let version = "4.0.0"
   
-    open let backgroundManager: SessionManager
-    open var accessToken: String
-    open var selectUser: String?
+    public let backgroundManager: SessionManager
+    public var accessToken: String
+    public var selectUser: String?
     var baseHosts: [String: String]
     var userAgent: String
 
@@ -19,7 +19,7 @@ open class DropboxTransportClient {
     }
 
     public init(accessToken: String, baseHosts: [String: String]?, userAgent: String?, selectUser: String?) {
-        let backgroundConfig = URLSessionConfiguration.background(withIdentifier: "com.dropbox.SwiftyDropbox_" + UUID().uuidString)
+        let backgroundConfig = URLSessionConfiguration.background(withIdentifier: "com.dropbox.SwiftyDropbox_" + NSUUID().uuidString)
         let backgroundManager = SessionManager(configuration: backgroundConfig)
         backgroundManager.startRequestsImmediately = false
         
@@ -43,7 +43,7 @@ open class DropboxTransportClient {
         }
     }
 
-    open func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
+    public func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType? = nil) -> RpcRequest<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
         let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
@@ -73,7 +73,7 @@ open class DropboxTransportClient {
     }
   
     struct SwiftyArgEncoding: ParameterEncoding {
-        fileprivate let rawJsonRequest: Data
+        private let rawJsonRequest: Data
       
         init(rawJsonRequest: Data) {
             self.rawJsonRequest = rawJsonRequest
@@ -86,7 +86,7 @@ open class DropboxTransportClient {
         }
     }
 
-    open func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
+    public func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType, input: UploadBody) -> UploadRequest<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
         let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
@@ -113,7 +113,7 @@ open class DropboxTransportClient {
         return uploadRequestObj
     }
 
-    open func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
+    public func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType, overwrite: Bool, destination: @escaping (URL, HTTPURLResponse) -> URL) -> DownloadRequestFile<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
         let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
@@ -212,8 +212,8 @@ open class DropboxTransportClient {
     }
 }
 
-open class Box<T> {
-    open let unboxed: T
+public class Box<T> {
+    public let unboxed: T
     init (_ v: T) { self.unboxed = v }
 }
 
@@ -327,7 +327,7 @@ public enum UploadBody {
 /// These objects are constructed by the SDK; users of the SDK do not need to create them manually.
 ///
 /// Pass in a closure to the `response` method to handle a response or error.
-open class Request<RSerial: JSONSerializer, ESerial: JSONSerializer> {
+public class Request<RSerial: JSONSerializer, ESerial: JSONSerializer> {
     let responseSerializer: RSerial
     let errorSerializer: ESerial
 
@@ -394,19 +394,19 @@ open class Request<RSerial: JSONSerializer, ESerial: JSONSerializer> {
 }
 
 /// An "rpc-style" request
-open class RpcRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
-    open let request: Alamofire.DataRequest
+public class RpcRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
+    public let request: Alamofire.DataRequest
 
     public init(request: Alamofire.DataRequest, responseSerializer: RSerial, errorSerializer: ESerial) {
         self.request = request
         super.init(responseSerializer: responseSerializer, errorSerializer: errorSerializer)
     }
   
-    open func cancel() {
+    public func cancel() {
         self.request.cancel()
     }
 
-    open func response(_ completionHandler: @escaping (RSerial.ValueType?, CallError<ESerial.ValueType>?) -> Void) -> Self {
+    public func response(_ completionHandler: @escaping (RSerial.ValueType?, CallError<ESerial.ValueType>?) -> Void) -> Self {
         self.request.validate().response { response in
             if let error = response.error {
                 completionHandler(nil, self.handleResponseError(response.response, data: response.data!, error: error))
@@ -419,26 +419,26 @@ open class RpcRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request
 }
 
 /// An "upload-style" request
-open class UploadRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
-    open let request: Alamofire.UploadRequest
+public class UploadRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
+    public let request: Alamofire.UploadRequest
 
     public init(request: Alamofire.UploadRequest, responseSerializer: RSerial, errorSerializer: ESerial) {
         self.request = request
         super.init(responseSerializer: responseSerializer, errorSerializer: errorSerializer)
     }
   
-    open func progress(_ progressHandler: @escaping ((Progress) -> Void)) -> Self {
+    public func progress(_ progressHandler: @escaping ((Progress) -> Void)) -> Self {
         self.request.uploadProgress { progressData in
             progressHandler(progressData)
         }
         return self
     }
   
-    open func cancel() {
+    public func cancel() {
         self.request.cancel()
     }
 
-    open func response(_ completionHandler: @escaping (RSerial.ValueType?, CallError<ESerial.ValueType>?) -> Void) -> Self {
+    public func response(_ completionHandler: @escaping (RSerial.ValueType?, CallError<ESerial.ValueType>?) -> Void) -> Self {
         self.request.validate().response { response in
             if let error = response.error {
                 completionHandler(nil, self.handleResponseError(response.response, data: response.data!, error: error))
@@ -452,10 +452,10 @@ open class UploadRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Requ
 
 
 /// A "download-style" request to a file
-open class DownloadRequestFile<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
-    open let request: Alamofire.DownloadRequest
-    open var urlPath: URL?
-    open var errorMessage: Data
+public class DownloadRequestFile<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
+    public let request: Alamofire.DownloadRequest
+    public var urlPath: URL?
+    public var errorMessage: Data
 
     public init(request: Alamofire.DownloadRequest, responseSerializer: RSerial, errorSerializer: ESerial) {
         self.request = request
@@ -464,18 +464,18 @@ open class DownloadRequestFile<RSerial: JSONSerializer, ESerial: JSONSerializer>
         super.init(responseSerializer: responseSerializer, errorSerializer: errorSerializer)
     }
   
-    open func progress(_ progressHandler: @escaping ((Progress) -> Void)) -> Self {
+    public func progress(_ progressHandler: @escaping ((Progress) -> Void)) -> Self {
         self.request.downloadProgress { progressData in
             progressHandler(progressData)
         }
         return self
     }
   
-    open func cancel() {
+    public func cancel() {
         self.request.cancel()
     }
 
-    open func response(_ completionHandler: @escaping ((RSerial.ValueType, URL)?, CallError<ESerial.ValueType>?) -> Void) -> Self {
+    public func response(_ completionHandler: @escaping ((RSerial.ValueType, URL)?, CallError<ESerial.ValueType>?) -> Void) -> Self {
         self.request.validate().response { response in
             if let error = response.error {
                 completionHandler(nil, self.handleResponseError(response.response, data: self.errorMessage, error: error))
@@ -493,26 +493,26 @@ open class DownloadRequestFile<RSerial: JSONSerializer, ESerial: JSONSerializer>
 }
 
 /// A "download-style" request to memory
-open class DownloadRequestMemory<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
-    open let request: Alamofire.DataRequest
+public class DownloadRequestMemory<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
+    public let request: Alamofire.DataRequest
 
     public init(request: Alamofire.DataRequest, responseSerializer: RSerial, errorSerializer: ESerial) {
         self.request = request
         super.init(responseSerializer: responseSerializer, errorSerializer: errorSerializer)
     }
   
-    open func progress(_ progressHandler: @escaping ((Progress) -> Void)) -> Self {
+    public func progress(_ progressHandler: @escaping ((Progress) -> Void)) -> Self {
         self.request.downloadProgress { progressData in
             progressHandler(progressData)
         }
         return self
     }
   
-    open func cancel() {
+    public func cancel() {
         self.request.cancel()
     }
 
-    open func response(_ completionHandler: @escaping ((RSerial.ValueType, Data)?, CallError<ESerial.ValueType>?) -> Void) -> Self {
+    public func response(_ completionHandler: @escaping ((RSerial.ValueType, Data)?, CallError<ESerial.ValueType>?) -> Void) -> Self {
         self.request.validate().response { response in
             if let error = response.error {
                 completionHandler(nil, self.handleResponseError(response.response, data: response.data, error: error))
@@ -529,7 +529,7 @@ open class DownloadRequestMemory<RSerial: JSONSerializer, ESerial: JSONSerialize
     }
 }
 
-func caseInsensitiveLookup(_ lookupKey: String, dictionary: [AnyHashable : Any]) -> String? {
+func caseInsensitiveLookup(lookupKey: String, dictionary: [AnyHashable : Any]) -> String? {
     for key in dictionary.keys {
         let keyString = key as! String
         if (keyString.lowercased() == lookupKey.lowercased()) {

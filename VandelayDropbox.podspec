@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VandelayDropbox'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'Vandelay is an importer/exporter for iOS.'
 
   s.description      = <<-DESC
@@ -18,6 +18,6 @@ strings, serialized JSON and encoded NSData to your app's Dropbox folder.
 
   s.source_files = 'VandelayDropbox/Classes/**/*'
   
-  s.dependency 'SwiftyDropbox', '~> 3.0.0'
-  s.dependency 'Vandelay', '~> 0.3.0'
+  s.dependency 'SwiftyDropbox', '~> 4.0.0'
+  s.dependency 'Vandelay', '~> 0.4.0'
 end

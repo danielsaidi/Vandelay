@@ -1,13 +1,13 @@
 PODS:
-  - Alamofire (3.4.1)
+  - Alamofire (4.0.0)
   - Nimble (3.2.0)
-  - Quick (0.9.2)
-  - SwiftyDropbox (3.0.0):
-    - Alamofire (~> 3.1)
-  - Vandelay (0.3.0)
-  - VandelayDropbox (0.3.0):
-    - SwiftyDropbox (~> 3.0.0)
-    - Vandelay (~> 0.3.0)
+  - Quick (0.9.3)
+  - SwiftyDropbox (4.0.2):
+    - Alamofire (~> 4.0.0)
+  - Vandelay (0.4.0)
+  - VandelayDropbox (0.4.0):
+    - SwiftyDropbox (~> 4.0.0)
+    - Vandelay (~> 0.4.0)
 
 DEPENDENCIES:
   - Nimble (~> 3.0)
@@ -17,18 +17,18 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Vandelay:
-    :path: ../
+    :path: "../"
   VandelayDropbox:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
-  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
-  SwiftyDropbox: e0d4aa3166082ec07ed942e94edb8c732b3376e4
-  Vandelay: decc49a118d8245be9840772b4fc4f1225a0470b
-  VandelayDropbox: 931017fe6476f51cfe086756d6a871e52da0bc16
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  SwiftyDropbox: 4458bb0c2d62d7714b7d2cddec107e392f3645d8
+  Vandelay: 91c17d8102b093221b0c96148ed7a91c85ea93e7
+  VandelayDropbox: 01a3163576f6ec61d8ce487136f14008f8bd17fe
 
 PODFILE CHECKSUM: 6b1868c1e98689abd304e696db330f00fd10510c
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2

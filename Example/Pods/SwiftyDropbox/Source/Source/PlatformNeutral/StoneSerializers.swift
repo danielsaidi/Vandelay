@@ -240,7 +240,7 @@ open class NSDateSerializer: JSONSerializer {
     init(_ dateFormat: String) {
         self.dateFormatter = DateFormatter()
         self.dateFormatter.timeZone = TimeZone(identifier: "UTC")
-        self.dateFormatter.locale = Locale(identifier:"en_US_POSIX") as Locale!
+        self.dateFormatter.locale = NSLocale(localeIdentifier:"en_US_POSIX") as Locale!
         dateFormatter.dateFormat = self.convertFormat(dateFormat)
     }
     open func serialize(_ value: Date) -> JSON {

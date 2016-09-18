@@ -7,22 +7,22 @@
 import Foundation
 
 /// Datatypes and serializers for the users namespace
-open class Users {
+public class Users {
     /// The amount of detail revealed about an account depends on the user being queried and the user making the query.
-    open class Account: CustomStringConvertible {
+    public class Account: CustomStringConvertible {
         /// The user's unique Dropbox ID.
-        open let accountId: String
+        public let accountId: String
         /// Details of a user's name.
-        open let name: Users.Name
+        public let name: Users.Name
         /// The user's e-mail address. Do not rely on this without checking the emailVerified field. Even then, it's
         /// possible that the user has since lost access to their e-mail.
-        open let email: String
+        public let email: String
         /// Whether the user has verified their e-mail address.
-        open let emailVerified: Bool
+        public let emailVerified: Bool
         /// URL for the photo representing the user, if one is set.
-        open let profilePhotoUrl: String?
+        public let profilePhotoUrl: String?
         /// Whether the user has been disabled.
-        open let disabled: Bool
+        public let disabled: Bool
         public init(accountId: String, name: Users.Name, email: String, emailVerified: Bool, disabled: Bool, profilePhotoUrl: String? = nil) {
             stringValidator(minLength: 40, maxLength: 40)(accountId)
             self.accountId = accountId
@@ -34,13 +34,13 @@ open class Users {
             self.profilePhotoUrl = profilePhotoUrl
             self.disabled = disabled
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(AccountSerializer().serialize(self)))"
         }
     }
-    open class AccountSerializer: JSONSerializer {
+    public class AccountSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: Account) -> JSON {
+        public func serialize(_ value: Account) -> JSON {
             let output = [ 
             "account_id": Serialization._StringSerializer.serialize(value.accountId),
             "name": Users.NameSerializer().serialize(value.name),
@@ -51,7 +51,7 @@ open class Users {
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> Account {
+        public func deserialize(_ json: JSON) -> Account {
             switch json {
                 case .dictionary(let dict):
                     let accountId = Serialization._StringSerializer.deserialize(dict["account_id"] ?? .null)
@@ -80,9 +80,9 @@ open class Users {
             return "\(SerializeUtil.prepareJSONForSerialization(AccountTypeSerializer().serialize(self)))"
         }
     }
-    open class AccountTypeSerializer: JSONSerializer {
+    public class AccountTypeSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: AccountType) -> JSON {
+        public func serialize(_ value: AccountType) -> JSON {
             switch value {
                 case .basic:
                     var d = [String: JSON]()
@@ -98,7 +98,7 @@ open class Users {
                     return .dictionary(d)
             }
         }
-        open func deserialize(_ json: JSON) -> AccountType {
+        public func deserialize(_ json: JSON) -> AccountType {
             switch json {
                 case .dictionary(let d):
                     let tag = Serialization.getTag(d)
@@ -119,26 +119,26 @@ open class Users {
     }
 
     /// Basic information about any account.
-    open class BasicAccount: Users.Account {
+    public class BasicAccount: Users.Account {
         /// Whether this user is a teammate of the current user. If this account is the current user's account, then
         /// this will be true.
-        open let isTeammate: Bool
+        public let isTeammate: Bool
         /// The user's unique team member id. This field will only be present if the user is part of a team and
         /// isTeammate is true.
-        open let teamMemberId: String?
+        public let teamMemberId: String?
         public init(accountId: String, name: Users.Name, email: String, emailVerified: Bool, disabled: Bool, isTeammate: Bool, profilePhotoUrl: String? = nil, teamMemberId: String? = nil) {
             self.isTeammate = isTeammate
             nullableValidator(stringValidator())(teamMemberId)
             self.teamMemberId = teamMemberId
             super.init(accountId: accountId, name: name, email: email, emailVerified: emailVerified, disabled: disabled, profilePhotoUrl: profilePhotoUrl)
         }
-        open override var description: String {
+        public override var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(BasicAccountSerializer().serialize(self)))"
         }
     }
-    open class BasicAccountSerializer: JSONSerializer {
+    public class BasicAccountSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: BasicAccount) -> JSON {
+        public func serialize(_ value: BasicAccount) -> JSON {
             let output = [ 
             "account_id": Serialization._StringSerializer.serialize(value.accountId),
             "name": Users.NameSerializer().serialize(value.name),
@@ -151,7 +151,7 @@ open class Users {
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> BasicAccount {
+        public func deserialize(_ json: JSON) -> BasicAccount {
             switch json {
                 case .dictionary(let dict):
                     let accountId = Serialization._StringSerializer.deserialize(dict["account_id"] ?? .null)
@@ -170,24 +170,24 @@ open class Users {
     }
 
     /// Detailed information about the current user's account.
-    open class FullAccount: Users.Account {
+    public class FullAccount: Users.Account {
         /// The user's two-letter country code, if available. Country codes are based on ISO 3166-1
         /// http://en.wikipedia.org/wiki/ISO_3166-1.
-        open let country: String?
+        public let country: String?
         /// The language that the user specified. Locale tags will be IETF language tags
         /// http://en.wikipedia.org/wiki/IETF_language_tag.
-        open let locale: String
+        public let locale: String
         /// The user's referral link https://www.dropbox.com/referrals.
-        open let referralLink: String
+        public let referralLink: String
         /// If this account is a member of a team, information about that team.
-        open let team: Users.FullTeam?
+        public let team: Users.FullTeam?
         /// This account's unique team member id. This field will only be present if team is present.
-        open let teamMemberId: String?
+        public let teamMemberId: String?
         /// Whether the user has a personal and work account. If the current account is personal, then team will always
         /// be null, but isPaired will indicate if a work account is linked.
-        open let isPaired: Bool
+        public let isPaired: Bool
         /// What type of account this user has.
-        open let accountType: Users.AccountType
+        public let accountType: Users.AccountType
         public init(accountId: String, name: Users.Name, email: String, emailVerified: Bool, disabled: Bool, locale: String, referralLink: String, isPaired: Bool, accountType: Users.AccountType, profilePhotoUrl: String? = nil, country: String? = nil, team: Users.FullTeam? = nil, teamMemberId: String? = nil) {
             nullableValidator(stringValidator(minLength: 2, maxLength: 2))(country)
             self.country = country
@@ -202,13 +202,13 @@ open class Users {
             self.accountType = accountType
             super.init(accountId: accountId, name: name, email: email, emailVerified: emailVerified, disabled: disabled, profilePhotoUrl: profilePhotoUrl)
         }
-        open override var description: String {
+        public override var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(FullAccountSerializer().serialize(self)))"
         }
     }
-    open class FullAccountSerializer: JSONSerializer {
+    public class FullAccountSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: FullAccount) -> JSON {
+        public func serialize(_ value: FullAccount) -> JSON {
             let output = [ 
             "account_id": Serialization._StringSerializer.serialize(value.accountId),
             "name": Users.NameSerializer().serialize(value.name),
@@ -226,7 +226,7 @@ open class Users {
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> FullAccount {
+        public func deserialize(_ json: JSON) -> FullAccount {
             switch json {
                 case .dictionary(let dict):
                     let accountId = Serialization._StringSerializer.deserialize(dict["account_id"] ?? .null)
@@ -250,31 +250,31 @@ open class Users {
     }
 
     /// Information about a team.
-    open class Team: CustomStringConvertible {
+    public class Team: CustomStringConvertible {
         /// The team's unique ID.
-        open let id: String
+        public let id: String
         /// The name of the team.
-        open let name: String
+        public let name: String
         public init(id: String, name: String) {
             stringValidator()(id)
             self.id = id
             stringValidator()(name)
             self.name = name
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(TeamSerializer().serialize(self)))"
         }
     }
-    open class TeamSerializer: JSONSerializer {
+    public class TeamSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: Team) -> JSON {
+        public func serialize(_ value: Team) -> JSON {
             let output = [ 
             "id": Serialization._StringSerializer.serialize(value.id),
             "name": Serialization._StringSerializer.serialize(value.name),
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> Team {
+        public func deserialize(_ json: JSON) -> Team {
             switch json {
                 case .dictionary(let dict):
                     let id = Serialization._StringSerializer.deserialize(dict["id"] ?? .null)
@@ -287,20 +287,20 @@ open class Users {
     }
 
     /// Detailed information about a team.
-    open class FullTeam: Users.Team {
+    public class FullTeam: Users.Team {
         /// Team policies governing sharing.
-        open let sharingPolicies: TeamPolicies.TeamSharingPolicies
+        public let sharingPolicies: TeamPolicies.TeamSharingPolicies
         public init(id: String, name: String, sharingPolicies: TeamPolicies.TeamSharingPolicies) {
             self.sharingPolicies = sharingPolicies
             super.init(id: id, name: name)
         }
-        open override var description: String {
+        public override var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(FullTeamSerializer().serialize(self)))"
         }
     }
-    open class FullTeamSerializer: JSONSerializer {
+    public class FullTeamSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: FullTeam) -> JSON {
+        public func serialize(_ value: FullTeam) -> JSON {
             let output = [ 
             "id": Serialization._StringSerializer.serialize(value.id),
             "name": Serialization._StringSerializer.serialize(value.name),
@@ -308,7 +308,7 @@ open class Users {
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> FullTeam {
+        public func deserialize(_ json: JSON) -> FullTeam {
             switch json {
                 case .dictionary(let dict):
                     let id = Serialization._StringSerializer.deserialize(dict["id"] ?? .null)
@@ -322,26 +322,26 @@ open class Users {
     }
 
     /// The GetAccountArg struct
-    open class GetAccountArg: CustomStringConvertible {
+    public class GetAccountArg: CustomStringConvertible {
         /// A user's account identifier.
-        open let accountId: String
+        public let accountId: String
         public init(accountId: String) {
             stringValidator(minLength: 40, maxLength: 40)(accountId)
             self.accountId = accountId
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(GetAccountArgSerializer().serialize(self)))"
         }
     }
-    open class GetAccountArgSerializer: JSONSerializer {
+    public class GetAccountArgSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: GetAccountArg) -> JSON {
+        public func serialize(_ value: GetAccountArg) -> JSON {
             let output = [ 
             "account_id": Serialization._StringSerializer.serialize(value.accountId),
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> GetAccountArg {
+        public func deserialize(_ json: JSON) -> GetAccountArg {
             switch json {
                 case .dictionary(let dict):
                     let accountId = Serialization._StringSerializer.deserialize(dict["account_id"] ?? .null)
@@ -353,26 +353,26 @@ open class Users {
     }
 
     /// The GetAccountBatchArg struct
-    open class GetAccountBatchArg: CustomStringConvertible {
+    public class GetAccountBatchArg: CustomStringConvertible {
         /// List of user account identifiers.  Should not contain any duplicate account IDs.
-        open let accountIds: Array<String>
+        public let accountIds: Array<String>
         public init(accountIds: Array<String>) {
             arrayValidator(minItems: 1, itemValidator: stringValidator(minLength: 40, maxLength: 40))(accountIds)
             self.accountIds = accountIds
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(GetAccountBatchArgSerializer().serialize(self)))"
         }
     }
-    open class GetAccountBatchArgSerializer: JSONSerializer {
+    public class GetAccountBatchArgSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: GetAccountBatchArg) -> JSON {
+        public func serialize(_ value: GetAccountBatchArg) -> JSON {
             let output = [ 
             "account_ids": ArraySerializer(Serialization._StringSerializer).serialize(value.accountIds),
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> GetAccountBatchArg {
+        public func deserialize(_ json: JSON) -> GetAccountBatchArg {
             switch json {
                 case .dictionary(let dict):
                     let accountIds = ArraySerializer(Serialization._StringSerializer).deserialize(dict["account_ids"] ?? .null)
@@ -394,9 +394,9 @@ open class Users {
             return "\(SerializeUtil.prepareJSONForSerialization(GetAccountBatchErrorSerializer().serialize(self)))"
         }
     }
-    open class GetAccountBatchErrorSerializer: JSONSerializer {
+    public class GetAccountBatchErrorSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: GetAccountBatchError) -> JSON {
+        public func serialize(_ value: GetAccountBatchError) -> JSON {
             switch value {
                 case .noAccount(let arg):
                     var d = ["no_account": Serialization._StringSerializer.serialize(arg)]
@@ -408,7 +408,7 @@ open class Users {
                     return .dictionary(d)
             }
         }
-        open func deserialize(_ json: JSON) -> GetAccountBatchError {
+        public func deserialize(_ json: JSON) -> GetAccountBatchError {
             switch json {
                 case .dictionary(let d):
                     let tag = Serialization.getTag(d)
@@ -438,9 +438,9 @@ open class Users {
             return "\(SerializeUtil.prepareJSONForSerialization(GetAccountErrorSerializer().serialize(self)))"
         }
     }
-    open class GetAccountErrorSerializer: JSONSerializer {
+    public class GetAccountErrorSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: GetAccountError) -> JSON {
+        public func serialize(_ value: GetAccountError) -> JSON {
             switch value {
                 case .noAccount:
                     var d = [String: JSON]()
@@ -452,7 +452,7 @@ open class Users {
                     return .dictionary(d)
             }
         }
-        open func deserialize(_ json: JSON) -> GetAccountError {
+        public func deserialize(_ json: JSON) -> GetAccountError {
             switch json {
                 case .dictionary(let d):
                     let tag = Serialization.getTag(d)
@@ -471,26 +471,26 @@ open class Users {
     }
 
     /// The IndividualSpaceAllocation struct
-    open class IndividualSpaceAllocation: CustomStringConvertible {
+    public class IndividualSpaceAllocation: CustomStringConvertible {
         /// The total space allocated to the user's account (bytes).
-        open let allocated: UInt64
+        public let allocated: UInt64
         public init(allocated: UInt64) {
             comparableValidator()(allocated)
             self.allocated = allocated
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(IndividualSpaceAllocationSerializer().serialize(self)))"
         }
     }
-    open class IndividualSpaceAllocationSerializer: JSONSerializer {
+    public class IndividualSpaceAllocationSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: IndividualSpaceAllocation) -> JSON {
+        public func serialize(_ value: IndividualSpaceAllocation) -> JSON {
             let output = [ 
             "allocated": Serialization._UInt64Serializer.serialize(value.allocated),
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> IndividualSpaceAllocation {
+        public func deserialize(_ json: JSON) -> IndividualSpaceAllocation {
             switch json {
                 case .dictionary(let dict):
                     let allocated = Serialization._UInt64Serializer.deserialize(dict["allocated"] ?? .null)
@@ -502,18 +502,18 @@ open class Users {
     }
 
     /// Representations for a person's name to assist with internationalization.
-    open class Name: CustomStringConvertible {
+    public class Name: CustomStringConvertible {
         /// Also known as a first name.
-        open let givenName: String
+        public let givenName: String
         /// Also known as a last name or family name.
-        open let surname: String
+        public let surname: String
         /// Locale-dependent name. In the US, a person's familiar name is their givenName, but elsewhere, it could be
         /// any combination of a person's givenName and surname.
-        open let familiarName: String
+        public let familiarName: String
         /// A name that can be used directly to represent the name of a user's Dropbox account.
-        open let displayName: String
+        public let displayName: String
         /// An abbreviated form of the person's name. Their initials in most locales.
-        open let abbreviatedName: String
+        public let abbreviatedName: String
         public init(givenName: String, surname: String, familiarName: String, displayName: String, abbreviatedName: String) {
             stringValidator()(givenName)
             self.givenName = givenName
@@ -526,13 +526,13 @@ open class Users {
             stringValidator()(abbreviatedName)
             self.abbreviatedName = abbreviatedName
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(NameSerializer().serialize(self)))"
         }
     }
-    open class NameSerializer: JSONSerializer {
+    public class NameSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: Name) -> JSON {
+        public func serialize(_ value: Name) -> JSON {
             let output = [ 
             "given_name": Serialization._StringSerializer.serialize(value.givenName),
             "surname": Serialization._StringSerializer.serialize(value.surname),
@@ -542,7 +542,7 @@ open class Users {
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> Name {
+        public func deserialize(_ json: JSON) -> Name {
             switch json {
                 case .dictionary(let dict):
                     let givenName = Serialization._StringSerializer.deserialize(dict["given_name"] ?? .null)
@@ -570,9 +570,9 @@ open class Users {
             return "\(SerializeUtil.prepareJSONForSerialization(SpaceAllocationSerializer().serialize(self)))"
         }
     }
-    open class SpaceAllocationSerializer: JSONSerializer {
+    public class SpaceAllocationSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: SpaceAllocation) -> JSON {
+        public func serialize(_ value: SpaceAllocation) -> JSON {
             switch value {
                 case .individual(let arg):
                     var d = Serialization.getFields(Users.IndividualSpaceAllocationSerializer().serialize(arg))
@@ -588,7 +588,7 @@ open class Users {
                     return .dictionary(d)
             }
         }
-        open func deserialize(_ json: JSON) -> SpaceAllocation {
+        public func deserialize(_ json: JSON) -> SpaceAllocation {
             switch json {
                 case .dictionary(let d):
                     let tag = Serialization.getTag(d)
@@ -611,30 +611,30 @@ open class Users {
     }
 
     /// Information about a user's space usage and quota.
-    open class SpaceUsage: CustomStringConvertible {
+    public class SpaceUsage: CustomStringConvertible {
         /// The user's total space usage (bytes).
-        open let used: UInt64
+        public let used: UInt64
         /// The user's space allocation.
-        open let allocation: Users.SpaceAllocation
+        public let allocation: Users.SpaceAllocation
         public init(used: UInt64, allocation: Users.SpaceAllocation) {
             comparableValidator()(used)
             self.used = used
             self.allocation = allocation
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(SpaceUsageSerializer().serialize(self)))"
         }
     }
-    open class SpaceUsageSerializer: JSONSerializer {
+    public class SpaceUsageSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: SpaceUsage) -> JSON {
+        public func serialize(_ value: SpaceUsage) -> JSON {
             let output = [ 
             "used": Serialization._UInt64Serializer.serialize(value.used),
             "allocation": Users.SpaceAllocationSerializer().serialize(value.allocation),
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> SpaceUsage {
+        public func deserialize(_ json: JSON) -> SpaceUsage {
             switch json {
                 case .dictionary(let dict):
                     let used = Serialization._UInt64Serializer.deserialize(dict["used"] ?? .null)
@@ -647,31 +647,31 @@ open class Users {
     }
 
     /// The TeamSpaceAllocation struct
-    open class TeamSpaceAllocation: CustomStringConvertible {
+    public class TeamSpaceAllocation: CustomStringConvertible {
         /// The total space currently used by the user's team (bytes).
-        open let used: UInt64
+        public let used: UInt64
         /// The total space allocated to the user's team (bytes).
-        open let allocated: UInt64
+        public let allocated: UInt64
         public init(used: UInt64, allocated: UInt64) {
             comparableValidator()(used)
             self.used = used
             comparableValidator()(allocated)
             self.allocated = allocated
         }
-        open var description: String {
+        public var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(TeamSpaceAllocationSerializer().serialize(self)))"
         }
     }
-    open class TeamSpaceAllocationSerializer: JSONSerializer {
+    public class TeamSpaceAllocationSerializer: JSONSerializer {
         public init() { }
-        open func serialize(_ value: TeamSpaceAllocation) -> JSON {
+        public func serialize(_ value: TeamSpaceAllocation) -> JSON {
             let output = [ 
             "used": Serialization._UInt64Serializer.serialize(value.used),
             "allocated": Serialization._UInt64Serializer.serialize(value.allocated),
             ]
             return .dictionary(output)
         }
-        open func deserialize(_ json: JSON) -> TeamSpaceAllocation {
+        public func deserialize(_ json: JSON) -> TeamSpaceAllocation {
             switch json {
                 case .dictionary(let dict):
                     let used = Serialization._UInt64Serializer.deserialize(dict["used"] ?? .null)

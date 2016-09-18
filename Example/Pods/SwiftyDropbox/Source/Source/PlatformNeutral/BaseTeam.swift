@@ -8,9 +8,9 @@ import Foundation
 
 import Alamofire
 
-open class DropboxTeamBase {
+public class DropboxTeamBase {
     /// Routes within the team namespace. See TeamRoutes for details.
-    open var team: TeamRoutes!
+    public var team: TeamRoutes!
 
     public init(client: DropboxTransportClient) {
         self.team = TeamRoutes(client: client)
