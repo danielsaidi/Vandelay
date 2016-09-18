@@ -31,14 +31,14 @@ public class ImportAlertController: UIAlertController {
     weak public var delegate: ImportAlertControllerDelegate?
     
     
-    public func addDataImporter(importer: DataImporter, withTitle title: String) {
+    public func add(_ importer: DataImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .default) { action in
             self.delegate?.alert(self, didPickDataImporter: importer)
         }
         addAction(action)
     }
     
-    public func addStringImporter(importer: StringImporter, withTitle title: String) {
+    public func add(_ importer: StringImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .default) { action in
             self.delegate?.alert(self, didPickStringImporter: importer)
         }
