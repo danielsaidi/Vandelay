@@ -52,8 +52,8 @@ class TodoItem: NSObject {
     
     // MARK: Public functions
     
-    func toDictionary() -> [String:AnyObject] {
-        var dict = [String : AnyObject]()
+    func toDictionary() -> [String : Any] {
+        var dict = [String : Any]()
         dict["id"] = id
         dict["name"] = name
         dict["completed"] = completed

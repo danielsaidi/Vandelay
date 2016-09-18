@@ -6,7 +6,5 @@ target 'Vandelay_Example' do
   
   target 'Vandelay_Tests' do
     inherit! :search_paths
-    pod 'Nimble', '~> 3.0'
-    pod 'Quick', '~> 0.8'
   end
 end

@@ -20,7 +20,7 @@
 
 import UIKit
 
-public class FileImporter: NSObject, DataImporter, StringImporter {
+public class FileImporter{/* TODO: NSObject, DataImporter, StringImporter {
     
     
     // MARK: Initialization
@@ -46,23 +46,23 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     
     // MARK: Public functions
     
-    public func importData(completion: ((result: ImportResult) -> ())?) {
+    public func importData(completion: ((_ result: ImportResult) -> ())?) {
         do {
             let filePath = getFilePath()
-            let data = try NSData(contentsOfFile: filePath, options: .DataReadingUncached)
-            completion?(result: getResultWithData(data))
+            let data = try NSData(contentsOfFile: filePath, options: .uncachedRead)
+            completion?(getResultWithData(data: data))
         } catch {
-            completion?(result: self.getResultWithError(error as NSError))
+            completion?(self.getResultWithError(error: error as NSError))
         }
     }
     
-    public func importString(completion: ((result: ImportResult) -> ())?) {
+    public func importString(completion: ((_ result: ImportResult) -> ())?) {
         do {
             let filePath = getFilePath()
             let string = try String(contentsOfFile: filePath)
-            completion?(result: getResultWithString(string))
+            completion?(getResultWithString(string: string))
         } catch {
-            completion?(result: self.getResultWithError(error as NSError))
+            completion?(self.getResultWithError(error: error as NSError))
         }
     }
     
@@ -70,8 +70,8 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     // MARK: Private functions
     
     private func getFilePath() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let fileName = fileNameGenerator.getFileName()
         return "\(paths.first!)/\(fileName)"
-    }
+    }*/
 }

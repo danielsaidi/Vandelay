@@ -20,20 +20,20 @@ import UIKit
 
 public class JsonObjectSerializer: NSObject, ObjectSerializer {
 
-    public func deserializeString(string: String) -> (result: AnyObject?, error: NSError?) {
+    public func deserializeString(string: String) -> (result: Any?, error: NSError?) {
         do {
-            let data = string.dataUsingEncoding(NSUTF8StringEncoding)
-            let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+            guard let data = string.data(using: .utf8) else { return (nil, nil) }
+            let result = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
             return (result: result, error: nil)
         } catch let error as NSError {
             return (result: nil, error: error)
         }
     }
     
-    public func serializeObject(object: AnyObject) -> (result: String?, error: NSError?) {
+    public func serializeObject(object: Any) -> (result: String?, error: NSError?) {
         do {
-            let data = try NSJSONSerialization.dataWithJSONObject(object, options: .PrettyPrinted)
-            let result = NSString(data: data, encoding: NSUTF8StringEncoding) as! String
+            let data = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
+            let result = String(data: data, encoding: .utf8)
             return (result: result, error: nil)
         } catch let error as NSError {
             return (result: nil, error: error)

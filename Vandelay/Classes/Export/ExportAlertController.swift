@@ -21,8 +21,8 @@ import UIKit
 
 
 public protocol ExportAlertControllerDelegate: class {
-    func alertController(controller: ExportAlertController, didPickDataExporter exporter: DataExporter)
-    func alertController(controller: ExportAlertController, didPickStringExporter exporter: StringExporter)
+    func alert(_ alert: ExportAlertController, didPickDataExporter exporter: DataExporter)
+    func alert(_ alert: ExportAlertController, didPickStringExporter exporter: StringExporter)
 }
 
 
@@ -32,15 +32,15 @@ public class ExportAlertController: UIAlertController {
     
     
     public func addDataExporter(exporter: DataExporter, withTitle title: String) {
-        let action = UIAlertAction(title: title, style: .Default) { action in
-            self.delegate?.alertController(self, didPickDataExporter: exporter)
+        let action = UIAlertAction(title: title, style: .default) { action in
+            self.delegate?.alert(self, didPickDataExporter: exporter)
         }
         addAction(action)
     }
     
     public func addStringExporter(exporter: StringExporter, withTitle title: String) {
-        let action = UIAlertAction(title: title, style: .Default) { action in
-            self.delegate?.alertController(self, didPickStringExporter: exporter)
+        let action = UIAlertAction(title: title, style: .default) { action in
+            self.delegate?.alert(self, didPickStringExporter: exporter)
         }
         addAction(action)
     }

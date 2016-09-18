@@ -56,7 +56,7 @@ import Foundation
 import SwiftyDropbox
 import Vandelay
 
-public class DropboxImporter : NSObject, DataImporter, StringImporter {
+public class DropboxImporter { /* TODO : NSObject, DataImporter, StringImporter {
     
     
     // MARK: Initialization
@@ -82,26 +82,26 @@ public class DropboxImporter : NSObject, DataImporter, StringImporter {
     
     // MARK: Public functions
     
-    public func importData(completion: ((result: ImportResult) -> ())?) {
+    public func importData(completion: ((_ result: ImportResult) -> ())?) {
         let vc = getTopmostViewController()
         if (vc == nil) {
             let error = "DropboxImporter could not find topmost view controller"
-            completion?(result: getResultWithErrorMessage(error))
+            completion?(getResult(withErrorMessage: error))
             return
         }
         
-        if (willAuthorizeFromViewController(vc!)) {
-            completion?(result: getResultWithState(.Cancelled))
+        if (willAuthorizeFromViewController(vc: vc!)) {
+            completion?(getResult(withState: .cancelled))
             return
         }
         
-        downloadData(completion)
+        downloadData(completion: completion)
     }
     
-    public func importString(completion: ((result: ImportResult) -> ())?) {
+    public func importString(completion: ((_ result: ImportResult) -> ())?) {
         importData { (result) in
             if (result.data != nil) {
-                if let string = String(data: result.data!, encoding: NSUTF8StringEncoding) {
+                if let string = String(data: result.data!, encoding: .utf8) {
                     completion?(result: self.getResultWithString(string))
                 } else {
                     completion?(result: self.getResultWithErrorMessage("Dropbox file did not contain valid content."))
@@ -154,5 +154,5 @@ public class DropboxImporter : NSObject, DataImporter, StringImporter {
             return true
         }
         return false
-    }
+    }*/
 }

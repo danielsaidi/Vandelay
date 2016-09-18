@@ -11,6 +11,6 @@ import Foundation
 public class UuidGenerator: NSObject, IdGenerator {
 
     public func generateUniqueId() -> String {
-        return NSUUID().UUIDString
+        return NSUUID().uuidString
     }
 }

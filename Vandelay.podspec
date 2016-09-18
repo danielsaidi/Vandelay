@@ -21,7 +21,7 @@ This means that 0.3.0 will not be compatible with 0.2.0, and so on.
   s.source           = { :git => 'https://github.com/danielsaidi/vandelay.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/danielsaidi'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'Vandelay/Classes/**/*.{swift}'
 

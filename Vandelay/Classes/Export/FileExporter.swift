@@ -19,9 +19,9 @@
 
 import Foundation
 
-public class FileExporter: NSObject, DataExporter, StringExporter {
+public class FileExporter: NSObject{/* TODO , DataExporter, StringExporter {
     
-    
+     
     // MARK: Initialization
     
     public convenience init(fileName: String) {
@@ -45,33 +45,37 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())?) {
+    public func export(data: Data, completion: ((_ result: ExportResult) -> ())?) {
         let filePath = getFilePath()
         do {
-            try data.writeToFile(filePath, options: .AtomicWrite)
+            try data.write(to: withFilePath, options: .atomicWrite)
         } catch {
-            completion?(result: self.getResultWithError(error as NSError))
+            completion?(self.getResult(withError: error))
         }
-        completion?(result: getResultWithFilePath(filePath))
+        completion?(getResult(withFilePath: filePath))
     }
     
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
-        let filePath = getFilePath()
-        do {
-            try string.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding)
-        } catch {
-            completion?(result: self.getResultWithError(error as NSError))
+    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
+        guard
+            let filePath = getFilePath(),
+            let url = URL(string: filePath) else {
+                let result = getResult(withErrorMessage: "foo")
+                completion(getResult(withErrorMessage: "Could not generate a valid file url"))
         }
-        completion?(result: getResultWithFilePath(filePath))
+        
+        string.write(to: url, atomically: true, encoding: .utf8)
+        completion?(getResult(withFilePath: filePath))
     }
     
     
     
     // MARK: Private functions
     
-    private func getFilePath() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+    private func getFilePath() -> String? {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        guard paths.count > 0 else { return nil }
         let fileName = fileNameGenerator.getFileName()
         return "\(paths.first!)/\(fileName)"
     }
+ */
 }

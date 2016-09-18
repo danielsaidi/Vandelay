@@ -9,8 +9,8 @@
 import Foundation
 
 public enum ExportState { case
-    InProgress,
-    Completed,
-    Cancelled,
-    Failed
+    inProgress,
+    completed,
+    cancelled,
+    failed
 }

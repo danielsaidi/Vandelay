@@ -23,35 +23,35 @@ public protocol Exporter {
 
 public extension Exporter {
     
-    public func getResultWithError(error: NSError) -> ExportResult {
-        let result = ExportResult(state: .Failed)
+    public func getResult(withError error: NSError) -> ExportResult {
+        let result = ExportResult(state: .failed)
         result.error = error
         result.exportMethod = exportMethod
         return result
     }
     
-    public func getResultWithErrorMessage(message: String) -> ExportResult {
+    public func getResult(withErrorMessage errorMessage: String) -> ExportResult {
         let domain = "Vandelay"
-        let userInfo = ["Description" : message]
+        let userInfo = ["Description" : errorMessage]
         let error = NSError(domain: domain, code: -1, userInfo: userInfo)
-        return getResultWithError(error)
+        return getResult(withError: error)
     }
     
-    public func getResultWithFilePath(filePath: String) -> ExportResult {
-        let result = ExportResult(state: .Completed)
+    public func getResult(withFilePath filePath: String) -> ExportResult {
+        let result = ExportResult(state: .completed)
         result.exportMethod = exportMethod
         result.filePath = filePath
         return result
     }
     
-    public func getResultWithState(state: ExportState) -> ExportResult {
+    public func getResult(withState state: ExportState) -> ExportResult {
         let result = ExportResult(state: state)
         result.exportMethod = exportMethod
         return result
     }
     
     public func getTopmostViewController() -> UIViewController? {
-        if var vc = UIApplication.sharedApplication().keyWindow?.rootViewController {
+        if var vc = UIApplication.shared.keyWindow?.rootViewController {
             while let presentedViewController = vc.presentedViewController {
                 vc = presentedViewController
             }

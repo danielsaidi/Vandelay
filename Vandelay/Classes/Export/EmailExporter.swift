@@ -25,7 +25,7 @@
 
 import MessageUI
 
-public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailComposeViewControllerDelegate {
+public class EmailExporter {/* TODO: NSObject, DataExporter, StringExporter, MFMailComposeViewControllerDelegate {
     
     
     // MARK: Initialization
@@ -50,32 +50,32 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     public var fileNameGenerator: FileNameGenerator!
     
     private var mailComposer: MFMailComposeViewController!
-    private var completion: ((result: ExportResult) -> ())?
+    private var completion: ((_ result: ExportResult) -> ())?
     
     
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())?) {
+    public func export(data: Data, completion: ((_ result: ExportResult) -> ())?) {
         let vc = getTopmostViewController()
         if (vc == nil) {
             let error = "EmailExporter could not find topmost view controller"
-            completion?(result: getResultWithErrorMessage(error))
+            completion?(getResult(withErrorMessage: error))
             return
         }
         
-        sendData(data, fromViewController: vc!, completion: completion)
+        sendData(data: data, fromViewController: vc!, completion: completion)
     }
     
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
-        let data = string.dataUsingEncoding(NSUTF8StringEncoding)
+    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
+        let data = string.data(using: .utf8)
         if (data == nil) {
             let error = "EmailExporter could not serialize string to data"
-            completion?(result: getResultWithErrorMessage(error))
+            completion?(getResult(withErrorMessage: error))
             return
         }
         
-        exportData(data!, completion: completion)
+        export(data: data!, completion: completion)
     }
     
     
@@ -84,22 +84,22 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     
     private func getExportStateForSendResult(sendResult: MFMailComposeResult) -> ExportState {
         switch sendResult {
-        case MFMailComposeResultCancelled: return .Cancelled
-        case MFMailComposeResultFailed: return .Failed
-        case MFMailComposeResultSent: return .Completed
-        case MFMailComposeResultSaved: return .Cancelled
+        case .cancelled: return .Cancelled
+        case .failed: return .Failed
+        case .sent: return .Completed
+        case .saved: return .Cancelled
         default: return .Failed
         }
     }
     
-    private func sendData(data: NSData, fromViewController vc: UIViewController, completion: ((result: ExportResult) -> ())?) {
+    private func sendData(data: Data, fromViewController vc: UIViewController, completion: ((_ result: ExportResult) -> ())?) {
         mailComposer = MFMailComposeViewController()
         mailComposer.mailComposeDelegate = self
         mailComposer.setSubject(emailSubject)
         mailComposer.setMessageBody(emailBody, isHTML: true)
         mailComposer.addAttachmentData(data, mimeType: "text/plain", fileName: fileNameGenerator.getFileName())
         
-        vc.presentViewController(mailComposer, animated: true, completion: nil)
+        vc.present(mailComposer, animated: true, completion: nil)
         
         self.completion = completion
     }
@@ -109,9 +109,10 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     // MARK: MFMailComposeViewControllerDelegate
     
     public func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult sendResult: MFMailComposeResult, error: NSError?) {
-        controller.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-        let result = getResultWithState(getExportStateForSendResult(sendResult))
+        controller.presentingViewController?.dismiss(animated: true, completion: nil)
+        let state = getExportStateForSendResult(sendResult: sendResult)
+        let result = getResult(state: state)
         result.error = error
-        completion?(result: result)
-    }
+        completion?(result)
+    }*/
 }

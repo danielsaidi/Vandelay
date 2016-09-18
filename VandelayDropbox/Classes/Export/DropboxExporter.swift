@@ -56,7 +56,7 @@ import Foundation
 import SwiftyDropbox
 import Vandelay
 
-public class DropboxExporter : NSObject, DataExporter, StringExporter {
+public class DropboxExporter { /* TODO : NSObject, DataExporter, StringExporter {
     
     
     // MARK: Initialization
@@ -82,7 +82,7 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((result: ExportResult) -> ())?) {
+    public func exportData(data: NSData, completion: ((_ result: ExportResult) -> ())?) {
         let vc = getTopmostViewController()
         if (vc == nil) {
             let error = "DropboxExporter could not find topmost view controller"
@@ -98,7 +98,7 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
         uploadData(data, completion: completion)
     }
     
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
+    public func exportString(string: String, completion: ((_ result: ExportResult) -> ())?) {
         let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         if (data == nil) {
             let error = "DropboxExporter could not create data from string"
@@ -113,7 +113,7 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
     
     // MARK: Private functions
     
-    private func uploadData(data: NSData, completion: ((result: ExportResult) -> ())?) {
+    private func uploadData(data: NSData, completion: ((_ result: ExportResult) -> ())?) {
         let client = DropboxClient.sharedClient!
         let fileName = fileNameGenerator.getFileName()
         let path = "/\(fileName)"
@@ -140,5 +140,5 @@ public class DropboxExporter : NSObject, DataExporter, StringExporter {
             return true
         }
         return false
-    }
+    }*/
 }

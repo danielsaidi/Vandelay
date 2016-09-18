@@ -24,11 +24,11 @@ class PhotoRepository : NSObject {
     }
     
     func deletePhoto(photo: Photo) {
-        photos.removeValueForKey(photo.id)
+        photos.removeValue(forKey: photo.id)
     }
     
     func getPhotos() -> [Photo] {
-        return photos.values.sort({ photo1, photo2 -> Bool in
+        return photos.values.sorted(by: { photo1, photo2 -> Bool in
             photo1.id < photo2.id
         })
     }

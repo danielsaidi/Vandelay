@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+/*TODO
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Dropbox.setupWithAppKey("XXXXXXXXXXXXX")
         return true
@@ -31,5 +31,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         return false
-    }
+    }*/
 }

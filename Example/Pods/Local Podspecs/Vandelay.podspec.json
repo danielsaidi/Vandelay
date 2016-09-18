@@ -17,7 +17,7 @@
   },
   "social_media_url": "https://twitter.com/danielsaidi",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "Vandelay/Classes/**/*.{swift}"
 }

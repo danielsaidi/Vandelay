@@ -10,15 +10,15 @@ import Foundation
 
 public class Base64StringEncoder: NSObject, StringEncoder {
     
-    public func decodeString(encodedString: String) -> String {
-        let data = NSData(base64EncodedString: encodedString, options: .IgnoreUnknownCharacters)
-        let result = NSString(data: data!, encoding: NSUTF8StringEncoding)
-        return result as! String
+    public func decode(string: String) -> String? {
+        let data = Data(base64Encoded: string, options: .ignoreUnknownCharacters)
+        return String(data: data!, encoding: .utf8)
     }
     
-    public func encodeString(string: String) -> String {
-        let data = string.dataUsingEncoding(NSUTF8StringEncoding)
-        let result = data?.base64EncodedStringWithOptions(.EncodingEndLineWithLineFeed)
-        return result!
+    public func encode(string: String) -> String? {
+        let data = string.data(using: .utf8)
+        let encoded = data?.base64EncodedData(options: .endLineWithLineFeed)
+        guard encoded != nil else { return nil }
+        return String(data: encoded!, encoding: .utf8)
     }
 }

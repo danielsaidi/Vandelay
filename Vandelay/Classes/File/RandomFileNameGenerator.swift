@@ -33,7 +33,7 @@ public class RandomFileNameGenerator: NSObject, FileNameGenerator {
     // MARK: Public functions
     
     public func getFileName() -> String {
-        let fileName = NSUUID().UUIDString
+        let fileName = NSUUID().uuidString
         return fileExtension == nil ? fileName : "\(fileName).\(fileExtension)"
     }
 }

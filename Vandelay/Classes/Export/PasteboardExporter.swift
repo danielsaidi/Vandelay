@@ -18,8 +18,8 @@ public class PasteboardExporter: NSObject, StringExporter {
     
     public private(set) var exportMethod = "Pasteboard"
 
-    public func exportString(string: String, completion: ((result: ExportResult) -> ())?) {
-        UIPasteboard.generalPasteboard().string = string
-        completion?(result: getResultWithState(.Completed))
+    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
+        UIPasteboard.general.string = string
+        completion?(getResult(withState: .completed))
     }
 }

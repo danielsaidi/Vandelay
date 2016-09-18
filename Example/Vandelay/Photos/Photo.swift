@@ -35,13 +35,13 @@ class Photo: NSObject, NSCoding {
     
     required init?(coder: NSCoder) {
         super.init()
-        id = coder.decodeObjectForKey("id") as? String ?? ""
-        imageData = coder.decodeObjectForKey("imageData") as? NSData
+        id = coder.decodeObject(forKey: "id") as? String ?? ""
+        imageData = coder.decodeObject(forKey: "imageData") as? Data
     }
     
-    func encodeWithCoder(coder: NSCoder) {
-        coder.encodeObject(id, forKey: "id")
-        coder.encodeObject(imageData, forKey: "imageData")
+    func encode(with coder: NSCoder) {
+        coder.encode(id, forKey: "id")
+        coder.encode(imageData, forKey: "imageData")
     }
     
     
@@ -49,28 +49,23 @@ class Photo: NSObject, NSCoding {
     // MARK: Properties
     
     var id = ""
-    var imageData: NSData?
+    var imageData: Data?
     
     var image: UIImage {
-        get { return dataToImage(imageData) }
-        set { imageData = imageToData(newValue) }
+        get { return imageData != nil ? imageData!.toImage() : UIImage() }
+        set { imageData = newValue.toData() }
     }
-    
-    
-    
-    // MARK: Private functions
-    
-    private func dataToImage(data: NSData?) -> UIImage {
-        if (data == nil) {
-            return UIImage()
-        }
-        return UIImage(data: data!) ?? UIImage()
+}
+
+
+fileprivate extension Data {
+    func toImage() -> UIImage {
+        return UIImage(data: self) ?? UIImage()
     }
-    
-    private func imageToData(image: UIImage?) -> NSData? {
-        if (image == nil) {
-            return nil
-        }
-        return UIImagePNGRepresentation(image!)
+}
+
+fileprivate extension UIImage {
+    func toData() -> Data? {
+        return UIImagePNGRepresentation(self)
     }
 }

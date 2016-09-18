@@ -10,6 +10,6 @@ import Foundation
 
 public protocol StringEncoder {
     
-    func decodeString(encodedString: String) -> String
-    func encodeString(string: String) -> String
+    func decode(string: String) -> String?
+    func encode(string: String) -> String?
 }

@@ -16,7 +16,7 @@
 
 import Foundation
 
-public class UrlImporter: NSObject, DataImporter {
+public class UrlImporter { /* TODO : NSObject, DataImporter {
     
     
     // MARK: Initialization
@@ -38,8 +38,8 @@ public class UrlImporter: NSObject, DataImporter {
     
     // MARK: Public functions
     
-    public func importData(completion: ((result: ImportResult) -> ())?) {
-        let session = NSURLSession.sharedSession()
+    public func importData(completion: ((_ result: ImportResult) -> ())?) {
+        let session = URLSession.shared
         let task = session.dataTaskWithURL(url) { (data, response, error) in
             if (error != nil) {
                 completion?(result: self.getResultWithError(error!))
@@ -50,5 +50,5 @@ public class UrlImporter: NSObject, DataImporter {
             }
         }
         task.resume()
-    }
+    }*/
 }

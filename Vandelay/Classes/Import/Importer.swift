@@ -23,42 +23,42 @@ public protocol Importer {
 
 public extension Importer {
     
-    public func getResultWithData(data: NSData) -> ImportResult {
-        let result = ImportResult(state: .Completed)
+    public func getResult(withData data: NSData) -> ImportResult {
+        let result = ImportResult(state: .completed)
         result.data = data
         result.importMethod = importMethod
         return result
     }
     
-    public func getResultWithError(error: NSError) -> ImportResult {
-        let result = ImportResult(state: .Failed)
+    public func getResult(withError error: Error) -> ImportResult {
+        let result = ImportResult(state: .failed)
         result.error = error
         result.importMethod = importMethod
         return result
     }
     
-    public func getResultWithErrorMessage(message: String) -> ImportResult {
+    public func getResult(withErrorMessage message: String) -> ImportResult {
         let domain = "Vandelay"
         let userInfo = ["Description" : message]
         let error = NSError(domain: domain, code: -1, userInfo: userInfo)
-        return getResultWithError(error)
+        return getResult(withError: error)
     }
     
-    public func getResultWithState(state: ImportState) -> ImportResult {
+    public func getResult(withState state: ImportState) -> ImportResult {
         let result = ImportResult(state: state)
         result.importMethod = importMethod
         return result
     }
     
-    public func getResultWithString(string: String) -> ImportResult {
-        let result = ImportResult(state: .Completed)
+    public func getResult(withString string: String) -> ImportResult {
+        let result = ImportResult(state: .completed)
         result.string = string
         result.importMethod = importMethod
         return result
     }
     
     public func getTopmostViewController() -> UIViewController? {
-        if var vc = UIApplication.sharedApplication().keyWindow?.rootViewController {
+        if var vc = UIApplication.shared.keyWindow?.rootViewController {
             while let presentedViewController = vc.presentedViewController {
                 vc = presentedViewController
             }

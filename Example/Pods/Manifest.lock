@@ -1,7 +1,5 @@
 PODS:
   - Alamofire (4.0.0)
-  - Nimble (3.2.0)
-  - Quick (0.9.3)
   - SwiftyDropbox (4.0.2):
     - Alamofire (~> 4.0.0)
   - Vandelay (0.4.0)
@@ -10,8 +8,6 @@ PODS:
     - Vandelay (~> 0.4.0)
 
 DEPENDENCIES:
-  - Nimble (~> 3.0)
-  - Quick (~> 0.8)
   - Vandelay (from `../`)
   - VandelayDropbox (from `../`)
 
@@ -23,12 +19,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
-  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
   SwiftyDropbox: 4458bb0c2d62d7714b7d2cddec107e392f3645d8
-  Vandelay: 91c17d8102b093221b0c96148ed7a91c85ea93e7
-  VandelayDropbox: 01a3163576f6ec61d8ce487136f14008f8bd17fe
+  Vandelay: 203ab941db6022080907d39b569503b9930810ac
+  VandelayDropbox: 248a4f63e17a394e7d5a30cfc9402fbabae437cb
 
-PODFILE CHECKSUM: 6b1868c1e98689abd304e696db330f00fd10510c
+PODFILE CHECKSUM: 8cf9f13a1c4c67700c51855b7a37a94636a15752
 
 COCOAPODS: 1.1.0.rc.2

@@ -18,12 +18,12 @@ public class PasteboardImporter: NSObject, StringImporter {
 
     public private(set) var importMethod = "Pasteboard"
     
-    public func importString(completion: ((result: ImportResult) -> ())?) {
-        let string = UIPasteboard.generalPasteboard().string
+    public func importString(completion: ((_ result: ImportResult) -> ())?) {
+        let string = UIPasteboard.general.string
         if (string == nil) {
-            completion?(result: getResultWithState(.Cancelled))
+            completion?(getResult(withState: .cancelled))
         } else {
-            completion?(result: getResultWithString(string!))
+            completion?(getResult(withString: string!))
         }
     }
 }

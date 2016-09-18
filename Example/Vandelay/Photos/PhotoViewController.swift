@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoViewController: UICollectionViewController {/* TODO, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     // MARK: View lifecycle
@@ -77,7 +77,7 @@ class PhotoViewController: UICollectionViewController, UIImagePickerControllerDe
         repository?.addPhoto(Photo(image: image.resizeToWidth(250)))
         dismissViewControllerAnimated(true, completion: nil)
         reloadData()
-    }
+    }*/
 }
 
 

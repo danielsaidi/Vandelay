@@ -24,11 +24,11 @@ class TodoItemRepository : NSObject {
     }
     
     func deleteTodoItem(item: TodoItem) {
-        items.removeValueForKey(item.id)
+        items.removeValue(forKey: item.id)
     }
     
     func getTodoItems() -> [TodoItem] {
-        return items.values.sort({ item1, item2 -> Bool in
+        return items.values.sorted(by: { item1, item2 -> Bool in
             item1.name < item2.name
         })
     }

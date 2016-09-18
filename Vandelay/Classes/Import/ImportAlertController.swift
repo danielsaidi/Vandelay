@@ -21,8 +21,8 @@ import UIKit
 
 
 public protocol ImportAlertControllerDelegate: class {
-    func alertController(controller: ImportAlertController, didPickDataImporter importer: DataImporter)
-    func alertController(controller: ImportAlertController, didPickStringImporter importer: StringImporter)
+    func alert(_ alert: ImportAlertController, didPickDataImporter importer: DataImporter)
+    func alert(_ alert: ImportAlertController, didPickStringImporter importer: StringImporter)
 }
 
 
@@ -32,15 +32,15 @@ public class ImportAlertController: UIAlertController {
     
     
     public func addDataImporter(importer: DataImporter, withTitle title: String) {
-        let action = UIAlertAction(title: title, style: .Default) { action in
-            self.delegate?.alertController(self, didPickDataImporter: importer)
+        let action = UIAlertAction(title: title, style: .default) { action in
+            self.delegate?.alert(self, didPickDataImporter: importer)
         }
         addAction(action)
     }
     
     public func addStringImporter(importer: StringImporter, withTitle title: String) {
-        let action = UIAlertAction(title: title, style: .Default) { action in
-            self.delegate?.alertController(self, didPickStringImporter: importer)
+        let action = UIAlertAction(title: title, style: .default) { action in
+            self.delegate?.alert(self, didPickStringImporter: importer)
         }
         addAction(action)
     }
