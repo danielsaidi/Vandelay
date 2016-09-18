@@ -41,6 +41,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     public private(set) var exportMethod = "File"
     
     public var errorMessageForFailedDataExport = "FileExporter could not export data to local file."
+    public var errorMessageForFailedStringExport = "FileExporter could not export string to local file."
     
     private var fileNameGenerator: FileNameGenerator
     
@@ -69,7 +70,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
             let result = getResult(withFilePath: filePath)
             completion?(result)
         } catch {
-            let errorMessage = errorMessageForFailedDataExport
+            let errorMessage = errorMessageForFailedStringExport
             completion?(self.getResult(withErrorMessage: errorMessage))
         }
     }
