@@ -20,9 +20,9 @@ import UIKit
 
 public class JsonObjectSerializer: NSObject, ObjectSerializer {
 
-    public func deserializeString(string: String) -> (result: Any?, error: NSError?) {
+    public func deserialize(_ json: String) -> (result: Any?, error: NSError?) {
         do {
-            guard let data = string.data(using: .utf8) else { return (nil, nil) }
+            guard let data = json.data(using: .utf8) else { return getResult(withErrorMessage: "InvalidData") }
             let result = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
             return (result: result, error: nil)
         } catch let error as NSError {
@@ -30,7 +30,7 @@ public class JsonObjectSerializer: NSObject, ObjectSerializer {
         }
     }
     
-    public func serializeObject(object: Any) -> (result: String?, error: NSError?) {
+    public func serialize(_ object: Any) -> (result: String?, error: NSError?) {
         do {
             let data = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
             let result = String(data: data, encoding: .utf8)
@@ -38,5 +38,13 @@ public class JsonObjectSerializer: NSObject, ObjectSerializer {
         } catch let error as NSError {
             return (result: nil, error: error)
         }
+    }
+    
+    
+    private func getResult(withErrorMessage message: String) -> (result: Any?, error: NSError?) {
+        let domain = "Vandelay"
+        let userInfo = ["Description" : message]
+        let error = NSError(domain: domain, code: -1, userInfo: userInfo)
+        return (result: nil, error: error)
     }
 }

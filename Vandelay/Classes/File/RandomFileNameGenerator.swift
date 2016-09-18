@@ -11,11 +11,7 @@ import Foundation
 public class RandomFileNameGenerator: NSObject, FileNameGenerator {
     
     
-    // MARK: Initialization
-    
-    public override init() {
-        super.init()
-    }
+    // MARK: - Initialization
     
     public init(fileExtension: String) {
         self.fileExtension = fileExtension
@@ -24,13 +20,13 @@ public class RandomFileNameGenerator: NSObject, FileNameGenerator {
     
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
-    private var fileExtension: String?
+    private var fileExtension: String
     
     
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
     public func getFileName() -> String {
         let fileName = NSUUID().uuidString

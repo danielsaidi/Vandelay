@@ -11,7 +11,7 @@ import Foundation
 public class StaticFileNameGenerator: NSObject, FileNameGenerator {
     
     
-    // MARK: Initialization
+    // MARK: - Initialization
     
     public init(fileName: String) {
         self.fileName = fileName
@@ -25,13 +25,13 @@ public class StaticFileNameGenerator: NSObject, FileNameGenerator {
     
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
     private var fileName: String
     
     
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
     public func getFileName() -> String {
         return fileName

@@ -15,11 +15,8 @@
 
 import UIKit
 
-
-//TODO: Error instead of NSError
-
 public protocol ObjectSerializer {
     
-    func deserializeString(string: String) -> (result: Any?, error: NSError?)
-    func serializeObject(object: Any) -> (result: String?, error: NSError?)
+    func deserialize(_ json: String) -> (result: Any?, error: NSError?)
+    func serialize(_ object: Any) -> (result: String?, error: NSError?)
 }
