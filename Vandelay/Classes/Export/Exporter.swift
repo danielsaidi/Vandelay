@@ -49,14 +49,4 @@ public extension Exporter {
         result.exportMethod = exportMethod
         return result
     }
-    
-    public func getTopmostViewController() -> UIViewController? {
-        if var vc = UIApplication.shared.keyWindow?.rootViewController {
-            while let presentedViewController = vc.presentedViewController {
-                vc = presentedViewController
-            }
-            return vc
-        }
-        return nil
-    }
 }

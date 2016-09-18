@@ -70,6 +70,7 @@
 		9C72E2176840FE6CED49850E7CC0A9D4 /* StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3C684D77A2398AE42CA2BE224CE1BB /* StringEncoder.swift */; };
 		9C983601A4D27C8F764F6528DD1C6857 /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D381B56C78E817203A5B19CBAC5EB72 /* FileImporter.swift */; };
 		A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA192AAC09377E452860024D223926 /* SessionManager.swift */; };
+		A9F58DCA1D8F2CBC00F85154 /* UIApplication_TopmostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F58DC91D8F2CBC00F85154 /* UIApplication_TopmostViewController.swift */; };
 		AA04319DFB532944483DB987B0E9C970 /* TeamRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB317122AEA557ACF7D0814AD2BE0D8 /* TeamRoutes.swift */; };
 		AD31083B3F0225FEB99534B32C8A95E5 /* TeamCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437793940DDE2D71B4BE7D5DA49C933 /* TeamCommon.swift */; };
 		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D554F5DF7A1E7805C576508ABF16888F /* ParameterEncoding.swift */; };
@@ -252,6 +253,7 @@
 		A54331BCC16CAD53B7C87DB31BC647F1 /* StoneSerializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneSerializers.swift; path = Source/Source/PlatformNeutral/StoneSerializers.swift; sourceTree = "<group>"; };
 		A829D82C6A482C86AA0E21F2A453B110 /* IdGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IdGenerator.swift; sourceTree = "<group>"; };
 		A9D14C6583A4EBDDA196BED1A1A2D3A8 /* DropboxTeamClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTeamClient.swift; path = Source/Source/PlatformNeutral/DropboxTeamClient.swift; sourceTree = "<group>"; };
+		A9F58DC91D8F2CBC00F85154 /* UIApplication_TopmostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication_TopmostViewController.swift; sourceTree = "<group>"; };
 		AF25220BC6C1438A3FF26630BA9751B5 /* Pods-Vandelay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vandelay_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B043433640A897C0338ED1D217102B8B /* SharingRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharingRoutes.swift; path = Source/Source/PlatformNeutral/SharingRoutes.swift; sourceTree = "<group>"; };
 		B1099BE43A9E92F0CEE198550FB1EDE4 /* FileNameGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileNameGenerator.swift; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 			children = (
 				A05E86593EC88EEA6EEECC3A2E0C3B50 /* Encoding */,
 				C6D0A5CFCAE1B39B3533FC0E2E1F43CC /* Export */,
+				A9F58DC81D8F2CA400F85154 /* Extensions */,
 				70E3661DD1B3942750DFE252554602E7 /* File */,
 				962579D396FC9B8569595438CD881C8C /* Id */,
 				1D216A5F28E0C4353C2362B700AD0F7F /* Import */,
@@ -594,6 +597,14 @@
 				EBA334F3FD6B9B244725C5B560C26DC0 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		A9F58DC81D8F2CA400F85154 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9F58DC91D8F2CBC00F85154 /* UIApplication_TopmostViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		AF63DADEF6339220E9CB231BE0828676 /* Products */ = {
@@ -926,6 +937,7 @@
 				7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */,
 				E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */,
 				C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */,
+				A9F58DCA1D8F2CBC00F85154 /* UIApplication_TopmostViewController.swift in Sources */,
 				E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */,
 				0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */,
 				AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */,

@@ -14,8 +14,8 @@ public class ImportResult: NSObject {
         self.state = state
     }
     
-    public var data: NSData?
-    public var error: Error?
+    public var data: Data?
+    public var error: NSError?
     public var importMethod = ""
     public var state: ImportState
     public var string: String?

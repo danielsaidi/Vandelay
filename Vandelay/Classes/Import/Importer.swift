@@ -23,14 +23,14 @@ public protocol Importer {
 
 public extension Importer {
     
-    public func getResult(withData data: NSData) -> ImportResult {
+    public func getResult(withData data: Data) -> ImportResult {
         let result = ImportResult(state: .completed)
         result.data = data
         result.importMethod = importMethod
         return result
     }
     
-    public func getResult(withError error: Error) -> ImportResult {
+    public func getResult(withError error: NSError) -> ImportResult {
         let result = ImportResult(state: .failed)
         result.error = error
         result.importMethod = importMethod
@@ -55,15 +55,5 @@ public extension Importer {
         result.string = string
         result.importMethod = importMethod
         return result
-    }
-    
-    public func getTopmostViewController() -> UIViewController? {
-        if var vc = UIApplication.shared.keyWindow?.rootViewController {
-            while let presentedViewController = vc.presentedViewController {
-                vc = presentedViewController
-            }
-            return vc
-        }
-        return nil
     }
 }
