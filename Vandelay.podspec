@@ -24,7 +24,5 @@ This means that 0.3.0 will not be compatible with 0.2.0, and so on.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Vandelay/Classes/**/*.{swift}'
-  
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
 end

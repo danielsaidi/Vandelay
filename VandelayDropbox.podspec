@@ -18,7 +18,6 @@ strings, serialized JSON and encoded NSData to your app's Dropbox folder.
 
   s.source_files = 'VandelayDropbox/Classes/**/*'
   
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'SwiftyDropbox', '~> 3.0.0'
   s.dependency 'Vandelay', '~> 0.3.0'
 end
