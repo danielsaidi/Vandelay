@@ -131,15 +131,15 @@ public class DropboxImporter: NSObject, DataImporter, StringImporter {
         
         let destination = getDownloadDestination()
         
-        client.files .download(path: filePath, destination: destination).response { response, error in
-            guard let (metadata, url) = response else {
+        let _ = client.files .download(path: filePath, destination: destination).response { response, error in
+            guard let (_, url) = response else {
                 let errorMessage = error?.description ?? self.errorMessageForDownloadError
                 completion?(self.getResult(withErrorMessage: errorMessage))
                 return
             }
         
             do {
-                let data = try! Data(contentsOf: url)
+                let data = try Data(contentsOf: url)
                 completion?(self.getResult(withData: data))
             } catch {
                 completion?(self.getResult(withErrorMessage: self.errorMessageForFileError))

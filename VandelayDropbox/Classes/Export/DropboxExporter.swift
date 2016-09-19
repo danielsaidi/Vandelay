@@ -124,7 +124,7 @@ public class DropboxExporter: NSObject, DataExporter, StringExporter {
         inProgressResult.filePath = fileName
         completion?(inProgressResult)
         
-        client.files.upload(path: path, mode: .overwrite, autorename: true, clientModified: nil, mute: true, input: data).response { (metadata, error) in
+        let _ = client.files.upload(path: path, mode: .overwrite, autorename: true, clientModified: nil, mute: true, input: data).response { (metadata, error) in
             if (error == nil && metadata != nil) {
                 completion?(self.getResult(withFilePath: fileName))
             } else {
