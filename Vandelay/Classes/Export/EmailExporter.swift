@@ -88,7 +88,6 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
         case .failed: return .failed
         case .sent: return .completed
         case .saved: return .cancelled
-        default: return .failed
         }
     }
     
@@ -108,11 +107,11 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     
     // MARK: MFMailComposeViewControllerDelegate
     
-    public func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult sendResult: MFMailComposeResult, error: NSError?) {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.presentingViewController?.dismiss(animated: true, completion: nil)
-        let state = getExportStateForSendResult(sendResult: sendResult)
+        let state = getExportStateForSendResult(sendResult: result)
         let result = getResult(withState: state)
-        result.error = error
+        result.error = error != nil ? getError(withErrorMessage: error!.localizedDescription) : nil
         completion?(result)
     }
 }

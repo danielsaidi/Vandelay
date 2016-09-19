@@ -30,6 +30,6 @@ public class RandomFileNameGenerator: NSObject, FileNameGenerator {
     
     public func getFileName() -> String {
         let fileName = NSUUID().uuidString
-        return fileExtension == nil ? fileName : "\(fileName).\(fileExtension)"
+        return "\(fileName).\(fileExtension)"
     }
 }

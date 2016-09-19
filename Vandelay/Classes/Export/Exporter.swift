@@ -33,6 +33,12 @@ public extension Exporter {
     
     
     
+    public func getError(withErrorMessage errorMessage: String) -> NSError {
+        let domain = "Vandelay"
+        let userInfo = ["Description" : errorMessage]
+        return NSError(domain: domain, code: -1, userInfo: userInfo)
+    }
+    
     public func getResult(withError error: NSError) -> ExportResult {
         let result = ExportResult(state: .failed)
         result.error = error
@@ -41,9 +47,7 @@ public extension Exporter {
     }
     
     public func getResult(withErrorMessage errorMessage: String) -> ExportResult {
-        let domain = "Vandelay"
-        let userInfo = ["Description" : errorMessage]
-        let error = NSError(domain: domain, code: -1, userInfo: userInfo)
+        let error = getError(withErrorMessage: errorMessage)
         return getResult(withError: error)
     }
     
