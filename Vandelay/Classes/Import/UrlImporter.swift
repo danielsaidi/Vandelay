@@ -16,39 +16,39 @@
 
 import Foundation
 
-public class UrlImporter { /* TODO : NSObject, DataImporter {
+public class UrlImporter: NSObject, DataImporter {
     
     
-    // MARK: Initialization
+    // MARK: - Initialization
     
-    public init(url: NSURL) {
+    public init(url: URL) {
         self.url = url
         super.init()
     }
     
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
     public private(set) var importMethod = "URL"
     
-    private var url: NSURL
+    private var url: URL
     
     
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
     public func importData(completion: ((_ result: ImportResult) -> ())?) {
         let session = URLSession.shared
-        let task = session.dataTaskWithURL(url) { (data, response, error) in
-            if (error != nil) {
-                completion?(result: self.getResultWithError(error!))
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                completion?(self.getResult(withError: error!))
             } else if (data != nil) {
-                completion?(result: self.getResultWithData(data!))
+                completion?(self.getResult(withData: data!))
             } else {
-                completion?(result: self.getResultWithErrorMessage("No data in url \(self.url)"))
+                completion?(self.getResult(withErrorMessage: "No data in \(self.url)"))
             }
         }
         task.resume()
-    }*/
+    }
 }

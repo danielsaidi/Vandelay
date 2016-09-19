@@ -20,7 +20,7 @@
 
 import UIKit
 
-public class FileImporter{/* TODO: NSObject, DataImporter, StringImporter {
+public class FileImporter: NSObject, DataImporter, StringImporter {
     
     
     // MARK: Initialization
@@ -48,30 +48,32 @@ public class FileImporter{/* TODO: NSObject, DataImporter, StringImporter {
     
     public func importData(completion: ((_ result: ImportResult) -> ())?) {
         do {
-            let filePath = getFilePath()
-            let data = try NSData(contentsOfFile: filePath, options: .uncachedRead)
-            completion?(getResultWithData(data: data))
+            let filePath = getFilePath()!
+            let url = URL(string: filePath)!
+            let data = try Data(contentsOf: url, options: .uncachedRead)
+            completion?(getResult(withData: data))
         } catch {
-            completion?(self.getResultWithError(error: error as NSError))
+            completion?(self.getResult(withError: error))
         }
     }
     
     public func importString(completion: ((_ result: ImportResult) -> ())?) {
         do {
-            let filePath = getFilePath()
-            let string = try String(contentsOfFile: filePath)
-            completion?(getResultWithString(string: string))
+            let filePath = getFilePath()!
+            let string = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
+            completion?(getResult(withString: string))
         } catch {
-            completion?(self.getResultWithError(error: error as NSError))
+            completion?(self.getResult(withError: error))
         }
     }
     
     
     // MARK: Private functions
     
-    private func getFilePath() -> String {
+    private func getFilePath() -> String? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        guard paths.count > 0 else { return nil }
         let fileName = fileNameGenerator.getFileName()
         return "\(paths.first!)/\(fileName)"
-    }*/
+    }
 }

@@ -46,6 +46,10 @@ public extension Importer {
         return result
     }
     
+    public func getResult(withError error: Error) -> ImportResult {
+        return getResult(withErrorMessage: error.localizedDescription)
+    }
+    
     public func getResult(withErrorMessage message: String) -> ImportResult {
         let domain = "Vandelay"
         let userInfo = ["Description" : message]
