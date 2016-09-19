@@ -33,17 +33,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
-/*
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        if let authResult = Dropbox.handleRedirectURL(url) {
-            switch authResult {
-            case .Success(let token):
-                print("Successfully connected to Dropbox with token \(token).")
-                return true
-            case .Error(let error, let description):
-                print("Error while connecting to Dropbox: \(error), description: \(description)")
-            }
-        }
-        return false
-    }*/
 }
