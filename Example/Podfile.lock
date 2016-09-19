@@ -4,7 +4,7 @@ PODS:
     - Alamofire (~> 4.0.0)
   - Vandelay (0.4.0)
   - VandelayDropbox (0.4.0):
-    - SwiftyDropbox (~> 4.0.0)
+    - SwiftyDropbox (~> 4.0.2)
     - Vandelay (~> 0.4.0)
 
 DEPENDENCIES:
@@ -21,7 +21,7 @@ SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   SwiftyDropbox: 4458bb0c2d62d7714b7d2cddec107e392f3645d8
   Vandelay: 203ab941db6022080907d39b569503b9930810ac
-  VandelayDropbox: 248a4f63e17a394e7d5a30cfc9402fbabae437cb
+  VandelayDropbox: 1812f1e240b92b67527143596a76803c0d08aad1
 
 PODFILE CHECKSUM: 8cf9f13a1c4c67700c51855b7a37a94636a15752
 

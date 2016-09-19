@@ -22,7 +22,7 @@
   "source_files": "VandelayDropbox/Classes/**/*",
   "dependencies": {
     "SwiftyDropbox": [
-      "~> 4.0.0"
+      "~> 4.0.2"
     ],
     "Vandelay": [
       "~> 0.4.0"

@@ -91,12 +91,16 @@ public class DropboxExporter: NSObject, DataExporter, StringExporter {
             return
         }
         
-        if (willAuthorize(from: vc)) {
+        guard let client = DropboxClientsManager.authorizedClient else {
+            let app = UIApplication.shared
+            DropboxClientsManager.authorizeFromController(app, controller: vc, openURL: { url in
+                app.openURL(url)
+            })
             completion?(getResult(withState: .cancelled))
             return
         }
         
-        uploadData(data, completion: completion)
+        uploadData(data, withClient: client, completion: completion)
     }
     
     public func exportString(_ string: String, completion: ((_ result: ExportResult) -> ())?) {
@@ -112,32 +116,21 @@ public class DropboxExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Private functions
     
-    private func uploadData(_ data: Data, completion: ((_ result: ExportResult) -> ())?) {
-        /*let client = DropboxClient.sharedClient!
+    private func uploadData(_ data: Data, withClient client: DropboxClient, completion: ((_ result: ExportResult) -> ())?) {
         let fileName = fileNameGenerator.getFileName()
         let path = "/\(fileName)"
         
-        let inProgressResult = getResultWithState(.InProgress)
+        let inProgressResult = getResult(withState: .inProgress)
         inProgressResult.filePath = fileName
-        completion?(result: inProgressResult)
+        completion?(inProgressResult)
         
-        client.files.upload(path: path, mode: .Overwrite, mute: true, body: data).response {
-            response, error in
-            if (error == nil && response != nil) {
-                completion?(result: self.getResultWithFilePath(fileName))
+        client.files.upload(path: path, mode: .overwrite, autorename: true, clientModified: nil, mute: true, input: data).response { (metadata, error) in
+            if (error == nil && metadata != nil) {
+                completion?(self.getResult(withFilePath: fileName))
             } else {
                 let message = error!.description
-                completion?(result: self.getResultWithErrorMessage(message))
+                completion?(self.getResult(withErrorMessage: message))
             }
-        }*/
-    }
-    
-    private func willAuthorize(from vc: UIViewController) -> Bool {
-        /*let client = DropboxConnectController. Dropbox.authorizedClient
-        if (client == nil) {
-            Dropbox.authorizeFromController(vc)
-            return true
         }
-        return false*/
     }
 }

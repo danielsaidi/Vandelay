@@ -56,7 +56,7 @@ import Foundation
 import SwiftyDropbox
 import Vandelay
 
-public class DropboxImporter { /* TODO : NSObject, DataImporter, StringImporter {
+public class DropboxImporter: NSObject, DataImporter, StringImporter {
     
     
     // MARK: Initialization
@@ -76,6 +76,11 @@ public class DropboxImporter { /* TODO : NSObject, DataImporter, StringImporter 
     
     public private(set) var importMethod = "Dropbox"
     
+    public var errorMessageForDownloadError = "DropboxExporter could not create data from string"
+    public var errorMessageForFileError = "DropboxExporter could not create data from string"
+    public var errorMessageForStringError = "DropboxExporter could not create data from string"
+    public var errorMessageForViewController = "DropboxExporter could not find topmost view controller"
+    
     private var fileNameGenerator: FileNameGenerator
     
     
@@ -83,31 +88,33 @@ public class DropboxImporter { /* TODO : NSObject, DataImporter, StringImporter 
     // MARK: Public functions
     
     public func importData(completion: ((_ result: ImportResult) -> ())?) {
-        let vc = getTopmostViewController()
-        if (vc == nil) {
-            let error = "DropboxImporter could not find topmost view controller"
-            completion?(getResult(withErrorMessage: error))
+        guard let vc = topmostViewController else {
+            completion?(getResult(withErrorMessage: errorMessageForViewController))
             return
         }
         
-        if (willAuthorizeFromViewController(vc: vc!)) {
+        guard let client = DropboxClientsManager.authorizedClient else {
+            let app = UIApplication.shared
+            DropboxClientsManager.authorizeFromController(app, controller: vc, openURL: { url in
+                app.openURL(url)
+            })
             completion?(getResult(withState: .cancelled))
             return
         }
         
-        downloadData(completion: completion)
+        downloadData(withClient: client, completion: completion)
     }
     
     public func importString(completion: ((_ result: ImportResult) -> ())?) {
         importData { (result) in
             if (result.data != nil) {
                 if let string = String(data: result.data!, encoding: .utf8) {
-                    completion?(result: self.getResultWithString(string))
+                    completion?(self.getResult(withString: string))
                 } else {
-                    completion?(result: self.getResultWithErrorMessage("Dropbox file did not contain valid content."))
+                    completion?(self.getResult(withErrorMessage: "Dropbox file did not contain valid content."))
                 }
             } else {
-                completion?(result: result)
+                completion?(result)
             }
         }
     }
@@ -116,43 +123,36 @@ public class DropboxImporter { /* TODO : NSObject, DataImporter, StringImporter 
     
     // MARK: Private functions
     
-    private func downloadData(completion: ((result: ImportResult) -> ())?) {
-        let client = DropboxClient.sharedClient!
+    private func downloadData(withClient client: DropboxClient, completion: ((_ result: ImportResult) -> ())?) {
         let fileName = fileNameGenerator.getFileName()
         let filePath = "/\(fileName)"
         
-        completion?(result: ImportResult(state: .InProgress))
+        completion?(ImportResult(state: .inProgress))
         
         let destination = getDownloadDestination()
         
-        client.files.download(path: filePath, destination: destination).response { response, error in
-            if let (metadata, url) = response {
-                if let data = NSData(contentsOfURL: url) {
-                    completion?(result: self.getResultWithData(data))
-                } else {
-                    completion?(result: self.getResultWithErrorMessage("No data in file \(url)"))
-                }
-            } else {
-                completion?(result: self.getResultWithErrorMessage(error?.description ?? "Error downloading file"))
+        client.files .download(path: filePath, destination: destination).response { response, error in
+            guard let (metadata, url) = response else {
+                let errorMessage = error?.description ?? self.errorMessageForDownloadError
+                completion?(self.getResult(withErrorMessage: errorMessage))
+                return
+            }
+        
+            do {
+                let data = try! Data(contentsOf: url)
+                completion?(self.getResult(withData: data))
+            } catch {
+                completion?(self.getResult(withErrorMessage: self.errorMessageForFileError))
             }
         }
     }
     
-    private func getDownloadDestination() -> ((NSURL, NSHTTPURLResponse) -> NSURL) {
+    private func getDownloadDestination() -> ((URL, HTTPURLResponse) -> URL) {
         return { temporaryURL, response in
-            let fileManager = NSFileManager.defaultManager()
-            let directoryURL = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-            let pathComponent = "\(NSUUID().UUIDString)-\(response.suggestedFilename!)"
-            return directoryURL.URLByAppendingPathComponent(pathComponent)
+            let fileManager = FileManager.default
+            let directoryURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let pathComponent = "\(NSUUID().uuidString)-\(response.suggestedFilename!)"
+            return directoryURL.appendingPathComponent(pathComponent)
         }
     }
-    
-    private func willAuthorizeFromViewController(vc: UIViewController) -> Bool {
-        let client = Dropbox.authorizedClient
-        if (client == nil) {
-            Dropbox.authorizeFromController(vc)
-            return true
-        }
-        return false
-    }*/
 }
