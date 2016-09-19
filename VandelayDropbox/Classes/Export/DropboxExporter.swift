@@ -56,7 +56,7 @@ import Foundation
 import SwiftyDropbox
 import Vandelay
 
-public class DropboxExporter { /* TODO : NSObject, DataExporter, StringExporter {
+public class DropboxExporter: NSObject, DataExporter, StringExporter {
     
     
     // MARK: Initialization
@@ -76,45 +76,44 @@ public class DropboxExporter { /* TODO : NSObject, DataExporter, StringExporter 
     
     public private(set) var exportMethod = "Dropbox"
     
+    public var errorMessageForViewController = "DropboxExporter could not find topmost view controller"
+    public var errorMessageForDataError = "DropboxExporter could not create data from string"
+    
     private var fileNameGenerator: FileNameGenerator
     
     
     
     // MARK: Public functions
     
-    public func exportData(data: NSData, completion: ((_ result: ExportResult) -> ())?) {
-        let vc = getTopmostViewController()
-        if (vc == nil) {
-            let error = "DropboxExporter could not find topmost view controller"
-            completion?(result: getResultWithErrorMessage(error))
+    public func exportData(_ data: Data, completion: ((_ result: ExportResult) -> ())?) {
+        guard let vc = topmostViewController else {
+            completion?(getResult(withErrorMessage: errorMessageForViewController))
             return
         }
         
-        if (willAuthorizeFromViewController(vc!)) {
-            completion?(result: getResultWithState(.Cancelled))
+        if (willAuthorize(from: vc)) {
+            completion?(getResult(withState: .cancelled))
             return
         }
         
         uploadData(data, completion: completion)
     }
     
-    public func exportString(string: String, completion: ((_ result: ExportResult) -> ())?) {
-        let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        if (data == nil) {
-            let error = "DropboxExporter could not create data from string"
-            completion?(result: getResultWithErrorMessage(error))
+    public func exportString(_ string: String, completion: ((_ result: ExportResult) -> ())?) {
+        guard let data = string.data(using: .utf8, allowLossyConversion: false) else {
+            completion?(getResult(withErrorMessage: errorMessageForDataError))
             return
         }
         
-        exportData(data!, completion: completion)
+        exportData(data, completion: completion)
     }
     
     
     
     // MARK: Private functions
     
-    private func uploadData(data: NSData, completion: ((_ result: ExportResult) -> ())?) {
-        let client = DropboxClient.sharedClient!
+    private func uploadData(_ data: Data, completion: ((_ result: ExportResult) -> ())?) {
+        /*let client = DropboxClient.sharedClient!
         let fileName = fileNameGenerator.getFileName()
         let path = "/\(fileName)"
         
@@ -130,15 +129,15 @@ public class DropboxExporter { /* TODO : NSObject, DataExporter, StringExporter 
                 let message = error!.description
                 completion?(result: self.getResultWithErrorMessage(message))
             }
-        }
+        }*/
     }
     
-    private func willAuthorizeFromViewController(vc: UIViewController) -> Bool {
-        let client = Dropbox.authorizedClient
+    private func willAuthorize(from vc: UIViewController) -> Bool {
+        /*let client = DropboxConnectController. Dropbox.authorizedClient
         if (client == nil) {
             Dropbox.authorizeFromController(vc)
             return true
         }
-        return false
-    }*/
+        return false*/
+    }
 }
