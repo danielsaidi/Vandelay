@@ -33,7 +33,7 @@ class TodoItem: NSObject {
         self.name = name
     }
     
-    required init(dict: [String : AnyObject]) {
+    required init(dict: [String : Any]) {
         super.init()
         id = dict["id"] as? String ?? id
         name = dict["name"] as? String ?? name

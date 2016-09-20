@@ -33,9 +33,9 @@ public extension Exporter {
     
     
     
-    public func getError(withErrorMessage errorMessage: String) -> NSError {
+    public func getError(withErrorMessage message: String) -> NSError {
         let domain = "Vandelay"
-        let userInfo = ["Description" : errorMessage]
+        let userInfo = [NSLocalizedDescriptionKey: message]
         return NSError(domain: domain, code: -1, userInfo: userInfo)
     }
     

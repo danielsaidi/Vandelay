@@ -21,8 +21,8 @@ import UIKit
 
 
 public protocol ImportAlertControllerDelegate: class {
-    func alert(_ alert: ImportAlertController, didPickDataImporter importer: DataImporter)
-    func alert(_ alert: ImportAlertController, didPickStringImporter importer: StringImporter)
+    func alert(_ alert: ImportAlertController, didPick importer: DataImporter)
+    func alert(_ alert: ImportAlertController, didPick importer: StringImporter)
 }
 
 
@@ -31,16 +31,16 @@ public class ImportAlertController: UIAlertController {
     weak public var delegate: ImportAlertControllerDelegate?
     
     
-    public func add(_ importer: DataImporter, withTitle title: String) {
+    public func addDataImporter(_ importer: DataImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .default) { action in
-            self.delegate?.alert(self, didPickDataImporter: importer)
+            self.delegate?.alert(self, didPick: importer)
         }
         addAction(action)
     }
     
-    public func add(_ importer: StringImporter, withTitle title: String) {
+    public func addStringImporter(_ importer: StringImporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .default) { action in
-            self.delegate?.alert(self, didPickStringImporter: importer)
+            self.delegate?.alert(self, didPick: importer)
         }
         addAction(action)
     }

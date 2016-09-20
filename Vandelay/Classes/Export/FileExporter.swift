@@ -57,8 +57,8 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
             let result = getResult(withFilePath: filePath)
             completion?(result)
         } catch {
-            let errorMessage = errorMessageForFailedDataExport
-            completion?(self.getResult(withErrorMessage: errorMessage))
+            let message = error.localizedDescription
+            completion?(self.getResult(withErrorMessage: message))
         }
     }
     
@@ -70,8 +70,8 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
             let result = getResult(withFilePath: filePath)
             completion?(result)
         } catch {
-            let errorMessage = errorMessageForFailedStringExport
-            completion?(self.getResult(withErrorMessage: errorMessage))
+            let message = error.localizedDescription
+            completion?(self.getResult(withErrorMessage: message))
         }
     }
     

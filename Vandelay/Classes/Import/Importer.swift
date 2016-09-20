@@ -52,7 +52,7 @@ public extension Importer {
     
     public func getResult(withErrorMessage message: String) -> ImportResult {
         let domain = "Vandelay"
-        let userInfo = ["Description" : message]
+        let userInfo = [NSLocalizedDescriptionKey: message]
         let error = NSError(domain: domain, code: -1, userInfo: userInfo)
         return getResult(withError: error)
     }
