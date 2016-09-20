@@ -40,9 +40,6 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     public private(set) var exportMethod = "File"
     
-    public var errorMessageForFailedDataExport = "FileExporter could not export data to local file."
-    public var errorMessageForFailedStringExport = "FileExporter could not export string to local file."
-    
     private var fileNameGenerator: FileNameGenerator
     
     
@@ -51,10 +48,12 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     public func exportData(_ data: Data, completion: ((_ result: ExportResult) -> ())?) {
         do {
-            let filePath = getPath()!
-            let url = URL(string: filePath)!
+            guard let url = getFileUrl() else {
+                completion?(self.getResult(withErrorMessage: "Could not generate valid document url"))
+                return
+            }
             try data.write(to: url, options: .atomicWrite)
-            let result = getResult(withFilePath: filePath)
+            let result = getResult(withFilePath: url.absoluteString )
             completion?(result)
         } catch {
             let message = error.localizedDescription
@@ -64,10 +63,12 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     public func exportString(_ string: String, completion: ((_ result: ExportResult) -> ())?) {
         do {
-            let filePath = getPath()!
-            let url = URL(string: filePath)!
+            guard let url = getFileUrl() else {
+                completion?(self.getResult(withErrorMessage: "Could not generate valid document url"))
+                return
+            }
             try string.write(to: url, atomically: true, encoding: .utf8)
-            let result = getResult(withFilePath: filePath)
+            let result = getResult(withFilePath: url.absoluteString )
             completion?(result)
         } catch {
             let message = error.localizedDescription
@@ -79,10 +80,11 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Private functions
     
-    private func getPath() -> String? {
+    private func getFileUrl() -> URL? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         guard paths.count > 0 else { return nil }
         let fileName = fileNameGenerator.getFileName()
-        return "\(paths.first!)/\(fileName)"
+        let path = "file:///\(paths.first!)/\(fileName)"
+        return URL(string: path)
     }
 }

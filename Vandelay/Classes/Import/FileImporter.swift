@@ -74,6 +74,6 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         guard paths.count > 0 else { return nil }
         let fileName = fileNameGenerator.getFileName()
-        return "\(paths.first!)/\(fileName)"
+        return "file:///\(paths.first!)/\(fileName)"
     }
 }

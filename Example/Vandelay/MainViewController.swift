@@ -89,7 +89,16 @@ class MainViewController: UITableViewController, ExportAlertControllerDelegate, 
         case .cancelled: return "Your export was cancelled."
         case .completed: return "Your data was exported, using the \"\(result.exportMethod)\" method"
         case .failed: return "Your export failed with error \(result.error?.description ?? "N/A")."
-        case .inProgress: return "Your export is in progress. Please wait."
+        case .inProgress: return "Your export is in progress."
+        }
+    }
+    
+    private func exportTitle(for result: ExportResult) -> String {
+        switch result.state {
+        case .cancelled: return "Oh..."
+        case .completed: return "Yeah!"
+        case .failed: return "Doh!"
+        case .inProgress: return "Please wait...."
         }
     }
     
@@ -137,12 +146,11 @@ class MainViewController: UITableViewController, ExportAlertControllerDelegate, 
     
     private func exportCompleted(withResult result: ExportResult) {
         let success = result.error == nil
-        let title = success ? "Yeah!" : "Error!"
+        let title = exportTitle(for: result)
         let message = success ? exportMessage(for: result) : result.error!.localizedDescription
         alert(title: title, message: message)
     }
 
-    
     
     
     // MARK: - Import functions
