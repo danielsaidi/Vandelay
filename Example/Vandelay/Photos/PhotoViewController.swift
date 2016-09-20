@@ -8,20 +8,20 @@
 
 import UIKit
 
-class PhotoViewController: UICollectionViewController {/* TODO, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView?.backgroundColor = UIColor.whiteColor()
+        collectionView?.backgroundColor = UIColor.white
         reloadData()
     }
     
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var repository: PhotoRepository?
     
@@ -31,19 +31,19 @@ class PhotoViewController: UICollectionViewController {/* TODO, UIImagePickerCon
     
     
     
-    // MARK: Actions
+    // MARK: - Actions
     
     @IBAction func add() {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = false
-        picker.sourceType = .PhotoLibrary
-        presentViewController(picker, animated: true, completion: nil)
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
     }
     
     
     
-    // MARK: Private functions
+    // MARK: - Private functions
     
     private func reloadData() {
         photos = repository?.getPhotos() ?? [Photo]()
@@ -52,18 +52,18 @@ class PhotoViewController: UICollectionViewController {/* TODO, UIImagePickerCon
     
     
     
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCollectionViewCell
         let photo = photos[indexPath.row]
         cell.imageView.image = photo.image
         return cell
@@ -71,14 +71,14 @@ class PhotoViewController: UICollectionViewController {/* TODO, UIImagePickerCon
     
     
     
-    // MARK: UIImagePickerControllerDelegate
+    // MARK: - UIImagePickerControllerDelegate
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        repository?.addPhoto(Photo(image: image.resizeToWidth(250)))
-        dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+        guard let resized = image.resize(toWidth: 250) else { return }
+        repository?.addPhoto(photo: Photo(image: resized))
+        dismiss(animated: true, completion: nil)
         reloadData()
-    }*/
+    }
 }
-
-
 

@@ -11,7 +11,7 @@ import UIKit
 public extension UIImage {
     
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
     public func resize(toHeight points: CGFloat) -> UIImage? {
         let height = points * scale
@@ -31,7 +31,7 @@ public extension UIImage {
     
     
     
-    // MARK: Private functions
+    // MARK: - Private functions
     
     private func resized(toSize newSize: CGSize, withQuality quality: CGInterpolationQuality) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(newSize, false, scale)

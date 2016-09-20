@@ -25,7 +25,7 @@ import Vandelay
 class Photo: NSObject, NSCoding {
 
     
-    // MARK: Initialization
+    // MARK: - Initialization
     
     init(image: UIImage) {
         super.init()
@@ -46,7 +46,7 @@ class Photo: NSObject, NSCoding {
     
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var id = ""
     var imageData: Data?

@@ -25,7 +25,7 @@ import Vandelay
 class TodoItem: NSObject {
 
     
-    // MARK: Initialization
+    // MARK: - Initialization
     
     init(name: String) {
         super.init()
@@ -42,7 +42,7 @@ class TodoItem: NSObject {
     
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var id = ""
     var name = ""
@@ -50,7 +50,7 @@ class TodoItem: NSObject {
     
     
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
     func toDictionary() -> [String : Any] {
         var dict = [String : Any]()

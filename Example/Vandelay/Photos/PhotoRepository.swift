@@ -12,12 +12,12 @@ import Vandelay
 class PhotoRepository : NSObject {
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
     private var photos = [String : Photo]()
     
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
     func addPhoto(photo: Photo) {
         photos[photo.id] = photo

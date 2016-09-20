@@ -11,7 +11,7 @@ import UIKit
 class TodoItemViewController: UITableViewController {
     
     
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -20,7 +20,7 @@ class TodoItemViewController: UITableViewController {
     
     
 
-    // MARK: Properties
+    // MARK: - Properties
     
     var repository: TodoItemRepository?
     
@@ -30,7 +30,7 @@ class TodoItemViewController: UITableViewController {
     
     
     
-    // MARK: Actions
+    // MARK: - Actions
     
     @IBAction func add() {
         let title = "Add new item"
@@ -48,7 +48,7 @@ class TodoItemViewController: UITableViewController {
     
     
     
-    // MARK: Private functions
+    // MARK: - Private functions
     
     private func reloadData() {
         items = repository?.getTodoItems() ?? [TodoItem]()
@@ -60,7 +60,7 @@ class TodoItemViewController: UITableViewController {
     
     
     
-    // MARK: UITableViewDataSource
+    // MARK: - UITableViewDataSource
     
     override func numberOfSections(in view: UITableView) -> Int {
         return 1
@@ -106,7 +106,7 @@ class TodoItemViewController: UITableViewController {
     
     
     
-    // MARK: UITableViewDelegate
+    // MARK: - UITableViewDelegate
     
     override func tableView(_ view: UITableView, didSelectRowAt indexPath: IndexPath) {
         view.deselectRow(at: indexPath, animated: true)
