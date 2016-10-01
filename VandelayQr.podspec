@@ -18,6 +18,6 @@ string or data by scanning a QR code.
 
   s.source_files = 'VandelayQr/Classes/**/*'
   
-  s.dependency 'QRCodeReader.swift', '> 7'
+  s.dependency 'QRCodeReader.swift'
   s.dependency 'Vandelay'
 end
