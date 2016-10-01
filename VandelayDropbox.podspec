@@ -19,6 +19,6 @@ Dropbox folder.
 
   s.source_files = 'VandelayDropbox/Classes/**/*'
   
-  s.dependency 'SwiftyDropbox'
+  s.dependency 'SwiftyDropbox', '> 4'
   s.dependency 'Vandelay'
 end
