@@ -21,6 +21,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A970CF151D9FDC7100BC2497 /* VandelayQr.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A970CF141D9FDC7100BC2497 /* VandelayQr.podspec */; };
 		A9F58DC71D8F227700F85154 /* VandelayDropbox.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A9F58DC61D8F227700F85154 /* VandelayDropbox.podspec */; };
 		B2371C693B3AC2038C2B470F /* Pods_Vandelay_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD64DEA264E3B35FF48CF6E /* Pods_Vandelay_Example.framework */; };
 		FD71FE2617FFFE4577F3D678 /* Pods_Vandelay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC18EB4664417844526877AA /* Pods_Vandelay_Tests.framework */; };
@@ -57,6 +58,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		80E026543821DC0781EED513 /* Pods-Vandelay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vandelay_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vandelay_Example/Pods-Vandelay_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A970CF141D9FDC7100BC2497 /* VandelayQr.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VandelayQr.podspec; path = ../VandelayQr.podspec; sourceTree = "<group>"; };
 		A9F58DC61D8F227700F85154 /* VandelayDropbox.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VandelayDropbox.podspec; path = ../VandelayDropbox.podspec; sourceTree = "<group>"; };
 		B0AFF21C82A0A7152F0922CC /* Pods-Vandelay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vandelay_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vandelay_Tests/Pods-Vandelay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C231FF1A39A516DB76135DCC /* Pods-Vandelay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vandelay_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vandelay_Tests/Pods-Vandelay_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				08F4BB091EE9A8F0B82D3AE3 /* Vandelay.podspec */,
 				A9F58DC61D8F227700F85154 /* VandelayDropbox.podspec */,
+				A970CF141D9FDC7100BC2497 /* VandelayQr.podspec */,
 				EBC0D8423F0BEBD7C730FA8E /* README.md */,
 				D06A47A2A40BE0BFAB2938F0 /* LICENSE */,
 			);
@@ -305,6 +308,7 @@
 				A9F58DC71D8F227700F85154 /* VandelayDropbox.podspec in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				A970CF151D9FDC7100BC2497 /* VandelayQr.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
