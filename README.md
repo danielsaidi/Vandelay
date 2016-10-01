@@ -24,12 +24,12 @@ in which ways it can be used.
 
 Vandelay currently comes with the following string and data exporters:
 
-- `EmailExporter` - exports data and strings as email attachments
-- `FileExporter` - exports data and strings to local files
-- `MessageExporter` - exports data and strings as message attachments
-- `PasteboardExporter` - exports string to the pasteboard
+- `EmailExporter [STRING|DATA]` - exports to email attachments
+- `FileExporter [STRING|DATA]` - exports to local device files
+- `MessageExporter [STRING|DATA]` - exports to message attachments
+- `PasteboardExporter [STRING]` - exports to the pasteboard
 
-- `DropboxExporter` - exports data and strings to Dropbox
+- `DropboxExporter [STRING|DATA]` - exports to Dropbox app folder
 
 Since strings are platform-independent, use a string exporter whenever
 your data can be serialized, e.g. to JSON
@@ -48,11 +48,13 @@ in which ways it can be used.
 
 Vandelay currently comes with the following string and data importers:
 
- - `PasteboardImporter` - imports string from the pasteboard
- - `FileImporter` - imports data and strings from local files
- - `UrlImporter` - imports data and strings from any url
+- `FileImporter [STRING|DATA]` - imports local device files
+- `PasteboardImporter [STRING]` - imports from the pasteboard
+- `UrlImporter [STRING|DATA]` - imports from any url
 
- - `DropboxImporter` - imports data and strings from Dropbox
+- `DropboxImporter [STRING|DATA]` - imports from Dropbox app folder
+
+- `QrCodeImporter [STRING|DATA]` - imports by scanning a QR code
 
 When importing data, the same logic goes as when exporting data - it's
 best to use strings whenever possible, but Data is way more powerful.
@@ -71,7 +73,7 @@ information.
 
 
 
-## Dropbox
+## Dropbox Support
 
 Vandelay comes with additional Dropbox support. This means that an app
 can use Vandelay to sync data to a user's personal Dropbox.
@@ -90,6 +92,16 @@ few keys to `Info.plist`, namely `CFBundleURLTypes` (db-<APP KEY>) and
 
 
 
+## QR Code support
+
+Vandelay comes with additional QR code support. This means that an app
+can use Vandelay to import data by letting the user scan a QR code.
+
+To use this feature, make sure to specify a `NSCameraUsageDescription`
+description in Info.plist. Otherwise, the app will crash.
+
+
+
 ## Example Project
 
 Vandelay comes with an example project that lets you export and import
@@ -98,6 +110,13 @@ todo lists (strings) and photos (data).
 To run the example app, clone this repo and run `pod install` from the
 Example directory. You can then open up the project (use the generated
 workspace) and run the app.
+
+For Dropbox, have a look at how the app enables Dropbox support in the
+AppDelegate class and how it handles Dropbox redirects. Also, open the
+Info.plist file and note all places where the text `db` occurs.
+
+For QR code support, the `VandelayQr` asset folder contains two images
+with QR codes that you can scan to import data to the test app.
 
 
 
@@ -113,15 +132,23 @@ to your project.
 ```ruby
 pod "Vandelay"
 ```
- 
 
-### Dropbox
 
-Dropbox support is added as a separate pod. To install VandelayDropbox,
-just add the following line to your Podfile:
+### Dropbox support
+
+Dropbox support is added separately. Add the following to your Podfile:
 
 ```ruby
 pod "VandelayDropbox"
+```
+
+
+### QR Code support
+
+QR Code support is added separately. Add the following to your Podfile:
+
+```ruby
+pod "VandelayQr"
 ```
 
 
