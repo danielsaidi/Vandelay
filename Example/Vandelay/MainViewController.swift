@@ -27,7 +27,7 @@ import VandelayDropbox
 class MainViewController: UITableViewController {
 
     
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class MainViewController: UITableViewController {
     
     
     
-    // MARK: Segues
+    // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let id = segue.identifier else { return }
@@ -57,17 +57,23 @@ class MainViewController: UITableViewController {
     
     
     
-    // MARK: Properties
-    
-    let photoFileName = "photoAlbum.vandelay"
-    let todoFileName = "todoList.vandelay"
+    // MARK: - Dependencies
     
     var todoItemRepository = TodoItemRepository()
     var photoRepository = PhotoRepository()
     
     
     
-    // MARK: Outlets
+    // MARK: - Properties
+    
+    let photoFile = "photoAlbum.vandelay"
+    let photoUrl = URL(string: "http://danielsaidi.com/vandelay/photoAlbum.vandelay")!
+    let todoFile = "todoList.vandelay"
+    let todoUrl = URL(string: "http://danielsaidi.com/vandelay/todoList.vandelay")!
+    
+    
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var exportPhotoAlbumCell: UITableViewCell!
     @IBOutlet weak var exportTodoItemsCell: UITableViewCell!
@@ -78,7 +84,7 @@ class MainViewController: UITableViewController {
     
     
     
-    // MARK: Private functions
+    // MARK: - Private functions
     
     private func alert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -95,7 +101,7 @@ class MainViewController: UITableViewController {
     
     
     
-    // MARK: Export functions
+    // MARK: - Export functions
     
     private func exportStateChanged(with result: ExportResult) {
         guard result.state != .inProgress else { return }
@@ -129,10 +135,10 @@ class MainViewController: UITableViewController {
         let message = "How do you want to export the photo album?"
         let alert = ExportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
-        alert.add(dataExporter: FileExporter(fileName: photoFileName), withTitle: "To a local file")
-        alert.add(dataExporter: DropboxExporter(fileName: photoFileName), withTitle: "To a Dropbox file")
-        alert.add(dataExporter: EmailExporter(fileName: photoFileName), withTitle: "As an e-mail attachment")
-        alert.add(dataExporter: MessageExporter(fileName: photoFileName), withTitle: "As a message attachment")
+        alert.add(dataExporter: FileExporter(fileName: photoFile), withTitle: "To a local file")
+        alert.add(dataExporter: DropboxExporter(fileName: photoFile), withTitle: "To a Dropbox file")
+        alert.add(dataExporter: EmailExporter(fileName: photoFile), withTitle: "As an e-mail attachment")
+        alert.add(dataExporter: MessageExporter(fileName: photoFile), withTitle: "As a message attachment")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -151,10 +157,10 @@ class MainViewController: UITableViewController {
         let alert = ExportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
         alert.add(stringExporter: PasteboardExporter(), withTitle: "To the pasteboard")
-        alert.add(stringExporter: FileExporter(fileName: todoFileName), withTitle: "To a local file")
-        alert.add(stringExporter: DropboxExporter(fileName: todoFileName), withTitle: "To a Dropbox file")
-        alert.add(stringExporter: EmailExporter(fileName: todoFileName), withTitle: "As an e-mail attachment")
-        alert.add(stringExporter: MessageExporter(fileName: photoFileName), withTitle: "As a message attachment")
+        alert.add(stringExporter: FileExporter(fileName: todoFile), withTitle: "To a local file")
+        alert.add(stringExporter: DropboxExporter(fileName: todoFile), withTitle: "To a Dropbox file")
+        alert.add(stringExporter: EmailExporter(fileName: todoFile), withTitle: "As an e-mail attachment")
+        alert.add(stringExporter: MessageExporter(fileName: photoFile), withTitle: "As a message attachment")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -173,7 +179,7 @@ class MainViewController: UITableViewController {
     
     
     
-    // MARK: Import functions
+    // MARK: - Import functions
     
     private func importMessage(for result: ImportResult) -> String {
         switch result.state {
@@ -193,8 +199,9 @@ class MainViewController: UITableViewController {
         let message = "From where do you want to import photos?"
         let alert = ImportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
-        alert.add(dataImporter: FileImporter(fileName: photoFileName), withTitle: "From a local file")
-        alert.add(dataImporter: DropboxImporter(fileName: photoFileName), withTitle: "From a Dropbox file")
+        alert.add(dataImporter: FileImporter(fileName: photoFile), withTitle: "From a local file")
+        alert.add(dataImporter: UrlImporter(url: photoUrl), withTitle: "From a custom url")
+        alert.add(dataImporter: DropboxImporter(fileName: photoFile), withTitle: "From a Dropbox file")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -224,8 +231,9 @@ class MainViewController: UITableViewController {
         let alert = ImportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
         alert.add(stringImporter: PasteboardImporter(), withTitle: "From the pasteboard")
-        alert.add(stringImporter: FileImporter(fileName: todoFileName), withTitle: "From a local file")
-        alert.add(stringImporter: DropboxImporter(fileName: todoFileName), withTitle: "From a Dropbox file")
+        alert.add(stringImporter: FileImporter(fileName: todoFile), withTitle: "From a local file")
+        alert.add(stringImporter: UrlImporter(url: todoUrl), withTitle: "From a custom url")
+        alert.add(stringImporter: DropboxImporter(fileName: todoFile), withTitle: "From a Dropbox file")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -266,7 +274,7 @@ class MainViewController: UITableViewController {
 
 
 
-// MARK: - ExportAlertControllerDelegate
+// MARK: - - ExportAlertControllerDelegate
 
 extension MainViewController: ExportAlertControllerDelegate {
     
@@ -281,7 +289,7 @@ extension MainViewController: ExportAlertControllerDelegate {
 
 
 
-// MARK: - ImportAlertControllerDelegate
+// MARK: - - ImportAlertControllerDelegate
 
 extension MainViewController: ImportAlertControllerDelegate {
     
@@ -296,7 +304,7 @@ extension MainViewController: ImportAlertControllerDelegate {
 
 
 
-// MARK: - UITableViewDelegate
+// MARK: - - UITableViewDelegate
 
 extension MainViewController {
     

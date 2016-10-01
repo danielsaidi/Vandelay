@@ -14,11 +14,16 @@
  Since url importing is asynchronous, you will receive
  two callbacks - one to tell you that the import begun,
  and one to tell you if it succeeded or failed.
+ 
+ Make sure to adjust your Info.plist file to allow the
+ app to request external urls, otherwise this importer
+ will not work.
+ 
  */
 
 import Foundation
 
-public class UrlImporter: NSObject, DataImporter {
+public class UrlImporter: NSObject, DataImporter, StringImporter {
     
     
     // MARK: - Initialization
@@ -60,7 +65,7 @@ public class UrlImporter: NSObject, DataImporter {
         completion?(ImportResult(state: .inProgress))
         
         do {
-            let contents = try String(contentsOf: url)
+            let contents = try String(contentsOf: url, encoding: .utf8)
             completion?(self.getResult(withString: contents))
         } catch {
             completion?(self.getResult(withError: error))
