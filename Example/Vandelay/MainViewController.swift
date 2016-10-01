@@ -98,7 +98,7 @@ class MainViewController: UITableViewController {
     // MARK: Export functions
     
     private func exportStateChanged(with result: ExportResult) {
-        guard result.state == .inProgress else { return }
+        guard result.state != .inProgress else { return }
         
         if let error = result.error {
             alert(title: "Ooops...", message: error.localizedDescription)

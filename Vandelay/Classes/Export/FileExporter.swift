@@ -57,6 +57,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
             let result = getResult(withFilePath: filePath)
             completion?(result)
         } catch {
+            print(error.localizedDescription)
             let errorMessage = errorMessageForFailedDataExport
             completion?(self.getResult(withErrorMessage: errorMessage))
         }
@@ -70,6 +71,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
             let result = getResult(withFilePath: filePath)
             completion?(result)
         } catch {
+            print(error.localizedDescription)
             let errorMessage = errorMessageForFailedStringExport
             completion?(self.getResult(withErrorMessage: errorMessage))
         }
@@ -83,6 +85,6 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         guard paths.count > 0 else { return nil }
         let fileName = fileNameGenerator.getFileName()
-        return "\(paths.first!)/\(fileName)"
+        return "file://\(paths.first!)/\(fileName)"
     }
 }
