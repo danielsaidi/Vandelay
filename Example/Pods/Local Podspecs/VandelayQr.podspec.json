@@ -1,8 +1,8 @@
 {
-  "name": "VandelayDropbox",
+  "name": "VandelayQr",
   "version": "0.4.5",
   "summary": "Vandelay is an importer/exporter for iOS.",
-  "description": "VandelayDropbox adds Dropbox integrations to Vandelay, and lets you export\nand import strings, serialized JSON and encoded NSData to and from a app's\nDropbox folder.",
+  "description": "VandelayQr adds QR code functionality to Vandelay, and lets you import any\nstring or data by scanning a QR code.",
   "homepage": "https://github.com/danielsaidi/vandelay",
   "license": {
     "type": "MIT",
@@ -19,9 +19,9 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "VandelayDropbox/Classes/**/*",
+  "source_files": "VandelayQr/Classes/**/*",
   "dependencies": {
-    "SwiftyDropbox": [
+    "QRCodeReader.swift": [
 
     ],
     "Vandelay": [

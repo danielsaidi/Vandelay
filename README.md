@@ -50,6 +50,7 @@ Vandelay currently comes with the following string and data importers:
 
  - `PasteboardImporter` - imports string from the pasteboard
  - `FileImporter` - imports data and strings from local files
+ - `UrlImporter` - imports data and strings from any url
 
  - `DropboxImporter` - imports data and strings from Dropbox
 

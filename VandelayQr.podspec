@@ -1,12 +1,11 @@
 Pod::Spec.new do |s|
-  s.name             = 'VandelayDropbox'
+  s.name             = 'VandelayQr'
   s.version          = '0.4.5'
   s.summary          = 'Vandelay is an importer/exporter for iOS.'
 
   s.description      = <<-DESC
-VandelayDropbox adds Dropbox integrations to Vandelay, and lets you export
-and import strings, serialized JSON and encoded NSData to and from a app's
-Dropbox folder.
+VandelayQr adds QR code functionality to Vandelay, and lets you import any
+string or data by scanning a QR code.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'
@@ -17,8 +16,8 @@ Dropbox folder.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'VandelayDropbox/Classes/**/*'
+  s.source_files = 'VandelayQr/Classes/**/*'
   
-  s.dependency 'SwiftyDropbox'
+  s.dependency 'QRCodeReader.swift'
   s.dependency 'Vandelay'
 end

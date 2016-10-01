@@ -7,294 +7,374 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0052B1A059DFE1F7438BB8ECA777249F /* VandelayDropbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFABED649675C79B4F5A8CE0C2F96B3A /* VandelayDropbox-dummy.m */; };
-		00E717AF7750E27A64BA24FA019A2AD3 /* PasteboardImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF20FB0C862CD119222DED3E3A148D /* PasteboardImporter.swift */; };
-		0479E155C29245DAF4B9ADE9844B2F15 /* ObjectSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A423DB67B3AD3F989D74C9D5691ABF41 /* ObjectSerializer.swift */; };
-		064007673945B1BB45332F7CE8E4E795 /* SwiftyDropbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B3DFEA2552C49BA9997488FC39B2A95E /* SwiftyDropbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0771C5D6BCC624239CCD3935CAEC8AA8 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA32B64A7CF506F10450554ACC88C53 /* Async.swift */; };
-		09F83CD3714AB9A1F77B1B01153B7BEF /* TeamPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B776F91F32D140FCCEB17A72701A25 /* TeamPolicies.swift */; };
-		0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296A6487323110EDE81484D15AF82D4 /* Notifications.swift */; };
-		0D193941B6FC432893D2C12437F5705E /* JsonObjectSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC721D1748D8BE5DD8830B00BE2983 /* JsonObjectSerializer.swift */; };
-		12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4251A13D43D9B3725B96DC9A9D5CF67A /* Request.swift */; };
-		1309BBC9412CB45ADEADEBB721527EDF /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C54D1C9CD5534D589692EB0A53496D5 /* Auth.swift */; };
-		18446F0CB8F46B98B7BAAAB5C7407BCC /* Vandelay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1325067953739BF811A3CA86DC8A82 /* Vandelay-dummy.m */; };
-		1EC3EDE795ADFD1F63E0C6BCC21D411A /* MessageExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75028B01BE4AE1AAFCFB36977FB287B8 /* MessageExporter.swift */; };
-		1FAFC6C84469673CE96EC2CBE8A8FC8D /* FileExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632554B3E7519D87783C550292881DA9 /* FileExporter.swift */; };
-		233372FE95D4A7E0236D66346DF4C1E5 /* ImportState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDEAA053AC1ED5915887E0E427A91C /* ImportState.swift */; };
-		236C22B8BD26CDF93E2E717E07B1959A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710A7EB61C37BA088C68C22A02F879B9 /* Alamofire.framework */; };
-		24316EC6041BB86238B07907C62FB481 /* DropboxClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4CC9B669DAFB869F04238CCF666644 /* DropboxClientsManager.swift */; };
-		28B0AC38377D8037B39FE0EB101C3AF0 /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDF56E24E8B16FFF922DDC0E2750C1 /* FileImporter.swift */; };
-		2977F5ECBA4F9EFC7669CD59E726DE22 /* DropboxExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF36B9EF2A37510CC2FFFE48BD220F5 /* DropboxExporter.swift */; };
-		2C267F01D3ABAA2133EA747D71EF8B98 /* DataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB83F770B2BCD4B6246849A0298AAC1 /* DataExporter.swift */; };
-		2E2EE0203529B6288BD4D00040E19988 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8F065281DF48C7221633DE6BCF9A96 /* Foundation.framework */; };
-		305600787078F699C1094E0B01B2BB18 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE926F9681BB68C39D3D68407856ED4 /* Users.swift */; };
-		3707569A6718E1AC68782D8AE23E53FF /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556B6FE8792E328371A012695D0DEBD /* Properties.swift */; };
-		38EA1AD5EA0B325FE3C2CCE267D1CC08 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1398EEC00E29BBC876207C66CC9FBD1 /* Team.swift */; };
-		3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21401E83F00D4B2565585DA9D21D839F /* Timeline.swift */; };
-		3C5F14E6D4EF30D00A9FA89959A1D336 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35372D5CA5E19973CEFE3ED457FDF8B9 /* Vandelay.framework */; };
-		41482A3A8A8E8013056B7F8301633212 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1B946A2ADA51E6E9A4B168CFBC04CD /* OAuth.swift */; };
-		426F9F1E77C4F613E329AD0F75E24E37 /* ExportState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637EA37AE7B034C3E0E02FD16E2F67CF /* ExportState.swift */; };
-		471AE27A67B51A8572948D33BF992874 /* DataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED18F00BE454616F210D14C5167B66 /* DataImporter.swift */; };
-		4A6A94B53F366AF73F757C9C688C1A83 /* StoneBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABAF41001A66A4ED992B87A02827CB /* StoneBase.swift */; };
-		4BDD9C0CE28DCA6EAB27F13F3460AB34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8F065281DF48C7221633DE6BCF9A96 /* Foundation.framework */; };
-		4E6EB89EAFF4B8ABC7987B32FB513BC9 /* StringExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6F4872727683434D41F433DC52BD1 /* StringExporter.swift */; };
-		5C9FA58018F90C7C391FB4DF48C429C3 /* AuthRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6E3114DFE6A071845375713526063 /* AuthRoutes.swift */; };
-		5D8A0258E6B4E1BD7DC83DA023286EC5 /* StaticFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E42BBAE1C73E9BA598082430CB155E /* StaticFileNameGenerator.swift */; };
-		61221ECE75BFBEC87A8054C33AF26C9E /* ExportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319F9CA6594716A2687FA6B37F6643F /* ExportResult.swift */; };
-		62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F100D9DEA35A125C6782186F7E22B /* AFError.swift */; };
-		64229128BE540D70022B8C37522AF198 /* Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFB232F7932A8923E8F85AE4C6DF375 /* Sharing.swift */; };
-		6A8E87B3644A1F34AC5358662657F1BF /* BaseTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3FED734280C1E43854A32E2E53A5A /* BaseTeam.swift */; };
-		706F0E070BC13796BC774E034C17C1B6 /* OAuthMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D26254DCB8C3B5AAEBA2650EF36C0EB /* OAuthMobile.swift */; };
-		73A22052B2D466D96E15B0DAADC7CE56 /* RandomFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF353F6D92B8F08060570EB30B7C897 /* RandomFileNameGenerator.swift */; };
-		7503D4C12A2B6CDF980DA35545D1006A /* StringImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BEC148832F6FCCA235DC9BD8884AE /* StringImporter.swift */; };
-		752BEF97509E4F6AA58EB83118445092 /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4C1EA79767110410F03907771DC7C /* DropboxClient.swift */; };
-		77598B411D3358E2F86789A7AB49099B /* SwiftyDropbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAAB6A38A4CB9A174D6A56D6BA106A0 /* SwiftyDropbox-dummy.m */; };
-		7869E9D2682B340C6BE5D7FBDAAB43FC /* SharingRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B043433640A897C0338ED1D217102B8B /* SharingRoutes.swift */; };
-		79771EEBF4E77F8D817D0303D586681F /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC4A564EB259EAC5DA6B84870DADFA /* UsersRoutes.swift */; };
-		7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80047093E875626450188DB8093A3F9 /* Alamofire.swift */; };
-		814FD85E26590BB4943619ECC09C908A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFECD0081C27A5274C05D6AF36CA832A /* Common.swift */; };
-		86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486629176BE4F7D11F6D21B3CAB59141 /* Response.swift */; };
-		89A011311A76DA3E1E11A4AAC0DC3F85 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FD02445BC2524A9734B7BCFEFFC9E6 /* Base.swift */; };
-		8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E31D0A6CEFFFEE638DD17F1FCCF1A8D /* Alamofire-dummy.m */; };
-		907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D22054F53102F825DCF4BAF21C84F /* SessionDelegate.swift */; };
-		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8F065281DF48C7221633DE6BCF9A96 /* Foundation.framework */; };
-		926A9420372DAC09A5D92FE3A3BF060D /* SwiftyDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = E32938F3F905840BF95DEFDF952B06F6 /* SwiftyDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		935FD5ACD87E996FED7EFAB2341FA1F3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710A7EB61C37BA088C68C22A02F879B9 /* Alamofire.framework */; };
-		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1306DC67AFFE3A7187E4E779C5DA90E8 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97F8A11A720BC6B765C7216970931DC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8F065281DF48C7221633DE6BCF9A96 /* Foundation.framework */; };
+		02B368D8F698FB1C1EB466E9E35DE113 /* ExportAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB45518BE7302F6A5EF0234D15E71BC2 /* ExportAlertController.swift */; };
+		0A1F60EAE470CEA4E861627A49796DA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860944EC9E5C611413AB81264749559E /* Foundation.framework */; };
+		0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFEE1511B0B16475CD8B271BA11FE4 /* Notifications.swift */; };
+		0C6FC06C836EAE1EF09846F7582D3681 /* Pods-Vandelay_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5343D8878575C9288626119083B6CEC1 /* Pods-Vandelay_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E218C6759259C378818DF206F5D79DF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEB3AF94F2F723927DB6BDBF35E28A /* Common.swift */; };
+		0F3B7FA4F5C9B4E30568E1FF6C12FE1E /* BaseTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AC127949C5F592F4BA9AD0F57801F5 /* BaseTeam.swift */; };
+		1055AA123B272C752FE1E9A706B26367 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860944EC9E5C611413AB81264749559E /* Foundation.framework */; };
+		112063C065C3B5F1188573E59731A8BE /* PasteboardImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C4D9B87151EB916DB2C2853D1F78E3 /* PasteboardImporter.swift */; };
+		112281E9AA036FAB94AA793656E8760F /* StringImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D68F6FD7138B90AEA6BF7C3BEC3C4B /* StringImporter.swift */; };
+		12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13512DA8614AAE651804DAD14270DE96 /* Request.swift */; };
+		128526FAD107D07E940AE583F18351C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860944EC9E5C611413AB81264749559E /* Foundation.framework */; };
+		1A6A0026AD35175B0E4539070DDAD334 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B074A5969C6B85DB6F711CFF60963745 /* QRCodeReaderViewController.swift */; };
+		1B15ECB689A383B5E40A65DDAA03B3A2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EE1D985A9F21449F1B6005F3E014E6 /* AVFoundation.framework */; };
+		1C3E5C0F0D924DBD5E4DF621397E2338 /* StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D5628E913905009F30DD13307830A /* StringEncoder.swift */; };
+		1E1DC3A9FCF49C35CC610F79DF99AC38 /* UrlImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E07DD2E45EEAF3CA96A0C7A7AE82834 /* UrlImporter.swift */; };
+		20E32166DC07613229735F8E8BD7F86A /* EmailExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94251C771C83CBEBD39239917374ABD2 /* EmailExporter.swift */; };
+		22F4D88FB77837A44772FBBBF945A42C /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A091AECFF6DD6372AED940F18B2E1E /* Vandelay.framework */; };
+		26A159C30398CF74B0FEACD29E5E45C9 /* VandelayQr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DB329E68E6D388B2B6B497CFE7821D /* VandelayQr-dummy.m */; };
+		2CC9D5FB5562FF46413496245C9A8ED8 /* VandelayDropbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AE58044B93A2A593F64CA249CA99A2 /* VandelayDropbox-dummy.m */; };
+		2D29E7B3CB9E933B886F0F2233910D62 /* StoneValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A93F8B38DED4D5A42E14C1D8FD63D7 /* StoneValidators.swift */; };
+		2F986FA62942393C09F7A9BC50AE6F2B /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48109A41E1B169E4B91A04C766257B4 /* Async.swift */; };
+		32D1260A60A236C7148D143A52ED849F /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900ED151B588E126C5B9E382BF26046D /* Files.swift */; };
+		37F6867A7BF5F599556B238E129B06B5 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66940979194A6DC6292E51DC46211B14 /* SwitchCameraButton.swift */; };
+		384F2515D6A6236FA9999782F908C958 /* ExportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915209E9BDD63B82293ABD478A3CDE28 /* ExportResult.swift */; };
+		3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B535CA805401D49CE828982F6E7995 /* Timeline.swift */; };
+		3BE20FDE37F8B5792BD670F064B058B6 /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759FFC0BC831FEF7BAD6C7EE018F377 /* UsersRoutes.swift */; };
+		40D04341664FD8456A3EF64D86D631F1 /* DataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614C2C39746F46256B861821792EE37 /* DataExporter.swift */; };
+		42E588073274D8C1BFC58BD0C6014DFB /* QrCodeImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B173CAD7A3D2434CB19C3CF4E425F8E /* QrCodeImporter.swift */; };
+		44172DE1429AA1EDFD360BB00EF4F54C /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC730DA2FBD12E8CF3FB8B4CF3CE1636 /* Auth.swift */; };
+		441E3198DBF48B4FB15BA16CA5F6C596 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD02B877799F26729FF00781B40EE /* QRCodeReaderResult.swift */; };
+		46D296063DD6E2ABDCCA5715F5B6A4B4 /* StringExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E08391D23FA5FCF86BA3B7E08ACEF /* StringExporter.swift */; };
+		474E96158B8118339FC6D04DC272FF5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860944EC9E5C611413AB81264749559E /* Foundation.framework */; };
+		4B22B2BDC2238BD8F86BD8EB3EA8AB68 /* VandelayDropbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9DAA288750FE27EBDD4BA216E278D2D /* VandelayDropbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF501293B88CB38D9D78F0B1E465A82 /* TeamPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12C5AFA08816E3BC91620904DAC0B55 /* TeamPolicies.swift */; };
+		4D51EFD4A14BC4388D8B7D3F076C1B82 /* DataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D840EC690E15700C21AE211042071 /* DataImporter.swift */; };
+		531FD1468986AEA33BCC0758003EB4CA /* StoneBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ECE01B3126C571BF597B0BFFA1EFCD /* StoneBase.swift */; };
+		53B63EC830BF75D9BD225DBE4BC9D0D7 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520562A015DA6617DBBF0CDE2A62AFE3 /* ToggleTorchButton.swift */; };
+		54010B96ED9CDB2E1FE5F0998965D063 /* ImportAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818362262DEB3B1205D8AF6490B55D9D /* ImportAlertController.swift */; };
+		5507E6354B856B8F5ADF6C91076B4FD0 /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB9C3ADDA2A531670D796C44C831FDA /* QRCodeReader.swift-dummy.m */; };
+		5904D2D3D63022400730A284E4DCB128 /* SwiftyDropbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B35500368A23E5D32AAB6F641DE561 /* SwiftyDropbox-dummy.m */; };
+		61B5CA7782F97B332C9741C5F46F1A7E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF923437B0CD6A72E193CAC5B6B9E3 /* Users.swift */; };
+		62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7365118254825F2E115CB6A11DAC5BC2 /* AFError.swift */; };
+		63406C7F259316595C2BC1BFA86A1897 /* SwiftyDropbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E6DCFDA26BBF3FEE8A1052E2ABA47A /* SwiftyDropbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D6FC713C1C870B6DC118A61B3EA2418 /* VandelayQr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2413971509A3D8CF87C6E979FEFFB90B /* VandelayQr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73D584B4256332BF7E6AB5DC8C773CAE /* StaticFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE70D10B6EA8ACD26D6D6F04DCE0C147 /* StaticFileNameGenerator.swift */; };
+		744F9AF0092174B231FA1E97D78BE4BF /* FileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BFE72870BD1088AFFD47FDBAE51149 /* FileNameGenerator.swift */; };
+		75CEDE53B7FED03894D4E9FA2B3992D2 /* Vandelay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7DD4C7CFC11B1561F1CB2446C3A1F87 /* Vandelay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		763C0660C508BE1E223497162EF27B04 /* ObjectSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB797E464D35DD5B5398F86B526393 /* ObjectSerializer.swift */; };
+		76DBA0469D5B0CFB132F4A8A0131424B /* Base64StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABA5F3BF95AED154755B2D884F76F14 /* Base64StringEncoder.swift */; };
+		7B8418D315005F7A717F3E10AFF976A6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C577040343B7DE840A66CF021F47FF /* Alamofire.framework */; };
+		7C66C316C797C676C1FD9087BC874D6E /* PasteboardExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F00409E8A85A58276B3A3E6379A19 /* PasteboardExporter.swift */; };
+		7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD9BA6AE69FB812031454B72A71D4D /* Alamofire.swift */; };
+		7EDB6EFE1B159B502F07F70BB6E223AF /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC311DD20EEE14ED634CBDB02EBE5D3 /* QRCodeReader.swift */; };
+		85D2111886942FD5AD7CDAB5E27BD34C /* MessageExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2A37CAFC808F3641EA09BDF8C8590 /* MessageExporter.swift */; };
+		86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B59790ADA2C2AF7763E76AD796A13 /* Response.swift */; };
+		8809BFEDFD81CFA29A473A7635D31066 /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CDB7AA79A0990F83437148F57AA334 /* Exporter.swift */; };
+		8B04D4DCE40A7C44DF65BF9443028E32 /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88627D2A136FB9AC814CA8C568F4663 /* DropboxClient.swift */; };
+		8BBC28ED36BF2DF33FA87B191A65A4E0 /* FilesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB29891D05921D92EF5FC6493FC125 /* FilesRoutes.swift */; };
+		8C1D9F7320D6E99F60A0AADA892E0810 /* DropboxTeamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A5DC7E64676393424359E9A2B5555 /* DropboxTeamClient.swift */; };
+		8C95DB5F9CB464F04507FEDE0D27CA87 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11985DD47010C54EED63E7ADE9BE56 /* ReaderOverlayView.swift */; };
+		8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 833869F326DF3A68AF72B02249B6EE80 /* Alamofire-dummy.m */; };
+		907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78233212A679961C2A2A7DE69724807F /* SessionDelegate.swift */; };
+		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860944EC9E5C611413AB81264749559E /* Foundation.framework */; };
+		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33BDDA0FF04EF8983F315261C0F0CDA5 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97F8A11A720BC6B765C7216970931DC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860944EC9E5C611413AB81264749559E /* Foundation.framework */; };
 		990DE5BE37C433C92C7BF5AF57B4A8CD /* Pods-Vandelay_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF25220BC6C1438A3FF26630BA9751B5 /* Pods-Vandelay_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BE5E3C600CCCFC93D1B40102B1B3BE9 /* FileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B7C9BE02C5A401B2CE4933F124A33 /* FileNameGenerator.swift */; };
-		A1467AA10364D7901F8E0F368AD9979C /* PasteboardExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3662D6B3AEB435B31AA5F04EB82964 /* PasteboardExporter.swift */; };
-		A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA192AAC09377E452860024D223926 /* SessionManager.swift */; };
-		AA04319DFB532944483DB987B0E9C970 /* TeamRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB317122AEA557ACF7D0814AD2BE0D8 /* TeamRoutes.swift */; };
-		AD31083B3F0225FEB99534B32C8A95E5 /* TeamCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437793940DDE2D71B4BE7D5DA49C933 /* TeamCommon.swift */; };
-		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D554F5DF7A1E7805C576508ABF16888F /* ParameterEncoding.swift */; };
-		B0F6E37A97838F1C540473BB805D207C /* Pods-Vandelay_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 936F34C6F6F3DE18DC89BCEC427761C7 /* Pods-Vandelay_Example-dummy.m */; };
-		B153215900C54FE9435C8DDAED7B4A6B /* StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602CB57B33DB7221F34C18FAF3D84DEA /* StringEncoder.swift */; };
-		B1706FD494E0A01C7A332A18B5E342E1 /* DropboxTransportClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00ADC475762AF2B0CE899E1F8C295E /* DropboxTransportClient.swift */; };
+		9A7E6C7F09D159D5CC765DD9BD1B696D /* SwiftyDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = D93FD00BE172F2E5B5CBE418405D11DA /* SwiftyDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BC601A75C8FE8AD9F6CAD7FA6168EE1 /* OAuthMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F609F267E8518489B5FC9FBAACFF5D /* OAuthMobile.swift */; };
+		9FDD02EC42EBB7CCB3DDD76482D85C62 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531BA5F16450146D044194F619E5F743 /* Base.swift */; };
+		A0DF23D773EDCDCB6AFE31B53ACA0640 /* DropboxExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE04B6AB8A51E27EACCC4431668907 /* DropboxExporter.swift */; };
+		A2BE20FEE31DA5DC51DCF360EF80F34D /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448A5E5C122DE0735C26DE88A59A0DA /* OAuth.swift */; };
+		A4403CFC885DF18B7ED25D02E2584FB8 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F8159B1DB2A7D19CBB982355FDF84 /* Team.swift */; };
+		A57DF42A9574CD753F8E97F7AF304041 /* ExportState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02689C19D1526B5461354C8A7D5318E /* ExportState.swift */; };
+		A57E6F3263329E6E9BDF2C5BA53A177C /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10B788D9DA9DD1906AAE803F32E08C /* FileImporter.swift */; };
+		A5E1731292ED99C1276902B1520F0ACB /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A21DAE945761062F0D2E84B8E3EEEE2 /* QRCodeReader.framework */; };
+		A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF5119F47333090737B6EBD8DB6E90 /* SessionManager.swift */; };
+		A81E1D5C3B1E65FE3ECFC14E91C791E0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C577040343B7DE840A66CF021F47FF /* Alamofire.framework */; };
+		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435E0AE558EDE1F2B983A16B7EE3841 /* ParameterEncoding.swift */; };
 		B245C5D4D05650608F6705905CD38E50 /* Pods-Vandelay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4C6A5DA94C24E59C87E4DE92BC6152 /* Pods-Vandelay_Tests-dummy.m */; };
-		B34EA6C3E7948C24BBDB12C561765EAE /* EmailExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D15B55F5576AFEEED70C6CE88F7D47 /* EmailExporter.swift */; };
-		B573575B073B97615142554D3BE83AAB /* Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E6940888E227287FA440EC9212B91 /* Importer.swift */; };
-		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC68D5FC7C5C65DBD9C7639FB8FBF4D /* ResponseSerialization.swift */; };
-		BA24C67CAD00CBD57D79D27DB64DD080 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E63A5EF5EE398A3221D38BAD13E4A /* Files.swift */; };
-		BA729D0C9AB8E6CCB093939A5AEE6260 /* Base64StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460D3E2B573833DDBC3565A82ADB6F16 /* Base64StringEncoder.swift */; };
-		BB8C3A0D415E96590C5E936E6D441F78 /* VandelayDropbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45AABED11B9CAED63BC1450F4E7A5494 /* VandelayDropbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFE28591B1DF69E8AABF00BC3EDD8935 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8F065281DF48C7221633DE6BCF9A96 /* Foundation.framework */; };
-		C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E7EFD3F80E4F7A8900746922EE93C4 /* ServerTrustPolicy.swift */; };
-		C11237AEC95487B4902F37826CE6AC70 /* DropboxTeamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D14C6583A4EBDDA196BED1A1A2D3A8 /* DropboxTeamClient.swift */; };
-		C3D8DE27D2CAA691949378F7C9186271 /* ImportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73CE8141ADD4249302107D223241CE /* ImportResult.swift */; };
-		C62B10A5A228D195D1EAD17EEDA40F5F /* FilesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89E68D13A89F18D757D9A98F0005EE6 /* FilesRoutes.swift */; };
-		C6F796D64E8BFAEB0CD35DD7741A7D17 /* Vandelay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 616AA224A09FFB80C0E6FC6FBC947CE1 /* Vandelay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C72DF7DB680158457698588DC5A9092F /* ExportAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E38908793710AD2792D2EA990B760D /* ExportAlertController.swift */; };
-		C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422F4C1B0D93385C566F955027DE5EC7 /* MultipartFormData.swift */; };
-		CCC638FB8025E0E6402D4F331CD6C237 /* UrlImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9B20D020084B5474921281FF5F919 /* UrlImporter.swift */; };
-		D1762731847655D456CF5E0AF2A6E64A /* ImportAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8325FB7E9C44474DA6568F314837C71 /* ImportAlertController.swift */; };
-		D4D126A85A4B05064D785206EA35E87F /* Pods-Vandelay_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5343D8878575C9288626119083B6CEC1 /* Pods-Vandelay_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D592B6C462465A4488D0274E6ADFE5A5 /* StoneValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FF43F5AE234E6495787231FD37E62 /* StoneValidators.swift */; };
-		DA8E3ED3ADC6180248F1D129E8EFE15E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8F065281DF48C7221633DE6BCF9A96 /* Foundation.framework */; };
-		DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7334EE579D956F47A9ADE158B67BE838 /* Result.swift */; };
-		E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C926461D9A81B9579A6B1E29D606DC1 /* TaskDelegate.swift */; };
-		E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311A280A535ABA319B8AD5E0879E1DBB /* DispatchQueue+Alamofire.swift */; };
-		E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA5F6C1194A4C86ADF4277F0BC6CC2 /* NetworkReachabilityManager.swift */; };
-		E692ADA347F1119E358D84A979A2EC80 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7407D8449E3B8199DBF48839B886FDDA /* SwiftyDropbox.framework */; };
-		EE478AC4DDD1A4F87CCEEE0DBD6957CB /* StoneSerializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54331BCC16CAD53B7C87DB31BC647F1 /* StoneSerializers.swift */; };
-		F2BD137B03A40D3FDCBCEE3D718B1288 /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59403E8FA673165910337A831534D95A /* Exporter.swift */; };
-		F4E5750A45AE4366C7D5EA75CC87AD57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA334F3FD6B9B244725C5B560C26DC0 /* UIKit.framework */; };
-		F72C9C00B3D680EBAEC5992E47DBCFE9 /* DropboxImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7338126FF7F96F246610F3CBD40657C /* DropboxImporter.swift */; };
-		FFFDD494EE6D1B83DDAF5F2721F685A6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD27CFBF2CD3EB97C955BDBE034EE0 /* Validation.swift */; };
+		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FFBBB0D1BA497AADD67BF5742FB8 /* ResponseSerialization.swift */; };
+		BA4045C22C1095B5216F23DA71029FE2 /* TeamRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD255A420C963B14883F6CE107966A7E /* TeamRoutes.swift */; };
+		BC1FABF7B68DA3DD4B95AFBCA7EF54AE /* DropboxImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D1643E9656273AC6514E4E0B0A653 /* DropboxImporter.swift */; };
+		C06C750DB1FDDBCE64EEB2F99B75C916 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A091AECFF6DD6372AED940F18B2E1E /* Vandelay.framework */; };
+		C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C637EA49E5F2B482BF5F135ED824E99 /* ServerTrustPolicy.swift */; };
+		C0CC28806FDF3B64FE939DC11DD3DAF8 /* SharingRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5CF6694553DD7EBBF348ADC163866 /* SharingRoutes.swift */; };
+		C10909690CEC90CB8B5E19C2DAFED8D6 /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA859724F8E804E0BE8B1A8F83906A68 /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C17A1DA6127FC2FFA944259277E8652E /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F20A65B71FEE70B2582F9B5A52E9FAF /* SwiftyDropbox.framework */; };
+		C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0507BA7FA9540BF70B7719AEE1ED38 /* MultipartFormData.swift */; };
+		C9690A9E98F8C59FC733E95DEE07783D /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F8922AD4A6489BF40129ABC87FEFE /* Properties.swift */; };
+		CF626BA9D5775D5DEFC4B1245FD40DDC /* Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61FFEC433CD474F2DB3324C8C89E3E4 /* Importer.swift */; };
+		D1E160D7C3AD2B84EB91BB9E243D3694 /* FileExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B866624459CAD5180D8C395A50B13A /* FileExporter.swift */; };
+		D2695494AAF3357D669077BF9D2549A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860944EC9E5C611413AB81264749559E /* Foundation.framework */; };
+		D7D3C55FD317D5A7A497BFCACFA1234E /* Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B103EF1B0E80875DBA8638DA5A859A /* Sharing.swift */; };
+		D81F05AD50CFBFA4165CFB1238CDDD7E /* DropboxClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6260949F01303781F9ACCE2AC2B595 /* DropboxClientsManager.swift */; };
+		D90617143EFAF0FD62B494C12C3202E8 /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0993FD2249344EB8521B681A05E61394 /* QRCodeReaderViewControllerBuilder.swift */; };
+		DAF0D3FF002A53EE71E5F4C592C73E95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860944EC9E5C611413AB81264749559E /* Foundation.framework */; };
+		DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77464CF200C657EA64344E9D13D4A4BD /* Result.swift */; };
+		E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B721893B18A76091440BE4B237F954 /* TaskDelegate.swift */; };
+		E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B94185CB7C029589A04909D4923EA00 /* DispatchQueue+Alamofire.swift */; };
+		E2C8D32A82A41BFEB8060280CDF63ECD /* TeamCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40692F69D37CB0409DFFC55E118AE2C /* TeamCommon.swift */; };
+		E2FF36FC49D237568986EB3A004B47AB /* DropboxTransportClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E04B07D33DF8F5CDE04BD9CB346D37 /* DropboxTransportClient.swift */; };
+		E5758026390828270AEB3F3D516EC258 /* JsonObjectSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDAC4937E66BC6225746C640C67B54B /* JsonObjectSerializer.swift */; };
+		E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9962357FA93FDE35E8D2E975088A9 /* NetworkReachabilityManager.swift */; };
+		E80A16D76DFDB3807C5FD48410E80D5F /* RandomFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9188B747607A32BFBCE1E20CF033123 /* RandomFileNameGenerator.swift */; };
+		E80F44269EFB89F62FA303BA9BCD5C13 /* Vandelay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A9F414758FC7136A1FB21985B04133 /* Vandelay-dummy.m */; };
+		EA033A558B756228B8294C06A0BF3D80 /* StoneSerializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB89D2C87B92F54ED92237B0BF868DF5 /* StoneSerializers.swift */; };
+		EEA14004C3D6A3EAE83232D0AE016195 /* Pods-Vandelay_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 936F34C6F6F3DE18DC89BCEC427761C7 /* Pods-Vandelay_Example-dummy.m */; };
+		F19405DC05AE24CCAF68E5FA9A03F82D /* AuthRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBF932663EDC76F2F77A478AB65968B /* AuthRoutes.swift */; };
+		F5BC02AC15A91C830D45D3F09FC3D2ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78E68F9D8770546B39E2DB7C8359794 /* UIKit.framework */; };
+		F8A27222EBC6FFA478DD133F48D7E4FE /* ImportState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B26816A9DDD20E4B1AD4792FF72028C /* ImportState.swift */; };
+		FF65CCA00E8FCADBA0B1AA2BA148DCBF /* ImportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D42313597B4482BE13B56E8A1C06DF /* ImportResult.swift */; };
+		FFFDD494EE6D1B83DDAF5F2721F685A6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36879F45AE4A3C9D01A90EC030A96F3C /* Validation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0CC902B4C25CD3F25824598AD0B41345 /* PBXContainerItemProxy */ = {
+		05E3F05C144E6299C6F8D7CCB2FAB525 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
 			remoteInfo = Alamofire;
 		};
-		246E6E1A05309D9663969230CFDE5B4D /* PBXContainerItemProxy */ = {
+		3254B9E5AD567D5766F82052C357E718 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0BEBB4FF9A5B4E0CB0A81198BFCC2533;
+			remoteGlobalIDString = 58665C6B1C79E7C5E4B121DB91492A74;
+			remoteInfo = Vandelay;
+		};
+		485C900B8810D84EA72D5841FFF63DFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A11D1FFF53D4384D2319913CAF55983A;
 			remoteInfo = SwiftyDropbox;
 		};
-		296847F208068EE594AD2496466B1F4C /* PBXContainerItemProxy */ = {
+		49C406026765C91B1A67782F978E37EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
 			remoteInfo = Alamofire;
 		};
-		77C6FEA1C36C80D104DDE47B7ED3F17E /* PBXContainerItemProxy */ = {
+		785AC50B003084F628DED524AB37467C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 10DD3BF5B63EB86F922722B9897F40BC;
-			remoteInfo = Vandelay;
-		};
-		77DC5B0D9FCAB68274AF00161AC323EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10DD3BF5B63EB86F922722B9897F40BC;
-			remoteInfo = Vandelay;
-		};
-		7955C345D449B0952303C8DDAD262870 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
-			remoteInfo = Alamofire;
-		};
-		83221E0D20287F8093A13F0EF4D7A2D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6BB82922F9C90FE6966CC2C0A73D6F25;
+			remoteGlobalIDString = A5CE5E8B0CF864BE13F4AC41F6656E81;
 			remoteInfo = VandelayDropbox;
 		};
-		87362FEFB6B710239172591717D61111 /* PBXContainerItemProxy */ = {
+		85585DCBFC3DF42778286C8B8DE9ACBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0BEBB4FF9A5B4E0CB0A81198BFCC2533;
+			remoteGlobalIDString = 493AE3B5637E0CB1F9F09A5A0A81A1C6;
+			remoteInfo = QRCodeReader.swift;
+		};
+		A26AC76A544AE1FF090939D7FD424089 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58665C6B1C79E7C5E4B121DB91492A74;
+			remoteInfo = Vandelay;
+		};
+		A4DD7D34AD6C799BC2A81B59CF497600 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A11D1FFF53D4384D2319913CAF55983A;
 			remoteInfo = SwiftyDropbox;
+		};
+		A5DD26CB137B4DCA56B936123E342268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 903BDE722D1793409C56BAF0B634280E;
+			remoteInfo = VandelayQr;
+		};
+		ABF71E1272A582E0576E63230EE6D5D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
+			remoteInfo = Alamofire;
+		};
+		D12C2F844D38EE75DF1D92884E5FAEA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58665C6B1C79E7C5E4B121DB91492A74;
+			remoteInfo = Vandelay;
+		};
+		E40287E4E163A6B86FCEBF93581010EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 493AE3B5637E0CB1F9F09A5A0A81A1C6;
+			remoteInfo = QRCodeReader.swift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02D15B55F5576AFEEED70C6CE88F7D47 /* EmailExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmailExporter.swift; sourceTree = "<group>"; };
-		05ED18F00BE454616F210D14C5167B66 /* DataImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataImporter.swift; sourceTree = "<group>"; };
-		08E42BBAE1C73E9BA598082430CB155E /* StaticFileNameGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StaticFileNameGenerator.swift; sourceTree = "<group>"; };
-		0C2DE5928E697226C1F8FF6C96402182 /* Pods_Vandelay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vandelay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B103EF1B0E80875DBA8638DA5A859A /* Sharing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sharing.swift; path = Source/Source/PlatformNeutral/Sharing.swift; sourceTree = "<group>"; };
+		0993FD2249344EB8521B681A05E61394 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerBuilder.swift; path = Sources/QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
+		0AE2A37CAFC808F3641EA09BDF8C8590 /* MessageExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageExporter.swift; sourceTree = "<group>"; };
+		0C74115C568B37AADAB3C4E08B97900F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D9EBA14A52DE01B52B2A5B00C59A1E6 /* Pods-Vandelay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vandelay_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0DC68D5FC7C5C65DBD9C7639FB8FBF4D /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		0E29BF97B3B937120831C4FAE86478D9 /* SwiftyDropbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyDropbox-prefix.pch"; sourceTree = "<group>"; };
-		0EDDEAA053AC1ED5915887E0E427A91C /* ImportState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportState.swift; sourceTree = "<group>"; };
-		0EF353F6D92B8F08060570EB30B7C897 /* RandomFileNameGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RandomFileNameGenerator.swift; sourceTree = "<group>"; };
-		0F079063387E73DCF4F01E780B51E5A7 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1306DC67AFFE3A7187E4E779C5DA90E8 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		1E0E9A468A0B3DE2A2FF32B1977E3EFD /* Vandelay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Vandelay.xcconfig; sourceTree = "<group>"; };
-		1F5DE46B3936996ABE139B451C2C485C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21401E83F00D4B2565585DA9D21D839F /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		22E6E3114DFE6A071845375713526063 /* AuthRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthRoutes.swift; path = Source/Source/PlatformNeutral/AuthRoutes.swift; sourceTree = "<group>"; };
-		22FD02445BC2524A9734B7BCFEFFC9E6 /* Base.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Source/Source/PlatformNeutral/Base.swift; sourceTree = "<group>"; };
-		2C926461D9A81B9579A6B1E29D606DC1 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		0F20A65B71FEE70B2582F9B5A52E9FAF /* SwiftyDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13512DA8614AAE651804DAD14270DE96 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		13EFEE1511B0B16475CD8B271BA11FE4 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		15A9F414758FC7136A1FB21985B04133 /* Vandelay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Vandelay-dummy.m"; sourceTree = "<group>"; };
+		15B1F0D4143901354C80358274E9C26C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1759FFC0BC831FEF7BAD6C7EE018F377 /* UsersRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UsersRoutes.swift; path = Source/Source/PlatformNeutral/UsersRoutes.swift; sourceTree = "<group>"; };
+		186DCC6D3986FA78759C760276C31F42 /* VandelayDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VandelayDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAD9BA6AE69FB812031454B72A71D4D /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		21770FD5EC3386D6311D56DB4BD8AD5B /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		22C577040343B7DE840A66CF021F47FF /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2413971509A3D8CF87C6E979FEFFB90B /* VandelayQr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VandelayQr-umbrella.h"; sourceTree = "<group>"; };
+		24BB797E464D35DD5B5398F86B526393 /* ObjectSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ObjectSerializer.swift; sourceTree = "<group>"; };
+		284FD02B877799F26729FF00781B40EE /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderResult.swift; path = Sources/QRCodeReaderResult.swift; sourceTree = "<group>"; };
+		2B11985DD47010C54EED63E7ADE9BE56 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = Sources/ReaderOverlayView.swift; sourceTree = "<group>"; };
+		2C637EA49E5F2B482BF5F135ED824E99 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		2CF8197D02EF3D28489EAD80FF38268D /* Pods-Vandelay_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Vandelay_Example.modulemap"; sourceTree = "<group>"; };
-		2E31D0A6CEFFFEE638DD17F1FCCF1A8D /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		311A280A535ABA319B8AD5E0879E1DBB /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		35372D5CA5E19973CEFE3ED457FDF8B9 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4E63A5EF5EE398A3221D38BAD13E4A /* Files.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Files.swift; path = Source/Source/PlatformNeutral/Files.swift; sourceTree = "<group>"; };
+		2DFDD96865F2FDF3D9A808A0127626E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E07DD2E45EEAF3CA96A0C7A7AE82834 /* UrlImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UrlImporter.swift; sourceTree = "<group>"; };
+		2EC311DD20EEE14ED634CBDB02EBE5D3 /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = Sources/QRCodeReader.swift; sourceTree = "<group>"; };
+		2F8751663DBAA42FC9D615B705153FD8 /* VandelayDropbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VandelayDropbox.xcconfig; sourceTree = "<group>"; };
+		31AA617CF16F51E0B8D3828A8E97C1E3 /* VandelayQr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VandelayQr.xcconfig; sourceTree = "<group>"; };
+		33BDDA0FF04EF8983F315261C0F0CDA5 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		3448A5E5C122DE0735C26DE88A59A0DA /* OAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth.swift; path = Source/Source/PlatformNeutral/OAuth.swift; sourceTree = "<group>"; };
+		36879F45AE4A3C9D01A90EC030A96F3C /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		37A091AECFF6DD6372AED940F18B2E1E /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		397F8922AD4A6489BF40129ABC87FEFE /* Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Properties.swift; path = Source/Source/PlatformNeutral/Properties.swift; sourceTree = "<group>"; };
+		39A93F8B38DED4D5A42E14C1D8FD63D7 /* StoneValidators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneValidators.swift; path = Source/Source/PlatformNeutral/StoneValidators.swift; sourceTree = "<group>"; };
+		3B6B59790ADA2C2AF7763E76AD796A13 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		3B97A4D725DB450869D6E89B334293FD /* Pods-Vandelay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vandelay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3DDF20FB0C862CD119222DED3E3A148D /* PasteboardImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasteboardImporter.swift; sourceTree = "<group>"; };
-		422F4C1B0D93385C566F955027DE5EC7 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		423B7F44C126558C211637523A391289 /* SwiftyDropbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyDropbox.modulemap; sourceTree = "<group>"; };
-		4251A13D43D9B3725B96DC9A9D5CF67A /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		45AABED11B9CAED63BC1450F4E7A5494 /* VandelayDropbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VandelayDropbox-umbrella.h"; sourceTree = "<group>"; };
-		460D3E2B573833DDBC3565A82ADB6F16 /* Base64StringEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Base64StringEncoder.swift; sourceTree = "<group>"; };
-		47DC721D1748D8BE5DD8830B00BE2983 /* JsonObjectSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JsonObjectSerializer.swift; sourceTree = "<group>"; };
-		486629176BE4F7D11F6D21B3CAB59141 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		4A73CE8141ADD4249302107D223241CE /* ImportResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportResult.swift; sourceTree = "<group>"; };
-		4ADDF56E24E8B16FFF922DDC0E2750C1 /* FileImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileImporter.swift; sourceTree = "<group>"; };
-		4C54D1C9CD5534D589692EB0A53496D5 /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Source/Source/PlatformNeutral/Auth.swift; sourceTree = "<group>"; };
-		4D0BEC148832F6FCCA235DC9BD8884AE /* StringImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringImporter.swift; sourceTree = "<group>"; };
-		4DAD27CFBF2CD3EB97C955BDBE034EE0 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		4EB83F770B2BCD4B6246849A0298AAC1 /* DataExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExporter.swift; sourceTree = "<group>"; };
+		3BDAC4937E66BC6225746C640C67B54B /* JsonObjectSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JsonObjectSerializer.swift; sourceTree = "<group>"; };
+		3C29B3D5AA96CC7B294AD9A9826C5B4F /* VandelayDropbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VandelayDropbox.modulemap; sourceTree = "<group>"; };
+		3D3D1643E9656273AC6514E4E0B0A653 /* DropboxImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DropboxImporter.swift; sourceTree = "<group>"; };
+		3FACACCF4AA5A88269E744C4AC95F343 /* VandelayDropbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VandelayDropbox-prefix.pch"; sourceTree = "<group>"; };
+		44054CE9A734BC01110B3AB9195516EA /* Vandelay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Vandelay.modulemap; sourceTree = "<group>"; };
+		4561E246F60734F474FB1BDD55AE02F7 /* SwiftyDropbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyDropbox-prefix.pch"; sourceTree = "<group>"; };
+		479F00409E8A85A58276B3A3E6379A19 /* PasteboardExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasteboardExporter.swift; sourceTree = "<group>"; };
+		47D68F6FD7138B90AEA6BF7C3BEC3C4B /* StringImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringImporter.swift; sourceTree = "<group>"; };
+		4B173CAD7A3D2434CB19C3CF4E425F8E /* QrCodeImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QrCodeImporter.swift; sourceTree = "<group>"; };
+		4B94185CB7C029589A04909D4923EA00 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		50565AB255D1DBD665DC913CCA375173 /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
+		520562A015DA6617DBBF0CDE2A62AFE3 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
+		52F609F267E8518489B5FC9FBAACFF5D /* OAuthMobile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthMobile.swift; path = Source/Source/PlatformDependent/iOS/OAuthMobile.swift; sourceTree = "<group>"; };
+		531BA5F16450146D044194F619E5F743 /* Base.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Source/Source/PlatformNeutral/Base.swift; sourceTree = "<group>"; };
 		5343D8878575C9288626119083B6CEC1 /* Pods-Vandelay_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vandelay_Example-umbrella.h"; sourceTree = "<group>"; };
-		57D9B20D020084B5474921281FF5F919 /* UrlImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UrlImporter.swift; sourceTree = "<group>"; };
+		5614C2C39746F46256B861821792EE37 /* DataExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExporter.swift; sourceTree = "<group>"; };
 		585B4F654AD826E57547368FC8E19B9D /* Pods-Vandelay_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vandelay_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		59403E8FA673165910337A831534D95A /* Exporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
-		602CB57B33DB7221F34C18FAF3D84DEA /* StringEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringEncoder.swift; sourceTree = "<group>"; };
-		60C4C1EA79767110410F03907771DC7C /* DropboxClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxClient.swift; path = Source/Source/PlatformNeutral/DropboxClient.swift; sourceTree = "<group>"; };
-		616AA224A09FFB80C0E6FC6FBC947CE1 /* Vandelay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vandelay-umbrella.h"; sourceTree = "<group>"; };
+		58DEB3AF94F2F723927DB6BDBF35E28A /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Source/Source/PlatformNeutral/Common.swift; sourceTree = "<group>"; };
+		5EE571BFCB07803512B67F721C59B398 /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
 		61ACDC32C17A13FC39AB2290D04F42A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		625ABE2EB38D8BEF78D92B48DDE01B21 /* VandelayDropbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VandelayDropbox.modulemap; sourceTree = "<group>"; };
-		6296A6487323110EDE81484D15AF82D4 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		632554B3E7519D87783C550292881DA9 /* FileExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileExporter.swift; sourceTree = "<group>"; };
-		637EA37AE7B034C3E0E02FD16E2F67CF /* ExportState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExportState.swift; sourceTree = "<group>"; };
-		6D00ADC475762AF2B0CE899E1F8C295E /* DropboxTransportClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTransportClient.swift; path = Source/Source/PlatformNeutral/DropboxTransportClient.swift; sourceTree = "<group>"; };
-		6E8F065281DF48C7221633DE6BCF9A96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6FE926F9681BB68C39D3D68407856ED4 /* Users.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Users.swift; path = Source/Source/PlatformNeutral/Users.swift; sourceTree = "<group>"; };
-		710A7EB61C37BA088C68C22A02F879B9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		72D70916CBA4ACE53F4C334CF0D33556 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7334EE579D956F47A9ADE158B67BE838 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		65B866624459CAD5180D8C395A50B13A /* FileExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileExporter.swift; sourceTree = "<group>"; };
+		66940979194A6DC6292E51DC46211B14 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = Sources/SwitchCameraButton.swift; sourceTree = "<group>"; };
+		695F8159B1DB2A7D19CBB982355FDF84 /* Team.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Source/Source/PlatformNeutral/Team.swift; sourceTree = "<group>"; };
+		6A5A5DC7E64676393424359E9A2B5555 /* DropboxTeamClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTeamClient.swift; path = Source/Source/PlatformNeutral/DropboxTeamClient.swift; sourceTree = "<group>"; };
+		6BEE04B6AB8A51E27EACCC4431668907 /* DropboxExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DropboxExporter.swift; sourceTree = "<group>"; };
+		6E2BD4948FE817256B6BCADD21FEBAB2 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		6F6260949F01303781F9ACCE2AC2B595 /* DropboxClientsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxClientsManager.swift; path = Source/Source/PlatformNeutral/DropboxClientsManager.swift; sourceTree = "<group>"; };
 		7359FEC302609CA7F937A2580F150ED1 /* Pods-Vandelay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vandelay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7407D8449E3B8199DBF48839B886FDDA /* SwiftyDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75028B01BE4AE1AAFCFB36977FB287B8 /* MessageExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageExporter.swift; sourceTree = "<group>"; };
-		7520E6C63E207DC3E77C345B11FD7B9E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7365118254825F2E115CB6A11DAC5BC2 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		75B721893B18A76091440BE4B237F954 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		75BAA54807E242D8CCA2E979D3CF7126 /* Pods-Vandelay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Vandelay_Tests.modulemap"; sourceTree = "<group>"; };
-		75F3FED734280C1E43854A32E2E53A5A /* BaseTeam.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTeam.swift; path = Source/Source/PlatformNeutral/BaseTeam.swift; sourceTree = "<group>"; };
-		791D22054F53102F825DCF4BAF21C84F /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		7737F7B87374455E094930E3A931F2DF /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
+		77464CF200C657EA64344E9D13D4A4BD /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		78233212A679961C2A2A7DE69724807F /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		79E6DCFDA26BBF3FEE8A1052E2ABA47A /* SwiftyDropbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyDropbox-umbrella.h"; sourceTree = "<group>"; };
+		79F7DD55B86A7DD746A3F589B2B60453 /* VandelayQr-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VandelayQr-prefix.pch"; sourceTree = "<group>"; };
+		7A21DAE945761062F0D2E84B8E3EEEE2 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD1723D0ECBFF9FBB02B951C2C8AE84 /* Pods-Vandelay_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Vandelay_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		7D26254DCB8C3B5AAEBA2650EF36C0EB /* OAuthMobile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthMobile.swift; path = Source/Source/PlatformDependent/iOS/OAuthMobile.swift; sourceTree = "<group>"; };
-		7F4CC9B669DAFB869F04238CCF666644 /* DropboxClientsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxClientsManager.swift; path = Source/Source/PlatformNeutral/DropboxClientsManager.swift; sourceTree = "<group>"; };
-		837B7C9BE02C5A401B2CE4933F124A33 /* FileNameGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileNameGenerator.swift; sourceTree = "<group>"; };
-		83E38908793710AD2792D2EA990B760D /* ExportAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExportAlertController.swift; sourceTree = "<group>"; };
-		869FF43F5AE234E6495787231FD37E62 /* StoneValidators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneValidators.swift; path = Source/Source/PlatformNeutral/StoneValidators.swift; sourceTree = "<group>"; };
-		8AAAB6A38A4CB9A174D6A56D6BA106A0 /* SwiftyDropbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyDropbox-dummy.m"; sourceTree = "<group>"; };
-		8AABAF41001A66A4ED992B87A02827CB /* StoneBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneBase.swift; path = Source/Source/PlatformNeutral/StoneBase.swift; sourceTree = "<group>"; };
-		8C3E435330BE2C25B30F1A9FA506365F /* VandelayDropbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VandelayDropbox.xcconfig; sourceTree = "<group>"; };
+		818362262DEB3B1205D8AF6490B55D9D /* ImportAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportAlertController.swift; sourceTree = "<group>"; };
+		833869F326DF3A68AF72B02249B6EE80 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		8435E0AE558EDE1F2B983A16B7EE3841 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		84E9962357FA93FDE35E8D2E975088A9 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		84EE1D985A9F21449F1B6005F3E014E6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		857338A21DC353A4AEB1DE968539CCA3 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		860944EC9E5C611413AB81264749559E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		87B535CA805401D49CE828982F6E7995 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		87ECE01B3126C571BF597B0BFFA1EFCD /* StoneBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneBase.swift; path = Source/Source/PlatformNeutral/StoneBase.swift; sourceTree = "<group>"; };
+		8ABA5F3BF95AED154755B2D884F76F14 /* Base64StringEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Base64StringEncoder.swift; sourceTree = "<group>"; };
+		8B2217B0B0E007F0EE89B85FB1451903 /* VandelayQr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VandelayQr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDB19E6008AD882DA5506955E62AC78 /* Pods-Vandelay_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Vandelay_Tests-resources.sh"; sourceTree = "<group>"; };
-		8F1325067953739BF811A3CA86DC8A82 /* Vandelay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Vandelay-dummy.m"; sourceTree = "<group>"; };
-		91096D740EB3B8D617779C4DA11881AB /* Vandelay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vandelay-prefix.pch"; sourceTree = "<group>"; };
+		900ED151B588E126C5B9E382BF26046D /* Files.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Files.swift; path = Source/Source/PlatformNeutral/Files.swift; sourceTree = "<group>"; };
+		90BFE72870BD1088AFFD47FDBAE51149 /* FileNameGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileNameGenerator.swift; sourceTree = "<group>"; };
+		915209E9BDD63B82293ABD478A3CDE28 /* ExportResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExportResult.swift; sourceTree = "<group>"; };
+		928D5628E913905009F30DD13307830A /* StringEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringEncoder.swift; sourceTree = "<group>"; };
 		936F34C6F6F3DE18DC89BCEC427761C7 /* Pods-Vandelay_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vandelay_Example-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9556B6FE8792E328371A012695D0DEBD /* Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Properties.swift; path = Source/Source/PlatformNeutral/Properties.swift; sourceTree = "<group>"; };
-		97E7EFD3F80E4F7A8900746922EE93C4 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		9C1CF8E98297B6F65D23882F0E8F610D /* Vandelay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Vandelay.modulemap; sourceTree = "<group>"; };
+		94251C771C83CBEBD39239917374ABD2 /* EmailExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmailExporter.swift; sourceTree = "<group>"; };
+		98CDB7AA79A0990F83437148F57AA334 /* Exporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
+		9B26816A9DDD20E4B1AD4792FF72028C /* ImportState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportState.swift; sourceTree = "<group>"; };
+		9BFB29891D05921D92EF5FC6493FC125 /* FilesRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilesRoutes.swift; path = Source/Source/PlatformNeutral/FilesRoutes.swift; sourceTree = "<group>"; };
+		9CE9FFBBB0D1BA497AADD67BF5742FB8 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		9DB9C3ADDA2A531670D796C44C831FDA /* QRCodeReader.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReader.swift-dummy.m"; sourceTree = "<group>"; };
 		A23613BBAD595434831B189548A78DDB /* Pods-Vandelay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vandelay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A2EA0D9178F17F32A66B7728E8993282 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		A423DB67B3AD3F989D74C9D5691ABF41 /* ObjectSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ObjectSerializer.swift; sourceTree = "<group>"; };
-		A54331BCC16CAD53B7C87DB31BC647F1 /* StoneSerializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneSerializers.swift; path = Source/Source/PlatformNeutral/StoneSerializers.swift; sourceTree = "<group>"; };
-		A8325FB7E9C44474DA6568F314837C71 /* ImportAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportAlertController.swift; sourceTree = "<group>"; };
-		A9D14C6583A4EBDDA196BED1A1A2D3A8 /* DropboxTeamClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTeamClient.swift; path = Source/Source/PlatformNeutral/DropboxTeamClient.swift; sourceTree = "<group>"; };
+		A3AC127949C5F592F4BA9AD0F57801F5 /* BaseTeam.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTeam.swift; path = Source/Source/PlatformNeutral/BaseTeam.swift; sourceTree = "<group>"; };
+		A7B35500368A23E5D32AAB6F641DE561 /* SwiftyDropbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyDropbox-dummy.m"; sourceTree = "<group>"; };
+		A8E5CF6694553DD7EBBF348ADC163866 /* SharingRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharingRoutes.swift; path = Source/Source/PlatformNeutral/SharingRoutes.swift; sourceTree = "<group>"; };
+		AB89D2C87B92F54ED92237B0BF868DF5 /* StoneSerializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneSerializers.swift; path = Source/Source/PlatformNeutral/StoneSerializers.swift; sourceTree = "<group>"; };
 		AF25220BC6C1438A3FF26630BA9751B5 /* Pods-Vandelay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vandelay_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B043433640A897C0338ED1D217102B8B /* SharingRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharingRoutes.swift; path = Source/Source/PlatformNeutral/SharingRoutes.swift; sourceTree = "<group>"; };
-		B2B776F91F32D140FCCEB17A72701A25 /* TeamPolicies.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamPolicies.swift; path = Source/Source/PlatformNeutral/TeamPolicies.swift; sourceTree = "<group>"; };
-		B3DFEA2552C49BA9997488FC39B2A95E /* SwiftyDropbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyDropbox-umbrella.h"; sourceTree = "<group>"; };
+		B074A5969C6B85DB6F711CFF60963745 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		B12C5AFA08816E3BC91620904DAC0B55 /* TeamPolicies.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamPolicies.swift; path = Source/Source/PlatformNeutral/TeamPolicies.swift; sourceTree = "<group>"; };
+		B133318609BB003B671AE3BC37BC1EB8 /* Pods_Vandelay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vandelay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B515856FCAD723F7D103289B6F7CAD0C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5F6F4872727683434D41F433DC52BD1 /* StringExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExporter.swift; sourceTree = "<group>"; };
+		B61FFEC433CD474F2DB3324C8C89E3E4 /* Importer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Importer.swift; sourceTree = "<group>"; };
+		B7A7D9A6AFD1C4362177E31DE4E1CA11 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C86B7B0496F15B9A99D8D920B168CB /* Pods-Vandelay_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vandelay_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		BB6F100D9DEA35A125C6782186F7E22B /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		BBFB232F7932A8923E8F85AE4C6DF375 /* Sharing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sharing.swift; path = Source/Source/PlatformNeutral/Sharing.swift; sourceTree = "<group>"; };
+		B98C9DE71FB43231E8E4D5CD316FC960 /* VandelayQr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VandelayQr.modulemap; sourceTree = "<group>"; };
+		B99292880620222CE5E4E375191841CF /* SwiftyDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9DB329E68E6D388B2B6B497CFE7821D /* VandelayQr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VandelayQr-dummy.m"; sourceTree = "<group>"; };
+		BB3E7676D9C42C3EAE55D21C950946DA /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8BC4A7E5F96A37E1736017C8509129 /* Pods-Vandelay_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Vandelay_Example-frameworks.sh"; sourceTree = "<group>"; };
-		BF3662D6B3AEB435B31AA5F04EB82964 /* PasteboardExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasteboardExporter.swift; sourceTree = "<group>"; };
-		BFABED649675C79B4F5A8CE0C2F96B3A /* VandelayDropbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VandelayDropbox-dummy.m"; sourceTree = "<group>"; };
-		C319F9CA6594716A2687FA6B37F6643F /* ExportResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExportResult.swift; sourceTree = "<group>"; };
-		C437793940DDE2D71B4BE7D5DA49C933 /* TeamCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamCommon.swift; path = Source/Source/PlatformNeutral/TeamCommon.swift; sourceTree = "<group>"; };
+		BE6BFFFC4B879B58B84587CEC2AA3CFB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C40692F69D37CB0409DFFC55E118AE2C /* TeamCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamCommon.swift; path = Source/Source/PlatformNeutral/TeamCommon.swift; sourceTree = "<group>"; };
 		C45076566CD138C99C4524739334A913 /* Pods-Vandelay_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vandelay_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C89E68D13A89F18D757D9A98F0005EE6 /* FilesRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilesRoutes.swift; path = Source/Source/PlatformNeutral/FilesRoutes.swift; sourceTree = "<group>"; };
+		C5EF923437B0CD6A72E193CAC5B6B9E3 /* Users.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Users.swift; path = Source/Source/PlatformNeutral/Users.swift; sourceTree = "<group>"; };
+		C6AF5119F47333090737B6EBD8DB6E90 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		C759D419ECF8B21F88EE3F36367D95DD /* Vandelay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Vandelay.xcconfig; sourceTree = "<group>"; };
+		C88627D2A136FB9AC814CA8C568F4663 /* DropboxClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxClient.swift; path = Source/Source/PlatformNeutral/DropboxClient.swift; sourceTree = "<group>"; };
+		CB0507BA7FA9540BF70B7719AEE1ED38 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		CB45518BE7302F6A5EF0234D15E71BC2 /* ExportAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExportAlertController.swift; sourceTree = "<group>"; };
 		CC4C6A5DA94C24E59C87E4DE92BC6152 /* Pods-Vandelay_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vandelay_Tests-dummy.m"; sourceTree = "<group>"; };
-		CFECD0081C27A5274C05D6AF36CA832A /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Source/Source/PlatformNeutral/Common.swift; sourceTree = "<group>"; };
-		D14E6940888E227287FA440EC9212B91 /* Importer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Importer.swift; sourceTree = "<group>"; };
-		D29D764DDB4CB689D72683661C83C31A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4251C4EA1A62A2485FAD350E6717002 /* VandelayDropbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VandelayDropbox-prefix.pch"; sourceTree = "<group>"; };
-		D554F5DF7A1E7805C576508ABF16888F /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		D6DA5F6C1194A4C86ADF4277F0BC6CC2 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		D7338126FF7F96F246610F3CBD40657C /* DropboxImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DropboxImporter.swift; sourceTree = "<group>"; };
-		D98C9C5334A3640DA070FA1382681107 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		DC1B946A2ADA51E6E9A4B168CFBC04CD /* OAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth.swift; path = Source/Source/PlatformNeutral/OAuth.swift; sourceTree = "<group>"; };
-		DCB317122AEA557ACF7D0814AD2BE0D8 /* TeamRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamRoutes.swift; path = Source/Source/PlatformNeutral/TeamRoutes.swift; sourceTree = "<group>"; };
-		DCF36B9EF2A37510CC2FFFE48BD220F5 /* DropboxExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DropboxExporter.swift; sourceTree = "<group>"; };
-		DE92DBD0F9537D614165B43D54BF57DC /* VandelayDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VandelayDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E12DE4E62215CF0F679D948DDC606CA1 /* SwiftyDropbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyDropbox.xcconfig; sourceTree = "<group>"; };
-		E32938F3F905840BF95DEFDF952B06F6 /* SwiftyDropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyDropbox.h; path = Source/SwiftyDropbox/SwiftyDropbox/SwiftyDropbox.h; sourceTree = "<group>"; };
-		E76FF95F5EAFECDC7E0DA045F8E104B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8AA192AAC09377E452860024D223926 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		EBA334F3FD6B9B244725C5B560C26DC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		ECDDC18FEA0A8FDD2315933E2C59D799 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		D0F9FD813F1F0741D29DC69E074963B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D29E08391D23FA5FCF86BA3B7E08ACEF /* StringExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExporter.swift; sourceTree = "<group>"; };
+		D3D42313597B4482BE13B56E8A1C06DF /* ImportResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImportResult.swift; sourceTree = "<group>"; };
+		D48109A41E1B169E4B91A04C766257B4 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Source/Source/PlatformNeutral/Async.swift; sourceTree = "<group>"; };
+		D8E04B07D33DF8F5CDE04BD9CB346D37 /* DropboxTransportClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTransportClient.swift; path = Source/Source/PlatformNeutral/DropboxTransportClient.swift; sourceTree = "<group>"; };
+		D93FD00BE172F2E5B5CBE418405D11DA /* SwiftyDropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyDropbox.h; path = Source/SwiftyDropbox/SwiftyDropbox/SwiftyDropbox.h; sourceTree = "<group>"; };
+		D9DAA288750FE27EBDD4BA216E278D2D /* VandelayDropbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VandelayDropbox-umbrella.h"; sourceTree = "<group>"; };
+		DA859724F8E804E0BE8B1A8F83906A68 /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
+		DD255A420C963B14883F6CE107966A7E /* TeamRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamRoutes.swift; path = Source/Source/PlatformNeutral/TeamRoutes.swift; sourceTree = "<group>"; };
+		DE70D10B6EA8ACD26D6D6F04DCE0C147 /* StaticFileNameGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StaticFileNameGenerator.swift; sourceTree = "<group>"; };
+		E0C4FE6B747AFBDFA363F06652F6E86B /* SwiftyDropbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyDropbox.modulemap; sourceTree = "<group>"; };
+		E2C4D9B87151EB916DB2C2853D1F78E3 /* PasteboardImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasteboardImporter.swift; sourceTree = "<group>"; };
+		E65BF21E3861A27A67C6F83ADD924448 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7DD4C7CFC11B1561F1CB2446C3A1F87 /* Vandelay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vandelay-umbrella.h"; sourceTree = "<group>"; };
+		E90D840EC690E15700C21AE211042071 /* DataImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataImporter.swift; sourceTree = "<group>"; };
+		ED10B788D9DA9DD1906AAE803F32E08C /* FileImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileImporter.swift; sourceTree = "<group>"; };
+		EDB9B1BFA2FEC00441C3B855910287EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1E39C33F852131D3DA55148B915A91 /* Pods-Vandelay_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Vandelay_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F1398EEC00E29BBC876207C66CC9FBD1 /* Team.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Source/Source/PlatformNeutral/Team.swift; sourceTree = "<group>"; };
-		F23833BC36110FDBBEEB0ADA0054D0FA /* Pods_Vandelay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vandelay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F653A9EBA3D5BFECEF4CEE087F51F66B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F80047093E875626450188DB8093A3F9 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		EFBF932663EDC76F2F77A478AB65968B /* AuthRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthRoutes.swift; path = Source/Source/PlatformNeutral/AuthRoutes.swift; sourceTree = "<group>"; };
+		F02689C19D1526B5461354C8A7D5318E /* ExportState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExportState.swift; sourceTree = "<group>"; };
+		F0DF8C1D27C7362018464E80223BB8D8 /* Vandelay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vandelay-prefix.pch"; sourceTree = "<group>"; };
+		F4AE58044B93A2A593F64CA249CA99A2 /* VandelayDropbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VandelayDropbox-dummy.m"; sourceTree = "<group>"; };
+		F785508CB6EEA0CE263D03B8DB65E95A /* Pods_Vandelay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vandelay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F78E68F9D8770546B39E2DB7C8359794 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F9188B747607A32BFBCE1E20CF033123 /* RandomFileNameGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RandomFileNameGenerator.swift; sourceTree = "<group>"; };
+		FC730DA2FBD12E8CF3FB8B4CF3CE1636 /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Source/Source/PlatformNeutral/Auth.swift; sourceTree = "<group>"; };
 		FD7C781F812EB51EAFFB7B4273B65088 /* Pods-Vandelay_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Vandelay_Example-resources.sh"; sourceTree = "<group>"; };
-		FFA32B64A7CF506F10450554ACC88C53 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Source/Source/PlatformNeutral/Async.swift; sourceTree = "<group>"; };
-		FFAC4A564EB259EAC5DA6B84870DADFA /* UsersRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UsersRoutes.swift; path = Source/Source/PlatformNeutral/UsersRoutes.swift; sourceTree = "<group>"; };
+		FEED7366D78D810F67BD31FAF7369F52 /* SwiftyDropbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyDropbox.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B832F870A57A2D663291A28B1491E1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A81E1D5C3B1E65FE3ECFC14E91C791E0 /* Alamofire.framework in Frameworks */,
+				DAF0D3FF002A53EE71E5F4C592C73E95 /* Foundation.framework in Frameworks */,
+				C17A1DA6127FC2FFA944259277E8652E /* SwiftyDropbox.framework in Frameworks */,
+				C06C750DB1FDDBCE64EEB2F99B75C916 /* Vandelay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1FFD31387B3156150999B9E0A359467E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,22 +383,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		716019E0C33D8F888A9C5EB69E6F11D1 /* Frameworks */ = {
+		35D04169E906ED159A3D2C5C58E31690 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935FD5ACD87E996FED7EFAB2341FA1F3 /* Alamofire.framework in Frameworks */,
-				DA8E3ED3ADC6180248F1D129E8EFE15E /* Foundation.framework in Frameworks */,
-				E692ADA347F1119E358D84A979A2EC80 /* SwiftyDropbox.framework in Frameworks */,
-				3C5F14E6D4EF30D00A9FA89959A1D336 /* Vandelay.framework in Frameworks */,
+				1B15ECB689A383B5E40A65DDAA03B3A2 /* AVFoundation.framework in Frameworks */,
+				128526FAD107D07E940AE583F18351C9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8BAFBC601EFE93F8F919E25D7E961E9E /* Frameworks */ = {
+		63D6210A2922D2A11D8EB10F9C456632 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BDD9C0CE28DCA6EAB27F13F3460AB34 /* Foundation.framework in Frameworks */,
+				D2695494AAF3357D669077BF9D2549A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744E89FA3857F988D0464BE0E73E5792 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1055AA123B272C752FE1E9A706B26367 /* Foundation.framework in Frameworks */,
+				A5E1731292ED99C1276902B1520F0ACB /* QRCodeReader.framework in Frameworks */,
+				22F4D88FB77837A44772FBBBF945A42C /* Vandelay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A259F7E3E47E90C12E6A28BA6A57F49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8418D315005F7A717F3E10AFF976A6 /* Alamofire.framework in Frameworks */,
+				474E96158B8118339FC6D04DC272FF5D /* Foundation.framework in Frameworks */,
+				F5BC02AC15A91C830D45D3F09FC3D2ED /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,69 +428,89 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E01BAA47EB29BB4EC071E0B6DCC53CFE /* Frameworks */ = {
+		FE5D5E2BFA492F082EE6E09519255DC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E2EE0203529B6288BD4D00040E19988 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD593A8F832896ABDAC67B7EF6605801 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				236C22B8BD26CDF93E2E717E07B1959A /* Alamofire.framework in Frameworks */,
-				BFE28591B1DF69E8AABF00BC3EDD8935 /* Foundation.framework in Frameworks */,
-				F4E5750A45AE4366C7D5EA75CC87AD57 /* UIKit.framework in Frameworks */,
+				0A1F60EAE470CEA4E861627A49796DA5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06107789B068791E770E8FE8110BC179 /* Vandelay */ = {
+		03AA24E69B0F57F922EAF2C109B6AFB3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2AA693911B6485E41315B4BF9F1E9E7B /* Classes */,
-			);
-			path = Vandelay;
-			sourceTree = "<group>";
-		};
-		127677FC7A8088794B75C8D1A9ACD427 /* VandelayDropbox */ = {
-			isa = PBXGroup;
-			children = (
-				585C5A8986EDE0AC251480D70788F74D /* Support Files */,
-				D497C26AA9CF5BC4377ACF426C4F5792 /* VandelayDropbox */,
-			);
-			name = VandelayDropbox;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		240D150E633E08F0EA163D4602356434 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A2EA0D9178F17F32A66B7728E8993282 /* Alamofire.modulemap */,
-				ECDDC18FEA0A8FDD2315933E2C59D799 /* Alamofire.xcconfig */,
-				2E31D0A6CEFFFEE638DD17F1FCCF1A8D /* Alamofire-dummy.m */,
-				D98C9C5334A3640DA070FA1382681107 /* Alamofire-prefix.pch */,
-				1306DC67AFFE3A7187E4E779C5DA90E8 /* Alamofire-umbrella.h */,
-				D29D764DDB4CB689D72683661C83C31A /* Info.plist */,
+				857338A21DC353A4AEB1DE968539CCA3 /* Alamofire.modulemap */,
+				21770FD5EC3386D6311D56DB4BD8AD5B /* Alamofire.xcconfig */,
+				833869F326DF3A68AF72B02249B6EE80 /* Alamofire-dummy.m */,
+				6E2BD4948FE817256B6BCADD21FEBAB2 /* Alamofire-prefix.pch */,
+				33BDDA0FF04EF8983F315261C0F0CDA5 /* Alamofire-umbrella.h */,
+				2DFDD96865F2FDF3D9A808A0127626E2 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		2AA693911B6485E41315B4BF9F1E9E7B /* Classes */ = {
+		161E3C9924130757FB398342D8372C63 /* Export */ = {
 			isa = PBXGroup;
 			children = (
-				6ABCE8A22539E2AE273FA40326E36802 /* Encoding */,
-				844669EF8CCC734F8EA2C5F9C9F8A14A /* Export */,
-				5E3F7511E90F908872DC730F8DFCB80A /* File */,
-				8571808A3F3491986D4B6D3BDD5042B1 /* Import */,
-				8629A0FE662934D44F9F1DE317F1D27E /* Serialization */,
+				5614C2C39746F46256B861821792EE37 /* DataExporter.swift */,
+				94251C771C83CBEBD39239917374ABD2 /* EmailExporter.swift */,
+				CB45518BE7302F6A5EF0234D15E71BC2 /* ExportAlertController.swift */,
+				98CDB7AA79A0990F83437148F57AA334 /* Exporter.swift */,
+				915209E9BDD63B82293ABD478A3CDE28 /* ExportResult.swift */,
+				F02689C19D1526B5461354C8A7D5318E /* ExportState.swift */,
+				65B866624459CAD5180D8C395A50B13A /* FileExporter.swift */,
+				0AE2A37CAFC808F3641EA09BDF8C8590 /* MessageExporter.swift */,
+				479F00409E8A85A58276B3A3E6379A19 /* PasteboardExporter.swift */,
+				D29E08391D23FA5FCF86BA3B7E08ACEF /* StringExporter.swift */,
 			);
-			path = Classes;
+			path = Export;
+			sourceTree = "<group>";
+		};
+		16B4E917971E07BDC93CEAF11BD26670 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE6BFFFC4B879B58B84587CEC2AA3CFB /* Info.plist */,
+				E0C4FE6B747AFBDFA363F06652F6E86B /* SwiftyDropbox.modulemap */,
+				FEED7366D78D810F67BD31FAF7369F52 /* SwiftyDropbox.xcconfig */,
+				A7B35500368A23E5D32AAB6F641DE561 /* SwiftyDropbox-dummy.m */,
+				4561E246F60734F474FB1BDD55AE02F7 /* SwiftyDropbox-prefix.pch */,
+				79E6DCFDA26BBF3FEE8A1052E2ABA47A /* SwiftyDropbox-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyDropbox";
+			sourceTree = "<group>";
+		};
+		19D3313142F5729119099F82BD4BF373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7A7D9A6AFD1C4362177E31DE4E1CA11 /* Alamofire.framework */,
+				B133318609BB003B671AE3BC37BC1EB8 /* Pods_Vandelay_Example.framework */,
+				F785508CB6EEA0CE263D03B8DB65E95A /* Pods_Vandelay_Tests.framework */,
+				BB3E7676D9C42C3EAE55D21C950946DA /* QRCodeReader.framework */,
+				B99292880620222CE5E4E375191841CF /* SwiftyDropbox.framework */,
+				E65BF21E3861A27A67C6F83ADD924448 /* Vandelay.framework */,
+				186DCC6D3986FA78759C760276C31F42 /* VandelayDropbox.framework */,
+				8B2217B0B0E007F0EE89B85FB1451903 /* VandelayQr.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A43077ED84BB4FF6EAE4FB112670C84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				15B1F0D4143901354C80358274E9C26C /* Info.plist */,
+				3C29B3D5AA96CC7B294AD9A9826C5B4F /* VandelayDropbox.modulemap */,
+				2F8751663DBAA42FC9D615B705153FD8 /* VandelayDropbox.xcconfig */,
+				F4AE58044B93A2A593F64CA249CA99A2 /* VandelayDropbox-dummy.m */,
+				3FACACCF4AA5A88269E744C4AC95F343 /* VandelayDropbox-prefix.pch */,
+				D9DAA288750FE27EBDD4BA216E278D2D /* VandelayDropbox-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VandelayDropbox";
 			sourceTree = "<group>";
 		};
 		3238A8F5B5FD91B96D311BDB0B26507C /* Targets Support Files */ = {
@@ -404,86 +522,87 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3F441605801E1688FC1644A17B476E81 /* Development Pods */ = {
+		44EB3F30271450FCD5152759075FFE20 /* SwiftyDropbox */ = {
 			isa = PBXGroup;
 			children = (
-				6FFE18D96CBA044EFC7DE1CFC1D927A5 /* Vandelay */,
-				127677FC7A8088794B75C8D1A9ACD427 /* VandelayDropbox */,
+				D48109A41E1B169E4B91A04C766257B4 /* Async.swift */,
+				FC730DA2FBD12E8CF3FB8B4CF3CE1636 /* Auth.swift */,
+				EFBF932663EDC76F2F77A478AB65968B /* AuthRoutes.swift */,
+				531BA5F16450146D044194F619E5F743 /* Base.swift */,
+				A3AC127949C5F592F4BA9AD0F57801F5 /* BaseTeam.swift */,
+				58DEB3AF94F2F723927DB6BDBF35E28A /* Common.swift */,
+				C88627D2A136FB9AC814CA8C568F4663 /* DropboxClient.swift */,
+				6F6260949F01303781F9ACCE2AC2B595 /* DropboxClientsManager.swift */,
+				6A5A5DC7E64676393424359E9A2B5555 /* DropboxTeamClient.swift */,
+				D8E04B07D33DF8F5CDE04BD9CB346D37 /* DropboxTransportClient.swift */,
+				900ED151B588E126C5B9E382BF26046D /* Files.swift */,
+				9BFB29891D05921D92EF5FC6493FC125 /* FilesRoutes.swift */,
+				3448A5E5C122DE0735C26DE88A59A0DA /* OAuth.swift */,
+				52F609F267E8518489B5FC9FBAACFF5D /* OAuthMobile.swift */,
+				397F8922AD4A6489BF40129ABC87FEFE /* Properties.swift */,
+				04B103EF1B0E80875DBA8638DA5A859A /* Sharing.swift */,
+				A8E5CF6694553DD7EBBF348ADC163866 /* SharingRoutes.swift */,
+				87ECE01B3126C571BF597B0BFFA1EFCD /* StoneBase.swift */,
+				AB89D2C87B92F54ED92237B0BF868DF5 /* StoneSerializers.swift */,
+				39A93F8B38DED4D5A42E14C1D8FD63D7 /* StoneValidators.swift */,
+				D93FD00BE172F2E5B5CBE418405D11DA /* SwiftyDropbox.h */,
+				695F8159B1DB2A7D19CBB982355FDF84 /* Team.swift */,
+				C40692F69D37CB0409DFFC55E118AE2C /* TeamCommon.swift */,
+				B12C5AFA08816E3BC91620904DAC0B55 /* TeamPolicies.swift */,
+				DD255A420C963B14883F6CE107966A7E /* TeamRoutes.swift */,
+				C5EF923437B0CD6A72E193CAC5B6B9E3 /* Users.swift */,
+				1759FFC0BC831FEF7BAD6C7EE018F377 /* UsersRoutes.swift */,
+				16B4E917971E07BDC93CEAF11BD26670 /* Support Files */,
 			);
-			name = "Development Pods";
+			path = SwiftyDropbox;
 			sourceTree = "<group>";
 		};
-		41263E2AA2AF789372A4D1D5A9D3C817 /* Support Files */ = {
+		489392C9BB7ECFC25B768F02A04A35B4 /* Import */ = {
 			isa = PBXGroup;
 			children = (
-				F653A9EBA3D5BFECEF4CEE087F51F66B /* Info.plist */,
-				423B7F44C126558C211637523A391289 /* SwiftyDropbox.modulemap */,
-				E12DE4E62215CF0F679D948DDC606CA1 /* SwiftyDropbox.xcconfig */,
-				8AAAB6A38A4CB9A174D6A56D6BA106A0 /* SwiftyDropbox-dummy.m */,
-				0E29BF97B3B937120831C4FAE86478D9 /* SwiftyDropbox-prefix.pch */,
-				B3DFEA2552C49BA9997488FC39B2A95E /* SwiftyDropbox-umbrella.h */,
+				E90D840EC690E15700C21AE211042071 /* DataImporter.swift */,
+				ED10B788D9DA9DD1906AAE803F32E08C /* FileImporter.swift */,
+				818362262DEB3B1205D8AF6490B55D9D /* ImportAlertController.swift */,
+				B61FFEC433CD474F2DB3324C8C89E3E4 /* Importer.swift */,
+				D3D42313597B4482BE13B56E8A1C06DF /* ImportResult.swift */,
+				9B26816A9DDD20E4B1AD4792FF72028C /* ImportState.swift */,
+				E2C4D9B87151EB916DB2C2853D1F78E3 /* PasteboardImporter.swift */,
+				47D68F6FD7138B90AEA6BF7C3BEC3C4B /* StringImporter.swift */,
+				2E07DD2E45EEAF3CA96A0C7A7AE82834 /* UrlImporter.swift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyDropbox";
+			path = Import;
 			sourceTree = "<group>";
 		};
-		585C5A8986EDE0AC251480D70788F74D /* Support Files */ = {
+		60A42F4F4B7BE4B4717DAF4588B532DD /* QRCodeReader.swift */ = {
 			isa = PBXGroup;
 			children = (
-				E76FF95F5EAFECDC7E0DA045F8E104B0 /* Info.plist */,
-				625ABE2EB38D8BEF78D92B48DDE01B21 /* VandelayDropbox.modulemap */,
-				8C3E435330BE2C25B30F1A9FA506365F /* VandelayDropbox.xcconfig */,
-				BFABED649675C79B4F5A8CE0C2F96B3A /* VandelayDropbox-dummy.m */,
-				D4251C4EA1A62A2485FAD350E6717002 /* VandelayDropbox-prefix.pch */,
-				45AABED11B9CAED63BC1450F4E7A5494 /* VandelayDropbox-umbrella.h */,
+				2EC311DD20EEE14ED634CBDB02EBE5D3 /* QRCodeReader.swift */,
+				284FD02B877799F26729FF00781B40EE /* QRCodeReaderResult.swift */,
+				B074A5969C6B85DB6F711CFF60963745 /* QRCodeReaderViewController.swift */,
+				0993FD2249344EB8521B681A05E61394 /* QRCodeReaderViewControllerBuilder.swift */,
+				2B11985DD47010C54EED63E7ADE9BE56 /* ReaderOverlayView.swift */,
+				66940979194A6DC6292E51DC46211B14 /* SwitchCameraButton.swift */,
+				520562A015DA6617DBBF0CDE2A62AFE3 /* ToggleTorchButton.swift */,
+				C60E0884D702605AE253DF40EBC36950 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/VandelayDropbox";
+			path = QRCodeReader.swift;
 			sourceTree = "<group>";
 		};
-		5AE2CD29A1CA287176ABC0917A71BD78 /* Export */ = {
+		65E60F579D7752B1F9A6289E85A78D1E /* Export */ = {
 			isa = PBXGroup;
 			children = (
-				DCF36B9EF2A37510CC2FFFE48BD220F5 /* DropboxExporter.swift */,
+				6BEE04B6AB8A51E27EACCC4431668907 /* DropboxExporter.swift */,
 			);
 			path = Export;
 			sourceTree = "<group>";
 		};
-		5E3F7511E90F908872DC730F8DFCB80A /* File */ = {
+		7BAB5E527A800F9544FBC1787BDFA7BD /* VandelayDropbox */ = {
 			isa = PBXGroup;
 			children = (
-				837B7C9BE02C5A401B2CE4933F124A33 /* FileNameGenerator.swift */,
-				0EF353F6D92B8F08060570EB30B7C897 /* RandomFileNameGenerator.swift */,
-				08E42BBAE1C73E9BA598082430CB155E /* StaticFileNameGenerator.swift */,
+				2A43077ED84BB4FF6EAE4FB112670C84 /* Support Files */,
+				B0708E6F52A2CACE1D5E12308E0DEEB0 /* VandelayDropbox */,
 			);
-			path = File;
-			sourceTree = "<group>";
-		};
-		6A1992A47645215278E0DC7E638A3A68 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C766AB7C3DF5F0577FAA586E0EA3478E /* Alamofire */,
-				FD0C53F2FBA2DC436C06824988B82682 /* SwiftyDropbox */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		6ABCE8A22539E2AE273FA40326E36802 /* Encoding */ = {
-			isa = PBXGroup;
-			children = (
-				460D3E2B573833DDBC3565A82ADB6F16 /* Base64StringEncoder.swift */,
-				602CB57B33DB7221F34C18FAF3D84DEA /* StringEncoder.swift */,
-			);
-			path = Encoding;
-			sourceTree = "<group>";
-		};
-		6FFE18D96CBA044EFC7DE1CFC1D927A5 /* Vandelay */ = {
-			isa = PBXGroup;
-			children = (
-				9910D1B7CC3BC1DF562B0042EE0C7D55 /* Support Files */,
-				06107789B068791E770E8FE8110BC179 /* Vandelay */,
-			);
-			name = Vandelay;
+			name = VandelayDropbox;
 			path = ../..;
 			sourceTree = "<group>";
 		};
@@ -491,54 +610,30 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3F441605801E1688FC1644A17B476E81 /* Development Pods */,
-				9B8D646101AD893EDD0B2180FA556D8F /* Frameworks */,
-				6A1992A47645215278E0DC7E638A3A68 /* Pods */,
-				AF63DADEF6339220E9CB231BE0828676 /* Products */,
+				FA58B0843366F6C30F00B7D2E9CFB3B1 /* Development Pods */,
+				8EC562DD6A9B089BD99B2449D0E563FC /* Frameworks */,
+				FF3CD8C04B37413A9F0DA7F45B5335B5 /* Pods */,
+				19D3313142F5729119099F82BD4BF373 /* Products */,
 				3238A8F5B5FD91B96D311BDB0B26507C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		844669EF8CCC734F8EA2C5F9C9F8A14A /* Export */ = {
+		7ECB28FB1A7BF3111E816AE830C156B3 /* File */ = {
 			isa = PBXGroup;
 			children = (
-				4EB83F770B2BCD4B6246849A0298AAC1 /* DataExporter.swift */,
-				02D15B55F5576AFEEED70C6CE88F7D47 /* EmailExporter.swift */,
-				83E38908793710AD2792D2EA990B760D /* ExportAlertController.swift */,
-				59403E8FA673165910337A831534D95A /* Exporter.swift */,
-				C319F9CA6594716A2687FA6B37F6643F /* ExportResult.swift */,
-				637EA37AE7B034C3E0E02FD16E2F67CF /* ExportState.swift */,
-				632554B3E7519D87783C550292881DA9 /* FileExporter.swift */,
-				75028B01BE4AE1AAFCFB36977FB287B8 /* MessageExporter.swift */,
-				BF3662D6B3AEB435B31AA5F04EB82964 /* PasteboardExporter.swift */,
-				B5F6F4872727683434D41F433DC52BD1 /* StringExporter.swift */,
+				90BFE72870BD1088AFFD47FDBAE51149 /* FileNameGenerator.swift */,
+				F9188B747607A32BFBCE1E20CF033123 /* RandomFileNameGenerator.swift */,
+				DE70D10B6EA8ACD26D6D6F04DCE0C147 /* StaticFileNameGenerator.swift */,
 			);
-			path = Export;
+			path = File;
 			sourceTree = "<group>";
 		};
-		8571808A3F3491986D4B6D3BDD5042B1 /* Import */ = {
+		845A65169E34C68895EF0361CBFCA772 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				05ED18F00BE454616F210D14C5167B66 /* DataImporter.swift */,
-				4ADDF56E24E8B16FFF922DDC0E2750C1 /* FileImporter.swift */,
-				A8325FB7E9C44474DA6568F314837C71 /* ImportAlertController.swift */,
-				D14E6940888E227287FA440EC9212B91 /* Importer.swift */,
-				4A73CE8141ADD4249302107D223241CE /* ImportResult.swift */,
-				0EDDEAA053AC1ED5915887E0E427A91C /* ImportState.swift */,
-				3DDF20FB0C862CD119222DED3E3A148D /* PasteboardImporter.swift */,
-				4D0BEC148832F6FCCA235DC9BD8884AE /* StringImporter.swift */,
-				57D9B20D020084B5474921281FF5F919 /* UrlImporter.swift */,
+				E2341E50419F9446A07D4771A059922A /* Import */,
 			);
-			path = Import;
-			sourceTree = "<group>";
-		};
-		8629A0FE662934D44F9F1DE317F1D27E /* Serialization */ = {
-			isa = PBXGroup;
-			children = (
-				47DC721D1748D8BE5DD8830B00BE2983 /* JsonObjectSerializer.swift */,
-				A423DB67B3AD3F989D74C9D5691ABF41 /* ObjectSerializer.swift */,
-			);
-			path = Serialization;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		8740449295E49DA379B0A01A23E2BCB8 /* Pods-Vandelay_Example */ = {
@@ -559,59 +654,41 @@
 			path = "Target Support Files/Pods-Vandelay_Example";
 			sourceTree = "<group>";
 		};
-		8E5F1A5FBF1F4861469E21ADE4350575 /* Import */ = {
+		8EC562DD6A9B089BD99B2449D0E563FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D7338126FF7F96F246610F3CBD40657C /* DropboxImporter.swift */,
-			);
-			path = Import;
-			sourceTree = "<group>";
-		};
-		9910D1B7CC3BC1DF562B0042EE0C7D55 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1F5DE46B3936996ABE139B451C2C485C /* Info.plist */,
-				9C1CF8E98297B6F65D23882F0E8F610D /* Vandelay.modulemap */,
-				1E0E9A468A0B3DE2A2FF32B1977E3EFD /* Vandelay.xcconfig */,
-				8F1325067953739BF811A3CA86DC8A82 /* Vandelay-dummy.m */,
-				91096D740EB3B8D617779C4DA11881AB /* Vandelay-prefix.pch */,
-				616AA224A09FFB80C0E6FC6FBC947CE1 /* Vandelay-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Vandelay";
-			sourceTree = "<group>";
-		};
-		9B8D646101AD893EDD0B2180FA556D8F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				710A7EB61C37BA088C68C22A02F879B9 /* Alamofire.framework */,
-				7407D8449E3B8199DBF48839B886FDDA /* SwiftyDropbox.framework */,
-				35372D5CA5E19973CEFE3ED457FDF8B9 /* Vandelay.framework */,
-				A5D0D54E9BF4D43E8B3DB6060EE912F3 /* iOS */,
+				22C577040343B7DE840A66CF021F47FF /* Alamofire.framework */,
+				7A21DAE945761062F0D2E84B8E3EEEE2 /* QRCodeReader.framework */,
+				0F20A65B71FEE70B2582F9B5A52E9FAF /* SwiftyDropbox.framework */,
+				37A091AECFF6DD6372AED940F18B2E1E /* Vandelay.framework */,
+				D2C32D0F186C6C1FBA33C769A894834B /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5D0D54E9BF4D43E8B3DB6060EE912F3 /* iOS */ = {
+		9557678A539BD61802E0F2F973273415 /* Encoding */ = {
 			isa = PBXGroup;
 			children = (
-				6E8F065281DF48C7221633DE6BCF9A96 /* Foundation.framework */,
-				EBA334F3FD6B9B244725C5B560C26DC0 /* UIKit.framework */,
+				8ABA5F3BF95AED154755B2D884F76F14 /* Base64StringEncoder.swift */,
+				928D5628E913905009F30DD13307830A /* StringEncoder.swift */,
 			);
-			name = iOS;
+			path = Encoding;
 			sourceTree = "<group>";
 		};
-		AF63DADEF6339220E9CB231BE0828676 /* Products */ = {
+		AB4BD47CEEA840EFB8F5F9B0E88AE11F /* Vandelay */ = {
 			isa = PBXGroup;
 			children = (
-				7520E6C63E207DC3E77C345B11FD7B9E /* Alamofire.framework */,
-				F23833BC36110FDBBEEB0ADA0054D0FA /* Pods_Vandelay_Example.framework */,
-				0C2DE5928E697226C1F8FF6C96402182 /* Pods_Vandelay_Tests.framework */,
-				72D70916CBA4ACE53F4C334CF0D33556 /* SwiftyDropbox.framework */,
-				0F079063387E73DCF4F01E780B51E5A7 /* Vandelay.framework */,
-				DE92DBD0F9537D614165B43D54BF57DC /* VandelayDropbox.framework */,
+				CD8F77D5A4D453DBE0D5B08D3AD61435 /* Classes */,
 			);
-			name = Products;
+			path = Vandelay;
+			sourceTree = "<group>";
+		};
+		AE030C19063E5DFB2E9607D57341C033 /* VandelayQr */ = {
+			isa = PBXGroup;
+			children = (
+				845A65169E34C68895EF0361CBFCA772 /* Classes */,
+			);
+			path = VandelayQr;
 			sourceTree = "<group>";
 		};
 		B01C21F5D0ED21B2D77A26F469FF0477 /* Pods-Vandelay_Tests */ = {
@@ -632,91 +709,185 @@
 			path = "Target Support Files/Pods-Vandelay_Tests";
 			sourceTree = "<group>";
 		};
-		C166EA21B9BD70287594266EBA41C834 /* Classes */ = {
+		B0708E6F52A2CACE1D5E12308E0DEEB0 /* VandelayDropbox */ = {
 			isa = PBXGroup;
 			children = (
-				5AE2CD29A1CA287176ABC0917A71BD78 /* Export */,
-				8E5F1A5FBF1F4861469E21ADE4350575 /* Import */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		C766AB7C3DF5F0577FAA586E0EA3478E /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				BB6F100D9DEA35A125C6782186F7E22B /* AFError.swift */,
-				F80047093E875626450188DB8093A3F9 /* Alamofire.swift */,
-				311A280A535ABA319B8AD5E0879E1DBB /* DispatchQueue+Alamofire.swift */,
-				422F4C1B0D93385C566F955027DE5EC7 /* MultipartFormData.swift */,
-				D6DA5F6C1194A4C86ADF4277F0BC6CC2 /* NetworkReachabilityManager.swift */,
-				6296A6487323110EDE81484D15AF82D4 /* Notifications.swift */,
-				D554F5DF7A1E7805C576508ABF16888F /* ParameterEncoding.swift */,
-				4251A13D43D9B3725B96DC9A9D5CF67A /* Request.swift */,
-				486629176BE4F7D11F6D21B3CAB59141 /* Response.swift */,
-				0DC68D5FC7C5C65DBD9C7639FB8FBF4D /* ResponseSerialization.swift */,
-				7334EE579D956F47A9ADE158B67BE838 /* Result.swift */,
-				97E7EFD3F80E4F7A8900746922EE93C4 /* ServerTrustPolicy.swift */,
-				791D22054F53102F825DCF4BAF21C84F /* SessionDelegate.swift */,
-				E8AA192AAC09377E452860024D223926 /* SessionManager.swift */,
-				2C926461D9A81B9579A6B1E29D606DC1 /* TaskDelegate.swift */,
-				21401E83F00D4B2565585DA9D21D839F /* Timeline.swift */,
-				4DAD27CFBF2CD3EB97C955BDBE034EE0 /* Validation.swift */,
-				240D150E633E08F0EA163D4602356434 /* Support Files */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		D497C26AA9CF5BC4377ACF426C4F5792 /* VandelayDropbox */ = {
-			isa = PBXGroup;
-			children = (
-				C166EA21B9BD70287594266EBA41C834 /* Classes */,
+				C5E51794D4F6A50E7F9A21F710CE8A0A /* Classes */,
 			);
 			path = VandelayDropbox;
 			sourceTree = "<group>";
 		};
-		FD0C53F2FBA2DC436C06824988B82682 /* SwiftyDropbox */ = {
+		BD3F70D7FAAFC7DE305B38B42F4CEAA1 /* Import */ = {
 			isa = PBXGroup;
 			children = (
-				FFA32B64A7CF506F10450554ACC88C53 /* Async.swift */,
-				4C54D1C9CD5534D589692EB0A53496D5 /* Auth.swift */,
-				22E6E3114DFE6A071845375713526063 /* AuthRoutes.swift */,
-				22FD02445BC2524A9734B7BCFEFFC9E6 /* Base.swift */,
-				75F3FED734280C1E43854A32E2E53A5A /* BaseTeam.swift */,
-				CFECD0081C27A5274C05D6AF36CA832A /* Common.swift */,
-				60C4C1EA79767110410F03907771DC7C /* DropboxClient.swift */,
-				7F4CC9B669DAFB869F04238CCF666644 /* DropboxClientsManager.swift */,
-				A9D14C6583A4EBDDA196BED1A1A2D3A8 /* DropboxTeamClient.swift */,
-				6D00ADC475762AF2B0CE899E1F8C295E /* DropboxTransportClient.swift */,
-				3B4E63A5EF5EE398A3221D38BAD13E4A /* Files.swift */,
-				C89E68D13A89F18D757D9A98F0005EE6 /* FilesRoutes.swift */,
-				DC1B946A2ADA51E6E9A4B168CFBC04CD /* OAuth.swift */,
-				7D26254DCB8C3B5AAEBA2650EF36C0EB /* OAuthMobile.swift */,
-				9556B6FE8792E328371A012695D0DEBD /* Properties.swift */,
-				BBFB232F7932A8923E8F85AE4C6DF375 /* Sharing.swift */,
-				B043433640A897C0338ED1D217102B8B /* SharingRoutes.swift */,
-				8AABAF41001A66A4ED992B87A02827CB /* StoneBase.swift */,
-				A54331BCC16CAD53B7C87DB31BC647F1 /* StoneSerializers.swift */,
-				869FF43F5AE234E6495787231FD37E62 /* StoneValidators.swift */,
-				E32938F3F905840BF95DEFDF952B06F6 /* SwiftyDropbox.h */,
-				F1398EEC00E29BBC876207C66CC9FBD1 /* Team.swift */,
-				C437793940DDE2D71B4BE7D5DA49C933 /* TeamCommon.swift */,
-				B2B776F91F32D140FCCEB17A72701A25 /* TeamPolicies.swift */,
-				DCB317122AEA557ACF7D0814AD2BE0D8 /* TeamRoutes.swift */,
-				6FE926F9681BB68C39D3D68407856ED4 /* Users.swift */,
-				FFAC4A564EB259EAC5DA6B84870DADFA /* UsersRoutes.swift */,
-				41263E2AA2AF789372A4D1D5A9D3C817 /* Support Files */,
+				3D3D1643E9656273AC6514E4E0B0A653 /* DropboxImporter.swift */,
 			);
-			path = SwiftyDropbox;
+			path = Import;
+			sourceTree = "<group>";
+		};
+		C5E51794D4F6A50E7F9A21F710CE8A0A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				65E60F579D7752B1F9A6289E85A78D1E /* Export */,
+				BD3F70D7FAAFC7DE305B38B42F4CEAA1 /* Import */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C60E0884D702605AE253DF40EBC36950 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDB9B1BFA2FEC00441C3B855910287EA /* Info.plist */,
+				50565AB255D1DBD665DC913CCA375173 /* QRCodeReader.swift.modulemap */,
+				7737F7B87374455E094930E3A931F2DF /* QRCodeReader.swift.xcconfig */,
+				9DB9C3ADDA2A531670D796C44C831FDA /* QRCodeReader.swift-dummy.m */,
+				5EE571BFCB07803512B67F721C59B398 /* QRCodeReader.swift-prefix.pch */,
+				DA859724F8E804E0BE8B1A8F83906A68 /* QRCodeReader.swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QRCodeReader.swift";
+			sourceTree = "<group>";
+		};
+		CCDF68E859152BA51B61A2100F71C0F5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C74115C568B37AADAB3C4E08B97900F /* Info.plist */,
+				B98C9DE71FB43231E8E4D5CD316FC960 /* VandelayQr.modulemap */,
+				31AA617CF16F51E0B8D3828A8E97C1E3 /* VandelayQr.xcconfig */,
+				B9DB329E68E6D388B2B6B497CFE7821D /* VandelayQr-dummy.m */,
+				79F7DD55B86A7DD746A3F589B2B60453 /* VandelayQr-prefix.pch */,
+				2413971509A3D8CF87C6E979FEFFB90B /* VandelayQr-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VandelayQr";
+			sourceTree = "<group>";
+		};
+		CD5B9639B6881F3B9A9F2493FE6065EB /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				7365118254825F2E115CB6A11DAC5BC2 /* AFError.swift */,
+				1AAD9BA6AE69FB812031454B72A71D4D /* Alamofire.swift */,
+				4B94185CB7C029589A04909D4923EA00 /* DispatchQueue+Alamofire.swift */,
+				CB0507BA7FA9540BF70B7719AEE1ED38 /* MultipartFormData.swift */,
+				84E9962357FA93FDE35E8D2E975088A9 /* NetworkReachabilityManager.swift */,
+				13EFEE1511B0B16475CD8B271BA11FE4 /* Notifications.swift */,
+				8435E0AE558EDE1F2B983A16B7EE3841 /* ParameterEncoding.swift */,
+				13512DA8614AAE651804DAD14270DE96 /* Request.swift */,
+				3B6B59790ADA2C2AF7763E76AD796A13 /* Response.swift */,
+				9CE9FFBBB0D1BA497AADD67BF5742FB8 /* ResponseSerialization.swift */,
+				77464CF200C657EA64344E9D13D4A4BD /* Result.swift */,
+				2C637EA49E5F2B482BF5F135ED824E99 /* ServerTrustPolicy.swift */,
+				78233212A679961C2A2A7DE69724807F /* SessionDelegate.swift */,
+				C6AF5119F47333090737B6EBD8DB6E90 /* SessionManager.swift */,
+				75B721893B18A76091440BE4B237F954 /* TaskDelegate.swift */,
+				87B535CA805401D49CE828982F6E7995 /* Timeline.swift */,
+				36879F45AE4A3C9D01A90EC030A96F3C /* Validation.swift */,
+				03AA24E69B0F57F922EAF2C109B6AFB3 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		CD8F77D5A4D453DBE0D5B08D3AD61435 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9557678A539BD61802E0F2F973273415 /* Encoding */,
+				161E3C9924130757FB398342D8372C63 /* Export */,
+				7ECB28FB1A7BF3111E816AE830C156B3 /* File */,
+				489392C9BB7ECFC25B768F02A04A35B4 /* Import */,
+				E86BD8503C90D1E068DCC5BCEDC1373D /* Serialization */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF8F4F8CB3C44C616BD02230289510E4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9FD813F1F0741D29DC69E074963B9 /* Info.plist */,
+				44054CE9A734BC01110B3AB9195516EA /* Vandelay.modulemap */,
+				C759D419ECF8B21F88EE3F36367D95DD /* Vandelay.xcconfig */,
+				15A9F414758FC7136A1FB21985B04133 /* Vandelay-dummy.m */,
+				F0DF8C1D27C7362018464E80223BB8D8 /* Vandelay-prefix.pch */,
+				E7DD4C7CFC11B1561F1CB2446C3A1F87 /* Vandelay-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Vandelay";
+			sourceTree = "<group>";
+		};
+		D2C32D0F186C6C1FBA33C769A894834B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				84EE1D985A9F21449F1B6005F3E014E6 /* AVFoundation.framework */,
+				860944EC9E5C611413AB81264749559E /* Foundation.framework */,
+				F78E68F9D8770546B39E2DB7C8359794 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D82038AA69C7CA9A570D0327810892B4 /* Vandelay */ = {
+			isa = PBXGroup;
+			children = (
+				CF8F4F8CB3C44C616BD02230289510E4 /* Support Files */,
+				AB4BD47CEEA840EFB8F5F9B0E88AE11F /* Vandelay */,
+			);
+			name = Vandelay;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E2341E50419F9446A07D4771A059922A /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				4B173CAD7A3D2434CB19C3CF4E425F8E /* QrCodeImporter.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		E86BD8503C90D1E068DCC5BCEDC1373D /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				3BDAC4937E66BC6225746C640C67B54B /* JsonObjectSerializer.swift */,
+				24BB797E464D35DD5B5398F86B526393 /* ObjectSerializer.swift */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
+		F8973F978DBEB38A0B1ECFF31E0AB2A3 /* VandelayQr */ = {
+			isa = PBXGroup;
+			children = (
+				CCDF68E859152BA51B61A2100F71C0F5 /* Support Files */,
+				AE030C19063E5DFB2E9607D57341C033 /* VandelayQr */,
+			);
+			name = VandelayQr;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FA58B0843366F6C30F00B7D2E9CFB3B1 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D82038AA69C7CA9A570D0327810892B4 /* Vandelay */,
+				7BAB5E527A800F9544FBC1787BDFA7BD /* VandelayDropbox */,
+				F8973F978DBEB38A0B1ECFF31E0AB2A3 /* VandelayQr */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FF3CD8C04B37413A9F0DA7F45B5335B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD5B9639B6881F3B9A9F2493FE6065EB /* Alamofire */,
+				60A42F4F4B7BE4B4717DAF4588B532DD /* QRCodeReader.swift */,
+				44EB3F30271450FCD5152759075FFE20 /* SwiftyDropbox */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5813DBDAEFB83675ABDCC6D837C9E6E3 /* Headers */ = {
+		4A3F27EF2E08048484F506E4F45267BA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB8C3A0D415E96590C5E936E6D441F78 /* VandelayDropbox-umbrella.h in Headers */,
+				C10909690CEC90CB8B5E19C2DAFED8D6 /* QRCodeReader.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,20 +899,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98BE69A0D8871270062BC5487157D634 /* Headers */ = {
+		5FBC937383D3D0399B117FA9A5B62844 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6F796D64E8BFAEB0CD35DD7741A7D17 /* Vandelay-umbrella.h in Headers */,
+				63406C7F259316595C2BC1BFA86A1897 /* SwiftyDropbox-umbrella.h in Headers */,
+				9A7E6C7F09D159D5CC765DD9BD1B696D /* SwiftyDropbox.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1BE7CCE8BB6F611B1CC35AEF7CA6438 /* Headers */ = {
+		8B9C426B510AEBD6B3E28B77543E120E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				064007673945B1BB45332F7CE8E4E795 /* SwiftyDropbox-umbrella.h in Headers */,
-				926A9420372DAC09A5D92FE3A3BF060D /* SwiftyDropbox.h in Headers */,
+				0C6FC06C836EAE1EF09846F7582D3681 /* Pods-Vandelay_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6E553C6FA48FE0C388109924E2DA41F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B22B2BDC2238BD8F86BD8EB3EA8AB68 /* VandelayDropbox-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA051663FF7E1D4E9C48224F8ED36DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CEDE53B7FED03894D4E9FA2B3992D2 /* Vandelay-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,42 +940,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF84927828549477957FD194056CF09D /* Headers */ = {
+		FCBA1C00751989C28B619DA2F8CFD57F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D126A85A4B05064D785206EA35E87F /* Pods-Vandelay_Example-umbrella.h in Headers */,
+				6D6FC713C1C870B6DC118A61B3EA2418 /* VandelayQr-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0BEBB4FF9A5B4E0CB0A81198BFCC2533 /* SwiftyDropbox */ = {
+		493AE3B5637E0CB1F9F09A5A0A81A1C6 /* QRCodeReader.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCCFFE5AA267E62D41570E0DBB224A2D /* Build configuration list for PBXNativeTarget "SwiftyDropbox" */;
+			buildConfigurationList = 1ADD687A6580A71E2D2201EDF9E407D8 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
 			buildPhases = (
-				95A2E98076937D0150EC84D48A9F60EC /* Sources */,
-				FD593A8F832896ABDAC67B7EF6605801 /* Frameworks */,
-				B1BE7CCE8BB6F611B1CC35AEF7CA6438 /* Headers */,
+				E1CE5711B98F6684FC5DE5FEC244599A /* Sources */,
+				35D04169E906ED159A3D2C5C58E31690 /* Frameworks */,
+				4A3F27EF2E08048484F506E4F45267BA /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				352A6FFE6419024E5F185E247D15703F /* PBXTargetDependency */,
 			);
-			name = SwiftyDropbox;
-			productName = SwiftyDropbox;
-			productReference = 72D70916CBA4ACE53F4C334CF0D33556 /* SwiftyDropbox.framework */;
+			name = QRCodeReader.swift;
+			productName = QRCodeReader.swift;
+			productReference = BB3E7676D9C42C3EAE55D21C950946DA /* QRCodeReader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		10DD3BF5B63EB86F922722B9897F40BC /* Vandelay */ = {
+		58665C6B1C79E7C5E4B121DB91492A74 /* Vandelay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8343B2B59188E3A04D475596213010E7 /* Build configuration list for PBXNativeTarget "Vandelay" */;
+			buildConfigurationList = B3003035333FC63F7E0A4E367B435FAA /* Build configuration list for PBXNativeTarget "Vandelay" */;
 			buildPhases = (
-				9714EB418B05D2745A752B7E20328E0B /* Sources */,
-				8BAFBC601EFE93F8F919E25D7E961E9E /* Frameworks */,
-				98BE69A0D8871270062BC5487157D634 /* Headers */,
+				8714DCF05D2B3B88A95588CE186BBBC0 /* Sources */,
+				FE5D5E2BFA492F082EE6E09519255DC4 /* Frameworks */,
+				DBA051663FF7E1D4E9C48224F8ED36DA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -796,48 +982,7 @@
 			);
 			name = Vandelay;
 			productName = Vandelay;
-			productReference = 0F079063387E73DCF4F01E780B51E5A7 /* Vandelay.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		51BA360E76104422B2E938CC15C45C97 /* Pods-Vandelay_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6572DE0ECDE19DAA6542BA4328B24749 /* Build configuration list for PBXNativeTarget "Pods-Vandelay_Example" */;
-			buildPhases = (
-				3EA4E7F02167DDDDF47FDD684589937E /* Sources */,
-				E01BAA47EB29BB4EC071E0B6DCC53CFE /* Frameworks */,
-				FF84927828549477957FD194056CF09D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E399F5CA7BF0E5E4BEFCB9956B9B9363 /* PBXTargetDependency */,
-				569ACA84C7AABE81D24CFEBD7B2F7F14 /* PBXTargetDependency */,
-				F84769503EEB1CBAB064928790AD8A70 /* PBXTargetDependency */,
-				8B8DDEE6E0438EC21DC8839F0947401A /* PBXTargetDependency */,
-			);
-			name = "Pods-Vandelay_Example";
-			productName = "Pods-Vandelay_Example";
-			productReference = F23833BC36110FDBBEEB0ADA0054D0FA /* Pods_Vandelay_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6BB82922F9C90FE6966CC2C0A73D6F25 /* VandelayDropbox */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 50214758B942E4A8B81CB889B7394B7B /* Build configuration list for PBXNativeTarget "VandelayDropbox" */;
-			buildPhases = (
-				7B5280DC57B72B28AC81FA6C0D97247B /* Sources */,
-				716019E0C33D8F888A9C5EB69E6F11D1 /* Frameworks */,
-				5813DBDAEFB83675ABDCC6D837C9E6E3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				16A462AE42AAB9806C19BD3553E7BAB9 /* PBXTargetDependency */,
-				4F45F2B5BEE1D8FF73EC937ABB5768FC /* PBXTargetDependency */,
-				10ED7A8C75AA026B176F3BE6F9DB53F7 /* PBXTargetDependency */,
-			);
-			name = VandelayDropbox;
-			productName = VandelayDropbox;
-			productReference = DE92DBD0F9537D614165B43D54BF57DC /* VandelayDropbox.framework */;
+			productReference = E65BF21E3861A27A67C6F83ADD924448 /* Vandelay.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
@@ -854,7 +999,26 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 7520E6C63E207DC3E77C345B11FD7B9E /* Alamofire.framework */;
+			productReference = B7A7D9A6AFD1C4362177E31DE4E1CA11 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		903BDE722D1793409C56BAF0B634280E /* VandelayQr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 736D8B4D0F47F36E004FB6ED2816B023 /* Build configuration list for PBXNativeTarget "VandelayQr" */;
+			buildPhases = (
+				129BEC8CFA1F35D9A71330F4E178FE8C /* Sources */,
+				744E89FA3857F988D0464BE0E73E5792 /* Frameworks */,
+				FCBA1C00751989C28B619DA2F8CFD57F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96A0BA85D87318AC08E45DBEFF5BDFB8 /* PBXTargetDependency */,
+				B01C117B6A519AB81EE422B5DC3EE8AD /* PBXTargetDependency */,
+			);
+			name = VandelayQr;
+			productName = VandelayQr;
+			productReference = 8B2217B0B0E007F0EE89B85FB1451903 /* VandelayQr.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9D05655A463B34F7BF00BD2277460D2C /* Pods-Vandelay_Tests */ = {
@@ -871,7 +1035,68 @@
 			);
 			name = "Pods-Vandelay_Tests";
 			productName = "Pods-Vandelay_Tests";
-			productReference = 0C2DE5928E697226C1F8FF6C96402182 /* Pods_Vandelay_Tests.framework */;
+			productReference = F785508CB6EEA0CE263D03B8DB65E95A /* Pods_Vandelay_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A11D1FFF53D4384D2319913CAF55983A /* SwiftyDropbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73AF18DEF53FDF4E6EDCC3D24C39A716 /* Build configuration list for PBXNativeTarget "SwiftyDropbox" */;
+			buildPhases = (
+				A6083C44420904E7A480712D3674F17D /* Sources */,
+				9A259F7E3E47E90C12E6A28BA6A57F49 /* Frameworks */,
+				5FBC937383D3D0399B117FA9A5B62844 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EF98D79BDFC6C90482D2CF3145E4D9E /* PBXTargetDependency */,
+			);
+			name = SwiftyDropbox;
+			productName = SwiftyDropbox;
+			productReference = B99292880620222CE5E4E375191841CF /* SwiftyDropbox.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A5CE5E8B0CF864BE13F4AC41F6656E81 /* VandelayDropbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77C15CB0B5008B9BED531CE717C30965 /* Build configuration list for PBXNativeTarget "VandelayDropbox" */;
+			buildPhases = (
+				FE0CB3922A2FFB2DCEEB32F6B252113C /* Sources */,
+				1B832F870A57A2D663291A28B1491E1F /* Frameworks */,
+				B6E553C6FA48FE0C388109924E2DA41F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2FBDA8C564216712C3DA042B3A3F293 /* PBXTargetDependency */,
+				189CA2452A93442531BD6F581C7E9F3E /* PBXTargetDependency */,
+				F68BC9D71ACA2B9BF7FD1695D3BE29DA /* PBXTargetDependency */,
+			);
+			name = VandelayDropbox;
+			productName = VandelayDropbox;
+			productReference = 186DCC6D3986FA78759C760276C31F42 /* VandelayDropbox.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDA053AE9B12B90E11FE63615D67483A /* Pods-Vandelay_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EEC63C4DCC0520FB122E10B5CA36994 /* Build configuration list for PBXNativeTarget "Pods-Vandelay_Example" */;
+			buildPhases = (
+				86E42617431A8CDEFB1156E20432D474 /* Sources */,
+				63D6210A2922D2A11D8EB10F9C456632 /* Frameworks */,
+				8B9C426B510AEBD6B3E28B77543E120E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2140155D51B19F84A2119425EBE06CC2 /* PBXTargetDependency */,
+				3FE4F87060929C0527E955C80CAF4313 /* PBXTargetDependency */,
+				5028F3EC3B6658541BBF6BE880AB69E9 /* PBXTargetDependency */,
+				2FEBCDE84C9C95E6C3654D2C2DCCC70B /* PBXTargetDependency */,
+				79AF2FA0E44AC446824F78BBBB85E2A7 /* PBXTargetDependency */,
+				D58148F01CA5FF9DC8BCAF773AB07FDA /* PBXTargetDependency */,
+			);
+			name = "Pods-Vandelay_Example";
+			productName = "Pods-Vandelay_Example";
+			productReference = B133318609BB003B671AE3BC37BC1EB8 /* Pods_Vandelay_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -891,16 +1116,18 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = AF63DADEF6339220E9CB231BE0828676 /* Products */;
+			productRefGroup = 19D3313142F5729119099F82BD4BF373 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
-				51BA360E76104422B2E938CC15C45C97 /* Pods-Vandelay_Example */,
+				EDA053AE9B12B90E11FE63615D67483A /* Pods-Vandelay_Example */,
 				9D05655A463B34F7BF00BD2277460D2C /* Pods-Vandelay_Tests */,
-				0BEBB4FF9A5B4E0CB0A81198BFCC2533 /* SwiftyDropbox */,
-				10DD3BF5B63EB86F922722B9897F40BC /* Vandelay */,
-				6BB82922F9C90FE6966CC2C0A73D6F25 /* VandelayDropbox */,
+				493AE3B5637E0CB1F9F09A5A0A81A1C6 /* QRCodeReader.swift */,
+				A11D1FFF53D4384D2319913CAF55983A /* SwiftyDropbox */,
+				58665C6B1C79E7C5E4B121DB91492A74 /* Vandelay */,
+				A5CE5E8B0CF864BE13F4AC41F6656E81 /* VandelayDropbox */,
+				903BDE722D1793409C56BAF0B634280E /* VandelayQr */,
 			);
 		};
 /* End PBXProject section */
@@ -931,6 +1158,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		129BEC8CFA1F35D9A71330F4E178FE8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E588073274D8C1BFC58BD0C6014DFB /* QrCodeImporter.swift in Sources */,
+				26A159C30398CF74B0FEACD29E5E45C9 /* VandelayQr-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		163C7446F622AC5C084FB3079B6708DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -939,149 +1175,188 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EA4E7F02167DDDDF47FDD684589937E /* Sources */ = {
+		86E42617431A8CDEFB1156E20432D474 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0F6E37A97838F1C540473BB805D207C /* Pods-Vandelay_Example-dummy.m in Sources */,
+				EEA14004C3D6A3EAE83232D0AE016195 /* Pods-Vandelay_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B5280DC57B72B28AC81FA6C0D97247B /* Sources */ = {
+		8714DCF05D2B3B88A95588CE186BBBC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2977F5ECBA4F9EFC7669CD59E726DE22 /* DropboxExporter.swift in Sources */,
-				F72C9C00B3D680EBAEC5992E47DBCFE9 /* DropboxImporter.swift in Sources */,
-				0052B1A059DFE1F7438BB8ECA777249F /* VandelayDropbox-dummy.m in Sources */,
+				76DBA0469D5B0CFB132F4A8A0131424B /* Base64StringEncoder.swift in Sources */,
+				40D04341664FD8456A3EF64D86D631F1 /* DataExporter.swift in Sources */,
+				4D51EFD4A14BC4388D8B7D3F076C1B82 /* DataImporter.swift in Sources */,
+				20E32166DC07613229735F8E8BD7F86A /* EmailExporter.swift in Sources */,
+				02B368D8F698FB1C1EB466E9E35DE113 /* ExportAlertController.swift in Sources */,
+				8809BFEDFD81CFA29A473A7635D31066 /* Exporter.swift in Sources */,
+				384F2515D6A6236FA9999782F908C958 /* ExportResult.swift in Sources */,
+				A57DF42A9574CD753F8E97F7AF304041 /* ExportState.swift in Sources */,
+				D1E160D7C3AD2B84EB91BB9E243D3694 /* FileExporter.swift in Sources */,
+				A57E6F3263329E6E9BDF2C5BA53A177C /* FileImporter.swift in Sources */,
+				744F9AF0092174B231FA1E97D78BE4BF /* FileNameGenerator.swift in Sources */,
+				54010B96ED9CDB2E1FE5F0998965D063 /* ImportAlertController.swift in Sources */,
+				CF626BA9D5775D5DEFC4B1245FD40DDC /* Importer.swift in Sources */,
+				FF65CCA00E8FCADBA0B1AA2BA148DCBF /* ImportResult.swift in Sources */,
+				F8A27222EBC6FFA478DD133F48D7E4FE /* ImportState.swift in Sources */,
+				E5758026390828270AEB3F3D516EC258 /* JsonObjectSerializer.swift in Sources */,
+				85D2111886942FD5AD7CDAB5E27BD34C /* MessageExporter.swift in Sources */,
+				763C0660C508BE1E223497162EF27B04 /* ObjectSerializer.swift in Sources */,
+				7C66C316C797C676C1FD9087BC874D6E /* PasteboardExporter.swift in Sources */,
+				112063C065C3B5F1188573E59731A8BE /* PasteboardImporter.swift in Sources */,
+				E80A16D76DFDB3807C5FD48410E80D5F /* RandomFileNameGenerator.swift in Sources */,
+				73D584B4256332BF7E6AB5DC8C773CAE /* StaticFileNameGenerator.swift in Sources */,
+				1C3E5C0F0D924DBD5E4DF621397E2338 /* StringEncoder.swift in Sources */,
+				46D296063DD6E2ABDCCA5715F5B6A4B4 /* StringExporter.swift in Sources */,
+				112281E9AA036FAB94AA793656E8760F /* StringImporter.swift in Sources */,
+				1E1DC3A9FCF49C35CC610F79DF99AC38 /* UrlImporter.swift in Sources */,
+				E80F44269EFB89F62FA303BA9BCD5C13 /* Vandelay-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95A2E98076937D0150EC84D48A9F60EC /* Sources */ = {
+		A6083C44420904E7A480712D3674F17D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0771C5D6BCC624239CCD3935CAEC8AA8 /* Async.swift in Sources */,
-				1309BBC9412CB45ADEADEBB721527EDF /* Auth.swift in Sources */,
-				5C9FA58018F90C7C391FB4DF48C429C3 /* AuthRoutes.swift in Sources */,
-				89A011311A76DA3E1E11A4AAC0DC3F85 /* Base.swift in Sources */,
-				6A8E87B3644A1F34AC5358662657F1BF /* BaseTeam.swift in Sources */,
-				814FD85E26590BB4943619ECC09C908A /* Common.swift in Sources */,
-				752BEF97509E4F6AA58EB83118445092 /* DropboxClient.swift in Sources */,
-				24316EC6041BB86238B07907C62FB481 /* DropboxClientsManager.swift in Sources */,
-				C11237AEC95487B4902F37826CE6AC70 /* DropboxTeamClient.swift in Sources */,
-				B1706FD494E0A01C7A332A18B5E342E1 /* DropboxTransportClient.swift in Sources */,
-				BA24C67CAD00CBD57D79D27DB64DD080 /* Files.swift in Sources */,
-				C62B10A5A228D195D1EAD17EEDA40F5F /* FilesRoutes.swift in Sources */,
-				41482A3A8A8E8013056B7F8301633212 /* OAuth.swift in Sources */,
-				706F0E070BC13796BC774E034C17C1B6 /* OAuthMobile.swift in Sources */,
-				3707569A6718E1AC68782D8AE23E53FF /* Properties.swift in Sources */,
-				64229128BE540D70022B8C37522AF198 /* Sharing.swift in Sources */,
-				7869E9D2682B340C6BE5D7FBDAAB43FC /* SharingRoutes.swift in Sources */,
-				4A6A94B53F366AF73F757C9C688C1A83 /* StoneBase.swift in Sources */,
-				EE478AC4DDD1A4F87CCEEE0DBD6957CB /* StoneSerializers.swift in Sources */,
-				D592B6C462465A4488D0274E6ADFE5A5 /* StoneValidators.swift in Sources */,
-				77598B411D3358E2F86789A7AB49099B /* SwiftyDropbox-dummy.m in Sources */,
-				38EA1AD5EA0B325FE3C2CCE267D1CC08 /* Team.swift in Sources */,
-				AD31083B3F0225FEB99534B32C8A95E5 /* TeamCommon.swift in Sources */,
-				09F83CD3714AB9A1F77B1B01153B7BEF /* TeamPolicies.swift in Sources */,
-				AA04319DFB532944483DB987B0E9C970 /* TeamRoutes.swift in Sources */,
-				305600787078F699C1094E0B01B2BB18 /* Users.swift in Sources */,
-				79771EEBF4E77F8D817D0303D586681F /* UsersRoutes.swift in Sources */,
+				2F986FA62942393C09F7A9BC50AE6F2B /* Async.swift in Sources */,
+				44172DE1429AA1EDFD360BB00EF4F54C /* Auth.swift in Sources */,
+				F19405DC05AE24CCAF68E5FA9A03F82D /* AuthRoutes.swift in Sources */,
+				9FDD02EC42EBB7CCB3DDD76482D85C62 /* Base.swift in Sources */,
+				0F3B7FA4F5C9B4E30568E1FF6C12FE1E /* BaseTeam.swift in Sources */,
+				0E218C6759259C378818DF206F5D79DF /* Common.swift in Sources */,
+				8B04D4DCE40A7C44DF65BF9443028E32 /* DropboxClient.swift in Sources */,
+				D81F05AD50CFBFA4165CFB1238CDDD7E /* DropboxClientsManager.swift in Sources */,
+				8C1D9F7320D6E99F60A0AADA892E0810 /* DropboxTeamClient.swift in Sources */,
+				E2FF36FC49D237568986EB3A004B47AB /* DropboxTransportClient.swift in Sources */,
+				32D1260A60A236C7148D143A52ED849F /* Files.swift in Sources */,
+				8BBC28ED36BF2DF33FA87B191A65A4E0 /* FilesRoutes.swift in Sources */,
+				A2BE20FEE31DA5DC51DCF360EF80F34D /* OAuth.swift in Sources */,
+				9BC601A75C8FE8AD9F6CAD7FA6168EE1 /* OAuthMobile.swift in Sources */,
+				C9690A9E98F8C59FC733E95DEE07783D /* Properties.swift in Sources */,
+				D7D3C55FD317D5A7A497BFCACFA1234E /* Sharing.swift in Sources */,
+				C0CC28806FDF3B64FE939DC11DD3DAF8 /* SharingRoutes.swift in Sources */,
+				531FD1468986AEA33BCC0758003EB4CA /* StoneBase.swift in Sources */,
+				EA033A558B756228B8294C06A0BF3D80 /* StoneSerializers.swift in Sources */,
+				2D29E7B3CB9E933B886F0F2233910D62 /* StoneValidators.swift in Sources */,
+				5904D2D3D63022400730A284E4DCB128 /* SwiftyDropbox-dummy.m in Sources */,
+				A4403CFC885DF18B7ED25D02E2584FB8 /* Team.swift in Sources */,
+				E2C8D32A82A41BFEB8060280CDF63ECD /* TeamCommon.swift in Sources */,
+				4CF501293B88CB38D9D78F0B1E465A82 /* TeamPolicies.swift in Sources */,
+				BA4045C22C1095B5216F23DA71029FE2 /* TeamRoutes.swift in Sources */,
+				61B5CA7782F97B332C9741C5F46F1A7E /* Users.swift in Sources */,
+				3BE20FDE37F8B5792BD670F064B058B6 /* UsersRoutes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9714EB418B05D2745A752B7E20328E0B /* Sources */ = {
+		E1CE5711B98F6684FC5DE5FEC244599A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA729D0C9AB8E6CCB093939A5AEE6260 /* Base64StringEncoder.swift in Sources */,
-				2C267F01D3ABAA2133EA747D71EF8B98 /* DataExporter.swift in Sources */,
-				471AE27A67B51A8572948D33BF992874 /* DataImporter.swift in Sources */,
-				B34EA6C3E7948C24BBDB12C561765EAE /* EmailExporter.swift in Sources */,
-				C72DF7DB680158457698588DC5A9092F /* ExportAlertController.swift in Sources */,
-				F2BD137B03A40D3FDCBCEE3D718B1288 /* Exporter.swift in Sources */,
-				61221ECE75BFBEC87A8054C33AF26C9E /* ExportResult.swift in Sources */,
-				426F9F1E77C4F613E329AD0F75E24E37 /* ExportState.swift in Sources */,
-				1FAFC6C84469673CE96EC2CBE8A8FC8D /* FileExporter.swift in Sources */,
-				28B0AC38377D8037B39FE0EB101C3AF0 /* FileImporter.swift in Sources */,
-				9BE5E3C600CCCFC93D1B40102B1B3BE9 /* FileNameGenerator.swift in Sources */,
-				D1762731847655D456CF5E0AF2A6E64A /* ImportAlertController.swift in Sources */,
-				B573575B073B97615142554D3BE83AAB /* Importer.swift in Sources */,
-				C3D8DE27D2CAA691949378F7C9186271 /* ImportResult.swift in Sources */,
-				233372FE95D4A7E0236D66346DF4C1E5 /* ImportState.swift in Sources */,
-				0D193941B6FC432893D2C12437F5705E /* JsonObjectSerializer.swift in Sources */,
-				1EC3EDE795ADFD1F63E0C6BCC21D411A /* MessageExporter.swift in Sources */,
-				0479E155C29245DAF4B9ADE9844B2F15 /* ObjectSerializer.swift in Sources */,
-				A1467AA10364D7901F8E0F368AD9979C /* PasteboardExporter.swift in Sources */,
-				00E717AF7750E27A64BA24FA019A2AD3 /* PasteboardImporter.swift in Sources */,
-				73A22052B2D466D96E15B0DAADC7CE56 /* RandomFileNameGenerator.swift in Sources */,
-				5D8A0258E6B4E1BD7DC83DA023286EC5 /* StaticFileNameGenerator.swift in Sources */,
-				B153215900C54FE9435C8DDAED7B4A6B /* StringEncoder.swift in Sources */,
-				4E6EB89EAFF4B8ABC7987B32FB513BC9 /* StringExporter.swift in Sources */,
-				7503D4C12A2B6CDF980DA35545D1006A /* StringImporter.swift in Sources */,
-				CCC638FB8025E0E6402D4F331CD6C237 /* UrlImporter.swift in Sources */,
-				18446F0CB8F46B98B7BAAAB5C7407BCC /* Vandelay-dummy.m in Sources */,
+				7EDB6EFE1B159B502F07F70BB6E223AF /* QRCodeReader.swift in Sources */,
+				5507E6354B856B8F5ADF6C91076B4FD0 /* QRCodeReader.swift-dummy.m in Sources */,
+				441E3198DBF48B4FB15BA16CA5F6C596 /* QRCodeReaderResult.swift in Sources */,
+				1A6A0026AD35175B0E4539070DDAD334 /* QRCodeReaderViewController.swift in Sources */,
+				D90617143EFAF0FD62B494C12C3202E8 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
+				8C95DB5F9CB464F04507FEDE0D27CA87 /* ReaderOverlayView.swift in Sources */,
+				37F6867A7BF5F599556B238E129B06B5 /* SwitchCameraButton.swift in Sources */,
+				53B63EC830BF75D9BD225DBE4BC9D0D7 /* ToggleTorchButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE0CB3922A2FFB2DCEEB32F6B252113C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0DF23D773EDCDCB6AFE31B53ACA0640 /* DropboxExporter.swift in Sources */,
+				BC1FABF7B68DA3DD4B95AFBCA7EF54AE /* DropboxImporter.swift in Sources */,
+				2CC9D5FB5562FF46413496245C9A8ED8 /* VandelayDropbox-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		10ED7A8C75AA026B176F3BE6F9DB53F7 /* PBXTargetDependency */ = {
+		189CA2452A93442531BD6F581C7E9F3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyDropbox;
+			target = A11D1FFF53D4384D2319913CAF55983A /* SwiftyDropbox */;
+			targetProxy = 485C900B8810D84EA72D5841FFF63DFF /* PBXContainerItemProxy */;
+		};
+		2140155D51B19F84A2119425EBE06CC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
+			targetProxy = 49C406026765C91B1A67782F978E37EB /* PBXContainerItemProxy */;
+		};
+		2FEBCDE84C9C95E6C3654D2C2DCCC70B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Vandelay;
-			target = 10DD3BF5B63EB86F922722B9897F40BC /* Vandelay */;
-			targetProxy = 77DC5B0D9FCAB68274AF00161AC323EA /* PBXContainerItemProxy */;
+			target = 58665C6B1C79E7C5E4B121DB91492A74 /* Vandelay */;
+			targetProxy = 3254B9E5AD567D5766F82052C357E718 /* PBXContainerItemProxy */;
 		};
-		16A462AE42AAB9806C19BD3553E7BAB9 /* PBXTargetDependency */ = {
+		3EF98D79BDFC6C90482D2CF3145E4D9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 296847F208068EE594AD2496466B1F4C /* PBXContainerItemProxy */;
+			targetProxy = 05E3F05C144E6299C6F8D7CCB2FAB525 /* PBXContainerItemProxy */;
 		};
-		352A6FFE6419024E5F185E247D15703F /* PBXTargetDependency */ = {
+		3FE4F87060929C0527E955C80CAF4313 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 7955C345D449B0952303C8DDAD262870 /* PBXContainerItemProxy */;
+			name = QRCodeReader.swift;
+			target = 493AE3B5637E0CB1F9F09A5A0A81A1C6 /* QRCodeReader.swift */;
+			targetProxy = 85585DCBFC3DF42778286C8B8DE9ACBB /* PBXContainerItemProxy */;
 		};
-		4F45F2B5BEE1D8FF73EC937ABB5768FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyDropbox;
-			target = 0BEBB4FF9A5B4E0CB0A81198BFCC2533 /* SwiftyDropbox */;
-			targetProxy = 87362FEFB6B710239172591717D61111 /* PBXContainerItemProxy */;
-		};
-		569ACA84C7AABE81D24CFEBD7B2F7F14 /* PBXTargetDependency */ = {
+		5028F3EC3B6658541BBF6BE880AB69E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyDropbox;
-			target = 0BEBB4FF9A5B4E0CB0A81198BFCC2533 /* SwiftyDropbox */;
-			targetProxy = 246E6E1A05309D9663969230CFDE5B4D /* PBXContainerItemProxy */;
+			target = A11D1FFF53D4384D2319913CAF55983A /* SwiftyDropbox */;
+			targetProxy = A4DD7D34AD6C799BC2A81B59CF497600 /* PBXContainerItemProxy */;
 		};
-		8B8DDEE6E0438EC21DC8839F0947401A /* PBXTargetDependency */ = {
+		79AF2FA0E44AC446824F78BBBB85E2A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VandelayDropbox;
-			target = 6BB82922F9C90FE6966CC2C0A73D6F25 /* VandelayDropbox */;
-			targetProxy = 83221E0D20287F8093A13F0EF4D7A2D0 /* PBXContainerItemProxy */;
+			target = A5CE5E8B0CF864BE13F4AC41F6656E81 /* VandelayDropbox */;
+			targetProxy = 785AC50B003084F628DED524AB37467C /* PBXContainerItemProxy */;
 		};
-		E399F5CA7BF0E5E4BEFCB9956B9B9363 /* PBXTargetDependency */ = {
+		96A0BA85D87318AC08E45DBEFF5BDFB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCodeReader.swift;
+			target = 493AE3B5637E0CB1F9F09A5A0A81A1C6 /* QRCodeReader.swift */;
+			targetProxy = E40287E4E163A6B86FCEBF93581010EC /* PBXContainerItemProxy */;
+		};
+		B01C117B6A519AB81EE422B5DC3EE8AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Vandelay;
+			target = 58665C6B1C79E7C5E4B121DB91492A74 /* Vandelay */;
+			targetProxy = D12C2F844D38EE75DF1D92884E5FAEA8 /* PBXContainerItemProxy */;
+		};
+		C2FBDA8C564216712C3DA042B3A3F293 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 0CC902B4C25CD3F25824598AD0B41345 /* PBXContainerItemProxy */;
+			targetProxy = ABF71E1272A582E0576E63230EE6D5D8 /* PBXContainerItemProxy */;
 		};
-		F84769503EEB1CBAB064928790AD8A70 /* PBXTargetDependency */ = {
+		D58148F01CA5FF9DC8BCAF773AB07FDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VandelayQr;
+			target = 903BDE722D1793409C56BAF0B634280E /* VandelayQr */;
+			targetProxy = A5DD26CB137B4DCA56B936123E342268 /* PBXContainerItemProxy */;
+		};
+		F68BC9D71ACA2B9BF7FD1695D3BE29DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Vandelay;
-			target = 10DD3BF5B63EB86F922722B9897F40BC /* Vandelay */;
-			targetProxy = 77C6FEA1C36C80D104DDE47B7ED3F17E /* PBXContainerItemProxy */;
+			target = 58665C6B1C79E7C5E4B121DB91492A74 /* Vandelay */;
+			targetProxy = A26AC76A544AE1FF090939D7FD424089 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08AF5CFA6E55738E6B9587DF16EEB9F1 /* Debug */ = {
+		062F2AE3DFCD4772CA5D94218F3000CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E0E9A468A0B3DE2A2FF32B1977E3EFD /* Vandelay.xcconfig */;
+			baseConfigurationReference = C759D419ECF8B21F88EE3F36367D95DD /* Vandelay.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1112,41 +1387,9 @@
 			};
 			name = Debug;
 		};
-		0CE97A871A1DBFDC2FFC55692EC0F9CD /* Release */ = {
+		11723368FEEC5AFD6E60986688FBF862 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E0E9A468A0B3DE2A2FF32B1977E3EFD /* Vandelay.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Vandelay/Vandelay-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Vandelay/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Vandelay/Vandelay.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Vandelay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3316BD2132B453CC2D2BC32B7A4DBD60 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12DE4E62215CF0F679D948DDC606CA1 /* SwiftyDropbox.xcconfig */;
+			baseConfigurationReference = FEED7366D78D810F67BD31FAF7369F52 /* SwiftyDropbox.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1176,9 +1419,9 @@
 			};
 			name = Release;
 		};
-		5151E85AC1BD8E273BEDE4E2FE4F555C /* Debug */ = {
+		2F885BA7F9E7CB68F887BAE45E3257B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 585B4F654AD826E57547368FC8E19B9D /* Pods-Vandelay_Example.debug.xcconfig */;
+			baseConfigurationReference = FEED7366D78D810F67BD31FAF7369F52 /* SwiftyDropbox.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1191,13 +1434,46 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyDropbox/SwiftyDropbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyDropbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyDropbox/SwiftyDropbox.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyDropbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4793FCE0FE0BAC2E1550E69CD0995F61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C45076566CD138C99C4524739334A913 /* Pods-Vandelay_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Vandelay_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Vandelay_Example/Pods-Vandelay_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1205,12 +1481,75 @@
 				PRODUCT_NAME = Pods_Vandelay_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
+		};
+		4975355E3E156E78DF584DAE3957AF82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C759D419ECF8B21F88EE3F36367D95DD /* Vandelay.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Vandelay/Vandelay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Vandelay/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Vandelay/Vandelay.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Vandelay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4B9A64F2AC8A4CB7E5A03CC91857E494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31AA617CF16F51E0B8D3828A8E97C1E3 /* VandelayQr.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VandelayQr/VandelayQr-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VandelayQr/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VandelayQr/VandelayQr.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = VandelayQr;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1256,41 +1595,45 @@
 			};
 			name = Debug;
 		};
-		6A2FAB491CECDA6F2D5A727E2BCAA435 /* Release */ = {
+		73957DE5C9910AA98EE97AF5162C9C7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C3E435330BE2C25B30F1A9FA506365F /* VandelayDropbox.xcconfig */;
+			baseConfigurationReference = 585B4F654AD826E57547368FC8E19B9D /* Pods-Vandelay_Example.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/VandelayDropbox/VandelayDropbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VandelayDropbox/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Vandelay_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VandelayDropbox/VandelayDropbox.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = VandelayDropbox;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Vandelay_Example/Pods-Vandelay_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Vandelay_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		7F93EF234CD87F7448472375CC1EFA96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECDDC18FEA0A8FDD2315933E2C59D799 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 21770FD5EC3386D6311D56DB4BD8AD5B /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1311,6 +1654,39 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		80F7775AE2BF768CDA7C5BE0032CD14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7737F7B87374455E094930E3A931F2DF /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = QRCodeReader;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1356,42 +1732,41 @@
 			};
 			name = Debug;
 		};
-		953F92377F92C71B249DBF9DDBDA200F /* Debug */ = {
+		90C9CE316E005573C07D2DE7B7540136 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12DE4E62215CF0F679D948DDC606CA1 /* SwiftyDropbox.xcconfig */;
+			baseConfigurationReference = 7737F7B87374455E094930E3A931F2DF /* QRCodeReader.swift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyDropbox/SwiftyDropbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyDropbox/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyDropbox/SwiftyDropbox.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyDropbox;
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = QRCodeReader;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		AA5CC997A9129E81B5CD6761E6369C33 /* Debug */ = {
+		A7AFA1B440B1A0230A2D33788D0BB647 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C3E435330BE2C25B30F1A9FA506365F /* VandelayDropbox.xcconfig */;
+			baseConfigurationReference = 2F8751663DBAA42FC9D615B705153FD8 /* VandelayDropbox.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1462,41 +1837,6 @@
 			};
 			name = Release;
 		};
-		C3B3E7A8A5AE3F9908A09A346FC888BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C45076566CD138C99C4524739334A913 /* Pods-Vandelay_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Vandelay_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Vandelay_Example/Pods-Vandelay_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Vandelay_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		C43CA7683DCF91159229BF9A9EC18A45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D9EBA14A52DE01B52B2A5B00C59A1E6 /* Pods-Vandelay_Tests.release.xcconfig */;
@@ -1532,9 +1872,74 @@
 			};
 			name = Release;
 		};
+		CD3DC88734EA7C66531CFCC4BFE4ADED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31AA617CF16F51E0B8D3828A8E97C1E3 /* VandelayQr.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VandelayQr/VandelayQr-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VandelayQr/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VandelayQr/VandelayQr.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = VandelayQr;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D157F012BC4B81060D18E06AD439F236 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F8751663DBAA42FC9D615B705153FD8 /* VandelayDropbox.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VandelayDropbox/VandelayDropbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VandelayDropbox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VandelayDropbox/VandelayDropbox.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = VandelayDropbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		DDA5A606A0B7062DEA5E47CD9FA65A3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECDDC18FEA0A8FDD2315933E2C59D799 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 21770FD5EC3386D6311D56DB4BD8AD5B /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1567,6 +1972,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1ADD687A6580A71E2D2201EDF9E407D8 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F7775AE2BF768CDA7C5BE0032CD14F /* Debug */,
+				90C9CE316E005573C07D2DE7B7540136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1585,38 +1999,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50214758B942E4A8B81CB889B7394B7B /* Build configuration list for PBXNativeTarget "VandelayDropbox" */ = {
+		736D8B4D0F47F36E004FB6ED2816B023 /* Build configuration list for PBXNativeTarget "VandelayQr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA5CC997A9129E81B5CD6761E6369C33 /* Debug */,
-				6A2FAB491CECDA6F2D5A727E2BCAA435 /* Release */,
+				CD3DC88734EA7C66531CFCC4BFE4ADED /* Debug */,
+				4B9A64F2AC8A4CB7E5A03CC91857E494 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6572DE0ECDE19DAA6542BA4328B24749 /* Build configuration list for PBXNativeTarget "Pods-Vandelay_Example" */ = {
+		73AF18DEF53FDF4E6EDCC3D24C39A716 /* Build configuration list for PBXNativeTarget "SwiftyDropbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5151E85AC1BD8E273BEDE4E2FE4F555C /* Debug */,
-				C3B3E7A8A5AE3F9908A09A346FC888BA /* Release */,
+				2F885BA7F9E7CB68F887BAE45E3257B4 /* Debug */,
+				11723368FEEC5AFD6E60986688FBF862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8343B2B59188E3A04D475596213010E7 /* Build configuration list for PBXNativeTarget "Vandelay" */ = {
+		77C15CB0B5008B9BED531CE717C30965 /* Build configuration list for PBXNativeTarget "VandelayDropbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08AF5CFA6E55738E6B9587DF16EEB9F1 /* Debug */,
-				0CE97A871A1DBFDC2FFC55692EC0F9CD /* Release */,
+				A7AFA1B440B1A0230A2D33788D0BB647 /* Debug */,
+				D157F012BC4B81060D18E06AD439F236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCCFFE5AA267E62D41570E0DBB224A2D /* Build configuration list for PBXNativeTarget "SwiftyDropbox" */ = {
+		8EEC63C4DCC0520FB122E10B5CA36994 /* Build configuration list for PBXNativeTarget "Pods-Vandelay_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				953F92377F92C71B249DBF9DDBDA200F /* Debug */,
-				3316BD2132B453CC2D2BC32B7A4DBD60 /* Release */,
+				73957DE5C9910AA98EE97AF5162C9C7F /* Debug */,
+				4793FCE0FE0BAC2E1550E69CD0995F61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3003035333FC63F7E0A4E367B435FAA /* Build configuration list for PBXNativeTarget "Vandelay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062F2AE3DFCD4772CA5D94218F3000CA /* Debug */,
+				4975355E3E156E78DF584DAE3957AF82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

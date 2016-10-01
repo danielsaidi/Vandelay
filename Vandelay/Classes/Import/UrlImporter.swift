@@ -11,8 +11,10 @@
  This exporter can import strings and data from custom
  urls, e.g. a file on the Internet, a REST api etc.
  
+ Since url importing is asynchronous, you will receive
+ two callbacks - one to tell you that the import begun,
+ and one to tell you if it succeeded or failed.
  */
-
 
 import Foundation
 
@@ -39,16 +41,29 @@ public class UrlImporter: NSObject, DataImporter {
     // MARK: - Public functions
     
     public func importData(completion: ((_ result: ImportResult) -> ())?) {
+        completion?(ImportResult(state: .inProgress))
+        
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                completion?(self.getResult(withError: error!))
-            } else if (data != nil) {
-                completion?(self.getResult(withData: data!))
+            if let error = error {
+                completion?(self.getResult(withError: error))
+            } else if let data = data {
+                completion?(self.getResult(withData: data))
             } else {
                 completion?(self.getResult(withErrorMessage: "No data in \(self.url)"))
             }
         }
         task.resume()
+    }
+    
+    public func importString(completion: ((_ result: ImportResult) -> ())?) {
+        completion?(ImportResult(state: .inProgress))
+        
+        do {
+            let contents = try String(contentsOf: url)
+            completion?(self.getResult(withString: contents))
+        } catch {
+            completion?(self.getResult(withError: error))
+        }
     }
 }

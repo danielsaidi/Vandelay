@@ -1,28 +1,37 @@
 PODS:
   - Alamofire (4.0.0)
+  - QRCodeReader.swift (7.0.1)
   - SwiftyDropbox (4.0.2):
     - Alamofire (~> 4.0.0)
-  - Vandelay (0.4.1)
-  - VandelayDropbox (0.4.1):
+  - Vandelay (0.4.5)
+  - VandelayDropbox (0.4.5):
     - SwiftyDropbox
+    - Vandelay
+  - VandelayQr (0.4.5):
+    - QRCodeReader.swift
     - Vandelay
 
 DEPENDENCIES:
   - Vandelay (from `../`)
   - VandelayDropbox (from `../`)
+  - VandelayQr (from `../`)
 
 EXTERNAL SOURCES:
   Vandelay:
     :path: "../"
   VandelayDropbox:
     :path: "../"
+  VandelayQr:
+    :path: "../"
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  QRCodeReader.swift: 2b57c1d5d503aeea620573a5c9215027b21d9e7a
   SwiftyDropbox: 4458bb0c2d62d7714b7d2cddec107e392f3645d8
-  Vandelay: ab23bee9682663674f3def60ad2aac16c6eb1b94
-  VandelayDropbox: 97de4c7c5b80fe8c7217fde527d1370adce47035
+  Vandelay: 5dea73204f106b8b684c5c8d0ed80b2a83bb3d13
+  VandelayDropbox: d2dee818406258ccd2807631ce3bde1d48ede3b3
+  VandelayQr: 88574a36542c88940d8078e4529bf8910c132ab6
 
-PODFILE CHECKSUM: 8cf9f13a1c4c67700c51855b7a37a94636a15752
+PODFILE CHECKSUM: d14cbe90d082309d0a9c0c0dd746c3980824bfbf
 
 COCOAPODS: 1.1.0.rc.2

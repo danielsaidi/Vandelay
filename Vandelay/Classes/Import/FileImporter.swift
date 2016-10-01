@@ -40,6 +40,8 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     
     public private(set) var importMethod = "File"
     
+    public var errorMessageForInvalidFilePath = "FileImporter could not retrieve a valid file path."
+    
     private var fileNameGenerator: FileNameGenerator
     
     
@@ -47,9 +49,12 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     // MARK: Public functions
     
     public func importData(completion: ((_ result: ImportResult) -> ())?) {
+        guard let url = getFileUrl() else {
+            completion?(getResult(withErrorMessage: errorMessageForInvalidFilePath))
+            return
+        }
+        
         do {
-            let filePath = getFilePath()!
-            let url = URL(string: filePath)!
             let data = try Data(contentsOf: url, options: .uncachedRead)
             completion?(getResult(withData: data))
         } catch {
@@ -58,9 +63,13 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     }
     
     public func importString(completion: ((_ result: ImportResult) -> ())?) {
+        guard let path = getFilePath() else {
+            completion?(getResult(withErrorMessage: errorMessageForInvalidFilePath))
+            return
+        }
+        
         do {
-            let filePath = getFilePath()!
-            let string = try String(contentsOfFile: filePath, encoding: .utf8)
+            let string = try String(contentsOfFile: path, encoding: .utf8)
             completion?(getResult(withString: string))
         } catch {
             completion?(self.getResult(withError: error))
@@ -72,8 +81,13 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     
     private func getFilePath() -> String? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        guard paths.count > 0 else { return nil }
+        guard let path = paths.first else { return nil }
         let fileName = fileNameGenerator.getFileName()
-        return "file://\(paths.first!)/\(fileName)"
+        return "\(path)/\(fileName)"
+    }
+    
+    private func getFileUrl() -> URL? {
+        guard let path = getFilePath() else { return nil }
+        return URL(string: "file://\(path)")
     }
 }
