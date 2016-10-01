@@ -12,18 +12,18 @@ import Vandelay
 class TodoItemRepository : NSObject {
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
     private var items = [String : TodoItem]()
     
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
-    func addTodoItem(item: TodoItem) {
+    func addTodoItem(_ item: TodoItem) {
         items[item.id] = item
     }
     
-    func deleteTodoItem(item: TodoItem) {
+    func deleteTodoItem(_ item: TodoItem) {
         items.removeValue(forKey: item.id)
     }
     

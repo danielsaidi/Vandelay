@@ -49,7 +49,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func exportData(_ data: Data, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(data: Data, completion: ((_ result: ExportResult) -> ())?) {
         do {
             let filePath = getPath()!
             let url = URL(string: filePath)!
@@ -62,7 +62,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
         }
     }
     
-    public func exportString(_ string: String, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
         do {
             let filePath = getPath()!
             let url = URL(string: filePath)!

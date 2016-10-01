@@ -23,11 +23,12 @@ import UIKit
 import Vandelay
 import VandelayDropbox
 
-class MainViewController: UITableViewController {/* TODO, ExportAlertControllerDelegate, ImportAlertControllerDelegate {
+
+class MainViewController: UITableViewController {
 
     
     // MARK: View lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = UIImageView(image: UIImage(named: "NavBarLogo"))
@@ -42,13 +43,14 @@ class MainViewController: UITableViewController {/* TODO, ExportAlertControllerD
     // MARK: Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier ?? "" {
+        guard let id = segue.identifier else { return }
+        switch id {
         case "PhotoSegue":
             let vc = segue.destination as! PhotoViewController
-            vc.repository = self.photoRepository
+            vc.repository = photoRepository
         case "TodoSegue":
             let vc = segue.destination as! TodoItemViewController
-            vc.repository = self.todoItemRepository
+            vc.repository = todoItemRepository
         default: break
         }
     }
@@ -78,7 +80,7 @@ class MainViewController: UITableViewController {/* TODO, ExportAlertControllerD
     
     // MARK: Private functions
     
-    private func alertTitle(title: String, andMessage message: String) {
+    private func alert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -95,22 +97,19 @@ class MainViewController: UITableViewController {/* TODO, ExportAlertControllerD
     
     // MARK: Export functions
     
-    private func exportCompletedWithResult(result: ExportResult) {
-        /* TODO if (result.state == .inProgress) {
-            return
-        }
+    private func exportStateChanged(with result: ExportResult) {
+        guard result.state == .inProgress else { return }
         
-        if (result.error != nil) {
-            self.alertTitle(title: "Export error", andMessage: result.error!.localizedDescription)
-            return
+        if let error = result.error {
+            alert(title: "Ooops...", message: error.localizedDescription)
+        } else {
+            alert(title: "Done", message: exportMessage(for: result))
         }
-
-        alertTitle(title: "Hey!", andMessage: exportMessageForResult(result))*/
     }
     
-    private func exportMessageForResult(result: ExportResult) -> String {
-        /* TODO if (result.filePath != nil) {
-            return "Your data was exported to \(result.filePath!)"
+    private func exportMessage(for result: ExportResult) -> String {
+        if let filePath = result.filePath {
+            return "Your data was exported to \(filePath)"
         }
         
         switch result.state {
@@ -122,122 +121,121 @@ class MainViewController: UITableViewController {/* TODO, ExportAlertControllerD
             return "Your export failed with error \(result.error?.description ?? "N/A")."
         case .inProgress:
             return "Your export is in progress. Please wait."
-        }*/return ""
+        }
     }
     
-    private func exportPhotoAlbum() {
-        /* TODO let title = "Export Photo Album"
+    fileprivate func exportPhotoAlbum() {
+        let title = "Export Photo Album"
         let message = "How do you want to export this album?"
         let alert = ExportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
-        alert.addDataExporter(exporter: FileExporter(fileName: photoFileName), withTitle: "To a local file")
-        alert.addDataExporter(exporter: DropboxExporter(fileName: photoFileName), withTitle: "To a Dropbox file")
-        alert.addDataExporter(exporter: EmailExporter(fileName: photoFileName), withTitle: "As an e-mail attachment")
+        alert.add(dataExporter: FileExporter(fileName: photoFileName), withTitle: "To a local file")
+        alert.add(dataExporter: DropboxExporter(fileName: photoFileName), withTitle: "To a Dropbox file")
+        alert.add(dataExporter: EmailExporter(fileName: photoFileName), withTitle: "As an e-mail attachment")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)*/
+        present(alert, animated: true, completion: nil)
     }
     
-    private func exportPhotoAlbumWithExporter(exporter: DataExporter) {
-        /* TODO let photos = photoRepository.getPhotos()
+    fileprivate func exportPhotoAlbum(with exporter: DataExporter) {
+        let photos = photoRepository.getPhotos()
         let data = NSKeyedArchiver.archivedData(withRootObject: photos)
-        exporter.exportData(data) { result in
-            self.exportCompletedWithResult(result)
-        }*/
+        exporter.export(data: data) { result in
+            self.exportStateChanged(with: result)
+        }
     }
     
-    private func exportTodoList() {
-        /* TODO let title = "Export Todo List"
+    fileprivate func exportTodoList() {
+        let title = "Export Todo List"
         let message = "How do you want to export this list?"
-        let alert = ExportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        let alert = ExportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
-        alert.addStringExporter(PasteboardExporter(), withTitle: "To the pasteboard")
-        alert.addStringExporter(FileExporter(fileName: todoFileName), withTitle: "To a local file")
-        alert.addStringExporter(DropboxExporter(fileName: todoFileName), withTitle: "To a Dropbox file")
-        alert.addStringExporter(EmailExporter(fileName: todoFileName), withTitle: "As an e-mail attachment")
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        presentViewController(alert, animated: true, completion: nil)*/
+        alert.add(stringExporter: PasteboardExporter(), withTitle: "To the pasteboard")
+        alert.add(stringExporter: FileExporter(fileName: todoFileName), withTitle: "To a local file")
+        alert.add(stringExporter: DropboxExporter(fileName: todoFileName), withTitle: "To a Dropbox file")
+        alert.add(stringExporter: EmailExporter(fileName: todoFileName), withTitle: "As an e-mail attachment")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
-    private func exportTodoListWithExporter(exporter: StringExporter) {
-        /* TODO let items = todoItemRepository.getTodoItems()
+    fileprivate func exportTodoList(with exporter: StringExporter) {
+        let items = todoItemRepository.getTodoItems()
         let dicts = items.map { $0.toDictionary() }
-        let json = JsonObjectSerializer().serializeObject(dicts).result
-        exporter.exportString(json!) { result in
-            self.exportCompletedWithResult(result)
-        }*/
+        guard let json = JsonObjectSerializer().serialize(dicts).result else {
+            print("Hey, serializing your todo items did not go too well! Aborting...")
+            return
+        }
+        exporter.export(string: json) { result in
+            self.exportStateChanged(with: result)
+        }
     }
     
     
     
     // MARK: Import functions
     
-    private func importMessageForResult(result: ImportResult) -> String {
+    private func importMessage(for result: ImportResult) -> String {
         switch result.state {
-        case .Cancelled:
+        case .cancelled:
             return "Your import was cancelled."
-        case .Completed:
+        case .completed:
             return "Your data was imported, using the \"\(result.importMethod)\" method"
-        case .Failed:
+        case .failed:
             return "Your import failed with error \(result.error?.description ?? "N/A")."
-        case .InProgress:
+        case .inProgress:
             return "Your import is in progress. Please wait."
         }
     }
     
-    private func importPhotoAlbum() {
+    fileprivate func importPhotoAlbum() {
         let title = "Import Photo Album"
-        let message = "How do you want to import?"
-        let alert = ImportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        let message = "How do you want to import photos?"
+        let alert = ImportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
-        alert.addDataImporter(FileImporter(fileName: photoFileName), withTitle: "From a local file")
-        alert.addDataImporter(DropboxImporter(fileName: photoFileName), withTitle: "From a Dropbox file")
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        presentViewController(alert, animated: true, completion: nil)
+        alert.add(dataImporter: FileImporter(fileName: photoFileName), withTitle: "From a local file")
+        alert.add(dataImporter: DropboxImporter(fileName: photoFileName), withTitle: "From a Dropbox file")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
-    private func importPhotoAlbumWithImporter(importer: DataImporter) {
+    fileprivate func importPhotoAlbum(with importer: DataImporter) {
         importer.importData { result in
-            if (!self.verifyImportResult(result)) {
-                return
-            }
+            guard self.verify(result) else { return }
             
             if let data = result.data {
-                let obj = NSKeyedUnarchiver.unarchiveObjectWithData(data)
+                let obj = NSKeyedUnarchiver.unarchiveObject(with: data)
                 if let photos = obj as? [Photo] {
                     photos.forEach { self.photoRepository.addPhoto($0) }
                     self.reloadData()
                 } else {
-                    self.alertTitle("Error", andMessage: "Invalid data")
+                    self.alert(title: "Ooops...", message: "Invalid data")
                     return
                 }
             }
             
-            self.alertTitle("Hey!", andMessage: self.importMessageForResult(result))
+            self.alert(title: "Done", message: self.importMessage(for: result))
         }
     }
     
-    private func importTodoList() {
+    fileprivate func importTodoList() {
         let title = "Import Todo List"
         let message = "How do you want to import?"
-        let alert = ImportAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        let alert = ImportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
-        alert.addStringImporter(PasteboardImporter(), withTitle: "From the pasteboard")
-        alert.addStringImporter(FileImporter(fileName: todoFileName), withTitle: "From a local file")
-        alert.addStringImporter(DropboxImporter(fileName: todoFileName), withTitle: "From a Dropbox file")
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        presentViewController(alert, animated: true, completion: nil)
+        alert.add(stringImporter: PasteboardImporter(), withTitle: "From the pasteboard")
+        alert.add(stringImporter: FileImporter(fileName: todoFileName), withTitle: "From a local file")
+        alert.add(stringImporter: DropboxImporter(fileName: todoFileName), withTitle: "From a Dropbox file")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
-    private func importTodoListWithImporter(importer: StringImporter) {
+    fileprivate func importTodoList(with importer: StringImporter) {
         importer.importString { result in
-            if (!self.verifyImportResult(result)) {
-                return
-            }
+            guard self.verify(result) else { return }
             
             if let string = result.string {
-                let jsonResult = JsonObjectSerializer().deserializeString(string)
-                if (jsonResult.error != nil) {
-                    self.alertTitle("Error", andMessage: "Could not parse JSON")
+                let jsonResult = JsonObjectSerializer().deserialize(string)
+                if let error = jsonResult.error {
+                    self.alert(title: "Ooops...", message: error.localizedDescription)
                     return
                 }
                 
@@ -246,59 +244,63 @@ class MainViewController: UITableViewController {/* TODO, ExportAlertControllerD
                     items.forEach { self.todoItemRepository.addTodoItem($0) }
                     self.reloadData()
                 } else {
-                    self.alertTitle("Error", andMessage: "Invalid data in JSON")
+                    self.alert(title: "Ooops...", message: "Invalid data in JSON")
                     return
                 }
             }
             
-            self.alertTitle("Hey!", andMessage: self.importMessageForResult(result))
+            self.alert(title: "Done", message: self.importMessage(for: result))
         }
     }
     
-    private func verifyImportResult(result: ImportResult) -> Bool {
-        if (result.state == .InProgress) {
-            return false
-        }
+    private func verify(_ result: ImportResult) -> Bool {
+        guard result.state != .inProgress else { return false }
+        guard let error = result.error else { return true }
         
-        if (result.error != nil) {
-            self.alertTitle("Import error", andMessage: result.error!.localizedDescription)
-            return false
-        }
-        
-        return true
+        alert(title: "Import error", message: error.localizedDescription)
+        return false
+    }
+}
+
+
+
+// MARK: - ExportAlertControllerDelegate
+
+extension MainViewController: ExportAlertControllerDelegate {
+    
+    func alert(_ alert: ExportAlertController, didPick exporter: DataExporter) {
+        exportPhotoAlbum(with: exporter)
     }
     
+    func alert(_ alert: ExportAlertController, didPick exporter: StringExporter) {
+        exportTodoList(with: exporter)
+    }
+}
+
+
+
+// MARK: - ImportAlertControllerDelegate
+
+extension MainViewController: ImportAlertControllerDelegate {
     
-    
-    // MARK: ExportAlertControllerDelegate
-    
-    func alertController(controller: ExportAlertController, didPickDataExporter exporter: DataExporter) {
-        exportPhotoAlbumWithExporter(exporter)
+    func alert(_ alert: ImportAlertController, didPickDataImporter importer: DataImporter) {
+        importPhotoAlbum(with: importer)
     }
     
-    func alertController(controller: ExportAlertController, didPickStringExporter exporter: StringExporter) {
-        exportTodoListWithExporter(exporter)
+    func alert(_ alert: ImportAlertController, didPickStringImporter importer: StringImporter) {
+        importTodoList(with: importer)
     }
+}
+
+
+
+// MARK: - UITableViewDelegate
+
+extension MainViewController {
     
-    
-    
-    // MARK: ImportAlertControllerDelegate
-    
-    func alertController(controller: ImportAlertController, didPickDataImporter importer: DataImporter) {
-        importPhotoAlbumWithImporter(importer)
-    }
-    
-    func alertController(controller: ImportAlertController, didPickStringImporter importer: StringImporter) {
-        importTodoListWithImporter(importer)
-    }
-    
-    
-    
-    // MARK: UITableViewDelegate
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
         switch cell {
         case exportPhotoAlbumCell: exportPhotoAlbum()
         case exportTodoItemsCell: exportTodoList()
@@ -306,7 +308,5 @@ class MainViewController: UITableViewController {/* TODO, ExportAlertControllerD
         case importPhotoAlbumCell: importPhotoAlbum()
         default: break
         }
- }
- 
- */
+    }
 }

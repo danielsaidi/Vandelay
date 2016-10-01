@@ -9,13 +9,8 @@
 /*
  
  Since this class contains an NSData property, it will
- not be serializable to JSON. We will therefore export
- it with a data exporter, by implementing NSCoding.
- 
- If you can sync such NSData properties in another way
- and have classes only contain serializable properties,
- you could use string exports for all your objects and
- export more complex data in an easier way.
+ not be serializable to JSON. We must therefore export
+ it with a data exporter instead of a string exporter.
  
  */
 
@@ -25,18 +20,18 @@ import Vandelay
 class Photo: NSObject, NSCoding {
 
     
-    // MARK: Initialization
+    // MARK: - Initialization
     
     init(image: UIImage) {
-        super.init()
         id = UuidGenerator().generateUniqueId()
+        super.init()
         self.image = image
     }
     
     required init?(coder: NSCoder) {
-        super.init()
         id = coder.decodeObject(forKey: "id") as? String ?? ""
-        imageData = coder.decodeObject(forKey: "imageData") as? Data
+        imageData = coder.decodeObject(forKey: "imageData") as? Data ?? nil
+        super.init()
     }
     
     func encode(with coder: NSCoder) {
@@ -46,13 +41,13 @@ class Photo: NSObject, NSCoding {
     
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
-    var id = ""
+    var id: String
     var imageData: Data?
     
     var image: UIImage {
-        get { return imageData != nil ? imageData!.toImage() : UIImage() }
+        get { return imageData?.toImage() ?? UIImage() }
         set { imageData = newValue.toData() }
     }
 }
@@ -66,6 +61,6 @@ fileprivate extension Data {
 
 fileprivate extension UIImage {
     func toData() -> Data? {
-        return UIImagePNGRepresentation(self)
+        return UIImagePNGRepresentation(self) ?? nil
     }
 }

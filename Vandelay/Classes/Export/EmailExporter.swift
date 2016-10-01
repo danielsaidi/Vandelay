@@ -60,7 +60,7 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
     
     // MARK: Public functions
     
-    public func exportData(_ data: Data, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(data: Data, completion: ((_ result: ExportResult) -> ())?) {
         guard let vc = topmostViewController else {
             let error = errorMessageForMissingTopmostViewController
             completion?(getResult(withErrorMessage: error))
@@ -69,13 +69,13 @@ public class EmailExporter: NSObject, DataExporter, StringExporter, MFMailCompos
         sendData(data: data, fromViewController: vc, completion: completion)
     }
     
-    public func exportString(_ string: String, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
         guard let data = string.data(using: .utf8) else {
             let error = errorMessageForFailedSerialization
             completion?(getResult(withErrorMessage: error))
             return
         }
-        exportData(data, completion: completion)
+        export(data: data, completion: completion)
     }
     
     

@@ -12,18 +12,19 @@ import Vandelay
 class PhotoRepository : NSObject {
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
     private var photos = [String : Photo]()
     
     
-    // MARK: Public functions
     
-    func addPhoto(photo: Photo) {
+    // MARK: - Public functions
+    
+    func addPhoto(_ photo: Photo) {
         photos[photo.id] = photo
     }
     
-    func deletePhoto(photo: Photo) {
+    func deletePhoto(_ photo: Photo) {
         photos.removeValue(forKey: photo.id)
     }
     

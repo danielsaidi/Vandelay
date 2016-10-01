@@ -11,7 +11,7 @@ import UIKit
 class TodoItemViewController: UITableViewController {
     
     
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -20,17 +20,16 @@ class TodoItemViewController: UITableViewController {
     
     
 
-    // MARK: Properties
+    // MARK: - Properties
     
     var repository: TodoItemRepository?
     
-    private var hasItems: Bool { return items.count > 0 }
-    private var items = [TodoItem]()
+    fileprivate var hasItems: Bool { return items.count > 0 }
+    fileprivate var items = [TodoItem]()
     
     
     
-    
-    // MARK: Actions
+    // MARK: - Actions
     
     @IBAction func add() {
         let title = "Add new item"
@@ -40,7 +39,7 @@ class TodoItemViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             let item = TodoItem(name: alert.textFields![0].text!)
-            self.repository?.addTodoItem(item: item)
+            self.repository?.addTodoItem(item)
             self.reloadData()
         }))
         present(alert, animated: true, completion: nil)
@@ -48,19 +47,22 @@ class TodoItemViewController: UITableViewController {
     
     
     
-    // MARK: Private functions
+    // MARK: - Private functions
     
-    private func reloadData() {
+    fileprivate func reloadData() {
         items = repository?.getTodoItems() ?? [TodoItem]()
         items = items.sorted(by: { item1, item2 -> Bool in
             return item1.name < item2.name
         })
         tableView.reloadData()
     }
-    
-    
-    
-    // MARK: UITableViewDataSource
+}
+
+
+
+// MARK: - UITableViewDataSource
+
+extension TodoItemViewController {
     
     override func numberOfSections(in view: UITableView) -> Int {
         return 1
@@ -69,7 +71,7 @@ class TodoItemViewController: UITableViewController {
     override func tableView(_ view: UITableView, numberOfRowsInSection section: Int) -> Int {
         return max(items.count, 1)
     }
-
+    
     override func tableView(_ view: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return hasItems
     }
@@ -92,7 +94,7 @@ class TodoItemViewController: UITableViewController {
     override func tableView(_ view: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             let item = items[indexPath.row]
-            repository?.deleteTodoItem(item: item)
+            repository?.deleteTodoItem(item)
             reloadData()
         }
     }
@@ -103,10 +105,13 @@ class TodoItemViewController: UITableViewController {
             cell.accessoryType = item.completed ? .checkmark : .none
         }
     }
-    
-    
-    
-    // MARK: UITableViewDelegate
+}
+
+
+
+// MARK: - UITableViewDelegate
+
+extension TodoItemViewController {
     
     override func tableView(_ view: UITableView, didSelectRowAt indexPath: IndexPath) {
         view.deselectRow(at: indexPath, animated: true)

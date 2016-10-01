@@ -8,14 +8,9 @@
 
 /*
  
- This class contains serializable properties only, and
- will therefore be able to export with a simple string
- exporter.
- 
- To avoid adding any third party libraries, this class
- uses really simple dictionary conversion. This allows
- us to serialize and deserialize to and from JSON with
- the basic JSON serializer that comes with Vandelay.
+ This class only has properties that can be serialized
+ to string and can therefore be exported with a simple
+ string exporter.
  
  */
 
@@ -25,32 +20,33 @@ import Vandelay
 class TodoItem: NSObject {
 
     
-    // MARK: Initialization
+    // MARK: - Initialization
     
     init(name: String) {
-        super.init()
         id = UuidGenerator().generateUniqueId()
         self.name = name
-    }
-    
-    required init(dict: [String : AnyObject]) {
+        completed = false
         super.init()
-        id = dict["id"] as? String ?? id
-        name = dict["name"] as? String ?? name
+    }
+    
+    required init(dict: [String : Any]) {
+        id = dict["id"] as? String ?? ""
+        name = dict["name"] as? String ?? ""
         completed = dict["completed"] as? Bool ?? false
+        super.init()
     }
     
     
     
-    // MARK: Properties
+    // MARK: - Properties
     
-    var id = ""
-    var name = ""
-    var completed = false
+    var id: String
+    var name: String
+    var completed: Bool
     
     
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
     func toDictionary() -> [String : Any] {
         var dict = [String : Any]()

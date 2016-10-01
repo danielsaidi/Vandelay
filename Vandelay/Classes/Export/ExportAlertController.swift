@@ -31,14 +31,14 @@ public class ExportAlertController: UIAlertController {
     weak public var delegate: ExportAlertControllerDelegate?
     
     
-    public func add(_ exporter: DataExporter, withTitle title: String) {
+    public func add(dataExporter exporter: DataExporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .default) { action in
             self.delegate?.alert(self, didPick: exporter)
         }
         addAction(action)
     }
     
-    public func add(_ exporter: StringExporter, withTitle title: String) {
+    public func add(stringExporter exporter: StringExporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .default) { action in
             self.delegate?.alert(self, didPick: exporter)
         }
