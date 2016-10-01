@@ -13,10 +13,17 @@ import SwiftyDropbox
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var dropboxAppKey = ""
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        DropboxClientsManager.setupWithAppKey("4j6q36uumkro49k")
+        if (dropboxAppKey.isEmpty) {
+            print("*** IMPORTANT ***")
+            print("In order to try Dropbox import/export, you must set the dropboxAppKey value in AppDelegate\n")
+        }
+        
+        DropboxClientsManager.setupWithAppKey(dropboxAppKey)
         return true
     }
     
