@@ -109,24 +109,24 @@ class MainViewController: UITableViewController {
     
     private func exportMessage(for result: ExportResult) -> String {
         if let filePath = result.filePath {
-            return "Your data was exported to \(filePath)"
+            return "The data was exported to \(filePath)"
         }
         
         switch result.state {
         case .cancelled:
-            return "Your export was cancelled."
+            return "The export was cancelled."
         case .completed:
-            return "Your data was exported, using the \"\(result.exportMethod)\" method"
+            return "The export completed, using the \"\(result.exportMethod)\" method"
         case .failed:
-            return "Your export failed with error \(result.error?.description ?? "N/A")."
+            return "The export failed with error \(result.error?.description ?? "N/A")."
         case .inProgress:
-            return "Your export is in progress. Please wait."
+            return "The export is in progress. Please wait."
         }
     }
     
     fileprivate func exportPhotoAlbum() {
-        let title = "Export Photo Album"
-        let message = "How do you want to export this album?"
+        let title = "Export photo album"
+        let message = "How do you want to export the photo album?"
         let alert = ExportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
         alert.add(dataExporter: FileExporter(fileName: photoFileName), withTitle: "To a local file")
@@ -145,8 +145,8 @@ class MainViewController: UITableViewController {
     }
     
     fileprivate func exportTodoList() {
-        let title = "Export Todo List"
-        let message = "How do you want to export this list?"
+        let title = "Export todo list"
+        let message = "How do you want to export the todo list?"
         let alert = ExportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
         alert.add(stringExporter: PasteboardExporter(), withTitle: "To the pasteboard")
@@ -187,8 +187,8 @@ class MainViewController: UITableViewController {
     }
     
     fileprivate func importPhotoAlbum() {
-        let title = "Import Photo Album"
-        let message = "How do you want to import photos?"
+        let title = "Import photos"
+        let message = "From where do you want to import photos?"
         let alert = ImportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
         alert.add(dataImporter: FileImporter(fileName: photoFileName), withTitle: "From a local file")
@@ -217,8 +217,8 @@ class MainViewController: UITableViewController {
     }
     
     fileprivate func importTodoList() {
-        let title = "Import Todo List"
-        let message = "How do you want to import?"
+        let title = "Import todo items"
+        let message = "From where do you want to import todo items?"
         let alert = ImportAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.delegate = self
         alert.add(stringImporter: PasteboardImporter(), withTitle: "From the pasteboard")

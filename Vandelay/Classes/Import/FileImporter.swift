@@ -60,7 +60,7 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     public func importString(completion: ((_ result: ImportResult) -> ())?) {
         do {
             let filePath = getFilePath()!
-            let string = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
+            let string = try String(contentsOfFile: filePath, encoding: .utf8)
             completion?(getResult(withString: string))
         } catch {
             completion?(self.getResult(withError: error))
@@ -74,6 +74,6 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         guard paths.count > 0 else { return nil }
         let fileName = fileNameGenerator.getFileName()
-        return "\(paths.first!)/\(fileName)"
+        return "file://\(paths.first!)/\(fileName)"
     }
 }
