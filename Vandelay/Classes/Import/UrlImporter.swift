@@ -48,17 +48,12 @@ public class UrlImporter: NSObject, DataImporter, StringImporter {
     public func importData(completion: ((_ result: ImportResult) -> ())?) {
         completion?(ImportResult(state: .inProgress))
         
-        let session = URLSession.shared
-        let task = session.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                completion?(self.getResult(withError: error))
-            } else if let data = data {
-                completion?(self.getResult(withData: data))
-            } else {
-                completion?(self.getResult(withErrorMessage: "No data in \(self.url)"))
-            }
+        do {
+            let data = try Data(contentsOf: url)
+            completion?(self.getResult(withData: data))
+        } catch {
+            completion?(self.getResult(withError: error))
         }
-        task.resume()
     }
     
     public func importString(completion: ((_ result: ImportResult) -> ())?) {
