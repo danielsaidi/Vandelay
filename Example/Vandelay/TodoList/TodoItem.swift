@@ -23,7 +23,7 @@ class TodoItem: NSObject {
     // MARK: - Initialization
     
     init(name: String) {
-        id = UuidGenerator().generateUniqueId()
+        id = NSUUID().uuidString
         self.name = name
         completed = false
         super.init()

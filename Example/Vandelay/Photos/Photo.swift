@@ -23,7 +23,7 @@ class Photo: NSObject, NSCoding {
     // MARK: - Initialization
     
     init(image: UIImage) {
-        id = UuidGenerator().generateUniqueId()
+        id = NSUUID().uuidString
         super.init()
         self.image = image
     }

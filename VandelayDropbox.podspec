@@ -5,7 +5,8 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 VandelayDropbox adds Dropbox integrations to Vandelay, and lets you export
-strings, serialized JSON and encoded NSData to your app's Dropbox folder.
+and import strings, serialized JSON and encoded NSData to and from a app's
+Dropbox folder.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'

@@ -10,87 +10,89 @@
 
 ## What is Vandelay?
 
-Vandelay is an importer / exporter library for iOS that can be used to
-import and export data in various ways.
+Vandelay is a string and data importer/exporter for iOS. It comes with
+built-in support for a few basic data sources and can be extended with
+even more.
 
 
 
 ## Exporting data
 
-Vandelay comes with a few string and data exporters. A string exporter
-exports strings and serialized data (e.g. JSON), while a data exporter
-exports encoded NSData.
+Vandelay can export strings, serialized data (string) and encoded data. 
+An exporter can implement StringExporter and DataExporter, to indicate
+in which ways it can be used.
 
 Vandelay currently comes with the following string and data exporters:
 
- - `PasteboardExporter` - exports string to the pasteboard
- - `EmailExporter` - exports data and strings as email file attachment
- - `FileExporter` - exports data and strings to local files
- - `DropboxExporter` - exports data and strings to files on Dropbox
+- `EmailExporter` - exports data and strings as email attachments
+- `FileExporter` - exports data and strings to local files
+- `MessageExporter` - exports data and strings as message attachments
+- `PasteboardExporter` - exports string to the pasteboard
 
-If you want to implement a custom exporter, implement the DataExporter
-and/or StringExporter protocol. Since strings are platform-independent,
-use string exporters whenever your data can be serialized.
+- `DropboxExporter` - exports data and strings to Dropbox
 
-Data exporters, however, can export NSData encodable objects that have
-properties that cannot be serialized to strings, e.g. image properties.
-However, since these exporters export to NSData, the exported data can
-only be imported on platforms that support NSData.
+Since strings are platform-independent, use a string exporter whenever
+your data can be serialized, e.g. to JSON
+
+Data exporters can export Data encodable objects, which is good when a
+class has properties that cannot be serialized, e.g. an image property.
+However, encoded Data can only be imported on Apple platforms.
 
 
 
 ## Importing data
 
-Vandelay comes with a few string and data importers. A string importer
-imports strings and serialized data (e.g. JSON), while a data importer
-imports encoded NSData.
+Vandelay can import strings, serialized data (string) and encoded data. 
+An importer can implement StringImporter and DataImporter, to indicate
+in which ways it can be used.
 
 Vandelay currently comes with the following string and data importers:
 
  - `PasteboardImporter` - imports string from the pasteboard
  - `FileImporter` - imports data and strings from local files
- - `DropboxImporter` - imports data and strings from files on Dropbox
+
+ - `DropboxImporter` - imports data and strings from Dropbox
 
 When importing data, the same logic goes as when exporting data - it's
-best to use strings whenever possible, but NSData is way more powerful.
+best to use strings whenever possible, but Data is way more powerful.
 
 
 
 ## UI helpers
 
-To make exporting and importing data with Vandelay easier, you can use
-the import and export alert controllers that come with the library.
+To make exporting and importing data easier, Vandelay comes with handy
+alert classes that can be used to show the app user a list of exporter
+and importer options. Set the delegate of these classes to detect when
+the user selects an exporter or importer, then use it to export/import.
 
-The `ExportAlertController` and `ImportAlertController` classes can be
-used to show the app user a list of exporter and importer options. Set
-the delegate property of these classes to detect when the user selects
-an exporter or importer, then export and import data using it.
+Check out `ExportAlertController` and `ImportAlertController` for more
+information.
 
 
 
 ## Dropbox
 
-Vandelay comes with additional support for Dropbox export/import. This
-means that an app can use Vandelay and Dropbox to sync data to the app
-user's personal Dropbox folder, in a sub folder called `Apps`.
+Vandelay comes with additional Dropbox support. This means that an app
+can use Vandelay to sync data to a user's personal Dropbox.
 
-Dropbox import and export requires a little setting up. First create a
-Dropbox developer account, then create a Dropbox app for your app. You
-can then follow Dropbox's install guide and tutorial to get going:
+To use these features, create a Dropbox developer account as well as a
+Dropbox app for your app. If you do not know how, follow this guide:
 
 - [Install Guide](https://www.dropbox.com/developers/documentation/swift#install)
 - [Tutorial](https://www.dropbox.com/developers/documentation/swift#tutorial)
 
-Basically, you must let the user give Dropbox permission to handle app
-data, then take care of the Dropbox callback. The, once Dropbox is all
-good to go, you can use the Dropbox importer and exporter classes.
+Check out how the demo app gets Dropbox ready for use. Basically, apps
+must setup Dropbox integration when started and handle any return urls
+when Dropbox redirects the user back to the app. Also, apps must add a
+few keys to `Info.plist`, namely `CFBundleURLTypes` (db-<APP KEY>) and 
+`LSApplicationQueriesSchemes`.
 
 
 
 ## Example Project
 
 Vandelay comes with an example project that lets you export and import
-todo lists (strings) and photo albums (data).
+todo lists (strings) and photos (data).
 
 To run the example app, clone this repo and run `pod install` from the
 Example directory. You can then open up the project (use the generated
@@ -126,7 +128,7 @@ pod "VandelayDropbox"
 ## Versioning
 
 Versions < 1.0.0 will have breaking changes between minor versions, so
-Vandelay 0.3.0 will probably not be compatible with Vandelay 0.2.0.
+Vandelay 0.3.0 will probably not be compatible with Vandelay 0.2.0 etc.
 
 
 

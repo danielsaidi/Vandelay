@@ -132,6 +132,7 @@ class MainViewController: UITableViewController {
         alert.add(dataExporter: FileExporter(fileName: photoFileName), withTitle: "To a local file")
         alert.add(dataExporter: DropboxExporter(fileName: photoFileName), withTitle: "To a Dropbox file")
         alert.add(dataExporter: EmailExporter(fileName: photoFileName), withTitle: "As an e-mail attachment")
+        alert.add(dataExporter: MessageExporter(fileName: photoFileName), withTitle: "As a message attachment")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -153,6 +154,7 @@ class MainViewController: UITableViewController {
         alert.add(stringExporter: FileExporter(fileName: todoFileName), withTitle: "To a local file")
         alert.add(stringExporter: DropboxExporter(fileName: todoFileName), withTitle: "To a Dropbox file")
         alert.add(stringExporter: EmailExporter(fileName: todoFileName), withTitle: "As an e-mail attachment")
+        alert.add(stringExporter: MessageExporter(fileName: photoFileName), withTitle: "As a message attachment")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }

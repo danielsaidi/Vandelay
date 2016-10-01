@@ -1,5 +1,5 @@
 //
-//  EmailExporter.swift
+//  MessageExporter.swift
 //  Vandelay
 //
 //  Created by Daniel Saidi on 2015-11-05.
@@ -25,10 +25,10 @@
 
 import MessageUI
 
-public class EmailExporter: NSObject, DataExporter, StringExporter {
+public class MessageExporter: NSObject, DataExporter, StringExporter {
     
     
-    // MARK: - Initialization
+    // MARK: Initialization
     
     public convenience init(fileName: String) {
         let generator = StaticFileNameGenerator(fileName: fileName)
@@ -42,24 +42,19 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
     
     
     
-    // MARK: - Dependencies
+    // MARK: Properties
+    
+    public private(set) var exportMethod = "Message"
     
     public var fileNameGenerator: FileNameGenerator
+    public var messageBody = ""
+    public var messageSubject = ""
     
-    
-    
-    // MARK: - Properties
-    
-    public private(set) var exportMethod = "Email"
-    
-    public var emailBody = ""
-    public var emailSubject = ""
-    
-    public var errorMessageForFailedSerialization = "EmailExporter could not serialize string to data"
-    public var errorMessageForMissingTopmostViewController = "EmailExporter could not find topmost view controller"
+    public var errorMessageForFailedSerialization = "MessageExporter could not serialize string to data"
+    public var errorMessageForMissingTopmostViewController = "MessageExporter could not find topmost view controller"
     
     fileprivate var completion: ((_ result: ExportResult) -> ())?
-    private var composer: MFMailComposeViewController!
+    private var composer: MFMessageComposeViewController!
     
     
     
@@ -87,21 +82,20 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: - Private functions
     
-    fileprivate func getExportState(for sendResult: MFMailComposeResult) -> ExportState {
+    fileprivate func getExportState(for sendResult: MessageComposeResult) -> ExportState {
         switch sendResult {
         case .cancelled: return .cancelled
         case .failed: return .failed
         case .sent: return .completed
-        case .saved: return .cancelled
         }
     }
     
     private func send(_ data: Data, from vc: UIViewController, completion: ((_ result: ExportResult) -> ())?) {
-        composer = MFMailComposeViewController()
-        composer.mailComposeDelegate = self
-        composer.setSubject(emailSubject)
-        composer.setMessageBody(emailBody, isHTML: true)
-        composer.addAttachmentData(data, mimeType: "text/plain", fileName: fileNameGenerator.getFileName())
+        composer = MFMessageComposeViewController()
+        composer.messageComposeDelegate = self
+        composer.subject = messageSubject
+        composer.body = messageBody
+        composer.addAttachmentData(data, typeIdentifier: "public.data", filename: fileNameGenerator.getFileName())
         
         vc.present(composer, animated: true, completion: nil)
         
@@ -113,13 +107,12 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
 
 // MARK: - MFMailComposeViewControllerDelegate
 
-extension EmailExporter: MFMailComposeViewControllerDelegate {
+extension MessageExporter: MFMessageComposeViewControllerDelegate {
     
-    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         controller.presentingViewController?.dismiss(animated: true, completion: nil)
         let state = getExportState(for: result)
         let result = getResult(withState: state)
-        result.error = error != nil ? getError(withErrorMessage: error!.localizedDescription) : nil
         completion?(result)
     }
 }
