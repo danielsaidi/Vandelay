@@ -87,7 +87,7 @@ public class DropboxImporter: NSObject, DataImporter, StringImporter {
     
     // MARK: Public functions
     
-    public func importData(completion: ((_ result: ImportResult) -> ())?) {
+    public func importData(completion: ImportCompletion?) {
         guard let vc = topmostViewController else {
             completion?(getResult(withErrorMessage: errorMessageForViewController))
             return
@@ -105,7 +105,7 @@ public class DropboxImporter: NSObject, DataImporter, StringImporter {
         downloadData(withClient: client, completion: completion)
     }
     
-    public func importString(completion: ((_ result: ImportResult) -> ())?) {
+    public func importString(completion: ImportCompletion?) {
         importData { (result) in
             if (result.data != nil) {
                 if let string = String(data: result.data!, encoding: .utf8) {
@@ -123,7 +123,7 @@ public class DropboxImporter: NSObject, DataImporter, StringImporter {
     
     // MARK: Private functions
     
-    private func downloadData(withClient client: DropboxClient, completion: ((_ result: ImportResult) -> ())?) {
+    private func downloadData(withClient client: DropboxClient, completion: ImportCompletion?) {
         let fileName = fileNameGenerator.getFileName()
         let filePath = "/\(fileName)"
         

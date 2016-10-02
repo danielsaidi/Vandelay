@@ -48,7 +48,7 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
     
     // MARK: Public functions
     
-    public func importData(completion: ((_ result: ImportResult) -> ())?) {
+    public func importData(completion: ImportCompletion?) {
         guard let url = getFileUrl() else {
             completion?(getResult(withErrorMessage: errorMessageForInvalidFilePath))
             return
@@ -62,7 +62,7 @@ public class FileImporter: NSObject, DataImporter, StringImporter {
         }
     }
     
-    public func importString(completion: ((_ result: ImportResult) -> ())?) {
+    public func importString(completion: ImportCompletion?) {
         guard let path = getFilePath() else {
             completion?(getResult(withErrorMessage: errorMessageForInvalidFilePath))
             return

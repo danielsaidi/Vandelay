@@ -51,7 +51,7 @@ public class QrCodeImporter: NSObject, DataImporter, StringImporter {
     
     // MARK: - Functions
     
-    public func importData(completion: ((_ result: ImportResult) -> ())?) {
+    public func importData(completion: ImportCompletion?) {
         guard let vc = vc else { return }
         guard let reader = createReader(completion) else { return }
         
@@ -64,7 +64,7 @@ public class QrCodeImporter: NSObject, DataImporter, StringImporter {
         vc.present(reader, animated: true, completion: nil)
     }
     
-    public func importString(completion: ((_ result: ImportResult) -> ())?) {
+    public func importString(completion: ImportCompletion?) {
         guard let vc = vc else { return }
         guard let reader = createReader(completion) else { return }
         
@@ -81,9 +81,9 @@ public class QrCodeImporter: NSObject, DataImporter, StringImporter {
     
     // MARK: - Private functions
     
-    private func createReader(_ completion: ((_ result: ImportResult) -> ())?) -> QRCodeReaderViewController? {
+    private func createReader(_ completion: ImportCompletion?) -> QRCodeReaderViewController? {
         guard QRCodeReader.isAvailable() else {
-            completion?(self.getResult(withErrorMessage: self.errorMessageForUnavailableReader))
+            completion?(getResult(withErrorMessage: self.errorMessageForUnavailableReader))
             return nil
         }
         
@@ -96,19 +96,19 @@ public class QrCodeImporter: NSObject, DataImporter, StringImporter {
         return new
     }
     
-    private func getImporter(for result: QRCodeReaderResult?, completion: ((_ result: ImportResult) -> ())?) -> UrlImporter? {
+    private func getImporter(for result: QRCodeReaderResult?, completion: ImportCompletion?) -> UrlImporter? {
         guard let url = getUrl(from: result, completion: completion) else { return nil }
         return UrlImporter(url: url)
     }
     
-    private func getUrl(from result: QRCodeReaderResult?, completion: ((_ result: ImportResult) -> ())?) -> URL? {
+    private func getUrl(from result: QRCodeReaderResult?, completion: ImportCompletion?) -> URL? {
         guard let result = result else {
-            completion?(self.getResult(withErrorMessage: self.errorMessageForNoResult))
+            completion?(getResult(withErrorMessage: self.errorMessageForNoResult))
             return nil
         }
         
         guard let url = URL(string: result.value) else {
-            completion?(self.getResult(withErrorMessage: self.errorMessageForInvalidUrl))
+            completion?(getResult(withErrorMessage: self.errorMessageForInvalidUrl))
             return nil
         }
         

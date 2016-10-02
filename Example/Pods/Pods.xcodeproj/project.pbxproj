@@ -87,6 +87,7 @@
 		A9A50DD81DA0098300F7F2C8 /* QrCodeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A50DD71DA0098300F7F2C8 /* QrCodeCreator.swift */; };
 		A9A50DDA1DA009C400F7F2C8 /* QrCodeCreatorDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A50DD91DA009C400F7F2C8 /* QrCodeCreatorDefault.swift */; };
 		A9A50DE11DA0F72600F7F2C8 /* ExportCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A50DDF1DA0F6B700F7F2C8 /* ExportCompletion.swift */; };
+		A9A50DE41DA0F7CE00F7F2C8 /* ImportCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A50DE21DA0F7AF00F7F2C8 /* ImportCompletion.swift */; };
 		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435E0AE558EDE1F2B983A16B7EE3841 /* ParameterEncoding.swift */; };
 		B245C5D4D05650608F6705905CD38E50 /* Pods-Vandelay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4C6A5DA94C24E59C87E4DE92BC6152 /* Pods-Vandelay_Tests-dummy.m */; };
 		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FFBBB0D1BA497AADD67BF5742FB8 /* ResponseSerialization.swift */; };
@@ -315,6 +316,7 @@
 		A9A50DD71DA0098300F7F2C8 /* QrCodeCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeCreator.swift; sourceTree = "<group>"; };
 		A9A50DD91DA009C400F7F2C8 /* QrCodeCreatorDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeCreatorDefault.swift; sourceTree = "<group>"; };
 		A9A50DDF1DA0F6B700F7F2C8 /* ExportCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportCompletion.swift; sourceTree = "<group>"; };
+		A9A50DE21DA0F7AF00F7F2C8 /* ImportCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCompletion.swift; sourceTree = "<group>"; };
 		AB89D2C87B92F54ED92237B0BF868DF5 /* StoneSerializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneSerializers.swift; path = Source/Source/PlatformNeutral/StoneSerializers.swift; sourceTree = "<group>"; };
 		AF25220BC6C1438A3FF26630BA9751B5 /* Pods-Vandelay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vandelay_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B074A5969C6B85DB6F711CFF60963745 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 				ED10B788D9DA9DD1906AAE803F32E08C /* FileImporter.swift */,
 				818362262DEB3B1205D8AF6490B55D9D /* ImportAlertController.swift */,
 				B61FFEC433CD474F2DB3324C8C89E3E4 /* Importer.swift */,
+				A9A50DE21DA0F7AF00F7F2C8 /* ImportCompletion.swift */,
 				D3D42313597B4482BE13B56E8A1C06DF /* ImportResult.swift */,
 				9B26816A9DDD20E4B1AD4792FF72028C /* ImportState.swift */,
 				E2C4D9B87151EB916DB2C2853D1F78E3 /* PasteboardImporter.swift */,
@@ -1224,6 +1227,7 @@
 				E5758026390828270AEB3F3D516EC258 /* JsonObjectSerializer.swift in Sources */,
 				85D2111886942FD5AD7CDAB5E27BD34C /* MessageExporter.swift in Sources */,
 				A9A50DE11DA0F72600F7F2C8 /* ExportCompletion.swift in Sources */,
+				A9A50DE41DA0F7CE00F7F2C8 /* ImportCompletion.swift in Sources */,
 				763C0660C508BE1E223497162EF27B04 /* ObjectSerializer.swift in Sources */,
 				7C66C316C797C676C1FD9087BC874D6E /* PasteboardExporter.swift in Sources */,
 				112063C065C3B5F1188573E59731A8BE /* PasteboardImporter.swift in Sources */,

@@ -45,7 +45,7 @@ public class UrlImporter: NSObject, DataImporter, StringImporter {
     
     // MARK: - Public functions
     
-    public func importData(completion: ((_ result: ImportResult) -> ())?) {
+    public func importData(completion: ImportCompletion?) {
         completion?(ImportResult(state: .inProgress))
         
         do {
@@ -56,7 +56,7 @@ public class UrlImporter: NSObject, DataImporter, StringImporter {
         }
     }
     
-    public func importString(completion: ((_ result: ImportResult) -> ())?) {
+    public func importString(completion: ImportCompletion?) {
         completion?(ImportResult(state: .inProgress))
         
         do {
