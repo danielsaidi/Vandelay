@@ -60,7 +60,7 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: - Public functions
     
-    public func export(data: Data, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(data: Data, completion: ExportCompletion?) {
         guard let vc = topmostViewController else {
             let error = errorMessageForMissingTopmostViewController
             completion?(getResult(withErrorMessage: error))
@@ -69,7 +69,7 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
         send(data, from: vc, completion: completion)
     }
     
-    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(string: String, completion: ExportCompletion?) {
         guard let data = string.data(using: .utf8) else {
             let error = errorMessageForFailedSerialization
             completion?(getResult(withErrorMessage: error))
@@ -90,7 +90,7 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
         }
     }
     
-    private func send(_ data: Data, from vc: UIViewController, completion: ((_ result: ExportResult) -> ())?) {
+    private func send(_ data: Data, from vc: UIViewController, completion: ExportCompletion?) {
         composer = MFMessageComposeViewController()
         composer.messageComposeDelegate = self
         composer.subject = messageSubject

@@ -48,7 +48,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func export(data: Data, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(data: Data, completion: ExportCompletion?) {
         guard let path = getFilePath(), let url = getFileUrl() else {
             completion?(getResult(withErrorMessage: errorMessageForInvalidFilePath))
             return
@@ -63,7 +63,7 @@ public class FileExporter: NSObject, DataExporter, StringExporter {
         }
     }
     
-    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(string: String, completion: ExportCompletion?) {
         guard let path = getFilePath(), let url = getFileUrl() else {
             completion?(getResult(withErrorMessage: errorMessageForInvalidFilePath))
             return

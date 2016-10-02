@@ -23,6 +23,9 @@ public protocol Exporter {
 
 public extension Exporter {
     
+    
+    // MARK: - Properties
+    
     public var topmostViewController: UIViewController? {
         guard var vc = UIApplication.shared.keyWindow?.rootViewController else { return nil }
         while let pvc = vc.presentedViewController {
@@ -32,6 +35,8 @@ public extension Exporter {
     }
     
     
+    
+    // MARK: - Functions
     
     public func getError(withErrorMessage errorMessage: String) -> NSError {
         let domain = "Vandelay"

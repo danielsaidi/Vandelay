@@ -85,7 +85,7 @@ public class DropboxExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Public functions
     
-    public func export(data: Data, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(data: Data, completion: ExportCompletion?) {
         guard let vc = topmostViewController else {
             completion?(getResult(withErrorMessage: errorMessageForViewController))
             return
@@ -103,7 +103,7 @@ public class DropboxExporter: NSObject, DataExporter, StringExporter {
         uploadData(data, withClient: client, completion: completion)
     }
     
-    public func export(string: String, completion: ((_ result: ExportResult) -> ())?) {
+    public func export(string: String, completion: ExportCompletion?) {
         guard let data = string.data(using: .utf8, allowLossyConversion: false) else {
             completion?(getResult(withErrorMessage: errorMessageForDataError))
             return
@@ -116,7 +116,7 @@ public class DropboxExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: Private functions
     
-    private func uploadData(_ data: Data, withClient client: DropboxClient, completion: ((_ result: ExportResult) -> ())?) {
+    private func uploadData(_ data: Data, withClient client: DropboxClient, completion: ExportCompletion?) {
         let fileName = fileNameGenerator.getFileName()
         let path = "/\(fileName)"
         

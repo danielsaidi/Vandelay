@@ -86,6 +86,7 @@
 		A81E1D5C3B1E65FE3ECFC14E91C791E0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C577040343B7DE840A66CF021F47FF /* Alamofire.framework */; };
 		A9A50DD81DA0098300F7F2C8 /* QrCodeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A50DD71DA0098300F7F2C8 /* QrCodeCreator.swift */; };
 		A9A50DDA1DA009C400F7F2C8 /* QrCodeCreatorDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A50DD91DA009C400F7F2C8 /* QrCodeCreatorDefault.swift */; };
+		A9A50DE11DA0F72600F7F2C8 /* ExportCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A50DDF1DA0F6B700F7F2C8 /* ExportCompletion.swift */; };
 		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435E0AE558EDE1F2B983A16B7EE3841 /* ParameterEncoding.swift */; };
 		B245C5D4D05650608F6705905CD38E50 /* Pods-Vandelay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4C6A5DA94C24E59C87E4DE92BC6152 /* Pods-Vandelay_Tests-dummy.m */; };
 		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FFBBB0D1BA497AADD67BF5742FB8 /* ResponseSerialization.swift */; };
@@ -313,6 +314,7 @@
 		A8E5CF6694553DD7EBBF348ADC163866 /* SharingRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharingRoutes.swift; path = Source/Source/PlatformNeutral/SharingRoutes.swift; sourceTree = "<group>"; };
 		A9A50DD71DA0098300F7F2C8 /* QrCodeCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeCreator.swift; sourceTree = "<group>"; };
 		A9A50DD91DA009C400F7F2C8 /* QrCodeCreatorDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeCreatorDefault.swift; sourceTree = "<group>"; };
+		A9A50DDF1DA0F6B700F7F2C8 /* ExportCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportCompletion.swift; sourceTree = "<group>"; };
 		AB89D2C87B92F54ED92237B0BF868DF5 /* StoneSerializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneSerializers.swift; path = Source/Source/PlatformNeutral/StoneSerializers.swift; sourceTree = "<group>"; };
 		AF25220BC6C1438A3FF26630BA9751B5 /* Pods-Vandelay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vandelay_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B074A5969C6B85DB6F711CFF60963745 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 				94251C771C83CBEBD39239917374ABD2 /* EmailExporter.swift */,
 				CB45518BE7302F6A5EF0234D15E71BC2 /* ExportAlertController.swift */,
 				98CDB7AA79A0990F83437148F57AA334 /* Exporter.swift */,
+				A9A50DDF1DA0F6B700F7F2C8 /* ExportCompletion.swift */,
 				915209E9BDD63B82293ABD478A3CDE28 /* ExportResult.swift */,
 				F02689C19D1526B5461354C8A7D5318E /* ExportState.swift */,
 				65B866624459CAD5180D8C395A50B13A /* FileExporter.swift */,
@@ -1220,6 +1223,7 @@
 				F8A27222EBC6FFA478DD133F48D7E4FE /* ImportState.swift in Sources */,
 				E5758026390828270AEB3F3D516EC258 /* JsonObjectSerializer.swift in Sources */,
 				85D2111886942FD5AD7CDAB5E27BD34C /* MessageExporter.swift in Sources */,
+				A9A50DE11DA0F72600F7F2C8 /* ExportCompletion.swift in Sources */,
 				763C0660C508BE1E223497162EF27B04 /* ObjectSerializer.swift in Sources */,
 				7C66C316C797C676C1FD9087BC874D6E /* PasteboardExporter.swift in Sources */,
 				112063C065C3B5F1188573E59731A8BE /* PasteboardImporter.swift in Sources */,
