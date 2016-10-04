@@ -26,19 +26,19 @@ public protocol ExportAlertControllerDelegate: class {
 }
 
 
-public class ExportAlertController: UIAlertController {
+open class ExportAlertController: UIAlertController {
     
     weak public var delegate: ExportAlertControllerDelegate?
     
     
-    public func add(dataExporter exporter: DataExporter, withTitle title: String) {
+    open func add(dataExporter exporter: DataExporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .default) { action in
             self.delegate?.alert(self, didPick: exporter)
         }
         addAction(action)
     }
     
-    public func add(stringExporter exporter: StringExporter, withTitle title: String) {
+    open func add(stringExporter exporter: StringExporter, withTitle title: String) {
         let action = UIAlertAction(title: title, style: .default) { action in
             self.delegate?.alert(self, didPick: exporter)
         }
