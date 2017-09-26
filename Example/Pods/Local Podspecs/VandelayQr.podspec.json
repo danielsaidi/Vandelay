@@ -1,6 +1,6 @@
 {
   "name": "VandelayQr",
-  "version": "0.4.5",
+  "version": "0.4.7",
   "summary": "Vandelay is an importer/exporter for iOS.",
   "description": "VandelayQr adds QR code functionality to Vandelay, and lets you import any\nstring or data by scanning a QR code.",
   "homepage": "https://github.com/danielsaidi/vandelay",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/danielsaidi/vandelay.git",
-    "tag": "0.4.5"
+    "tag": "0.4.7"
   },
   "social_media_url": "https://twitter.com/danielsaidi",
   "platforms": {

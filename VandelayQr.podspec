@@ -4,8 +4,8 @@ Pod::Spec.new do |s|
   s.summary          = 'Vandelay is an importer/exporter for iOS.'
 
   s.description      = <<-DESC
-VandelayQr adds QR code functionality to Vandelay, and lets you import any
-string or data by scanning a QR code.
+VandelayQr adds QR code functionality to Vandelay. With VandelayQr you can
+import data by scanning a QR code.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'

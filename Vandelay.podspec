@@ -1,17 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = 'Vandelay'
   s.version          = '0.4.7'
-  s.summary          = 'Vandelay is an importer/exporter for iOS.'
+  s.summary          = 'Vandelay is an iOS importer/exporter.'
 
   s.description      = <<-DESC
-Vandelay is an importer / exporter for iOS, that can be used to import and 
-export data in various ways.
-
-Vandelay supports exporting and importing strings, serialized JSON and iOS
-encoded NSData (for more complex objects, image data etc.).
-
-Vandelay versions <1.0.0 will have breaking changes between minor versions.
-This means that 0.3.0 will not be compatible with 0.2.0, and so on.
+Vandelay is a Swift library that can be used to import and export data and
+strings. It supports strings, serialized JSON and encoded Data (to be used
+for more complex objects, image data etc.). 
 
                        DESC
 
