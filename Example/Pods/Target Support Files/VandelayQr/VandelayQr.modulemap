@@ -1,6 +1,0 @@
-framework module VandelayQr {
-  umbrella header "VandelayQr-umbrella.h"
-
-  export *
-  module * { export * }
-}
