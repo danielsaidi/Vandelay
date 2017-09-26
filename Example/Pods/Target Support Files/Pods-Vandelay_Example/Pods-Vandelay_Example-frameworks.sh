@@ -90,15 +90,19 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/QRCodeReader.swift/QRCodeReader.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyDropbox/SwiftyDropbox.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Vandelay/Vandelay.framework"
   install_framework "$BUILT_PRODUCTS_DIR/VandelayDropbox/VandelayDropbox.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/VandelayQr/VandelayQr.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/QRCodeReader.swift/QRCodeReader.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyDropbox/SwiftyDropbox.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Vandelay/Vandelay.framework"
   install_framework "$BUILT_PRODUCTS_DIR/VandelayDropbox/VandelayDropbox.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/VandelayQr/VandelayQr.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

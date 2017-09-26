@@ -22,6 +22,7 @@
 import UIKit
 import Vandelay
 import VandelayDropbox
+import VandelayQr
 
 
 class MainViewController: UITableViewController {
@@ -202,7 +203,7 @@ class MainViewController: UITableViewController {
         alert.add(dataImporter: FileImporter(fileName: photoFile), withTitle: "From a local file")
         alert.add(dataImporter: UrlImporter(url: photoUrl), withTitle: "From a custom url")
         alert.add(dataImporter: DropboxImporter(fileName: photoFile), withTitle: "From Dropbox")
-        //alert.add(dataImporter: QrCodeImporter(vc: self), withTitle: "By scanning a qr code")
+        alert.add(dataImporter: QrCodeImporter(vc: self), withTitle: "By scanning a qr code")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -235,7 +236,7 @@ class MainViewController: UITableViewController {
         alert.add(stringImporter: FileImporter(fileName: todoFile), withTitle: "From a local file")
         alert.add(stringImporter: UrlImporter(url: todoUrl), withTitle: "From a custom url")
         alert.add(stringImporter: DropboxImporter(fileName: todoFile), withTitle: "From Dropbox")
-        //alert.add(stringImporter: QrCodeImporter(vc: self), withTitle: "By scanning a qr code")
+        alert.add(stringImporter: QrCodeImporter(vc: self), withTitle: "By scanning a qr code")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }

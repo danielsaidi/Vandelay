@@ -40,7 +40,7 @@ class QrCodeCreatorDefault: NSObject, QrCodeCreator {
         filter.setValue(data, forKey: "inputMessage")
         let cgScale = CGFloat(scale)
         let transform = CGAffineTransform(scaleX: cgScale, y: cgScale)
-        guard let output = filter.outputImage?.applying(transform) else { return nil }
+        guard let output = filter.outputImage?.transformed(by: transform) else { return nil }
         return UIImage(ciImage: output)
     }
 }
