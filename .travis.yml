@@ -2,8 +2,8 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode8
-language: objective-c
+osx_image: xcode9
+language: swift
 
 before_install:
   - brew update
