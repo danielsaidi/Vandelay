@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = 'VandelayQr'
-  s.version          = '0.5.0'
-  s.summary          = 'Vandelay is an importer/exporter for iOS.'
+  s.version          = '0.6.0'
+  s.summary          = 'VandelayQr is a QR code extension to Vandelay.'
 
   s.description      = <<-DESC
-VandelayQr adds QR code functionality to Vandelay. With VandelayQr you can
-import data by scanning a QR code.
+VandelayQr adds QR code support to Vandelay. You can use it to import
+data by scanning QR codes.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'
@@ -16,7 +16,7 @@ import data by scanning a QR code.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'VandelayQr/Classes/**/*'
+  s.source_files = 'Vandelay/VandelayQr/**/*'
   
   s.dependency 'QRCodeReader.swift'
   s.dependency 'Vandelay'

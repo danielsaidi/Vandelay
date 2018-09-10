@@ -1,0 +1,2 @@
+github "yannickl/QRCodeReader.swift" >= 8.2.0
+github "dropbox/SwiftyDropbox" ~> 4.6.0

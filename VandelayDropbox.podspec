@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = 'VandelayDropbox'
-  s.version          = '0.5.0'
-  s.summary          = 'Vandelay is an iOS importer/exporter.'
+  s.version          = '0.6.0'
+  s.summary          = 'VandelayDropbox is a Dropbox extension to Vandelay.'
 
   s.description      = <<-DESC
-VandelayDropbox adds Dropbox support to Vandelay. With VandelayDropbox you
-can export to and import from a Dropbox app folder.
+VandelayDropbox adds Dropbox support to Vandelay. You can use it to export
+and import data to/from a Dropbox app folder.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/vandelay'
@@ -16,7 +16,7 @@ can export to and import from a Dropbox app folder.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'VandelayDropbox/Classes/**/*'
+  s.source_files = 'Vandelay/VandelayDropbox/**/*'
   
   s.dependency 'SwiftyDropbox'
   s.dependency 'Vandelay'

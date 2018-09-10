@@ -1,6 +1,0 @@
-framework module Vandelay {
-  umbrella header "Vandelay-umbrella.h"
-
-  export *
-  module * { export * }
-}
