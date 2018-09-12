@@ -6,6 +6,6 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public typealias ImportCompletion = (_ result: ImportResult) -> ()

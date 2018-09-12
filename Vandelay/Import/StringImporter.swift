@@ -8,14 +8,18 @@
 
 /*
  
- This protocol is implemented by all Vandelay importers
- that can import strings, e.g. JSON serialized objects.
+ This protocol is implemented by all Vandelay exporters that
+ can import strings, e.g. JSON serialized objects.
+ 
+ A string importer will just read strings from its supported
+ source, then return it in the import result. You must parse
+ the string and import any importable content manually.
  
  */
 
 import Foundation
 
-public protocol StringImporter: class, Importer {
+public protocol StringImporter: Importer {
     
-    func importString(completion: ImportCompletion?)
+    func importString(completion: @escaping ImportCompletion)
 }

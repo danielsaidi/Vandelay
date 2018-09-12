@@ -8,22 +8,33 @@
 
 /*
  
- This importer can import strings from the pasteboard.
+ This importer can import strings from the system pasteboard.
  
  */
 
 import UIKit
 
-public class PasteboardImporter: NSObject, StringImporter {
-
-    public private(set) var importMethod = "Pasteboard"
+public class PasteboardImporter: StringImporter {
     
-    public func importString(completion: ImportCompletion?) {
-        let string = UIPasteboard.general.string
-        if string == nil {
-            completion?(getResult(withState: .cancelled))
-        } else {
-            completion?(getResult(withString: string!))
+    
+    // MARK: - Initialization
+    
+    public init() {}
+    
+    
+    // MARK: - Properties
+    
+    public let importMethod = ImportMethod.pasteboard
+    
+    
+    // MARK: - StringImporter
+    
+    public func importString(completion: @escaping ImportCompletion) {
+        guard let string = UIPasteboard.general.string else {
+            let result = ImportResult(method: importMethod, state: .failed)
+            return completion(result)
         }
+        let result = ImportResult(method: importMethod, string: string)
+        completion(result)
     }
 }

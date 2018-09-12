@@ -8,9 +8,13 @@
 
 /*
  
- This protocol is implemented by all Vandelay importers
- that can import NSData. Use data importers for objects
- that cannot be serialized to strings or JSON.
+ This protocol is implemented by all Vandelay importers that
+ can be used to import Data. Use them for types that can not
+ be serialized, e.g. types with binary properties.
+ 
+ A data importer will just read data from a supported source
+ and return it in the import result. You must parse the data
+ and import any importable content manually.
  
  */
 
@@ -18,5 +22,5 @@ import Foundation
 
 public protocol DataImporter: class, Importer {
     
-    func importData(completion: ImportCompletion?)
+    func importData(completion: @escaping ImportCompletion)
 }

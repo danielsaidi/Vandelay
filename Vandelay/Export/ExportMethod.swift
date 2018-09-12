@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ExportMethod: String {
+public enum ExportMethod {
     
     case
     email,

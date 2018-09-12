@@ -8,60 +8,53 @@
 
 /*
  
- This exporter can import strings and data from custom
- urls, e.g. a file on the Internet, a REST api etc.
+ This exporter can import strings and data from a custom url,
+ e.g. a file on the Internet, a REST api etc.
  
- Since url importing is asynchronous, you will receive
- two callbacks - one to tell you that the import begun,
- and one to tell you if it succeeded or failed.
- 
- Make sure to adjust your Info.plist file to allow the
- app to request external urls, otherwise this importer
- will not work.
+ Make sure to adjust the Info.plist file to allow the app to
+ request external urls, otherwise the importer will not work.
  
  */
 
 import Foundation
 
-public class UrlImporter: NSObject, DataImporter, StringImporter {
+public class UrlImporter: DataImporter, StringImporter {
     
     
     // MARK: - Initialization
     
     public init(url: URL) {
         self.url = url
-        super.init()
     }
     
     
     // MARK: - Properties
     
-    public private(set) var importMethod = "URL"
+    public let importMethod = ImportMethod.url
+    public let url: URL
     
-    private var url: URL
     
+    // MARK: - Public Functions
     
-    // MARK: - Public functions
-    
-    public func importData(completion: ImportCompletion?) {
-        completion?(ImportResult(state: .inProgress))
-        
+    public func importData(completion: @escaping ImportCompletion) {
         do {
             let data = try Data(contentsOf: url)
-            completion?(self.getResult(withData: data))
+            let result = ImportResult(method: importMethod, data: data)
+            completion(result)
         } catch {
-            completion?(self.getResult(withError: error))
+            let result = ImportResult(method: importMethod, error: error)
+            completion(result)
         }
     }
     
-    public func importString(completion: ImportCompletion?) {
-        completion?(ImportResult(state: .inProgress))
-        
+    public func importString(completion: @escaping ImportCompletion) {
         do {
-            let contents = try String(contentsOf: url, encoding: .utf8)
-            completion?(self.getResult(withString: contents))
+            let string = try String(contentsOf: url, encoding: .utf8)
+            let result = ImportResult(method: importMethod, string: string)
+            completion(result)
         } catch {
-            completion?(self.getResult(withError: error))
+            let result = ImportResult(method: importMethod, error: error)
+            completion(result)
         }
     }
 }

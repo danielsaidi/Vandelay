@@ -69,7 +69,7 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: - Errors
     
-    enum MessageExporterError: Error {
+    enum ExportError: Error {
         case fromViewControllerDeallocated
         case stringCouldNotBeEncoded
     }
@@ -79,7 +79,7 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
     
     public func export(data: Data, completion: @escaping ExportCompletion) {
         guard let vc = fromViewController else {
-            let error = MessageExporterError.fromViewControllerDeallocated
+            let error = ExportError.fromViewControllerDeallocated
             let result = ExportResult(method: exportMethod, error: error)
             return completion(result)
         }
@@ -92,7 +92,7 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
     
     public func export(string: String, completion: @escaping ExportCompletion) {
         guard let data = string.data(using: .utf8) else {
-            let error = MessageExporterError.stringCouldNotBeEncoded
+            let error = ExportError.stringCouldNotBeEncoded
             let result = ExportResult(method: exportMethod, error: error)
             return completion(result)
         }

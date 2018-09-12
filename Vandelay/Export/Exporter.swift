@@ -8,9 +8,9 @@
 
 /*
  
- This protocol gives Vandelay exporters access to core
- export functionality. It should not be implemented by
- classes outside of Vandelay.
+ This protocol is inherited by the other exporter protocols.
+ It has no logic besides specifying an export method and to
+ provide encoding utilities.
  
  */
 

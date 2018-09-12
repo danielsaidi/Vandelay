@@ -8,83 +8,92 @@
 
 /*
  
- This exporter can import strings and data from a file
- in the app's document directory.
+ This exporter can import strings and data from files in the
+ app's document directory.
  
- Use the fileName initializer if your file should have
- the same name at all times. Use the fileNameGenerator
+ Use the `fileName` initializer if the imported files should
+ have the same name at all times. Use the `fileNameGenerator`
  initializer if you require dynamic file names.
  
  */
 
-
 import UIKit
 
-public class FileImporter: NSObject, DataImporter, StringImporter {
+public class FileImporter: DataImporter, StringImporter {
     
     
     // MARK: Initialization
     
-    public convenience init(fileName: String) {
-        self.init(fileNameGenerator: StaticFileNameGenerator(fileName: fileName))
-    }
-    
-    public init(fileNameGenerator: FileNameGenerator) {
-        self.fileNameGenerator = fileNameGenerator
-        super.init()
+    public init(fileName: String) {
+        fileNameGenerator = StaticFileNameGenerator(fileName: fileName)
     }
     
     
-    // MARK: Properties
+    // MARK: - Dependencies
     
-    public private(set) var importMethod = "File"
-    
-    public var errorMessageForInvalidFilePath = "FileImporter could not retrieve a valid file path."
-    
-    private var fileNameGenerator: FileNameGenerator
+    private let fileNameGenerator: FileNameGenerator
     
     
-    // MARK: Public functions
+    // MARK: - Properties
     
-    public func importData(completion: ImportCompletion?) {
+    public let importMethod = ImportMethod.file
+    
+    
+    // MARK: - Errors
+    
+    enum ImportError: Error {
+        case invalidFilePath
+    }
+    
+    
+    // MARK: - Public Functions
+    
+    public func importData(completion: @escaping ImportCompletion) {
         guard let url = getFileUrl() else {
-            completion?(getResult(withErrorMessage: errorMessageForInvalidFilePath))
-            return
+            let result = ImportResult(method: importMethod, error: ImportError.invalidFilePath)
+            return completion(result)
         }
-        
+
         do {
             let data = try Data(contentsOf: url, options: .uncachedRead)
-            completion?(getResult(withData: data))
+            let result = ImportResult(method: importMethod, data: data)
+            completion(result)
         } catch {
-            completion?(self.getResult(withError: error))
+            let result = ImportResult(method: importMethod, error: ImportError.invalidFilePath)
+            completion(result)
         }
     }
     
-    public func importString(completion: ImportCompletion?) {
+    public func importString(completion: @escaping ImportCompletion) {
         guard let path = getFilePath() else {
-            completion?(getResult(withErrorMessage: errorMessageForInvalidFilePath))
-            return
+            let result = ImportResult(method: importMethod, error: ImportError.invalidFilePath)
+            return completion(result)
         }
-        
+
         do {
             let string = try String(contentsOfFile: path, encoding: .utf8)
-            completion?(getResult(withString: string))
+            let result = ImportResult(method: importMethod, string: string)
+            completion(result)
         } catch {
-            completion?(self.getResult(withError: error))
+            let result = ImportResult(method: importMethod, error: ImportError.invalidFilePath)
+            completion(result)
         }
     }
+}
+
+
+// MARK: - Private Functions
+
+private extension FileImporter {
     
-    
-    // MARK: Private functions
-    
-    private func getFilePath() -> String? {
+    func getFilePath() -> String? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         guard let path = paths.first else { return nil }
         let fileName = fileNameGenerator.getFileName()
         return "\(path)/\(fileName)"
     }
     
-    private func getFileUrl() -> URL? {
+    func getFileUrl() -> URL? {
         guard let path = getFilePath() else { return nil }
         return URL(string: "file://\(path)")
     }

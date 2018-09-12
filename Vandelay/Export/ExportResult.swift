@@ -10,26 +10,29 @@ import Foundation
 
 public struct ExportResult {
     
-    public init(method: ExportMethod, state: ExportState) {
+    public init(method: ExportMethod, state: ExportState, error: Error? = nil) {
+        self.method = method
         self.state = state
-        self.exportMethod = method
+        self.error = error
+        self.filePath = nil
     }
     
     public init(method: ExportMethod, error: Error) {
+        self.method = method
         self.state = .failed
-        self.exportMethod = method
-        self.error = error as NSError
+        self.error = error
+        self.filePath = nil
     }
     
-    public init(method: ExportMethod, errorMessage: String) {
-        let domain = "com.vandelay.export.error"
-        let userInfo = ["Description": errorMessage]
-        let error = NSError(domain: domain, code: -1, userInfo: userInfo)
-        self.init(method: method, error: error)
+    public init(method: ExportMethod, filePath: String) {
+        self.method = method
+        self.state = .completed
+        self.error = nil
+        self.filePath = filePath
     }
     
-    public var exportMethod: ExportMethod
-    public var error: Error?
-    public var filePath: String?
-    public var state: ExportState
+    public let method: ExportMethod
+    public let state: ExportState
+    public let error: Error?
+    public let filePath: String?
 }

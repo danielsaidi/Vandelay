@@ -8,7 +8,7 @@
 
 /*
  
- This exporter can export strings to the pasteboard.
+ This exporter can export strings to the system pasteboard.
  
  */
 
@@ -19,14 +19,12 @@ public class PasteboardExporter: StringExporter {
     
     // MARK: - Initialization
     
-    public init() {
-        exportMethod = .pasteboard
-    }
+    public init() {}
     
     
     // MARK: - Properties
     
-    public let exportMethod: ExportMethod
+    public let exportMethod = ExportMethod.pasteboard
 
     
     // MARK: - StringExporter

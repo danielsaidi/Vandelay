@@ -15,7 +15,7 @@
 
 import Foundation
 
-public protocol StringExporter: class, Exporter {
+public protocol StringExporter: Exporter {
     
     func export(string: String, completion: @escaping ExportCompletion)
 }

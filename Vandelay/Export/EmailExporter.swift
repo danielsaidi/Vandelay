@@ -69,7 +69,7 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: - Errors
     
-    enum EmailExporterError: Error {
+    enum ExportError: Error {
         case fromViewControllerDeallocated
         case stringCouldNotBeEncoded
     }
@@ -79,7 +79,7 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
     
     public func export(data: Data, completion: @escaping ExportCompletion) {
         guard let vc = fromViewController else {
-            let error = EmailExporterError.fromViewControllerDeallocated
+            let error = ExportError.fromViewControllerDeallocated
             let result = ExportResult(method: exportMethod, error: error)
             return completion(result)
         }
@@ -92,7 +92,7 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
     
     public func export(string: String, completion: @escaping ExportCompletion) {
         guard let data = string.data(using: .utf8) else {
-            let error = EmailExporterError.stringCouldNotBeEncoded
+            let error = ExportError.stringCouldNotBeEncoded
             let result = ExportResult(method: exportMethod, error: error)
             return completion(result)
         }
@@ -123,8 +123,7 @@ extension EmailExporter: MFMailComposeViewControllerDelegate {
     
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.presentingViewController?.dismiss(animated: true, completion: nil)
-        var result = ExportResult(method: exportMethod, state: result.exportState)
-        result.error = error
+        let result = ExportResult(method: exportMethod, state: result.exportState, error: error)
         completion?(result)
     }
 }

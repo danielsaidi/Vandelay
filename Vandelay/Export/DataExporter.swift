@@ -16,7 +16,7 @@
 
 import Foundation
 
-public protocol DataExporter: class, Exporter {
+public protocol DataExporter: Exporter {
     
     func export(data: Data, completion: @escaping ExportCompletion)
 }

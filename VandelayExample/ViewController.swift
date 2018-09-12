@@ -26,10 +26,16 @@ class ViewController: UIViewController {
         exporter = FileExporter(fileName: "foo.json")
         exporter.exportString(for: obj, encoder: JSONEncoder()) { (result) in
             print(result)
+            
+            self.importer = FileImporter(fileName: "foo.json")
+            self.importer.importString { (result) in
+                print(result)
+            }
         }
     }
 
     var exporter: StringExporter!
+    var importer: StringImporter!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

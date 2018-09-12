@@ -8,9 +8,11 @@
 
 import Foundation
 
-public enum ImportState { case
+public enum ImportState {
+    
+    case
     inProgress,
-    completed,
     cancelled,
+    completed,
     failed
 }

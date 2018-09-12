@@ -8,11 +8,11 @@
 
 /*
  
- This exporter can export strings and data to files in
- the app's document directory.
+ This exporter can export strings and data to files that end
+ are stored in the app's document directory.
  
- Use the fileName initializer if your file should have
- the same name at all times. Use the fileNameGenerator
+ Use the `fileName` initializer if the exported files should
+ have the same name at all times. Use the `fileNameGenerator`
  initializer if you require dynamic file names.
  
  */
@@ -46,7 +46,7 @@ public class FileExporter: DataExporter, StringExporter {
     
     // MARK: - Errors
     
-    enum FileExporterError: Error {
+    enum ExportError: Error {
         case invalidFilePath
         case stringCouldNotBeEncoded
     }
@@ -56,7 +56,7 @@ public class FileExporter: DataExporter, StringExporter {
     
     public func export(data: Data, completion: @escaping ExportCompletion) {
         guard let url = getFileUrl() else {
-            let error = FileExporterError.invalidFilePath
+            let error = ExportError.invalidFilePath
             let result = ExportResult(method: exportMethod, error: error)
             return completion(result)
         }
@@ -68,7 +68,7 @@ public class FileExporter: DataExporter, StringExporter {
     
     public func export(string: String, completion: @escaping ExportCompletion) {
         guard let data = string.data(using: .utf8) else {
-            let error = FileExporterError.stringCouldNotBeEncoded
+            let error = ExportError.stringCouldNotBeEncoded
             let result = ExportResult(method: exportMethod, error: error)
             return completion(result)
         }
@@ -92,8 +92,7 @@ private extension FileExporter {
     func write(data: Data, to url: URL, completion: @escaping ExportCompletion) {
         do {
             try data.write(to: url, options: .atomicWrite)
-            var result = ExportResult(method: exportMethod, state: .completed)
-            result.filePath = url.absoluteString
+            let result = ExportResult(method: exportMethod, filePath: url.absoluteString)
             completion(result)
         } catch {
             let result = ExportResult(method: exportMethod, error: error)

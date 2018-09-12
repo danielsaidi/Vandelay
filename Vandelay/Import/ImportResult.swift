@@ -8,15 +8,43 @@
 
 import Foundation
 
-public class ImportResult: NSObject {
+public struct ImportResult {
     
-    public init(state: ImportState) {
+    public init(method: ImportMethod, state: ImportState) {
+        self.method = method
         self.state = state
+        self.data = nil
+        self.error = nil
+        self.string = nil
     }
     
-    public var data: Data?
-    public var error: NSError?
-    public var importMethod = ""
-    public var state: ImportState
-    public var string: String?
+    public init(method: ImportMethod, string: String) {
+        self.method = method
+        self.state = .completed
+        self.data = nil
+        self.error = nil
+        self.string = string
+    }
+    
+    public init(method: ImportMethod, data: Data) {
+        self.method = method
+        self.state = .completed
+        self.data = data
+        self.error = nil
+        self.string = nil
+    }
+    
+    public init(method: ImportMethod, error: Error) {
+        self.method = method
+        self.state = .failed
+        self.data = nil
+        self.error = error
+        self.string = nil
+    }
+    
+    public let method: ImportMethod
+    public let state: ImportState
+    public let data: Data?
+    public let error: Error?
+    public let string: String?
 }

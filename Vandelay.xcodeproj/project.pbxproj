@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8400C5B72148F58500C19232 /* ImportMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5B62148F58500C19232 /* ImportMethod.swift */; };
 		84B1438621463A42001CE5D7 /* Vandelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B1437821463A42001CE5D7 /* Vandelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B143C821463A74001CE5D7 /* VandelayDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143BA21463A74001CE5D7 /* VandelayDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B1440821463AC9001CE5D7 /* VandelayQr.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143FA21463AC9001CE5D7 /* VandelayQr.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,7 +21,6 @@
 		84B1443721463D85001CE5D7 /* Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441821463D85001CE5D7 /* Importer.swift */; };
 		84B1443821463D85001CE5D7 /* DataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441921463D85001CE5D7 /* DataImporter.swift */; };
 		84B1443921463D85001CE5D7 /* ImportCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441A21463D85001CE5D7 /* ImportCompletion.swift */; };
-		84B1443A21463D85001CE5D7 /* ImportAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441B21463D85001CE5D7 /* ImportAlertController.swift */; };
 		84B1443B21463D85001CE5D7 /* ImportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441C21463D85001CE5D7 /* ImportResult.swift */; };
 		84B1443C21463D85001CE5D7 /* PasteboardImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441D21463D85001CE5D7 /* PasteboardImporter.swift */; };
 		84B1443E21463D85001CE5D7 /* ExportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1442021463D85001CE5D7 /* ExportResult.swift */; };
@@ -89,6 +89,7 @@
 
 /* Begin PBXFileReference section */
 		8400C5B22148C9B100C19232 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		8400C5B62148F58500C19232 /* ImportMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportMethod.swift; sourceTree = "<group>"; };
 		844FE2732148B7DD00CE7BD7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		84B1437521463A42001CE5D7 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B1437821463A42001CE5D7 /* Vandelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vandelay.h; sourceTree = "<group>"; };
@@ -109,7 +110,6 @@
 		84B1441821463D85001CE5D7 /* Importer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Importer.swift; sourceTree = "<group>"; };
 		84B1441921463D85001CE5D7 /* DataImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataImporter.swift; sourceTree = "<group>"; };
 		84B1441A21463D85001CE5D7 /* ImportCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCompletion.swift; sourceTree = "<group>"; };
-		84B1441B21463D85001CE5D7 /* ImportAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportAlertController.swift; sourceTree = "<group>"; };
 		84B1441C21463D85001CE5D7 /* ImportResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportResult.swift; sourceTree = "<group>"; };
 		84B1441D21463D85001CE5D7 /* PasteboardImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardImporter.swift; sourceTree = "<group>"; };
 		84B1442021463D85001CE5D7 /* ExportResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportResult.swift; sourceTree = "<group>"; };
@@ -247,16 +247,16 @@
 		84B1441321463D85001CE5D7 /* Import */ = {
 			isa = PBXGroup;
 			children = (
-				84B1441421463D85001CE5D7 /* UrlImporter.swift */,
-				84B1441521463D85001CE5D7 /* StringImporter.swift */,
-				84B1441621463D85001CE5D7 /* ImportState.swift */,
-				84B1441721463D85001CE5D7 /* FileImporter.swift */,
-				84B1441821463D85001CE5D7 /* Importer.swift */,
 				84B1441921463D85001CE5D7 /* DataImporter.swift */,
+				84B1441721463D85001CE5D7 /* FileImporter.swift */,
 				84B1441A21463D85001CE5D7 /* ImportCompletion.swift */,
-				84B1441B21463D85001CE5D7 /* ImportAlertController.swift */,
+				84B1441821463D85001CE5D7 /* Importer.swift */,
+				8400C5B62148F58500C19232 /* ImportMethod.swift */,
 				84B1441C21463D85001CE5D7 /* ImportResult.swift */,
+				84B1441621463D85001CE5D7 /* ImportState.swift */,
 				84B1441D21463D85001CE5D7 /* PasteboardImporter.swift */,
+				84B1441521463D85001CE5D7 /* StringImporter.swift */,
+				84B1441421463D85001CE5D7 /* UrlImporter.swift */,
 			);
 			path = Import;
 			sourceTree = "<group>";
@@ -536,6 +536,7 @@
 				84B1444021463D85001CE5D7 /* StringExporter.swift in Sources */,
 				84B1443321463D85001CE5D7 /* UrlImporter.swift in Sources */,
 				84B1443721463D85001CE5D7 /* Importer.swift in Sources */,
+				8400C5B72148F58500C19232 /* ImportMethod.swift in Sources */,
 				84B1444221463D85001CE5D7 /* DataExporter.swift in Sources */,
 				84B1443121463D85001CE5D7 /* StaticFileNameGenerator.swift in Sources */,
 				84B1443E21463D85001CE5D7 /* ExportResult.swift in Sources */,
@@ -546,7 +547,6 @@
 				84B1444721463D85001CE5D7 /* ExportState.swift in Sources */,
 				84B1443C21463D85001CE5D7 /* PasteboardImporter.swift in Sources */,
 				84B1443421463D85001CE5D7 /* StringImporter.swift in Sources */,
-				84B1443A21463D85001CE5D7 /* ImportAlertController.swift in Sources */,
 				84B1443921463D85001CE5D7 /* ImportCompletion.swift in Sources */,
 				84B1443F21463D85001CE5D7 /* ExportCompletion.swift in Sources */,
 				84F22D5A21479FA2005DEC41 /* ExportMethod.swift in Sources */,
