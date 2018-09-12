@@ -15,6 +15,20 @@
 		8400C5CB21491F8A00C19232 /* QrCodeImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C821491F8900C19232 /* QrCodeImporter.swift */; };
 		8400C5D02149B82700C19232 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
 		8400C5D12149B82E00C19232 /* QRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8400C5D92149BC6900C19232 /* VandelayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5D82149BC6900C19232 /* VandelayTests.swift */; };
+		8400C5DB2149BC6900C19232 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
+		8400C5E32149BC9800C19232 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; };
+		8400C5E42149BC9800C19232 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; };
+		8400C5E62149BCA800C19232 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8400C5E72149BCA800C19232 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8400C5ED2149BDAE00C19232 /* MockDataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5EC2149BDAE00C19232 /* MockDataExporter.swift */; };
+		8400C5EF2149BEA000C19232 /* DataExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5EE2149BEA000C19232 /* DataExporterTests.swift */; };
+		8400C5F12149C10500C19232 /* EmailExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5F02149C10500C19232 /* EmailExporterTests.swift */; };
+		8400C5F32149C1E900C19232 /* ExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5F22149C1E900C19232 /* ExporterTests.swift */; };
+		8400C5F52149C38C00C19232 /* FileExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5F42149C38C00C19232 /* FileExporterTests.swift */; };
+		8400C5F72149C3BA00C19232 /* MessageExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5F62149C3BA00C19232 /* MessageExporterTests.swift */; };
+		8400C5F92149C3EC00C19232 /* PasteboardExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5F82149C3EC00C19232 /* PasteboardExporterTests.swift */; };
+		8400C5FB214A2B0200C19232 /* StringExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5FA214A2B0200C19232 /* StringExporterTests.swift */; };
 		84B1438621463A42001CE5D7 /* Vandelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B1437821463A42001CE5D7 /* Vandelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B143C821463A74001CE5D7 /* VandelayDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143BA21463A74001CE5D7 /* VandelayDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B1440821463AC9001CE5D7 /* VandelayQr.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143FA21463AC9001CE5D7 /* VandelayQr.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +69,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8400C5DC2149BC6900C19232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B1436C21463A42001CE5D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B1437421463A42001CE5D7;
+			remoteInfo = Vandelay;
+		};
+		8400C5E82149BCFC00C19232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B1436C21463A42001CE5D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F22D6B2148B184005DEC41;
+			remoteInfo = VandelayExample;
+		};
 		84F22DAE2148B656005DEC41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84B1436C21463A42001CE5D7 /* Project object */;
@@ -89,6 +117,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8400C5E52149BC9E00C19232 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8400C5E62149BCA800C19232 /* Nimble.framework in CopyFiles */,
+				8400C5E72149BCA800C19232 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84F22DB82148B657005DEC41 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +150,19 @@
 		8400C5C521491F8900C19232 /* QrCodeCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeCreator.swift; sourceTree = "<group>"; };
 		8400C5C621491F8900C19232 /* StandardQrCodeCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardQrCodeCreator.swift; sourceTree = "<group>"; };
 		8400C5C821491F8900C19232 /* QrCodeImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeImporter.swift; sourceTree = "<group>"; };
+		8400C5D62149BC6900C19232 /* VandelayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VandelayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8400C5D82149BC6900C19232 /* VandelayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VandelayTests.swift; sourceTree = "<group>"; };
+		8400C5DA2149BC6900C19232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8400C5E12149BC9800C19232 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		8400C5E22149BC9800C19232 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		8400C5EC2149BDAE00C19232 /* MockDataExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataExporter.swift; sourceTree = "<group>"; };
+		8400C5EE2149BEA000C19232 /* DataExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExporterTests.swift; sourceTree = "<group>"; };
+		8400C5F02149C10500C19232 /* EmailExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailExporterTests.swift; sourceTree = "<group>"; };
+		8400C5F22149C1E900C19232 /* ExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExporterTests.swift; sourceTree = "<group>"; };
+		8400C5F42149C38C00C19232 /* FileExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExporterTests.swift; sourceTree = "<group>"; };
+		8400C5F62149C3BA00C19232 /* MessageExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageExporterTests.swift; sourceTree = "<group>"; };
+		8400C5F82149C3EC00C19232 /* PasteboardExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardExporterTests.swift; sourceTree = "<group>"; };
+		8400C5FA214A2B0200C19232 /* StringExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExporterTests.swift; sourceTree = "<group>"; };
 		844FE2732148B7DD00CE7BD7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		84B1437521463A42001CE5D7 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B1437821463A42001CE5D7 /* Vandelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vandelay.h; sourceTree = "<group>"; };
@@ -165,6 +217,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8400C5D32149BC6900C19232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8400C5E32149BC9800C19232 /* Nimble.framework in Frameworks */,
+				8400C5E42149BC9800C19232 /* Quick.framework in Frameworks */,
+				8400C5DB2149BC6900C19232 /* Vandelay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84B1437121463A42001CE5D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +263,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8400C5D72149BC6900C19232 /* VandelayTests */ = {
+			isa = PBXGroup;
+			children = (
+				8400C5EA2149BD9A00C19232 /* Export */,
+				8400C5D82149BC6900C19232 /* VandelayTests.swift */,
+				8400C5DA2149BC6900C19232 /* Info.plist */,
+			);
+			path = VandelayTests;
+			sourceTree = "<group>";
+		};
+		8400C5EA2149BD9A00C19232 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				8400C5EB2149BDA300C19232 /* Mocks */,
+				8400C5EE2149BEA000C19232 /* DataExporterTests.swift */,
+				8400C5F02149C10500C19232 /* EmailExporterTests.swift */,
+				8400C5F22149C1E900C19232 /* ExporterTests.swift */,
+				8400C5F42149C38C00C19232 /* FileExporterTests.swift */,
+				8400C5F62149C3BA00C19232 /* MessageExporterTests.swift */,
+				8400C5F82149C3EC00C19232 /* PasteboardExporterTests.swift */,
+				8400C5FA214A2B0200C19232 /* StringExporterTests.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		8400C5EB2149BDA300C19232 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8400C5EC2149BDAE00C19232 /* MockDataExporter.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		84B1436B21463A42001CE5D7 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +304,7 @@
 				84B143B921463A74001CE5D7 /* VandelayDropbox */,
 				84B143F921463AC9001CE5D7 /* VandelayQr */,
 				84F22D6D2148B184005DEC41 /* VandelayExample */,
+				8400C5D72149BC6900C19232 /* VandelayTests */,
 				84B1437621463A42001CE5D7 /* Products */,
 				84F22D60214850AA005DEC41 /* Frameworks */,
 			);
@@ -221,6 +317,7 @@
 				84B143B821463A74001CE5D7 /* VandelayDropbox.framework */,
 				84B143F821463AC8001CE5D7 /* VandelayQr.framework */,
 				84F22D6C2148B184005DEC41 /* VandelayExample.app */,
+				8400C5D62149BC6900C19232 /* VandelayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,9 +358,9 @@
 		84B1440F21463D85001CE5D7 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				84B1441221463D85001CE5D7 /* FileNameGenerator.swift */,
 				84B1441021463D85001CE5D7 /* RandomFileNameGenerator.swift */,
 				84B1441121463D85001CE5D7 /* StaticFileNameGenerator.swift */,
-				84B1441221463D85001CE5D7 /* FileNameGenerator.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -325,6 +422,8 @@
 		84F22D60214850AA005DEC41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8400C5E12149BC9800C19232 /* Nimble.framework */,
+				8400C5E22149BC9800C19232 /* Quick.framework */,
 				8400C5B821491EDB00C19232 /* QRCodeReader.framework */,
 			);
 			name = Frameworks;
@@ -373,6 +472,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8400C5D52149BC6900C19232 /* VandelayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8400C5DE2149BC6900C19232 /* Build configuration list for PBXNativeTarget "VandelayTests" */;
+			buildPhases = (
+				8400C5D22149BC6900C19232 /* Sources */,
+				8400C5D32149BC6900C19232 /* Frameworks */,
+				8400C5D42149BC6900C19232 /* Resources */,
+				8400C5E52149BC9E00C19232 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8400C5DD2149BC6900C19232 /* PBXTargetDependency */,
+				8400C5E92149BCFC00C19232 /* PBXTargetDependency */,
+			);
+			name = VandelayTests;
+			productName = VandelayTests;
+			productReference = 8400C5D62149BC6900C19232 /* VandelayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		84B1437421463A42001CE5D7 /* Vandelay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84B1438921463A42001CE5D7 /* Build configuration list for PBXNativeTarget "Vandelay" */;
@@ -460,6 +579,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Daniel Saidi";
 				TargetAttributes = {
+					8400C5D52149BC6900C19232 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 84F22D6B2148B184005DEC41;
+					};
 					84B1437421463A42001CE5D7 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -492,11 +615,19 @@
 				84B143B721463A74001CE5D7 /* VandelayDropbox */,
 				84B143F721463AC8001CE5D7 /* VandelayQr */,
 				84F22D6B2148B184005DEC41 /* VandelayExample */,
+				8400C5D52149BC6900C19232 /* VandelayTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8400C5D42149BC6900C19232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84B1437321463A42001CE5D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,6 +679,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8400C5D22149BC6900C19232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8400C5ED2149BDAE00C19232 /* MockDataExporter.swift in Sources */,
+				8400C5F92149C3EC00C19232 /* PasteboardExporterTests.swift in Sources */,
+				8400C5EF2149BEA000C19232 /* DataExporterTests.swift in Sources */,
+				8400C5D92149BC6900C19232 /* VandelayTests.swift in Sources */,
+				8400C5F72149C3BA00C19232 /* MessageExporterTests.swift in Sources */,
+				8400C5F12149C10500C19232 /* EmailExporterTests.swift in Sources */,
+				8400C5F52149C38C00C19232 /* FileExporterTests.swift in Sources */,
+				8400C5FB214A2B0200C19232 /* StringExporterTests.swift in Sources */,
+				8400C5F32149C1E900C19232 /* ExporterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84B1437021463A42001CE5D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,6 +755,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8400C5DD2149BC6900C19232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B1437421463A42001CE5D7 /* Vandelay */;
+			targetProxy = 8400C5DC2149BC6900C19232 /* PBXContainerItemProxy */;
+		};
+		8400C5E92149BCFC00C19232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F22D6B2148B184005DEC41 /* VandelayExample */;
+			targetProxy = 8400C5E82149BCFC00C19232 /* PBXContainerItemProxy */;
+		};
 		84F22DAF2148B656005DEC41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84B1437421463A42001CE5D7 /* Vandelay */;
@@ -645,6 +802,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8400C5DF2149BC6900C19232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PMEDFW438U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = VandelayTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VandelayExample.app/VandelayExample";
+			};
+			name = Debug;
+		};
+		8400C5E02149BC6900C19232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PMEDFW438U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = VandelayTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VandelayExample.app/VandelayExample";
+			};
+			name = Release;
+		};
 		84B1438721463A42001CE5D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -977,6 +1182,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8400C5DE2149BC6900C19232 /* Build configuration list for PBXNativeTarget "VandelayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8400C5DF2149BC6900C19232 /* Debug */,
+				8400C5E02149BC6900C19232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		84B1436F21463A42001CE5D7 /* Build configuration list for PBXProject "Vandelay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

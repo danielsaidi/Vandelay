@@ -22,13 +22,13 @@ public protocol Exporter {
 }
 
 
-extension Exporter {
+public extension Exporter {
     
-    func getData<T: Encodable>(for object: T, using encoder: JSONEncoder) throws -> Data {
+    func getData<T: Encodable>(for object: T, using encoder: JSONEncoder = JSONEncoder()) throws -> Data {
         return try encoder.encode(object)
     }
     
-    func getString<T: Encodable>(for object: T, using encoder: JSONEncoder) throws -> String {
+    func getString<T: Encodable>(for object: T, using encoder: JSONEncoder = JSONEncoder()) throws -> String {
         let data = try getData(for: object, using: encoder)
         return String(data: data, encoding: .utf8)!
     }
