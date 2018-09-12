@@ -8,10 +8,6 @@
 
 /*
  
- IMPORTANT: Since this exporter opens an e-mail compose view
- controller, you must keep a strong reference to it to avoid
- that it is deallocated while you complete the export.
- 
  This exporter can export string and data files by attaching
  them to emails.
  
@@ -27,6 +23,10 @@
  is because you instead must link the app with the file type
  you use, then read and import the data that is sent to your
  app when a user taps the file on her/his device.
+ 
+ IMPORTANT: Since this exporter opens an e-mail compose view
+ controller, you must keep a strong reference to it to avoid
+ that it is deallocated while you complete the export.
  
  */
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol QrCodeCreator: class {
+public protocol QrCodeCreator {
     
     func createQrCode(fromUrl url: URL) -> UIImage?
     func createQrCode(fromUrlString string: String) -> UIImage?

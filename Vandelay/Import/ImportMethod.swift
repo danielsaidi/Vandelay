@@ -13,5 +13,6 @@ public enum ImportMethod {
     case
     file,
     pasteboard,
+    qrCode,
     url
 }

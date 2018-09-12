@@ -20,7 +20,7 @@
 
 import Foundation
 
-public protocol DataImporter: class, Importer {
+public protocol DataImporter: Importer {
     
     func importData(completion: @escaping ImportCompletion)
 }

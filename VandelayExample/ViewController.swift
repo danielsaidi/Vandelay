@@ -19,18 +19,24 @@ struct TestClass: Codable {
 }
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let url = "http://vinylsamlaren.se/api/stores/"
+        let img = StandardQrCodeCreator(scale: 6).createQrCode(fromUrlString: url)
+        let imgView = UIImageView(image: img)
+        imgView.center = view.center
+        view.addSubview(imgView)
+        
+        
+        
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let obj = TestClass(name: "name", date: Date(), isEmpty: true)
-        exporter = FileExporter(fileName: "foo.json")
-        exporter.exportString(for: obj, encoder: JSONEncoder()) { (result) in
+        importer = QrCodeImporter(fromViewController: self)
+        importer.importString { (result) in
             print(result)
-            
-            self.importer = FileImporter(fileName: "foo.json")
-            self.importer.importString { (result) in
-                print(result)
-            }
         }
     }
 

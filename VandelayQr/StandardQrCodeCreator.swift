@@ -1,5 +1,5 @@
 //
-//  QrCodeCreatorDefault.swift
+//  StandardQrCodeCreator.swift
 //  Vandelay
 //
 //  Original: https://www.hackingwithswift.com/example-code/media/how-to-create-a-qr-code
@@ -10,31 +10,28 @@
 
 import UIKit
 
-class QrCodeCreatorDefault: NSObject, QrCodeCreator {
+public class StandardQrCodeCreator: QrCodeCreator {
     
     
     // MARK: - Initialization
     
-    init(scale: Int) {
+    public init(scale: Int = 1) {
         self.scale = scale
-        super.init()
     }
-    
     
     
     // MARK: - Properties
     
-    private var scale: Int
-    
+    private let scale: Int
     
     
     // MARK: - Functions
     
-    func createQrCode(fromUrl url: URL) -> UIImage? {
+    public func createQrCode(fromUrl url: URL) -> UIImage? {
         return createQrCode(fromUrlString: url.absoluteString)
     }
     
-    func createQrCode(fromUrlString string: String) -> UIImage? {
+    public func createQrCode(fromUrlString string: String) -> UIImage? {
         guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
         let data = string.data(using: .ascii)
         filter.setValue(data, forKey: "inputMessage")

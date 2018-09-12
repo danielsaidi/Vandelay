@@ -8,10 +8,6 @@
 
 /*
  
- IMPORTANT: Since this exporter opens a message compose view
- controller, you must keep a strong reference to it to avoid
- that it is deallocated while you complete the export.
- 
  This exporter can export string and data files by attaching
  them to messages.
  
@@ -27,6 +23,10 @@
  must instead link your app with the file type you use, then
  read and import the data that is sent to the app when users
  tap the file on their devices.
+ 
+ IMPORTANT: Since this exporter opens a message compose view
+ controller, you must keep a strong reference to it to avoid
+ that it is deallocated while you complete the export.
  
  */
 
