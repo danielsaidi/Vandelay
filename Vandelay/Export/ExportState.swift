@@ -11,7 +11,6 @@ import Foundation
 public enum ExportState {
     
     case
-    inProgress,
     cancelled,
     completed,
     failed

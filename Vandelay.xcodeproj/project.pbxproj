@@ -31,6 +31,7 @@
 		8400C5FB214A2B0200C19232 /* StringExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5FA214A2B0200C19232 /* StringExporterTests.swift */; };
 		8400C5FE214A2C3300C19232 /* StaticFileNameGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5FD214A2C3300C19232 /* StaticFileNameGeneratorTests.swift */; };
 		8400C600214A2CB100C19232 /* RandomFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5FF214A2CB100C19232 /* RandomFileNameGenerator.swift */; };
+		8400C604214A31B100C19232 /* MockDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C603214A31B100C19232 /* MockDataImporter.swift */; };
 		84B1438621463A42001CE5D7 /* Vandelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B1437821463A42001CE5D7 /* Vandelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B143C821463A74001CE5D7 /* VandelayDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143BA21463A74001CE5D7 /* VandelayDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B1440821463AC9001CE5D7 /* VandelayQr.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143FA21463AC9001CE5D7 /* VandelayQr.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,6 +168,7 @@
 		8400C5FA214A2B0200C19232 /* StringExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExporterTests.swift; sourceTree = "<group>"; };
 		8400C5FD214A2C3300C19232 /* StaticFileNameGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticFileNameGeneratorTests.swift; sourceTree = "<group>"; };
 		8400C5FF214A2CB100C19232 /* RandomFileNameGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFileNameGenerator.swift; sourceTree = "<group>"; };
+		8400C603214A31B100C19232 /* MockDataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataImporter.swift; sourceTree = "<group>"; };
 		844FE2732148B7DD00CE7BD7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		84B1437521463A42001CE5D7 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B1437821463A42001CE5D7 /* Vandelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vandelay.h; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		8400C5D72149BC6900C19232 /* VandelayTests */ = {
 			isa = PBXGroup;
 			children = (
+				8400C601214A31A000C19232 /* Import */,
 				8400C5EA2149BD9A00C19232 /* Export */,
 				8400C5FC214A2BF400C19232 /* File */,
 				8400C5DA2149BC6900C19232 /* Info.plist */,
@@ -308,6 +311,22 @@
 				8400C5FF214A2CB100C19232 /* RandomFileNameGenerator.swift */,
 			);
 			path = File;
+			sourceTree = "<group>";
+		};
+		8400C601214A31A000C19232 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				8400C602214A31A700C19232 /* Mock */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		8400C602214A31A700C19232 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8400C603214A31B100C19232 /* MockDataImporter.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		84B1436B21463A42001CE5D7 = {
@@ -704,6 +723,7 @@
 				8400C5FE214A2C3300C19232 /* StaticFileNameGeneratorTests.swift in Sources */,
 				8400C5F72149C3BA00C19232 /* MessageExporterTests.swift in Sources */,
 				8400C5F12149C10500C19232 /* EmailExporterTests.swift in Sources */,
+				8400C604214A31B100C19232 /* MockDataImporter.swift in Sources */,
 				8400C5F52149C38C00C19232 /* FileExporterTests.swift in Sources */,
 				8400C5FB214A2B0200C19232 /* StringExporterTests.swift in Sources */,
 				8400C600214A2CB100C19232 /* RandomFileNameGenerator.swift in Sources */,
