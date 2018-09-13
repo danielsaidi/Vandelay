@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = "http://vinylsamlaren.se/api/stores/"
-        let img = StandardQrCodeCreator(scale: 6).createQrCode(fromUrlString: url)
+        let img = try? StandardQrCodeGenerator(scale: 6).generateQrCode(with: url)
         let imgView = UIImageView(image: img)
         imgView.center = view.center
         view.addSubview(imgView)

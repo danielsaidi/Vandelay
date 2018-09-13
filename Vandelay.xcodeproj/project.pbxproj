@@ -10,8 +10,8 @@
 		8400C5B72148F58500C19232 /* ImportMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5B62148F58500C19232 /* ImportMethod.swift */; };
 		8400C5B921491EDB00C19232 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
 		8400C5BB21491EF000C19232 /* QRCodeReader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8400C5C921491F8900C19232 /* QrCodeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C521491F8900C19232 /* QrCodeCreator.swift */; };
-		8400C5CA21491F8A00C19232 /* StandardQrCodeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C621491F8900C19232 /* StandardQrCodeCreator.swift */; };
+		8400C5C921491F8900C19232 /* QrCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C521491F8900C19232 /* QrCodeGenerator.swift */; };
+		8400C5CA21491F8A00C19232 /* StandardQrCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C621491F8900C19232 /* StandardQrCodeGenerator.swift */; };
 		8400C5CB21491F8A00C19232 /* QrCodeImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C821491F8900C19232 /* QrCodeImporter.swift */; };
 		8400C5D02149B82700C19232 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
 		8400C5D12149B82E00C19232 /* QRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -34,6 +34,8 @@
 		8400C606214A329800C19232 /* FileImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C605214A329800C19232 /* FileImporterTests.swift */; };
 		8400C608214A32A400C19232 /* PasteboardImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C607214A32A400C19232 /* PasteboardImporterTests.swift */; };
 		8400C60A214A32B800C19232 /* UrlImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C609214A32B800C19232 /* UrlImporterTests.swift */; };
+		8400C60D214A33D300C19232 /* QrCodeImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C60C214A33D300C19232 /* QrCodeImporterTests.swift */; };
+		8400C60F214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C60E214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift */; };
 		84B1438621463A42001CE5D7 /* Vandelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B1437821463A42001CE5D7 /* Vandelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B143C821463A74001CE5D7 /* VandelayDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143BA21463A74001CE5D7 /* VandelayDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B1440821463AC9001CE5D7 /* VandelayQr.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143FA21463AC9001CE5D7 /* VandelayQr.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -152,8 +154,8 @@
 /* Begin PBXFileReference section */
 		8400C5B62148F58500C19232 /* ImportMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportMethod.swift; sourceTree = "<group>"; };
 		8400C5B821491EDB00C19232 /* QRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCodeReader.framework; path = Carthage/Build/iOS/QRCodeReader.framework; sourceTree = "<group>"; };
-		8400C5C521491F8900C19232 /* QrCodeCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeCreator.swift; sourceTree = "<group>"; };
-		8400C5C621491F8900C19232 /* StandardQrCodeCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardQrCodeCreator.swift; sourceTree = "<group>"; };
+		8400C5C521491F8900C19232 /* QrCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeGenerator.swift; sourceTree = "<group>"; };
+		8400C5C621491F8900C19232 /* StandardQrCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardQrCodeGenerator.swift; sourceTree = "<group>"; };
 		8400C5C821491F8900C19232 /* QrCodeImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeImporter.swift; sourceTree = "<group>"; };
 		8400C5D62149BC6900C19232 /* VandelayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VandelayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8400C5DA2149BC6900C19232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +175,8 @@
 		8400C605214A329800C19232 /* FileImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileImporterTests.swift; sourceTree = "<group>"; };
 		8400C607214A32A400C19232 /* PasteboardImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardImporterTests.swift; sourceTree = "<group>"; };
 		8400C609214A32B800C19232 /* UrlImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImporterTests.swift; sourceTree = "<group>"; };
+		8400C60C214A33D300C19232 /* QrCodeImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeImporterTests.swift; sourceTree = "<group>"; };
+		8400C60E214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardQrCodeGeneratorTests.swift; sourceTree = "<group>"; };
 		844FE2732148B7DD00CE7BD7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		84B1437521463A42001CE5D7 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B1437821463A42001CE5D7 /* Vandelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vandelay.h; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 				8400C5EA2149BD9A00C19232 /* Export */,
 				8400C5FC214A2BF400C19232 /* File */,
 				8400C601214A31A000C19232 /* Import */,
+				8400C60B214A33A000C19232 /* Qr */,
 			);
 			path = VandelayTests;
 			sourceTree = "<group>";
@@ -335,6 +340,15 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		8400C60B214A33A000C19232 /* Qr */ = {
+			isa = PBXGroup;
+			children = (
+				8400C60C214A33D300C19232 /* QrCodeImporterTests.swift */,
+				8400C60E214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift */,
+			);
+			path = Qr;
+			sourceTree = "<group>";
+		};
 		84B1436B21463A42001CE5D7 = {
 			isa = PBXGroup;
 			children = (
@@ -386,9 +400,9 @@
 			isa = PBXGroup;
 			children = (
 				84B143FB21463AC9001CE5D7 /* Info.plist */,
-				8400C5C521491F8900C19232 /* QrCodeCreator.swift */,
+				8400C5C521491F8900C19232 /* QrCodeGenerator.swift */,
 				8400C5C821491F8900C19232 /* QrCodeImporter.swift */,
-				8400C5C621491F8900C19232 /* StandardQrCodeCreator.swift */,
+				8400C5C621491F8900C19232 /* StandardQrCodeGenerator.swift */,
 				84B143FA21463AC9001CE5D7 /* VandelayQr.h */,
 			);
 			path = VandelayQr;
@@ -733,8 +747,10 @@
 				8400C604214A31B100C19232 /* MockDataImporter.swift in Sources */,
 				8400C5F52149C38C00C19232 /* FileExporterTests.swift in Sources */,
 				8400C5FB214A2B0200C19232 /* StringExporterTests.swift in Sources */,
+				8400C60D214A33D300C19232 /* QrCodeImporterTests.swift in Sources */,
 				8400C600214A2CB100C19232 /* RandomFileNameGenerator.swift in Sources */,
 				8400C608214A32A400C19232 /* PasteboardImporterTests.swift in Sources */,
+				8400C60F214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift in Sources */,
 				8400C5F32149C1E900C19232 /* ExporterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,8 +797,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8400C5CA21491F8A00C19232 /* StandardQrCodeCreator.swift in Sources */,
-				8400C5C921491F8900C19232 /* QrCodeCreator.swift in Sources */,
+				8400C5CA21491F8A00C19232 /* StandardQrCodeGenerator.swift in Sources */,
+				8400C5C921491F8900C19232 /* QrCodeGenerator.swift in Sources */,
 				8400C5CB21491F8A00C19232 /* QrCodeImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
