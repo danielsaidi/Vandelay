@@ -11,6 +11,10 @@
  This exporter can export string and data files by attaching
  them to emails.
  
+ Since this exporter requires a view controller from which a
+ mail composer is presented, you must create the exporter by
+ passing in the view controller that triggers the export.
+ 
  Since this exporter requires a source view controller, from
  which the e-mail composer is presented, you must create the
  exporter from the view controller that triggers the export.
@@ -24,9 +28,8 @@
  you use, then read and import the data that is sent to your
  app when a user taps the file on her/his device.
  
- IMPORTANT: Since this exporter opens an e-mail compose view
- controller, you must keep a strong reference to it to avoid
- that it is deallocated while you complete the export.
+ IMPORTANT: Since the importer waits for user input, it must
+ be strongly referenced to avoid deallocation.
  
  */
 

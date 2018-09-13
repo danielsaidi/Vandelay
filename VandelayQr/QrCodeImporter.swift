@@ -11,9 +11,12 @@
  This importer can import strings and data by scanning codes
  that contain embedded urls.
  
- IMPORTANT: Since this importer opens a QR code scanner, you
- must keep a strong reference to it to avoid that it becomes
- deallocated while you complete the import.
+ Since this exporter requires a view controller from which a
+ QR code scanner is presented, you must create it by passing
+ in the view controller that triggers the export.
+ 
+ IMPORTANT: Since the importer waits for user input, it must
+ be strongly referenced to avoid deallocation.
  
  IMPORTANT: Due to extended security in iOS 10, you must add
  a text for the `NSCameraUsageDescription` key in Info.plist.

@@ -11,9 +11,9 @@
  This exporter can export string and data files by attaching
  them to messages.
  
- Since this exporter requires a source view controller, from
- which the message composer is presented, you must create it
- from the view controller that triggers the export.
+ Since this exporter requires a view controller from which a
+ message composer is presented, you must create the exporter
+ by passing in the view controller that triggers the export.
  
  Use the `fileName` initializer if the exported files should
  have the same name at all times. Use the `fileNameGenerator`
@@ -24,9 +24,8 @@
  read and import the data that is sent to the app when users
  tap the file on their devices.
  
- IMPORTANT: Since this exporter opens a message compose view
- controller, you must keep a strong reference to it to avoid
- that it is deallocated while you complete the export.
+ IMPORTANT: Since the importer waits for user input, it must
+ be strongly referenced to avoid deallocation.
  
  */
 
