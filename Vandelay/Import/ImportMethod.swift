@@ -8,9 +8,11 @@
 
 import Foundation
 
-public enum ImportMethod {
+public enum ImportMethod: Equatable {
     
     case
+    custom(name: String),
+    dropbox,
     file,
     pasteboard,
     qrCode,

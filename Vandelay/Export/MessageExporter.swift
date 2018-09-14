@@ -36,12 +36,12 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: - Initialization
     
-    public convenience init(fromViewController: UIViewController?, fileName: String, messageSubject: String? = nil, messageBody: String? = nil) {
+    public convenience init(fromViewController: UIViewController, fileName: String, messageSubject: String? = nil, messageBody: String? = nil) {
         let generator = StaticFileNameGenerator(fileName: fileName)
         self.init(fromViewController: fromViewController, fileNameGenerator: generator, messageSubject: messageSubject, messageBody: messageBody)
     }
     
-    public init(fromViewController: UIViewController?, fileNameGenerator: FileNameGenerator, messageSubject: String? = nil, messageBody: String? = nil) {
+    public init(fromViewController: UIViewController, fileNameGenerator: FileNameGenerator, messageSubject: String? = nil, messageBody: String? = nil) {
         self.fromViewController = fromViewController
         self.fileNameGenerator = fileNameGenerator
         self.messageSubject = messageSubject

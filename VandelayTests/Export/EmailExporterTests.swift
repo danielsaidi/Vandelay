@@ -17,7 +17,7 @@ class EmailExporterTests: QuickSpec {
         var exporter: Exporter!
         
         beforeEach {
-            exporter = EmailExporter(fromViewController: nil, fileName: "foo")
+            exporter = EmailExporter(fromViewController: UIViewController(), fileName: "foo")
         }
         
         describe("export method") {

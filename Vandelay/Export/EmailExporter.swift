@@ -40,12 +40,12 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
     
     // MARK: - Initialization
     
-    public convenience init(fromViewController: UIViewController?, fileName: String, emailSubject: String? = nil, emailBody: String? = nil) {
+    public convenience init(fromViewController: UIViewController, fileName: String, emailSubject: String? = nil, emailBody: String? = nil) {
         let generator = StaticFileNameGenerator(fileName: fileName)
         self.init(fromViewController: fromViewController, fileNameGenerator: generator, emailSubject: emailSubject, emailBody: emailBody)
     }
     
-    public init(fromViewController: UIViewController?, fileNameGenerator: FileNameGenerator, emailSubject: String? = nil, emailBody: String? = nil) {
+    public init(fromViewController: UIViewController, fileNameGenerator: FileNameGenerator, emailSubject: String? = nil, emailBody: String? = nil) {
         self.fromViewController = fromViewController
         self.fileNameGenerator = fileNameGenerator
         self.emailSubject = emailSubject

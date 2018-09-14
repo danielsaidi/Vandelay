@@ -8,9 +8,11 @@
 
 import Foundation
 
-public enum ExportMethod {
+public enum ExportMethod: Equatable {
     
     case
+    custom(name: String),
+    dropbox,
     email,
     file,
     message,

@@ -25,18 +25,15 @@ public class FileImporter: DataImporter, StringImporter {
     // MARK: Initialization
     
     public init(fileName: String) {
-        fileNameGenerator = StaticFileNameGenerator(fileName: fileName)
+        self.fileName = fileName
     }
-    
-    
-    // MARK: - Dependencies
-    
-    private let fileNameGenerator: FileNameGenerator
     
     
     // MARK: - Properties
     
     public let importMethod = ImportMethod.file
+    
+    private let fileName: String
     
     
     // MARK: - Errors
@@ -89,7 +86,6 @@ private extension FileImporter {
     func getFilePath() -> String? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         guard let path = paths.first else { return nil }
-        let fileName = fileNameGenerator.getFileName()
         return "\(path)/\(fileName)"
     }
     
