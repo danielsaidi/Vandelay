@@ -78,6 +78,8 @@
 		84D0A6E0214BE81D00139AF6 /* DropboxClientCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6DF214BE81D00139AF6 /* DropboxClientCreator.swift */; };
 		84D0A6E3214BED0300139AF6 /* DropboxExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E2214BED0300139AF6 /* DropboxExporterTests.swift */; };
 		84D0A6E5214BED5500139AF6 /* DropboxImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E4214BED5500139AF6 /* DropboxImporterTests.swift */; };
+		84D0A6E7214BF57E00139AF6 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E6214BF57E00139AF6 /* Accounts.swift */; };
+		84D0A6E9214BF67200139AF6 /* Accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D0A6E8214BF67200139AF6 /* Accounts.plist */; };
 		84F22D5A21479FA2005DEC41 /* ExportMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5921479FA2005DEC41 /* ExportMethod.swift */; };
 		84F22D6F2148B184005DEC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D6E2148B184005DEC41 /* AppDelegate.swift */; };
 		84F22D712148B184005DEC41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D702148B184005DEC41 /* ViewController.swift */; };
@@ -217,6 +219,8 @@
 		84D0A6DF214BE81D00139AF6 /* DropboxClientCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxClientCreator.swift; sourceTree = "<group>"; };
 		84D0A6E2214BED0300139AF6 /* DropboxExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxExporterTests.swift; sourceTree = "<group>"; };
 		84D0A6E4214BED5500139AF6 /* DropboxImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxImporterTests.swift; sourceTree = "<group>"; };
+		84D0A6E6214BF57E00139AF6 /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
+		84D0A6E8214BF67200139AF6 /* Accounts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Accounts.plist; sourceTree = "<group>"; };
 		84F22D5921479FA2005DEC41 /* ExportMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportMethod.swift; sourceTree = "<group>"; };
 		84F22D6C2148B184005DEC41 /* VandelayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VandelayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F22D6E2148B184005DEC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -511,12 +515,14 @@
 		84F22D6D2148B184005DEC41 /* VandelayExample */ = {
 			isa = PBXGroup;
 			children = (
+				84D0A6E8214BF67200139AF6 /* Accounts.plist */,
+				84D0A6E6214BF57E00139AF6 /* Accounts.swift */,
 				84F22D6E2148B184005DEC41 /* AppDelegate.swift */,
-				84F22D702148B184005DEC41 /* ViewController.swift */,
-				84F22D722148B184005DEC41 /* Main.storyboard */,
 				84F22D752148B186005DEC41 /* Assets.xcassets */,
-				84F22D772148B186005DEC41 /* LaunchScreen.storyboard */,
 				84F22D7A2148B186005DEC41 /* Info.plist */,
+				84F22D772148B186005DEC41 /* LaunchScreen.storyboard */,
+				84F22D722148B184005DEC41 /* Main.storyboard */,
+				84F22D702148B184005DEC41 /* ViewController.swift */,
 			);
 			path = VandelayExample;
 			sourceTree = "<group>";
@@ -730,6 +736,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D0A6E9214BF67200139AF6 /* Accounts.plist in Resources */,
 				84F22D792148B186005DEC41 /* LaunchScreen.storyboard in Resources */,
 				84F22D762148B186005DEC41 /* Assets.xcassets in Resources */,
 				84F22D742148B184005DEC41 /* Main.storyboard in Resources */,
@@ -836,6 +843,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D0A6E7214BF57E00139AF6 /* Accounts.swift in Sources */,
 				84F22D712148B184005DEC41 /* ViewController.swift in Sources */,
 				84F22D6F2148B184005DEC41 /* AppDelegate.swift in Sources */,
 			);
