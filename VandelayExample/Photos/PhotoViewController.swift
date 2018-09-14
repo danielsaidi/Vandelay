@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class PhotoViewController: UICollectionViewController {
 
     
@@ -16,40 +15,42 @@ class PhotoViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView?.backgroundColor = UIColor.white
+        collectionView?.backgroundColor = .white
         reloadData()
     }
     
     
-    
     // MARK: - Properties
     
-    var repository: PhotoRepository?
+    var repository: PhotoRepository!
     
-    fileprivate var photos = [Photo]()
+    private var photos = [Photo]()
+}
+
+
+// MARK: - Actions
+
+@objc extension PhotoViewController {
     
-    
-    
-    // MARK: - Actions
-    
-    @IBAction func add() {
+    func add() {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         present(picker, animated: true, completion: nil)
     }
+}
+
+
+// MARK: - Private Functions
+
+private extension PhotoViewController {
     
-    
-    
-    // MARK: - Private functions
-    
-    fileprivate func reloadData() {
-        photos = repository?.getPhotos() ?? [Photo]()
+    func reloadData() {
+        photos = repository.getPhotos()
         collectionView?.reloadData()
     }
 }
-
 
 
 // MARK: - UICollectionViewDataSource
@@ -65,27 +66,24 @@ extension PhotoViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath)
+        guard let photoCell = cell as? PhotoCollectionViewCell else { return cell }
         let photo = photos[indexPath.row]
-        cell.imageView.image = photo.image
-        return cell
+        photoCell.imageView.image = photo.image
+        return photoCell
     }
 }
-
 
 
 // MARK: - UIImagePickerControllerDelegate
 
 extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            print("Could not extract image from media picker")
-            return
-        }
-        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        let imageData = info[UIImagePickerControllerOriginalImage] as? UIImage
+        guard let image = imageData else { return print("No image data") }
         let photo = Photo(image: image.resized(toWidth: 250))
-        repository?.addPhoto(photo)
+        repository.add(photo)
         dismiss(animated: true, completion: nil)
         reloadData()
     }

@@ -6,35 +6,35 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
-import UIKit
 import Vandelay
 
-class PhotoRepository : NSObject {
+class PhotoRepository {
     
     
     // MARK: - Properties
     
-    private var photos = [String : Photo]()
-    
+    private var photos = [String: Photo]()
     
     
     // MARK: - Public functions
     
-    func addPhoto(_ photo: Photo) {
+    func add(_ photo: Photo) {
         photos[photo.id] = photo
     }
     
-    func deletePhoto(_ photo: Photo) {
+    func add(_ photos: [Photo]) {
+        photos.forEach { add($0) }
+    }
+    
+    func delete(_ photo: Photo) {
         photos.removeValue(forKey: photo.id)
     }
     
     func getPhotos() -> [Photo] {
-        return photos.values.sorted(by: { photo1, photo2 -> Bool in
-            photo1.id < photo2.id
-        })
+        return photos.values.sorted { $0.id < $1.id }
     }
     
-    func getPhoto(id: String) -> Photo? {
+    func getPhoto(withId id: String) -> Photo? {
         return photos[id]
     }
 }

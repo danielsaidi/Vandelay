@@ -18,46 +18,42 @@ class TodoItemViewController: UITableViewController {
         reloadData()
     }
     
-    
 
     // MARK: - Properties
     
-    var repository: TodoItemRepository?
+    var repository: TodoItemRepository!
     
-    fileprivate var hasItems: Bool { return items.count > 0 }
-    fileprivate var items = [TodoItem]()
-    
+    private var hasItems: Bool { return items.count > 0 }
+    private var items = [TodoItem]()
     
     
     // MARK: - Actions
     
     @IBAction func add() {
-        let title = "Add new item"
-        let message = "What do you want to remember?"
+        let title = "Add todo"
+        let message = "Enter todo description"
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
             let item = TodoItem(name: alert.textFields![0].text!)
-            self.repository?.addTodoItem(item)
+            self.repository.add(item)
             self.reloadData()
-        }))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    
-    
-    // MARK: - Private functions
-    
-    fileprivate func reloadData() {
-        items = repository?.getTodoItems() ?? [TodoItem]()
-        items = items.sorted(by: { item1, item2 -> Bool in
-            return item1.name < item2.name
         })
-        tableView.reloadData()
+        present(alert, animated: true, completion: nil)
     }
 }
 
+
+// MARK: - Private Functions
+
+private extension TodoItemViewController {
+    
+    func reloadData() {
+        items = repository.getItems()
+        tableView.reloadData()
+    }
+}
 
 
 // MARK: - UITableViewDataSource
@@ -77,7 +73,7 @@ extension TodoItemViewController {
     }
     
     override func tableView(_ view: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (hasItems) {
+        if hasItems {
             return tableView(view, cellForItemAt: indexPath)
         } else {
             return tableView.dequeueReusableCell(withIdentifier: "NoItemsCell")!
@@ -92,21 +88,18 @@ extension TodoItemViewController {
     }
     
     override func tableView(_ view: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            let item = items[indexPath.row]
-            repository?.deleteTodoItem(item)
-            reloadData()
-        }
+        guard editingStyle == .delete else { return }
+        let item = items[indexPath.row]
+        repository.delete(item)
+        reloadData()
     }
     
     override func tableView(_ view: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if (hasItems) {
-            let item = items[indexPath.row]
-            cell.accessoryType = item.completed ? .checkmark : .none
-        }
+        guard hasItems else { return }
+        let item = items[indexPath.row]
+        cell.accessoryType = item.completed ? .checkmark : .none
     }
 }
-
 
 
 // MARK: - UITableViewDelegate
@@ -115,10 +108,9 @@ extension TodoItemViewController {
     
     override func tableView(_ view: UITableView, didSelectRowAt indexPath: IndexPath) {
         view.deselectRow(at: indexPath, animated: true)
-        if (hasItems) {
-            let item = items[indexPath.row]
-            item.completed = !item.completed
-            reloadData()
-        }
+        guard hasItems else { return }
+        var item = items[indexPath.row]
+        item.completed = !item.completed
+        reloadData()
     }
 }

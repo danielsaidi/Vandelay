@@ -6,34 +6,35 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
-import UIKit
 import Vandelay
 
-class TodoItemRepository : NSObject {
+class TodoItemRepository {
     
     
     // MARK: - Properties
     
-    private var items = [String : TodoItem]()
+    private var items = [String: TodoItem]()
     
     
     // MARK: - Public functions
     
-    func addTodoItem(_ item: TodoItem) {
+    func add(_ item: TodoItem) {
         items[item.id] = item
     }
     
-    func deleteTodoItem(_ item: TodoItem) {
+    func add(_ items: [TodoItem]) {
+        items.forEach { add($0) }
+    }
+    
+    func delete(_ item: TodoItem) {
         items.removeValue(forKey: item.id)
     }
     
-    func getTodoItems() -> [TodoItem] {
-        return items.values.sorted(by: { item1, item2 -> Bool in
-            item1.name < item2.name
-        })
+    func getItems() -> [TodoItem] {
+        return items.values.sorted { $0.name < $1.name }
     }
     
-    func getTodoItem(id: String) -> TodoItem? {
+    func getItem(withId id: String) -> TodoItem? {
         return items[id]
     }
 }

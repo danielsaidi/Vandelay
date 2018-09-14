@@ -11,8 +11,7 @@
 ## What is Vandelay?
 
 Vandelay is a string and data importer/exporter for iOS. It comes with
-built-in support for a few basic data sources and can be extended with
-even more.
+built-in support for some data sources and can be extended with more.
 
 
 

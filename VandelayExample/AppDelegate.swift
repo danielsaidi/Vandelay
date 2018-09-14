@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupDropbox(with: accounts.dropboxAppKey)
         return true
     }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+        tryHandleDropboxAuth(with: url)
+        return true
+    }
 }
 
 private extension AppDelegate {
@@ -26,5 +31,14 @@ private extension AppDelegate {
     func setupDropbox(with appKey: String) {
         guard appKey.count > 0 else { return }
         DropboxClientsManager.setupWithAppKey(appKey)
+    }
+    
+    func tryHandleDropboxAuth(with url: URL) {
+        if let result = DropboxClientsManager.handleRedirectURL(url) {
+            switch result {
+            case .success: print("Success! User is logged into Dropbox.")
+            case .cancel: print("Authorization flow was manually canceled by user!")
+            case .error(_, let description): print("Error: \(description)") }
+        }
     }
 }

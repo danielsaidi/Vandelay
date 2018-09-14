@@ -62,24 +62,38 @@
 		84D0A6C8214B893700139AF6 /* DropboxExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6C6214B893700139AF6 /* DropboxExporter.swift */; };
 		84D0A6C9214B893700139AF6 /* DropboxImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6C7214B893700139AF6 /* DropboxImporter.swift */; };
 		84D0A6CB214B968F00139AF6 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
-		84D0A6CC214B96B900139AF6 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
-		84D0A6CD214B96B900139AF6 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
 		84D0A6CE214B971600139AF6 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
 		84D0A6CF214B971600139AF6 /* VandelayDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; };
 		84D0A6D0214B971600139AF6 /* VandelayQr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; };
 		84D0A6D5214B979900139AF6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
 		84D0A6D7214B97C300139AF6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D0A6D8214B97C300139AF6 /* SwiftyDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6DA214B981600139AF6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6DB214B981600139AF6 /* SwiftyDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6DC214B981600139AF6 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6DD214B981600139AF6 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6DE214B981600139AF6 /* QRCodeReader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D0A6E0214BE81D00139AF6 /* DropboxClientCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6DF214BE81D00139AF6 /* DropboxClientCreator.swift */; };
 		84D0A6E3214BED0300139AF6 /* DropboxExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E2214BED0300139AF6 /* DropboxExporterTests.swift */; };
 		84D0A6E5214BED5500139AF6 /* DropboxImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E4214BED5500139AF6 /* DropboxImporterTests.swift */; };
 		84D0A6E7214BF57E00139AF6 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E6214BF57E00139AF6 /* Accounts.swift */; };
 		84D0A6E9214BF67200139AF6 /* Accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D0A6E8214BF67200139AF6 /* Accounts.plist */; };
+		84D0A6EA214BFA8800139AF6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
+		84D0A6EB214BFA8800139AF6 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
+		84D0A6ED214BFA9500139AF6 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
+		84D0A6F0214BFAB300139AF6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D0A6F1214BFAB300139AF6 /* SwiftyDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D0A6F2214BFAB300139AF6 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D0A6F3214BFAB300139AF6 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D0A6F4214BFAB300139AF6 /* QRCodeReader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D0A6F5214BFAD300139AF6 /* Vandelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D0A6F6214BFAD300139AF6 /* VandelayDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D0A6F7214BFAD300139AF6 /* VandelayQr.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D0A703214C5BA600139AF6 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6F9214C5BA500139AF6 /* PhotoRepository.swift */; };
+		84D0A704214C5BA600139AF6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FA214C5BA500139AF6 /* Photo.swift */; };
+		84D0A705214C5BA600139AF6 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FB214C5BA500139AF6 /* PhotoViewController.swift */; };
+		84D0A706214C5BA600139AF6 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FC214C5BA500139AF6 /* PhotoCollectionViewCell.swift */; };
+		84D0A707214C5BA600139AF6 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FE214C5BA500139AF6 /* TodoItem.swift */; };
+		84D0A708214C5BA600139AF6 /* TodoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FF214C5BA500139AF6 /* TodoItemViewController.swift */; };
+		84D0A709214C5BA600139AF6 /* TodoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A700214C5BA500139AF6 /* TodoItemRepository.swift */; };
+		84D0A70A214C5BA600139AF6 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A702214C5BA500139AF6 /* UIImage+Resize.swift */; };
+		84D0A70D214E9A7A00139AF6 /* ViewController+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A70C214E9A7A00139AF6 /* ViewController+Export.swift */; };
+		84D0A70F214E9DF800139AF6 /* ViewController+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A70E214E9DF800139AF6 /* ViewController+Import.swift */; };
 		84F22D5A21479FA2005DEC41 /* ExportMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5921479FA2005DEC41 /* ExportMethod.swift */; };
 		84F22D6F2148B184005DEC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D6E2148B184005DEC41 /* AppDelegate.swift */; };
 		84F22D712148B184005DEC41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D702148B184005DEC41 /* ViewController.swift */; };
@@ -138,17 +152,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84D0A6D9214B980C00139AF6 /* CopyFiles */ = {
+		84D0A6EF214BFAA800139AF6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				84D0A6DA214B981600139AF6 /* Alamofire.framework in CopyFiles */,
-				84D0A6DB214B981600139AF6 /* SwiftyDropbox.framework in CopyFiles */,
-				84D0A6DC214B981600139AF6 /* Nimble.framework in CopyFiles */,
-				84D0A6DD214B981600139AF6 /* Quick.framework in CopyFiles */,
-				84D0A6DE214B981600139AF6 /* QRCodeReader.framework in CopyFiles */,
+				84D0A6F5214BFAD300139AF6 /* Vandelay.framework in CopyFiles */,
+				84D0A6F6214BFAD300139AF6 /* VandelayDropbox.framework in CopyFiles */,
+				84D0A6F7214BFAD300139AF6 /* VandelayQr.framework in CopyFiles */,
+				84D0A6F0214BFAB300139AF6 /* Alamofire.framework in CopyFiles */,
+				84D0A6F1214BFAB300139AF6 /* SwiftyDropbox.framework in CopyFiles */,
+				84D0A6F2214BFAB300139AF6 /* Nimble.framework in CopyFiles */,
+				84D0A6F3214BFAB300139AF6 /* Quick.framework in CopyFiles */,
+				84D0A6F4214BFAB300139AF6 /* QRCodeReader.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +238,16 @@
 		84D0A6E4214BED5500139AF6 /* DropboxImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxImporterTests.swift; sourceTree = "<group>"; };
 		84D0A6E6214BF57E00139AF6 /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
 		84D0A6E8214BF67200139AF6 /* Accounts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Accounts.plist; sourceTree = "<group>"; };
+		84D0A6F9214C5BA500139AF6 /* PhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		84D0A6FA214C5BA500139AF6 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		84D0A6FB214C5BA500139AF6 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		84D0A6FC214C5BA500139AF6 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		84D0A6FE214C5BA500139AF6 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		84D0A6FF214C5BA500139AF6 /* TodoItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemViewController.swift; sourceTree = "<group>"; };
+		84D0A700214C5BA500139AF6 /* TodoItemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemRepository.swift; sourceTree = "<group>"; };
+		84D0A702214C5BA500139AF6 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		84D0A70C214E9A7A00139AF6 /* ViewController+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Export.swift"; sourceTree = "<group>"; };
+		84D0A70E214E9DF800139AF6 /* ViewController+Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Import.swift"; sourceTree = "<group>"; };
 		84F22D5921479FA2005DEC41 /* ExportMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportMethod.swift; sourceTree = "<group>"; };
 		84F22D6C2148B184005DEC41 /* VandelayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VandelayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F22D6E2148B184005DEC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -281,11 +308,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D0A6EA214BFA8800139AF6 /* Alamofire.framework in Frameworks */,
+				84D0A6EB214BFA8800139AF6 /* QRCodeReader.framework in Frameworks */,
+				84D0A6ED214BFA9500139AF6 /* SwiftyDropbox.framework in Frameworks */,
 				84D0A6CE214B971600139AF6 /* Vandelay.framework in Frameworks */,
 				84D0A6CF214B971600139AF6 /* VandelayDropbox.framework in Frameworks */,
 				84D0A6D0214B971600139AF6 /* VandelayQr.framework in Frameworks */,
-				84D0A6CC214B96B900139AF6 /* QRCodeReader.framework in Frameworks */,
-				84D0A6CD214B96B900139AF6 /* SwiftyDropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +528,28 @@
 			path = Dropbox;
 			sourceTree = "<group>";
 		};
+		84D0A6F8214C5BA500139AF6 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				84D0A6FA214C5BA500139AF6 /* Photo.swift */,
+				84D0A6FC214C5BA500139AF6 /* PhotoCollectionViewCell.swift */,
+				84D0A6F9214C5BA500139AF6 /* PhotoRepository.swift */,
+				84D0A6FB214C5BA500139AF6 /* PhotoViewController.swift */,
+				84D0A702214C5BA500139AF6 /* UIImage+Resize.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		84D0A6FD214C5BA500139AF6 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				84D0A6FE214C5BA500139AF6 /* TodoItem.swift */,
+				84D0A700214C5BA500139AF6 /* TodoItemRepository.swift */,
+				84D0A6FF214C5BA500139AF6 /* TodoItemViewController.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
 		84F22D60214850AA005DEC41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +565,8 @@
 		84F22D6D2148B184005DEC41 /* VandelayExample */ = {
 			isa = PBXGroup;
 			children = (
+				84D0A6F8214C5BA500139AF6 /* Photos */,
+				84D0A6FD214C5BA500139AF6 /* TodoList */,
 				84D0A6E8214BF67200139AF6 /* Accounts.plist */,
 				84D0A6E6214BF57E00139AF6 /* Accounts.swift */,
 				84F22D6E2148B184005DEC41 /* AppDelegate.swift */,
@@ -523,6 +575,8 @@
 				84F22D772148B186005DEC41 /* LaunchScreen.storyboard */,
 				84F22D722148B184005DEC41 /* Main.storyboard */,
 				84F22D702148B184005DEC41 /* ViewController.swift */,
+				84D0A70C214E9A7A00139AF6 /* ViewController+Export.swift */,
+				84D0A70E214E9DF800139AF6 /* ViewController+Import.swift */,
 			);
 			path = VandelayExample;
 			sourceTree = "<group>";
@@ -641,7 +695,7 @@
 				84F22D682148B184005DEC41 /* Sources */,
 				84F22D692148B184005DEC41 /* Frameworks */,
 				84F22D6A2148B184005DEC41 /* Resources */,
-				84D0A6D9214B980C00139AF6 /* CopyFiles */,
+				84D0A6EF214BFAA800139AF6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -843,9 +897,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D0A70F214E9DF800139AF6 /* ViewController+Import.swift in Sources */,
 				84D0A6E7214BF57E00139AF6 /* Accounts.swift in Sources */,
 				84F22D712148B184005DEC41 /* ViewController.swift in Sources */,
+				84D0A703214C5BA600139AF6 /* PhotoRepository.swift in Sources */,
 				84F22D6F2148B184005DEC41 /* AppDelegate.swift in Sources */,
+				84D0A706214C5BA600139AF6 /* PhotoCollectionViewCell.swift in Sources */,
+				84D0A70A214C5BA600139AF6 /* UIImage+Resize.swift in Sources */,
+				84D0A704214C5BA600139AF6 /* Photo.swift in Sources */,
+				84D0A708214C5BA600139AF6 /* TodoItemViewController.swift in Sources */,
+				84D0A707214C5BA600139AF6 /* TodoItem.swift in Sources */,
+				84D0A709214C5BA600139AF6 /* TodoItemRepository.swift in Sources */,
+				84D0A70D214E9A7A00139AF6 /* ViewController+Export.swift in Sources */,
+				84D0A705214C5BA600139AF6 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,10 +28,12 @@ public extension UIImage {
         let newSize = CGSize(width: width, height: height)
         return resized(toSize: newSize, withQuality: .high)
     }
-    
-    
-    
-    // MARK: - Private functions
+}
+
+
+// MARK: - Private Functions
+
+private extension UIImage {
     
     private func resized(toSize newSize: CGSize, withQuality quality: CGInterpolationQuality) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, scale)

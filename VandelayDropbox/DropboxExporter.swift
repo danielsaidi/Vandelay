@@ -45,7 +45,8 @@
  
  IMPORTANT: If you do not handle the exporter callback, your
  app will never be authorized, and will keep asking for this
- permission every time this exporter is used.
+ permission each time this exporter is used. Look at the app
+ `AppDelegate.swift` to see how to handle the auth result.
  
  */
 
