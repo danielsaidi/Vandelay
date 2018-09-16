@@ -6,11 +6,10 @@ osx_image: xcode9
 language: swift
 
 before_install:
-  - brew update
-  - pod repo update
-  - gem install cocoapods --pre
   - brew outdated xctool || brew upgrade xctool
+  - carthage update
 
 script:
-  - xcodebuild -workspace "Example/Vandelay.xcworkspace" -scheme "Vandelay-Example" -sdk "iphonesimulator" | xcpretty -c
+  - xcodebuild -project "Vandelay.xcodeproj" -scheme "Vandelay" -sdk "iphonesimulator" | xcpretty -c
   - pod lib lint
+  - fastlane test
