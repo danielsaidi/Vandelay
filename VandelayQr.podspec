@@ -16,7 +16,7 @@ data by scanning QR codes.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Vandelay/VandelayQr/**/*'
+  s.source_files = 'VandelayQr/**/*'
   
   s.dependency 'QRCodeReader.swift'
   s.dependency 'Vandelay'

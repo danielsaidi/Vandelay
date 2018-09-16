@@ -16,7 +16,7 @@ and import data to/from a Dropbox app folder.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Vandelay/VandelayDropbox/**/*'
+  s.source_files = 'VandelayDropbox/**/*'
   
   s.dependency 'SwiftyDropbox'
   s.dependency 'Vandelay'

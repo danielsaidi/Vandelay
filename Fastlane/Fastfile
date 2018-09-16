@@ -5,28 +5,14 @@ default_platform :ios
 
 platform :ios do
 
-  
 
-  # Build ======================
-
-  desc "Build the app"
-  lane :build do
-    gym(
-      clean: true,
-      scheme: "Vandelay-Example",
-      workspace: "Example/Tutti.xcworkspace"
-    )
-  end
-
-
-
-  # Version =====================
+  # Versioning **************
 
   desc "Create a new version"
   lane :version do |options|
     ensure_git_status_clean
     ensure_git_branch(branch: 'master')
-    #test
+    test
     
     version = version_bump_podspec(path: "Vandelay.podspec", version_number: options[:name])
     version_db = version_bump_podspec(path: "VandelayDropbox.podspec", version_number: options[:name])
@@ -35,7 +21,6 @@ platform :ios do
     increment_build_number(build_number: version)
     increment_build_number(build_number: version_db)
     increment_build_number(build_number: version_db)
-
 
     git_commit(
       path: [
@@ -49,25 +34,20 @@ platform :ios do
 
     add_git_tag(tag: version)
     push_git_tags()
-    reset_git_repo
+    push_to_git_remote()
+    pod_push()
   end
 
-  
 
-  # Test =======================
+  # Unit Tests ********
 
   desc "Run unit tests"
   lane :test do
-
-    # To try this from the terminal, run:
-    # scan --workspace "Example/Vandelay.xcworkspace" --scheme "Vandelay-Example"
-
     scan(
-      workspace: "Example/Vandelay.xcworkspace",
-      scheme: "Vandelay-Example",
-      devices: ["iPhone 6s"]
+      scheme: "Vandelay",
+      devices: ["iPhone 6s"],
+      project: "Vandelay.xcodeproj"
     )    
   end
   
 end
-
