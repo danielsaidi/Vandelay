@@ -44,13 +44,17 @@ To install Vandelay with [Carthage](https://github.com/Carthage), just
 add this to your `Cartfile`, then run `carthage update --platform iOS`:
 
 ```ruby
-pod "Vandelay"
+github "danielsaidi/Vandelay"
 ```
 
-This will download and build all `Vandelay` frameworks. The `Vandelay`
-framework contains core functionality and is required by all the other
-optional frameworks. `VandelayDropbox` adds additional Dropbox support.
-`VandelayQr` adds support for scanning QR codes. Add them if you want.
+This will download and build all `Vandelay` frameworks including every
+external dependency (`VandelayDropbox` depends on `SwiftDropbox` which
+depends on `Alamofire`, `VandelayQr` depends on `QrCodeReader`), so it
+will take a little time.
+
+Once Carthage has built all frameworks, you can add every required one
+to the app. This involves a little more work than when using CocoaPods,
+but you will then have pre-built frameworks.
 
 
 ## Exporting data
