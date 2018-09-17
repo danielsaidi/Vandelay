@@ -7,7 +7,7 @@ language: swift
 
 before_install:
   - brew outdated xctool || brew upgrade xctool
-  - carthage update --platform iOS
+  - travis_wait carthage update --platform iOS
 
 script:
   - xcodebuild -project "Vandelay.xcodeproj" -scheme "Vandelay" -sdk "iphonesimulator" | xcpretty -c
