@@ -1,18 +1,23 @@
-![Vandelay logo](Assets/logo-900.png "Vandelay")
+<p align="center">
+    <img src ="Assets/logo-900.png" width="450" alt="Vandelay logo" />
+</p>
+
 
 # Vandelay
 
-[![Version](https://img.shields.io/cocoapods/v/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
-[![License](https://img.shields.io/cocoapods/l/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
-[![Platform](https://img.shields.io/cocoapods/p/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
+[![Version](https://badge.fury.io/gh/danielsaidi%2FVandelay.svg?style=flat)](http://badge.fury.io/gh/danielsaidi%2FVandelay)
+[![Carthage](https://img.shields.io/badge/carthage-supported-green.svg?style=flat)](https://github.com/danielsaidi/Vandelay)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
+![Platform](https://img.shields.io/cocoapods/p/Vandelay.svg?style=flat)
+[![License](https://badges.frapsoft.com/os/mit/mit.svg?style=flat&v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 
 ## About
 
-Vandelay is an importer/exporter for iOS (mind the pun). It is written
-in Swift 4 and comes with built-in support for exporting and importing
-strings and data to/from a bunch of data sources. It supports `Codable`
-types as well as basic string and data.
+Vandelay is an iOS importer/exporter. It is written in Swift and comes
+with built-in support for exporting and importing strings/data to/from
+a bunch of data sources. It supports `Codable` types, as well as basic
+string and data.
 
 
 ## Installation
