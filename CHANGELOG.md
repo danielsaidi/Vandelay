@@ -1,6 +1,13 @@
 # Vandelay Changelog
 
 
+## 0.7.0
+
+This version migrates Vandelay to Swift 4.2. For now, the tests do run
+and everything builds correctly, but the example app has problems with
+linking the frameworks correctly. I'll create a GitHub issue for this.
+
+
 ## 0.6.0
 
 This version migrates Vandelay to Swift 4 and adds Codable support. It
