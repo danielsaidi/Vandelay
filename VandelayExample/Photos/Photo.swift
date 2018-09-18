@@ -46,6 +46,6 @@ private extension Data {
 private extension UIImage {
     
     func toData() -> Data? {
-        return UIImagePNGRepresentation(self) ?? nil
+        return self.pngData() ?? nil
     }
 }

@@ -79,12 +79,25 @@ extension PhotoViewController {
 
 extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-        let imageData = info[UIImagePickerControllerOriginalImage] as? UIImage
-        guard let image = imageData else { return print("No image data") }
-        let photo = Photo(image: image.resized(toWidth: 250))
-        repository.add(photo)
-        dismiss(animated: true, completion: nil)
-        reloadData()
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        let imageData = info[.originalImage]
+        
+//        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+//        let imageData = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
+//        guard let image = imageData else { return print("No image data") }
+//        let photo = Photo(image: image.resized(toWidth: 250))
+//        repository.add(photo)
+//        dismiss(animated: true, completion: nil)
+//        reloadData()
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+private func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+private func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

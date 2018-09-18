@@ -87,7 +87,7 @@ extension TodoItemViewController {
         return cell
     }
     
-    override func tableView(_ view: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ view: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         let item = items[indexPath.row]
         repository.delete(item)

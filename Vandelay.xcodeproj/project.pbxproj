@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		8400C5B72148F58500C19232 /* ImportMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5B62148F58500C19232 /* ImportMethod.swift */; };
 		8400C5B921491EDB00C19232 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
-		8400C5BB21491EF000C19232 /* QRCodeReader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8400C5C921491F8900C19232 /* QrCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C521491F8900C19232 /* QrCodeGenerator.swift */; };
 		8400C5CA21491F8A00C19232 /* StandardQrCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C621491F8900C19232 /* StandardQrCodeGenerator.swift */; };
 		8400C5CB21491F8A00C19232 /* QrCodeImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5C821491F8900C19232 /* QrCodeImporter.swift */; };
 		8400C5DB2149BC6900C19232 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
 		8400C5E32149BC9800C19232 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; };
 		8400C5E42149BC9800C19232 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; };
-		8400C5E62149BCA800C19232 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8400C5E72149BCA800C19232 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8400C5ED2149BDAE00C19232 /* MockDataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5EC2149BDAE00C19232 /* MockDataExporter.swift */; };
 		8400C5EF2149BEA000C19232 /* DataExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5EE2149BEA000C19232 /* DataExporterTests.swift */; };
 		8400C5F12149C10500C19232 /* EmailExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C5F02149C10500C19232 /* EmailExporterTests.swift */; };
@@ -34,6 +31,20 @@
 		8400C60A214A32B800C19232 /* UrlImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C609214A32B800C19232 /* UrlImporterTests.swift */; };
 		8400C60D214A33D300C19232 /* QrCodeImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C60C214A33D300C19232 /* QrCodeImporterTests.swift */; };
 		8400C60F214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C60E214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift */; };
+		849F71BF21518F9D005FDF45 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
+		849F71C021518F9D005FDF45 /* VandelayDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; };
+		849F71C121518F9D005FDF45 /* VandelayQr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; };
+		849F71C221518FB8005FDF45 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
+		849F71C321518FB8005FDF45 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
+		849F71C421518FB8005FDF45 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
+		849F71C621518FCF005FDF45 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		849F71C721518FCF005FDF45 /* SwiftyDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		849F71C821518FCF005FDF45 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		849F71C921518FCF005FDF45 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		849F71CA21518FCF005FDF45 /* QRCodeReader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		849F71CC21518FEA005FDF45 /* VandelayDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		849F71CD21518FEA005FDF45 /* VandelayQr.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		849F71CE2151913D005FDF45 /* Vandelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84B1438621463A42001CE5D7 /* Vandelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B1437821463A42001CE5D7 /* Vandelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B143C821463A74001CE5D7 /* VandelayDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143BA21463A74001CE5D7 /* VandelayDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B1440821463AC9001CE5D7 /* VandelayQr.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143FA21463AC9001CE5D7 /* VandelayQr.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,28 +73,12 @@
 		84D0A6C8214B893700139AF6 /* DropboxExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6C6214B893700139AF6 /* DropboxExporter.swift */; };
 		84D0A6C9214B893700139AF6 /* DropboxImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6C7214B893700139AF6 /* DropboxImporter.swift */; };
 		84D0A6CB214B968F00139AF6 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
-		84D0A6CE214B971600139AF6 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
-		84D0A6CF214B971600139AF6 /* VandelayDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; };
-		84D0A6D0214B971600139AF6 /* VandelayQr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; };
 		84D0A6D5214B979900139AF6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
-		84D0A6D7214B97C300139AF6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6D8214B97C300139AF6 /* SwiftyDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D0A6E0214BE81D00139AF6 /* DropboxClientCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6DF214BE81D00139AF6 /* DropboxClientCreator.swift */; };
 		84D0A6E3214BED0300139AF6 /* DropboxExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E2214BED0300139AF6 /* DropboxExporterTests.swift */; };
 		84D0A6E5214BED5500139AF6 /* DropboxImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E4214BED5500139AF6 /* DropboxImporterTests.swift */; };
 		84D0A6E7214BF57E00139AF6 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E6214BF57E00139AF6 /* Accounts.swift */; };
 		84D0A6E9214BF67200139AF6 /* Accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D0A6E8214BF67200139AF6 /* Accounts.plist */; };
-		84D0A6EA214BFA8800139AF6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
-		84D0A6EB214BFA8800139AF6 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
-		84D0A6ED214BFA9500139AF6 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
-		84D0A6F0214BFAB300139AF6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6F1214BFAB300139AF6 /* SwiftyDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6F2214BFAB300139AF6 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6F3214BFAB300139AF6 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6F4214BFAB300139AF6 /* QRCodeReader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6F5214BFAD300139AF6 /* Vandelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6F6214BFAD300139AF6 /* VandelayDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D0A6F7214BFAD300139AF6 /* VandelayQr.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D0A703214C5BA600139AF6 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6F9214C5BA500139AF6 /* PhotoRepository.swift */; };
 		84D0A704214C5BA600139AF6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FA214C5BA500139AF6 /* Photo.swift */; };
 		84D0A705214C5BA600139AF6 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FB214C5BA500139AF6 /* PhotoViewController.swift */; };
@@ -120,52 +115,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8400C5BA21491EE600C19232 /* CopyFiles */ = {
+		849F71C521518FC7005FDF45 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8400C5BB21491EF000C19232 /* QRCodeReader.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8400C5E52149BC9E00C19232 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8400C5E62149BCA800C19232 /* Nimble.framework in CopyFiles */,
-				8400C5E72149BCA800C19232 /* Quick.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84D0A6D6214B97B900139AF6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				84D0A6D7214B97C300139AF6 /* Alamofire.framework in CopyFiles */,
-				84D0A6D8214B97C300139AF6 /* SwiftyDropbox.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84D0A6EF214BFAA800139AF6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				84D0A6F5214BFAD300139AF6 /* Vandelay.framework in CopyFiles */,
-				84D0A6F6214BFAD300139AF6 /* VandelayDropbox.framework in CopyFiles */,
-				84D0A6F7214BFAD300139AF6 /* VandelayQr.framework in CopyFiles */,
-				84D0A6F0214BFAB300139AF6 /* Alamofire.framework in CopyFiles */,
-				84D0A6F1214BFAB300139AF6 /* SwiftyDropbox.framework in CopyFiles */,
-				84D0A6F2214BFAB300139AF6 /* Nimble.framework in CopyFiles */,
-				84D0A6F3214BFAB300139AF6 /* Quick.framework in CopyFiles */,
-				84D0A6F4214BFAB300139AF6 /* QRCodeReader.framework in CopyFiles */,
+				849F71CE2151913D005FDF45 /* Vandelay.framework in CopyFiles */,
+				849F71CC21518FEA005FDF45 /* VandelayDropbox.framework in CopyFiles */,
+				849F71CD21518FEA005FDF45 /* VandelayQr.framework in CopyFiles */,
+				849F71C621518FCF005FDF45 /* Alamofire.framework in CopyFiles */,
+				849F71C721518FCF005FDF45 /* SwiftyDropbox.framework in CopyFiles */,
+				849F71C821518FCF005FDF45 /* Nimble.framework in CopyFiles */,
+				849F71C921518FCF005FDF45 /* Quick.framework in CopyFiles */,
+				849F71CA21518FCF005FDF45 /* QRCodeReader.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,12 +271,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D0A6EA214BFA8800139AF6 /* Alamofire.framework in Frameworks */,
-				84D0A6EB214BFA8800139AF6 /* QRCodeReader.framework in Frameworks */,
-				84D0A6ED214BFA9500139AF6 /* SwiftyDropbox.framework in Frameworks */,
-				84D0A6CE214B971600139AF6 /* Vandelay.framework in Frameworks */,
-				84D0A6CF214B971600139AF6 /* VandelayDropbox.framework in Frameworks */,
-				84D0A6D0214B971600139AF6 /* VandelayQr.framework in Frameworks */,
+				849F71C221518FB8005FDF45 /* Alamofire.framework in Frameworks */,
+				849F71C321518FB8005FDF45 /* QRCodeReader.framework in Frameworks */,
+				849F71C421518FB8005FDF45 /* SwiftyDropbox.framework in Frameworks */,
+				849F71BF21518F9D005FDF45 /* Vandelay.framework in Frameworks */,
+				849F71C021518F9D005FDF45 /* VandelayDropbox.framework in Frameworks */,
+				849F71C121518F9D005FDF45 /* VandelayQr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +581,6 @@
 				8400C5D22149BC6900C19232 /* Sources */,
 				8400C5D32149BC6900C19232 /* Frameworks */,
 				8400C5D42149BC6900C19232 /* Resources */,
-				8400C5E52149BC9E00C19232 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -658,7 +620,6 @@
 				84B143B421463A74001CE5D7 /* Frameworks */,
 				84B143B521463A74001CE5D7 /* Headers */,
 				84B143B621463A74001CE5D7 /* Resources */,
-				84D0A6D6214B97B900139AF6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -677,7 +638,6 @@
 				84B143F421463AC8001CE5D7 /* Frameworks */,
 				84B143F521463AC8001CE5D7 /* Headers */,
 				84B143F621463AC8001CE5D7 /* Resources */,
-				8400C5BA21491EE600C19232 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -695,7 +655,7 @@
 				84F22D682148B184005DEC41 /* Sources */,
 				84F22D692148B184005DEC41 /* Frameworks */,
 				84F22D6A2148B184005DEC41 /* Resources */,
-				84D0A6EF214BFAA800139AF6 /* CopyFiles */,
+				849F71C521518FC7005FDF45 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -718,20 +678,24 @@
 				TargetAttributes = {
 					8400C5D52149BC6900C19232 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 84F22D6B2148B184005DEC41;
 					};
 					84B1437421463A42001CE5D7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					84B143B721463A74001CE5D7 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1000;
 					};
 					84B143F721463AC8001CE5D7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					84F22D6B2148B184005DEC41 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -966,7 +930,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VandelayExample.app/VandelayExample";
 			};
@@ -990,7 +954,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VandelayExample.app/VandelayExample";
 			};
@@ -1136,7 +1100,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.Vandelay;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1161,7 +1125,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.Vandelay;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1192,7 +1156,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1222,7 +1186,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayDropbox;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1251,7 +1215,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayQr;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1280,7 +1244,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayQr;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1303,7 +1267,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1326,7 +1290,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
