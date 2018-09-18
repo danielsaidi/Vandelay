@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VandelayDropbox'
-  s.version          = '0.6.0'
+  s.version          = '0.7.0'
   s.summary          = 'VandelayDropbox is a Dropbox extension to Vandelay.'
 
   s.description      = <<-DESC
