@@ -1,2 +1,3 @@
+github "Alamofire/Alamofire" "4.7.3"
 github "yannickl/QRCodeReader.swift" >= 8.2.0
 github "dropbox/SwiftyDropbox" ~> 4.6.0

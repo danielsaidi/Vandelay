@@ -31,20 +31,6 @@
 		8400C60A214A32B800C19232 /* UrlImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C609214A32B800C19232 /* UrlImporterTests.swift */; };
 		8400C60D214A33D300C19232 /* QrCodeImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C60C214A33D300C19232 /* QrCodeImporterTests.swift */; };
 		8400C60F214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C60E214A4DA400C19232 /* StandardQrCodeGeneratorTests.swift */; };
-		849F71BF21518F9D005FDF45 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
-		849F71C021518F9D005FDF45 /* VandelayDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; };
-		849F71C121518F9D005FDF45 /* VandelayQr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; };
-		849F71C221518FB8005FDF45 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
-		849F71C321518FB8005FDF45 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
-		849F71C421518FB8005FDF45 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
-		849F71C621518FCF005FDF45 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		849F71C721518FCF005FDF45 /* SwiftyDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		849F71C821518FCF005FDF45 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		849F71C921518FCF005FDF45 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		849F71CA21518FCF005FDF45 /* QRCodeReader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		849F71CC21518FEA005FDF45 /* VandelayDropbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		849F71CD21518FEA005FDF45 /* VandelayQr.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		849F71CE2151913D005FDF45 /* Vandelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84B1438621463A42001CE5D7 /* Vandelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B1437821463A42001CE5D7 /* Vandelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B143C821463A74001CE5D7 /* VandelayDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143BA21463A74001CE5D7 /* VandelayDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B1440821463AC9001CE5D7 /* VandelayQr.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143FA21463AC9001CE5D7 /* VandelayQr.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,6 +75,17 @@
 		84D0A70A214C5BA600139AF6 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A702214C5BA500139AF6 /* UIImage+Resize.swift */; };
 		84D0A70D214E9A7A00139AF6 /* ViewController+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A70C214E9A7A00139AF6 /* ViewController+Export.swift */; };
 		84D0A70F214E9DF800139AF6 /* ViewController+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A70E214E9DF800139AF6 /* ViewController+Import.swift */; };
+		84D1A45D215E6F7200EA1B89 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
+		84D1A45E215E6F7200EA1B89 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
+		84D1A460215E6F9800EA1B89 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
+		84D1A461215E6F9800EA1B89 /* Vandelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D1A464215E6F9800EA1B89 /* VandelayDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; };
+		84D1A465215E6F9800EA1B89 /* VandelayDropbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D1A468215E6F9800EA1B89 /* VandelayQr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; };
+		84D1A469215E6F9800EA1B89 /* VandelayQr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143F821463AC8001CE5D7 /* VandelayQr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D1A46D215E700400EA1B89 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
+		84D1A470215E76B300EA1B89 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84D1A471215E76B300EA1B89 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84F22D5A21479FA2005DEC41 /* ExportMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5921479FA2005DEC41 /* ExportMethod.swift */; };
 		84F22D6F2148B184005DEC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D6E2148B184005DEC41 /* AppDelegate.swift */; };
 		84F22D712148B184005DEC41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D702148B184005DEC41 /* ViewController.swift */; };
@@ -112,23 +109,51 @@
 			remoteGlobalIDString = 84F22D6B2148B184005DEC41;
 			remoteInfo = VandelayExample;
 		};
+		84D1A462215E6F9800EA1B89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B1436C21463A42001CE5D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B1437421463A42001CE5D7;
+			remoteInfo = Vandelay;
+		};
+		84D1A466215E6F9800EA1B89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B1436C21463A42001CE5D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B143B721463A74001CE5D7;
+			remoteInfo = VandelayDropbox;
+		};
+		84D1A46A215E6F9800EA1B89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B1436C21463A42001CE5D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B143F721463AC8001CE5D7;
+			remoteInfo = VandelayQr;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		849F71C521518FC7005FDF45 /* CopyFiles */ = {
+		84D1A46C215E6F9800EA1B89 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				849F71CE2151913D005FDF45 /* Vandelay.framework in CopyFiles */,
-				849F71CC21518FEA005FDF45 /* VandelayDropbox.framework in CopyFiles */,
-				849F71CD21518FEA005FDF45 /* VandelayQr.framework in CopyFiles */,
-				849F71C621518FCF005FDF45 /* Alamofire.framework in CopyFiles */,
-				849F71C721518FCF005FDF45 /* SwiftyDropbox.framework in CopyFiles */,
-				849F71C821518FCF005FDF45 /* Nimble.framework in CopyFiles */,
-				849F71C921518FCF005FDF45 /* Quick.framework in CopyFiles */,
-				849F71CA21518FCF005FDF45 /* QRCodeReader.framework in CopyFiles */,
+				84D1A469215E6F9800EA1B89 /* VandelayQr.framework in Embed Frameworks */,
+				84D1A461215E6F9800EA1B89 /* Vandelay.framework in Embed Frameworks */,
+				84D1A465215E6F9800EA1B89 /* VandelayDropbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D1A46F215E76A800EA1B89 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84D1A470215E76B300EA1B89 /* Nimble.framework in CopyFiles */,
+				84D1A471215E76B300EA1B89 /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +296,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849F71C221518FB8005FDF45 /* Alamofire.framework in Frameworks */,
-				849F71C321518FB8005FDF45 /* QRCodeReader.framework in Frameworks */,
-				849F71C421518FB8005FDF45 /* SwiftyDropbox.framework in Frameworks */,
-				849F71BF21518F9D005FDF45 /* Vandelay.framework in Frameworks */,
-				849F71C021518F9D005FDF45 /* VandelayDropbox.framework in Frameworks */,
-				849F71C121518F9D005FDF45 /* VandelayQr.framework in Frameworks */,
+				84D1A460215E6F9800EA1B89 /* Vandelay.framework in Frameworks */,
+				84D1A464215E6F9800EA1B89 /* VandelayDropbox.framework in Frameworks */,
+				84D1A468215E6F9800EA1B89 /* VandelayQr.framework in Frameworks */,
+				84D1A45D215E6F7200EA1B89 /* Alamofire.framework in Frameworks */,
+				84D1A45E215E6F7200EA1B89 /* SwiftyDropbox.framework in Frameworks */,
+				84D1A46D215E700400EA1B89 /* QRCodeReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +606,7 @@
 				8400C5D22149BC6900C19232 /* Sources */,
 				8400C5D32149BC6900C19232 /* Frameworks */,
 				8400C5D42149BC6900C19232 /* Resources */,
+				84D1A46F215E76A800EA1B89 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -655,11 +681,15 @@
 				84F22D682148B184005DEC41 /* Sources */,
 				84F22D692148B184005DEC41 /* Frameworks */,
 				84F22D6A2148B184005DEC41 /* Resources */,
-				849F71C521518FC7005FDF45 /* CopyFiles */,
+				84D1A46C215E6F9800EA1B89 /* Embed Frameworks */,
+				84D1A45F215E6F7C00EA1B89 /* [Carthage] Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84D1A463215E6F9800EA1B89 /* PBXTargetDependency */,
+				84D1A467215E6F9800EA1B89 /* PBXTargetDependency */,
+				84D1A46B215E6F9800EA1B89 /* PBXTargetDependency */,
 			);
 			name = VandelayExample;
 			productName = VandelayExample;
@@ -778,6 +808,30 @@
 			shellPath = /bin/sh;
 			shellScript = swiftlint;
 		};
+		84D1A45F215E6F7C00EA1B89 /* [Carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyDropbox.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/QRCodeReader.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "[Carthage] Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyDropbox.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/QRCodeReader.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -889,6 +943,21 @@
 			isa = PBXTargetDependency;
 			target = 84F22D6B2148B184005DEC41 /* VandelayExample */;
 			targetProxy = 8400C5E82149BCFC00C19232 /* PBXContainerItemProxy */;
+		};
+		84D1A463215E6F9800EA1B89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B1437421463A42001CE5D7 /* Vandelay */;
+			targetProxy = 84D1A462215E6F9800EA1B89 /* PBXContainerItemProxy */;
+		};
+		84D1A467215E6F9800EA1B89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B143B721463A74001CE5D7 /* VandelayDropbox */;
+			targetProxy = 84D1A466215E6F9800EA1B89 /* PBXContainerItemProxy */;
+		};
+		84D1A46B215E6F9800EA1B89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B143F721463AC8001CE5D7 /* VandelayQr */;
+			targetProxy = 84D1A46A215E6F9800EA1B89 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1252,6 +1321,7 @@
 		84F22D922148B186005DEC41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PMEDFW438U;
@@ -1275,6 +1345,7 @@
 		84F22D932148B186005DEC41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PMEDFW438U;
