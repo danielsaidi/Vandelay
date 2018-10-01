@@ -6,8 +6,8 @@
 # Vandelay
 
 [![Version](https://badge.fury.io/gh/danielsaidi%2FVandelay.svg?style=flat)](http://badge.fury.io/gh/danielsaidi%2FVandelay)
-[![Carthage](https://img.shields.io/badge/carthage-supported-green.svg?style=flat)](https://github.com/danielsaidi/Vandelay)
-[![CocoaPods](https://img.shields.io/cocoapods/v/Vandelay.svg?style=flat)](http://cocoapods.org/pods/Vandelay)
+[![Carthage](https://img.shields.io/badge/carthage-supported-green.svg?style=flat)](github)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Vandelay.svg?style=flat)](pod)
 ![Platform](https://img.shields.io/cocoapods/p/Vandelay.svg?style=flat)
 [![License](https://badges.frapsoft.com/os/mit/mit.svg?style=flat&v=102)](https://github.com/ellerbrock/open-source-badge/)
 
@@ -16,49 +16,28 @@
 
 Vandelay is an iOS importer/exporter. It is written in Swift and comes
 with built-in support for exporting and importing strings/data to/from
-a bunch of data sources. It supports `Codable` types, as well as basic
-string and data.
+a bunch of data sources. It supports `Codable` types, strings and data.
 
 
 ## Installation
 
 ### Cocoapods
 
-To install Vandelay with [CocoaPods](http://cocoapods.org) add this to
-your `Podfile`, then run `pod install`:
+If you use [CocoaPods](cocoapods), add this line to your `Podfile` and
+run `pod install`:
 
 ```ruby
 pod "Vandelay"
 ```
 
-You can add additional support for Dropbox and QR codes by adding more
-lines to the `Podfile`: 
-
-```ruby
-pod "VandelayDropbox"
-```
-
-```ruby
-pod "VandelayQr"
-```
-
 ### Carthage
 
-To install Vandelay with [Carthage](https://github.com/Carthage), just
-add this to your `Cartfile`, then run `carthage update --platform iOS`:
+If you use [Carthage](carthage), add this line to your `Cartfile` then
+run `carthage update --platform iOS`:
 
 ```ruby
 github "danielsaidi/Vandelay"
 ```
-
-This will download and build all `Vandelay` frameworks including every
-external dependency (`VandelayDropbox` depends on `SwiftDropbox` which
-depends on `Alamofire`, `VandelayQr` depends on `QrCodeReader`), so it
-will take a little time.
-
-Once Carthage has built all frameworks, you can add every required one
-to the app. This involves a little more work than when using CocoaPods,
-but you will then have pre-built frameworks.
 
 
 ## Exporting data
@@ -96,10 +75,6 @@ If you add `VandelayDropbox`, you get access to the following importer:
 
 - `DropboxImporter` - imports `strings` & `data` from Dropbox
 
-If you add `VandelayQr`, you get access to the following importer:
-
-- `QrCodeImporter [STRING|DATA]` - imports by scanning a QR code
-
 When importing, the same goes as when exporting: data is more powerful,
 but strings are more universal.
 
@@ -127,14 +102,7 @@ and insert the same app ID under `URL Types`.
 
 ## QR Code support
 
-Vandelay comes with additional QR code support. This means that an app
-can use Vandelay to import data by letting the user scan a QR code.
-
-To use this feature, make sure to specify a `NSCameraUsageDescription`
-text in Info.plist. Otherwise, the app will crash. Also make sure that
-the app can access the scanned url. The demo does this by allowing any
-urls to be imported. In a real world app, allowing arbitary urls isn't
-probably a good idea :)
+You can add QR code support to Vandelay with [VandelayQR](vandelayqr).
 
 
 ## Example Project
@@ -146,15 +114,11 @@ Before you can run the example app, you have to install `Carthage` and
 run `carthage update --platform iOS`. This will setup all dependencies
 and prepare the app. You can then open the project and run the app.
 
-For QR codes, you can use the built-in `QrCodeGenerator` to generate a
-scannable QR code for any url you have exported data to. You will then
-be able to scan that code to import data into the app.
-
 
 ## Versioning
 
 Versions < 1.0.0 will have breaking changes between minor versions, so
-Vandelay 0.3.0 will probably not be compatible with Vandelay 0.2.0 etc.
+Vandelay 0.8.0 will probably not be compatible with 0.7.0 etc.
 
 
 ## Author
@@ -166,3 +130,9 @@ Daniel Saidi, daniel.saidi@gmail.com
 
 Vandelay is available under the MIT license. See the LICENSE file for more info.
 
+
+[carthage]: https://github.com/Carthage
+[cocoapods]: http://cocoapods.org
+[github]: https://github.com/danielsaidi/Vandelay
+[pod]: http://cocoapods.org/pods/Vandelay
+[vandelayqr]: https://github.com/danielsaidi/VandelayQr

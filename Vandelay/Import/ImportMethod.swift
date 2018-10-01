@@ -15,6 +15,5 @@ public enum ImportMethod: Equatable {
     dropbox,
     file,
     pasteboard,
-    qrCode,
     url
 }

@@ -8,7 +8,6 @@
 
 import UIKit
 import Vandelay
-import VandelayQr
 import VandelayDropbox
 
 extension ViewController {
@@ -20,7 +19,6 @@ extension ViewController {
         alert.addAction(importPhotoAlbumAction(for: FileImporter(fileName: photoFile), title: "From a local file"))
         alert.addAction(importPhotoAlbumAction(for: UrlImporter(url: photoUrl), title: "From a local file URL"))
         alert.addAction(importPhotoAlbumAction(for: DropboxImporter(fromViewController: self, fileName: photoFile), title: "From a Dropbox file"))
-        alert.addAction(importPhotoAlbumAction(for: QrCodeImporter(fromViewController: self), title: "By scanning a QR code"))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -33,7 +31,6 @@ extension ViewController {
         alert.addAction(importTodoListAction(for: FileImporter(fileName: photoFile), title: "From a local file"))
         alert.addAction(importTodoListAction(for: UrlImporter(url: photoUrl), title: "From a local file URL"))
         alert.addAction(importTodoListAction(for: DropboxImporter(fromViewController: self, fileName: photoFile), title: "From a Dropbox file"))
-        alert.addAction(importTodoListAction(for: QrCodeImporter(fromViewController: self), title: "By scanning a QR code"))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }

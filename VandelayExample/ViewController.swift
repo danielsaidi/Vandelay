@@ -20,7 +20,6 @@
 import UIKit
 import Vandelay
 import VandelayDropbox
-import VandelayQr
 
 class ViewController: UITableViewController {
     
