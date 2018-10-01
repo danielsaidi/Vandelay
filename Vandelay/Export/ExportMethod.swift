@@ -12,7 +12,6 @@ public enum ExportMethod: Equatable {
     
     case
     custom(name: String),
-    dropbox,
     email,
     file,
     message,

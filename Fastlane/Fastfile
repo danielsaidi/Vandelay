@@ -15,18 +15,11 @@ platform :ios do
     test
     
     version = version_bump_podspec(path: "Vandelay.podspec", version_number: options[:name])
-    version_db = version_bump_podspec(path: "VandelayDropbox.podspec", version_number: options[:name])
-    version_qr = version_bump_podspec(path: "VandelayQr.podspec", version_number: options[:name])
-    
     increment_build_number(build_number: version)
-    increment_build_number(build_number: version_db)
-    increment_build_number(build_number: version_qr)
-
+    
     git_commit(
       path: [
         "Vandelay.podspec",
-        "VandelayDropbox.podspec",
-        "VandelayQr.podspec",
         "Fastlane/"],
       message: "Bump to #{version}"
     )
@@ -47,5 +40,4 @@ platform :ios do
       project: "Vandelay.xcodeproj"
     )    
   end
-  
 end

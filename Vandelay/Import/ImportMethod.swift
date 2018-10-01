@@ -12,7 +12,6 @@ public enum ImportMethod: Equatable {
     
     case
     custom(name: String),
-    dropbox,
     file,
     pasteboard,
     url

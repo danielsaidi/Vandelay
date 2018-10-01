@@ -52,10 +52,6 @@ Vandelay comes with the following built-in exporters:
 - `MessageExporter` - exports `strings` & `data` as message attachments
 - `PasteboardExporter` - exports `strings` to the pasteboard
 
-If you add `VandelayDropbox`, you get access to the following exporter:
-
-- `DropboxExporter` - exports `strings` & `data` to Dropbox
-
 You should probably use string exporters whenever possible. Use a data
 exporter when you only have `Data` or when a type can't be serialized.
 
@@ -71,33 +67,13 @@ Vandelay comes with the following built-in importers:
 - `PasteboardExporter` - imports `strings` from the pasteboard
 - `UrlExporter` - imports `strings` & `data` from custom urls
 
-If you add `VandelayDropbox`, you get access to the following importer:
-
-- `DropboxImporter` - imports `strings` & `data` from Dropbox
-
 When importing, the same goes as when exporting: data is more powerful,
 but strings are more universal.
 
 
 ## Dropbox Support
 
-Vandelay comes with additional Dropbox support. This means that an app
-can use Vandelay to sync data to a user's personal Dropbox app folder.
-
-To use these features in your app, you must create a Dropbox developer
-account as well as a Dropbox app for your app. This guide explains how:
-
-- [Install Guide](https://www.dropbox.com/developers/documentation/swift#install)
-- [Tutorial](https://www.dropbox.com/developers/documentation/swift#tutorial)
-
-Check out how the demo app gets Dropbox ready for use. Basically, your
-app must setup Dropbox integration when started then handle any return
-url that are triggered when Dropbox redirects the user back to the app.
-Also, your app must add a few keys to `Info.plist`.
-
-In the demo app, you just have to add your Dropbox app ID to the local
-`Accounts.plist` file, then select the app target, select the info tab
-and insert the same app ID under `URL Types`.
+You can add Dropbox code support to Vandelay with [VandelayDropbox](vandelaydropbox).
 
 
 ## QR Code support
@@ -135,4 +111,5 @@ Vandelay is available under the MIT license. See the LICENSE file for more info.
 [cocoapods]: http://cocoapods.org
 [github]: https://github.com/danielsaidi/Vandelay
 [pod]: http://cocoapods.org/pods/Vandelay
+[vandelaydropbox]: https://github.com/danielsaidi/VandelayDropbox
 [vandelayqr]: https://github.com/danielsaidi/VandelayQr

@@ -26,7 +26,6 @@
 		8400C608214A32A400C19232 /* PasteboardImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C607214A32A400C19232 /* PasteboardImporterTests.swift */; };
 		8400C60A214A32B800C19232 /* UrlImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C609214A32B800C19232 /* UrlImporterTests.swift */; };
 		84B1438621463A42001CE5D7 /* Vandelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B1437821463A42001CE5D7 /* Vandelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		84B143C821463A74001CE5D7 /* VandelayDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B143BA21463A74001CE5D7 /* VandelayDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B1443021463D85001CE5D7 /* RandomFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441021463D85001CE5D7 /* RandomFileNameGenerator.swift */; };
 		84B1443121463D85001CE5D7 /* StaticFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441121463D85001CE5D7 /* StaticFileNameGenerator.swift */; };
 		84B1443221463D85001CE5D7 /* FileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441221463D85001CE5D7 /* FileNameGenerator.swift */; };
@@ -49,15 +48,6 @@
 		84B1444521463D85001CE5D7 /* PasteboardExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1442721463D85001CE5D7 /* PasteboardExporter.swift */; };
 		84B1444621463D85001CE5D7 /* MessageExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1442821463D85001CE5D7 /* MessageExporter.swift */; };
 		84B1444721463D85001CE5D7 /* ExportState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1442921463D85001CE5D7 /* ExportState.swift */; };
-		84D0A6C8214B893700139AF6 /* DropboxExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6C6214B893700139AF6 /* DropboxExporter.swift */; };
-		84D0A6C9214B893700139AF6 /* DropboxImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6C7214B893700139AF6 /* DropboxImporter.swift */; };
-		84D0A6CB214B968F00139AF6 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
-		84D0A6D5214B979900139AF6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
-		84D0A6E0214BE81D00139AF6 /* DropboxClientCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6DF214BE81D00139AF6 /* DropboxClientCreator.swift */; };
-		84D0A6E3214BED0300139AF6 /* DropboxExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E2214BED0300139AF6 /* DropboxExporterTests.swift */; };
-		84D0A6E5214BED5500139AF6 /* DropboxImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E4214BED5500139AF6 /* DropboxImporterTests.swift */; };
-		84D0A6E7214BF57E00139AF6 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6E6214BF57E00139AF6 /* Accounts.swift */; };
-		84D0A6E9214BF67200139AF6 /* Accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D0A6E8214BF67200139AF6 /* Accounts.plist */; };
 		84D0A703214C5BA600139AF6 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6F9214C5BA500139AF6 /* PhotoRepository.swift */; };
 		84D0A704214C5BA600139AF6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FA214C5BA500139AF6 /* Photo.swift */; };
 		84D0A705214C5BA600139AF6 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A6FB214C5BA500139AF6 /* PhotoViewController.swift */; };
@@ -72,8 +62,6 @@
 		84D1A45E215E6F7200EA1B89 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
 		84D1A460215E6F9800EA1B89 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
 		84D1A461215E6F9800EA1B89 /* Vandelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D1A464215E6F9800EA1B89 /* VandelayDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; };
-		84D1A465215E6F9800EA1B89 /* VandelayDropbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D1A46D215E700400EA1B89 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
 		84D1A470215E76B300EA1B89 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D1A471215E76B300EA1B89 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -107,13 +95,6 @@
 			remoteGlobalIDString = 84B1437421463A42001CE5D7;
 			remoteInfo = Vandelay;
 		};
-		84D1A466215E6F9800EA1B89 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84B1436C21463A42001CE5D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84B143B721463A74001CE5D7;
-			remoteInfo = VandelayDropbox;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -124,7 +105,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				84D1A461215E6F9800EA1B89 /* Vandelay.framework in Embed Frameworks */,
-				84D1A465215E6F9800EA1B89 /* VandelayDropbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,9 +147,6 @@
 		84B1437521463A42001CE5D7 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B1437821463A42001CE5D7 /* Vandelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vandelay.h; sourceTree = "<group>"; };
 		84B1437921463A42001CE5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84B143B821463A74001CE5D7 /* VandelayDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VandelayDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84B143BA21463A74001CE5D7 /* VandelayDropbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VandelayDropbox.h; sourceTree = "<group>"; };
-		84B143BB21463A74001CE5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B1441021463D85001CE5D7 /* RandomFileNameGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFileNameGenerator.swift; sourceTree = "<group>"; };
 		84B1441121463D85001CE5D7 /* StaticFileNameGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFileNameGenerator.swift; sourceTree = "<group>"; };
 		84B1441221463D85001CE5D7 /* FileNameGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNameGenerator.swift; sourceTree = "<group>"; };
@@ -192,15 +169,8 @@
 		84B1442721463D85001CE5D7 /* PasteboardExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardExporter.swift; sourceTree = "<group>"; };
 		84B1442821463D85001CE5D7 /* MessageExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageExporter.swift; sourceTree = "<group>"; };
 		84B1442921463D85001CE5D7 /* ExportState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportState.swift; sourceTree = "<group>"; };
-		84D0A6C6214B893700139AF6 /* DropboxExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxExporter.swift; sourceTree = "<group>"; };
-		84D0A6C7214B893700139AF6 /* DropboxImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxImporter.swift; sourceTree = "<group>"; };
 		84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyDropbox.framework; path = Carthage/Build/iOS/SwiftyDropbox.framework; sourceTree = "<group>"; };
 		84D0A6D4214B979900139AF6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		84D0A6DF214BE81D00139AF6 /* DropboxClientCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxClientCreator.swift; sourceTree = "<group>"; };
-		84D0A6E2214BED0300139AF6 /* DropboxExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxExporterTests.swift; sourceTree = "<group>"; };
-		84D0A6E4214BED5500139AF6 /* DropboxImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxImporterTests.swift; sourceTree = "<group>"; };
-		84D0A6E6214BF57E00139AF6 /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
-		84D0A6E8214BF67200139AF6 /* Accounts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Accounts.plist; sourceTree = "<group>"; };
 		84D0A6F9214C5BA500139AF6 /* PhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
 		84D0A6FA214C5BA500139AF6 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		84D0A6FB214C5BA500139AF6 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
@@ -223,7 +193,6 @@
 		84F22D9E2148B45F005DEC41 /* Vandelay.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Vandelay.podspec; sourceTree = "<group>"; };
 		84F22D9F2148B45F005DEC41 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		84F22DA02148B45F005DEC41 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		84F22DA12148B460005DEC41 /* VandelayDropbox.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = VandelayDropbox.podspec; sourceTree = "<group>"; };
 		84F22DA22148B460005DEC41 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		84F22DA32148B460005DEC41 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		84F22DA52148B461005DEC41 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -249,21 +218,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84B143B421463A74001CE5D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84D0A6D5214B979900139AF6 /* Alamofire.framework in Frameworks */,
-				84D0A6CB214B968F00139AF6 /* SwiftyDropbox.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84F22D692148B184005DEC41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				84D1A460215E6F9800EA1B89 /* Vandelay.framework in Frameworks */,
-				84D1A464215E6F9800EA1B89 /* VandelayDropbox.framework in Frameworks */,
 				84D1A45D215E6F7200EA1B89 /* Alamofire.framework in Frameworks */,
 				84D1A45E215E6F7200EA1B89 /* SwiftyDropbox.framework in Frameworks */,
 				84D1A46D215E700400EA1B89 /* QRCodeReader.framework in Frameworks */,
@@ -276,7 +235,6 @@
 		8400C5D72149BC6900C19232 /* VandelayTests */ = {
 			isa = PBXGroup;
 			children = (
-				84D0A6E1214BECEF00139AF6 /* Dropbox */,
 				8400C5EA2149BD9A00C19232 /* Export */,
 				8400C5FC214A2BF400C19232 /* File */,
 				8400C601214A31A000C19232 /* Import */,
@@ -339,11 +297,10 @@
 		84B1436B21463A42001CE5D7 = {
 			isa = PBXGroup;
 			children = (
-				84B1444D21463D9D001CE5D7 /* Project Files */,
 				84B1437721463A42001CE5D7 /* Vandelay */,
-				84B143B921463A74001CE5D7 /* VandelayDropbox */,
 				84F22D6D2148B184005DEC41 /* VandelayExample */,
 				8400C5D72149BC6900C19232 /* VandelayTests */,
+				84B1444D21463D9D001CE5D7 /* Project Files */,
 				84B1437621463A42001CE5D7 /* Products */,
 				84F22D60214850AA005DEC41 /* Frameworks */,
 			);
@@ -353,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				84B1437521463A42001CE5D7 /* Vandelay.framework */,
-				84B143B821463A74001CE5D7 /* VandelayDropbox.framework */,
 				84F22D6C2148B184005DEC41 /* VandelayExample.app */,
 				8400C5D62149BC6900C19232 /* VandelayTests.xctest */,
 			);
@@ -370,18 +326,6 @@
 				84B1437921463A42001CE5D7 /* Info.plist */,
 			);
 			path = Vandelay;
-			sourceTree = "<group>";
-		};
-		84B143B921463A74001CE5D7 /* VandelayDropbox */ = {
-			isa = PBXGroup;
-			children = (
-				84D0A6DF214BE81D00139AF6 /* DropboxClientCreator.swift */,
-				84D0A6C6214B893700139AF6 /* DropboxExporter.swift */,
-				84D0A6C7214B893700139AF6 /* DropboxImporter.swift */,
-				84B143BB21463A74001CE5D7 /* Info.plist */,
-				84B143BA21463A74001CE5D7 /* VandelayDropbox.h */,
-			);
-			path = VandelayDropbox;
 			sourceTree = "<group>";
 		};
 		84B1440F21463D85001CE5D7 /* File */ = {
@@ -442,18 +386,8 @@
 				84F22DA72148B461005DEC41 /* LICENSE */,
 				84F22DA62148B461005DEC41 /* README.md */,
 				84F22D9E2148B45F005DEC41 /* Vandelay.podspec */,
-				84F22DA12148B460005DEC41 /* VandelayDropbox.podspec */,
 			);
 			name = "Project Files";
-			sourceTree = "<group>";
-		};
-		84D0A6E1214BECEF00139AF6 /* Dropbox */ = {
-			isa = PBXGroup;
-			children = (
-				84D0A6E2214BED0300139AF6 /* DropboxExporterTests.swift */,
-				84D0A6E4214BED5500139AF6 /* DropboxImporterTests.swift */,
-			);
-			path = Dropbox;
 			sourceTree = "<group>";
 		};
 		84D0A6F8214C5BA500139AF6 /* Photos */ = {
@@ -495,8 +429,6 @@
 			children = (
 				84D0A6F8214C5BA500139AF6 /* Photos */,
 				84D0A6FD214C5BA500139AF6 /* TodoList */,
-				84D0A6E8214BF67200139AF6 /* Accounts.plist */,
-				84D0A6E6214BF57E00139AF6 /* Accounts.swift */,
 				84F22D6E2148B184005DEC41 /* AppDelegate.swift */,
 				84F22D752148B186005DEC41 /* Assets.xcassets */,
 				84F22D7A2148B186005DEC41 /* Info.plist */,
@@ -517,14 +449,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B1438621463A42001CE5D7 /* Vandelay.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84B143B521463A74001CE5D7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84B143C821463A74001CE5D7 /* VandelayDropbox.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,24 +494,6 @@
 			productReference = 84B1437521463A42001CE5D7 /* Vandelay.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		84B143B721463A74001CE5D7 /* VandelayDropbox */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 84B143C921463A74001CE5D7 /* Build configuration list for PBXNativeTarget "VandelayDropbox" */;
-			buildPhases = (
-				84B143B321463A74001CE5D7 /* Sources */,
-				84B143B421463A74001CE5D7 /* Frameworks */,
-				84B143B521463A74001CE5D7 /* Headers */,
-				84B143B621463A74001CE5D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = VandelayDropbox;
-			productName = VandelayDropbox;
-			productReference = 84B143B821463A74001CE5D7 /* VandelayDropbox.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		84F22D6B2148B184005DEC41 /* VandelayExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84F22D912148B186005DEC41 /* Build configuration list for PBXNativeTarget "VandelayExample" */;
@@ -602,7 +508,6 @@
 			);
 			dependencies = (
 				84D1A463215E6F9800EA1B89 /* PBXTargetDependency */,
-				84D1A467215E6F9800EA1B89 /* PBXTargetDependency */,
 			);
 			name = VandelayExample;
 			productName = VandelayExample;
@@ -628,10 +533,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
 					};
-					84B143B721463A74001CE5D7 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
-					};
 					84F22D6B2148B184005DEC41 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
@@ -652,7 +553,6 @@
 			projectRoot = "";
 			targets = (
 				84B1437421463A42001CE5D7 /* Vandelay */,
-				84B143B721463A74001CE5D7 /* VandelayDropbox */,
 				84F22D6B2148B184005DEC41 /* VandelayExample */,
 				8400C5D52149BC6900C19232 /* VandelayTests */,
 			);
@@ -674,18 +574,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84B143B621463A74001CE5D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84F22D6A2148B184005DEC41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D0A6E9214BF67200139AF6 /* Accounts.plist in Resources */,
 				84F22D792148B186005DEC41 /* LaunchScreen.storyboard in Resources */,
 				84F22D762148B186005DEC41 /* Assets.xcassets in Resources */,
 				84F22D742148B184005DEC41 /* Main.storyboard in Resources */,
@@ -751,9 +643,7 @@
 				8400C604214A31B100C19232 /* MockDataImporter.swift in Sources */,
 				8400C5F52149C38C00C19232 /* FileExporterTests.swift in Sources */,
 				8400C5FB214A2B0200C19232 /* StringExporterTests.swift in Sources */,
-				84D0A6E5214BED5500139AF6 /* DropboxImporterTests.swift in Sources */,
 				8400C600214A2CB100C19232 /* RandomFileNameGenerator.swift in Sources */,
-				84D0A6E3214BED0300139AF6 /* DropboxExporterTests.swift in Sources */,
 				8400C608214A32A400C19232 /* PasteboardImporterTests.swift in Sources */,
 				8400C5F32149C1E900C19232 /* ExporterTests.swift in Sources */,
 			);
@@ -790,22 +680,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84B143B321463A74001CE5D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84D0A6E0214BE81D00139AF6 /* DropboxClientCreator.swift in Sources */,
-				84D0A6C9214B893700139AF6 /* DropboxImporter.swift in Sources */,
-				84D0A6C8214B893700139AF6 /* DropboxExporter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84F22D682148B184005DEC41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				84D0A70F214E9DF800139AF6 /* ViewController+Import.swift in Sources */,
-				84D0A6E7214BF57E00139AF6 /* Accounts.swift in Sources */,
 				84F22D712148B184005DEC41 /* ViewController.swift in Sources */,
 				84D0A703214C5BA600139AF6 /* PhotoRepository.swift in Sources */,
 				84F22D6F2148B184005DEC41 /* AppDelegate.swift in Sources */,
@@ -837,11 +716,6 @@
 			isa = PBXTargetDependency;
 			target = 84B1437421463A42001CE5D7 /* Vandelay */;
 			targetProxy = 84D1A462215E6F9800EA1B89 /* PBXContainerItemProxy */;
-		};
-		84D1A467215E6F9800EA1B89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 84B143B721463A74001CE5D7 /* VandelayDropbox */;
-			targetProxy = 84D1A466215E6F9800EA1B89 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1083,67 +957,6 @@
 			};
 			name = Release;
 		};
-		84B143CA21463A74001CE5D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PMEDFW438U;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 0.7.0;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = VandelayDropbox/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayDropbox;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		84B143CB21463A74001CE5D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PMEDFW438U;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 0.7.0;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = VandelayDropbox/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayDropbox;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		84F22D922148B186005DEC41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1218,15 +1031,6 @@
 			buildConfigurations = (
 				84B1438A21463A42001CE5D7 /* Debug */,
 				84B1438B21463A42001CE5D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		84B143C921463A74001CE5D7 /* Build configuration list for PBXNativeTarget "VandelayDropbox" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				84B143CA21463A74001CE5D7 /* Debug */,
-				84B143CB21463A74001CE5D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
