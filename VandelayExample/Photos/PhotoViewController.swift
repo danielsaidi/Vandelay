@@ -81,14 +81,11 @@ extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationCont
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let imageData = info[.originalImage]
-        
-//        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
-//        let imageData = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
-//        guard let image = imageData else { return print("No image data") }
-//        let photo = Photo(image: image.resized(toWidth: 250))
-//        repository.add(photo)
-//        dismiss(animated: true, completion: nil)
-//        reloadData()
+        guard let image = imageData as? UIImage else { return print("No image data") }
+        let photo = Photo(image: image.resized(toWidth: 250))
+        repository.add(photo)
+        dismiss(animated: true, completion: nil)
+        reloadData()
     }
 }
 

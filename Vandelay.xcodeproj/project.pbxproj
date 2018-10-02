@@ -58,11 +58,8 @@
 		84D0A70A214C5BA600139AF6 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A702214C5BA500139AF6 /* UIImage+Resize.swift */; };
 		84D0A70D214E9A7A00139AF6 /* ViewController+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A70C214E9A7A00139AF6 /* ViewController+Export.swift */; };
 		84D0A70F214E9DF800139AF6 /* ViewController+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0A70E214E9DF800139AF6 /* ViewController+Import.swift */; };
-		84D1A45D215E6F7200EA1B89 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6D4214B979900139AF6 /* Alamofire.framework */; };
-		84D1A45E215E6F7200EA1B89 /* SwiftyDropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A6CA214B968F00139AF6 /* SwiftyDropbox.framework */; };
 		84D1A460215E6F9800EA1B89 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; };
 		84D1A461215E6F9800EA1B89 /* Vandelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1437521463A42001CE5D7 /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84D1A46D215E700400EA1B89 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8400C5B821491EDB00C19232 /* QRCodeReader.framework */; };
 		84D1A470215E76B300EA1B89 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E12149BC9800C19232 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D1A471215E76B300EA1B89 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8400C5E22149BC9800C19232 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84F22D5A21479FA2005DEC41 /* ExportMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5921479FA2005DEC41 /* ExportMethod.swift */; };
@@ -223,9 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D1A460215E6F9800EA1B89 /* Vandelay.framework in Frameworks */,
-				84D1A45D215E6F7200EA1B89 /* Alamofire.framework in Frameworks */,
-				84D1A45E215E6F7200EA1B89 /* SwiftyDropbox.framework in Frameworks */,
-				84D1A46D215E700400EA1B89 /* QRCodeReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +496,6 @@
 				84F22D692148B184005DEC41 /* Frameworks */,
 				84F22D6A2148B184005DEC41 /* Resources */,
 				84D1A46C215E6F9800EA1B89 /* Embed Frameworks */,
-				84D1A45F215E6F7C00EA1B89 /* [Carthage] Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -599,31 +592,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = swiftlint;
-		};
-		84D1A45F215E6F7C00EA1B89 /* [Carthage] Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyDropbox.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/QRCodeReader.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-			);
-			name = "[Carthage] Copy Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyDropbox.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/QRCodeReader.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
