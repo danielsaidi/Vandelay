@@ -2,14 +2,24 @@
     <img src ="Assets/logo-900.png" width="450" alt="Vandelay logo" />
 </p>
 
-
-# Vandelay
-
-[![Version](https://badge.fury.io/gh/danielsaidi%2FVandelay.svg?style=flat)](http://badge.fury.io/gh/danielsaidi%2FVandelay)
-[![Carthage](https://img.shields.io/badge/carthage-supported-green.svg?style=flat)](github)
-[![CocoaPods](https://img.shields.io/cocoapods/v/Vandelay.svg?style=flat)](pod)
-![Platform](https://img.shields.io/cocoapods/p/Vandelay.svg?style=flat)
-[![License](https://badges.frapsoft.com/os/mit/mit.svg?style=flat&v=102)](https://github.com/ellerbrock/open-source-badge/)
+<p align="center">
+    <a href="https://github.com/danielsaidi/Vandelay">
+        <img src="https://badge.fury.io/gh/danielsaidi%2FVandelay.svg?style=flat" alt="Version" />
+    </a>
+    <img src="https://api.travis-ci.org/danielsaidi/Vandelay.svg" alt="Build Status" />
+    <a href="https://cocoapods.org/pods/Vandelay">
+        <img src="https://img.shields.io/cocoapods/v/Vandelay.svg?style=flat" alt="CocoaPods" />
+    </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/carthage-supported-green.svg?style=flat" alt="Carthage" />
+    </a>
+    <img src="https://img.shields.io/cocoapods/p/Vandelay.svg?style=flat" alt="Platform" />
+    <img src="https://img.shields.io/badge/Swift-4.2-orange.svg" alt="Swift 4.2" />
+    <img src="https://badges.frapsoft.com/os/mit/mit.svg?style=flat&v=102" alt="License" />
+    <a href="https://twitter.com/danielsaidi">
+        <img src="https://img.shields.io/badge/contact-@danielsaidi-blue.svg?style=flat" alt="Twitter: @danielsaidi" />
+    </a>
+</p>
 
 
 ## About
