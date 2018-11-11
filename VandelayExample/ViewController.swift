@@ -6,19 +6,9 @@
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
-/*
- 
- This class intentionally handles most of the logic required
- for this example app, so you don't have to understand a big
- domain model to understand the examples.
- 
- I have, however, extracted the import and export logic into
- their own extensions, to make each piece easier to overview.
- 
- */
-
 import UIKit
 import Vandelay
+import VandelayDropbox
 
 class ViewController: UITableViewController {
     
@@ -47,7 +37,6 @@ class ViewController: UITableViewController {
         default: break
         }
     }
-
     
     
     // MARK: - Dependencies

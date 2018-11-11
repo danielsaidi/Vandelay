@@ -18,6 +18,7 @@ extension ViewController {
         alert.addAction(exportPhotoAlbumAction(for: FileExporter(fileName: photoFile), title: "To a local file"))
         alert.addAction(exportPhotoAlbumAction(for: EmailExporter(fromViewController: self, fileName: photoFile), title: "In an e-mail"))
         alert.addAction(exportPhotoAlbumAction(for: MessageExporter(fromViewController: self, fileName: photoFile), title: "In a message"))
+        alert.addAction(exportPhotoAlbumAction(for: DropboxExporter(fromViewController: self, fileName: photoFile), title: "To a Dropbox file"))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -30,6 +31,7 @@ extension ViewController {
         alert.addAction(exportTodoListAction(for: FileExporter(fileName: photoFile), title: "To a local file"))
         alert.addAction(exportTodoListAction(for: EmailExporter(fromViewController: self, fileName: photoFile), title: "In an e-mail"))
         alert.addAction(exportTodoListAction(for: MessageExporter(fromViewController: self, fileName: photoFile), title: "In a message"))
+        alert.addAction(exportTodoListAction(for: DropboxExporter(fromViewController: self, fileName: photoFile), title: "To a Dropbox file"))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }

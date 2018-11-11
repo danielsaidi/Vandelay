@@ -1,2 +1,6 @@
 github "Quick/Quick"
 github "Quick/Nimble"
+
+github "danielsaidi/VandelayDropbox" "tmp"
+github "danielsaidi/VandelayQr" "0.7.2"
+github "dropbox/SwiftyDropbox" "4.8.1"

@@ -25,6 +25,8 @@
 		8400C606214A329800C19232 /* FileImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C605214A329800C19232 /* FileImporterTests.swift */; };
 		8400C608214A32A400C19232 /* PasteboardImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C607214A32A400C19232 /* PasteboardImporterTests.swift */; };
 		8400C60A214A32B800C19232 /* UrlImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400C609214A32B800C19232 /* UrlImporterTests.swift */; };
+		8413990F219872BF007AFADF /* Accounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8413990D219872BF007AFADF /* Accounts.plist */; };
+		84139910219872BF007AFADF /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413990E219872BF007AFADF /* Accounts.swift */; };
 		84B1438621463A42001CE5D7 /* Vandelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B1437821463A42001CE5D7 /* Vandelay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B1443021463D85001CE5D7 /* RandomFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441021463D85001CE5D7 /* RandomFileNameGenerator.swift */; };
 		84B1443121463D85001CE5D7 /* StaticFileNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1441121463D85001CE5D7 /* StaticFileNameGenerator.swift */; };
@@ -140,6 +142,8 @@
 		8400C605214A329800C19232 /* FileImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileImporterTests.swift; sourceTree = "<group>"; };
 		8400C607214A32A400C19232 /* PasteboardImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardImporterTests.swift; sourceTree = "<group>"; };
 		8400C609214A32B800C19232 /* UrlImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImporterTests.swift; sourceTree = "<group>"; };
+		8413990D219872BF007AFADF /* Accounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Accounts.plist; sourceTree = "<group>"; };
+		8413990E219872BF007AFADF /* Accounts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
 		844FE2732148B7DD00CE7BD7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		84B1437521463A42001CE5D7 /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B1437821463A42001CE5D7 /* Vandelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vandelay.h; sourceTree = "<group>"; };
@@ -288,12 +292,21 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		8413990C219872BF007AFADF /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				8413990D219872BF007AFADF /* Accounts.plist */,
+				8413990E219872BF007AFADF /* Accounts.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
 		84B1436B21463A42001CE5D7 = {
 			isa = PBXGroup;
 			children = (
 				84B1437721463A42001CE5D7 /* Vandelay */,
-				84F22D6D2148B184005DEC41 /* VandelayExample */,
 				8400C5D72149BC6900C19232 /* VandelayTests */,
+				84F22D6D2148B184005DEC41 /* VandelayExample */,
 				84B1444D21463D9D001CE5D7 /* Project Files */,
 				84B1437621463A42001CE5D7 /* Products */,
 				84F22D60214850AA005DEC41 /* Frameworks */,
@@ -421,6 +434,7 @@
 		84F22D6D2148B184005DEC41 /* VandelayExample */ = {
 			isa = PBXGroup;
 			children = (
+				8413990C219872BF007AFADF /* Accounts */,
 				84D0A6F8214C5BA500139AF6 /* Photos */,
 				84D0A6FD214C5BA500139AF6 /* TodoList */,
 				84F22D6E2148B184005DEC41 /* AppDelegate.swift */,
@@ -571,6 +585,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8413990F219872BF007AFADF /* Accounts.plist in Resources */,
 				84F22D792148B186005DEC41 /* LaunchScreen.storyboard in Resources */,
 				84F22D762148B186005DEC41 /* Assets.xcassets in Resources */,
 				84F22D742148B184005DEC41 /* Main.storyboard in Resources */,
@@ -662,6 +677,7 @@
 				84D0A704214C5BA600139AF6 /* Photo.swift in Sources */,
 				84D0A708214C5BA600139AF6 /* TodoItemViewController.swift in Sources */,
 				84D0A707214C5BA600139AF6 /* TodoItem.swift in Sources */,
+				84139910219872BF007AFADF /* Accounts.swift in Sources */,
 				84D0A709214C5BA600139AF6 /* TodoItemRepository.swift in Sources */,
 				84D0A70D214E9A7A00139AF6 /* ViewController+Export.swift in Sources */,
 				84D0A705214C5BA600139AF6 /* PhotoViewController.swift in Sources */,
