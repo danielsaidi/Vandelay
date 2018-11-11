@@ -83,12 +83,12 @@ but strings are more universal.
 
 ## Dropbox Support
 
-You can add Dropbox code support to Vandelay with [VandelayDropbox](vandelaydropbox).
+You can add Dropbox support with [VandelayDropbox](vandelaydropbox).
 
 
 ## QR Code support
 
-You can add QR code support to Vandelay with [VandelayQR](vandelayqr).
+You can add QR code support with [VandelayQR](vandelayqr).
 
 
 ## Example Project
@@ -99,6 +99,25 @@ todo lists (strings) and photos (data).
 Before you can run the example app, you have to install `Carthage` and
 run `carthage update --platform iOS`. This will setup all dependencies
 and prepare the app. You can then open the project and run the app.
+
+### Dropbox Support
+
+The example project also installs additional Dropbox support, by using
+the `VandelayDropbox` addon.
+
+For Dropbox support to work, you must replace the Dropbox app keys you
+find in `Accounts.plist` and `Info.plist` with your own app keys. Make
+sure to create a developer account and a Dropbox app before doing this.
+
+### QR Code Support
+
+The example project also installs additional QR code support, by using
+the `VandelayQr` addon.
+
+For QR codes, you can use the built-in `QrCodeGenerator` to generate a
+scannable QR code for any url you have exported data to, e.g. by using
+the [Vandelay](vandelay) example project. You can then run the example
+project from your phone and scan that code to import data into the app.
 
 
 ## Versioning

@@ -8,6 +8,8 @@
 
 import UIKit
 import Vandelay
+import VandelayDropbox
+import VandelayQr
 
 extension ViewController {
     
