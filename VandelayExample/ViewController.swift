@@ -8,7 +8,6 @@
 
 import UIKit
 import Vandelay
-import VandelayDropbox
 
 class ViewController: UITableViewController {
     

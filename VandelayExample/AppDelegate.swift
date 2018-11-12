@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyDropbox
+//import SwiftyDropbox
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,15 +30,15 @@ private extension AppDelegate {
     
     func setupDropbox(with appKey: String) {
         guard appKey.count > 0 else { return }
-        DropboxClientsManager.setupWithAppKey(appKey)
+//        DropboxClientsManager.setupWithAppKey(appKey)
     }
     
     func tryHandleDropboxAuth(with url: URL) {
-        if let result = DropboxClientsManager.handleRedirectURL(url) {
-            switch result {
-            case .success: print("Success! User is logged into Dropbox.")
-            case .cancel: print("Authorization flow was manually canceled by user!")
-            case .error(_, let description): print("Error: \(description)") }
-        }
+//        if let result = DropboxClientsManager.handleRedirectURL(url) {
+//            switch result {
+//            case .success: print("Success! User is logged into Dropbox.")
+//            case .cancel: print("Authorization flow was manually canceled by user!")
+//            case .error(_, let description): print("Error: \(description)") }
+//        }
     }
 }

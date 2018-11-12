@@ -88,31 +88,44 @@ You can add Dropbox support with [VandelayDropbox](vandelaydropbox).
 
 ## QR Code support
 
-You can add QR code support with [VandelayQR](vandelayqr).
+You can add QR code scanning support with [VandelayQR](vandelayqr).
 
 
-## Example Project
+## Example App
 
-Vandelay comes with an example project that lets you export and import
-todo lists (strings) and photos (data).
+Vandelay comes with an example app, that lets you export and import an
+easily managed collection of todo items (strings) and photos (data).
 
 Before you can run the example app, you have to install `Carthage` and
-run `carthage update --platform iOS`. This will setup all dependencies
-and prepare the app. You can then open the project and run the app.
+run `carthage update --platform iOS`. This will setup all dependencies.
+You can then open the Vandelay project and run the app.
 
 ### Dropbox Support
 
-The example project also installs additional Dropbox support, by using
-the `VandelayDropbox` addon.
+The example app has support for [VandelayDropbox](vandelaydropbox). It
+is disabled by default, but can be enabled with these steps:
 
-For Dropbox support to work, you must replace the Dropbox app keys you
-find in `Accounts.plist` and `Info.plist` with your own app keys. Make
-sure to create a developer account and a Dropbox app before doing this.
+* Add `github "danielsaidi/VandelayDropbox"` to `Cartfile`.
+* Run `carthage update --platform iOS --cache-builds`
+* Uncomment the Dropbox-specific lines in `AppDelegate.swift`
+* Uncomment the Dropbox-specific lines in `ViewController+Export.swift`
+* Uncomment the Dropbox-specific lines in `ViewController+Import.swift`
+* Add each framework to `Build Phases / [Carthage] Copy Files`.
+
+Before you can use [VandelayDropbox](vandelaydropbox), you must create
+a Dropbox developer account, create a Dropbox app then finally replace
+the Dropbox app key you find in `Accounts.plist` and `Info.plist` with
+your own app keys.
 
 ### QR Code Support
 
-The example project also installs additional QR code support, by using
-the `VandelayQr` addon.
+The example app has support for [VandelayQR](vandelayqr). To enable it,
+follow these steps:
+
+* Add `github "danielsaidi/VandelayQr"` to `Cartfile`.
+* Run `carthage update --platform iOS --cache-builds`
+* Uncomment the QR-specific lines in `ViewController+Import.swift`
+* Add each framework to `Build Phases / [Carthage] Copy Files`.
 
 For QR codes, you can use the built-in `QrCodeGenerator` to generate a
 scannable QR code for any url you have exported data to, e.g. by using
