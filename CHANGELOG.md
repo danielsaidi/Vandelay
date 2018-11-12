@@ -1,6 +1,20 @@
 # Vandelay Changelog
 
 
+## 0.8.0
+
+This version moves stuff around between Vandelay and its add-ons. This
+means that I have had some trial and error getting it to work, but the
+`0.8.1` version works with both CocoaPods and Carthage. I version bump
+`VandelayQr` and `VandelayDropbox` to `0.8.1` as well.
+
+The add-ons no longer have their own demo projects, since this meant I
+had to duplicate code en-masse. I moved the demo code to this repo and
+disabled it for now, since I could not get Carthage to ignore building
+the example app, which had a bunch of private dependencies. I will add
+it as a GitHub issue for future fixing.
+
+
 ## 0.7.0
 
 This version migrates Vandelay to Swift 4.2. For now, the tests do run
