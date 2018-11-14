@@ -510,7 +510,7 @@
 				84F22D692148B184005DEC41 /* Frameworks */,
 				84F22D6A2148B184005DEC41 /* Resources */,
 				84D1A46C215E6F9800EA1B89 /* Embed Frameworks */,
-				8413991C2198B2BB007AFADF /* [Carthage] Copy FIles */,
+				8413991C2198B2BB007AFADF /* [Carthage] Copy Files */,
 			);
 			buildRules = (
 			);
@@ -560,8 +560,8 @@
 			projectRoot = "";
 			targets = (
 				84B1437421463A42001CE5D7 /* Vandelay */,
-				84F22D6B2148B184005DEC41 /* VandelayExample */,
 				8400C5D52149BC6900C19232 /* VandelayTests */,
+				84F22D6B2148B184005DEC41 /* VandelayExample */,
 			);
 		};
 /* End PBXProject section */
@@ -595,7 +595,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8413991C2198B2BB007AFADF /* [Carthage] Copy FIles */ = {
+		8413991C2198B2BB007AFADF /* [Carthage] Copy Files */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -604,7 +604,7 @@
 			);
 			inputPaths = (
 			);
-			name = "[Carthage] Copy FIles";
+			name = "[Carthage] Copy Files";
 			outputFileListPaths = (
 			);
 			outputPaths = (
