@@ -137,6 +137,7 @@ private extension MessageComposeResult {
         case .cancelled: return .cancelled
         case .failed: return .failed
         case .sent: return .completed
+        @unknown default: return .unknown
         }
     }
 }

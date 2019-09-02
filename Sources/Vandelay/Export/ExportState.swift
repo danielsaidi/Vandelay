@@ -16,5 +16,6 @@ public enum ExportState {
     case
     cancelled,
     completed,
-    failed
+    failed,
+    unknown
 }

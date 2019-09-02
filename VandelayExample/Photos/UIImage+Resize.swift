@@ -13,7 +13,7 @@ public extension UIImage {
     
     // MARK: - Public functions
     
-    public func resized(toHeight points: CGFloat) -> UIImage {
+    func resized(toHeight points: CGFloat) -> UIImage {
         let height = points * scale
         let ratio = height / size.height
         let width = size.width * ratio
@@ -21,7 +21,7 @@ public extension UIImage {
         return resized(toSize: newSize, withQuality: .high)
     }
     
-    public func resized(toWidth points: CGFloat) -> UIImage {
+    func resized(toWidth points: CGFloat) -> UIImage {
         let width = points * scale
         let ratio = width / size.width
         let height = size.height * ratio

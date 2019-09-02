@@ -125,6 +125,7 @@ extension ExportResult {
         case .cancelled: return "The export was cancelled."
         case .completed: return "The export was successfully completed."
         case .failed: return "The export did fail: \(error?.localizedDescription ?? "No error information")."
+        case .unknown: return "The export is in an unknown state."
         }
     }
 }

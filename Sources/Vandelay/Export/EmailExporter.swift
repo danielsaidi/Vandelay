@@ -142,6 +142,7 @@ private extension MFMailComposeResult {
         case .failed: return .failed
         case .sent: return .completed
         case .saved: return .cancelled
+        @unknown default: return .unknown
         }
     }
 }
