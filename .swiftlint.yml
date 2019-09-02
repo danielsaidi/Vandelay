@@ -14,8 +14,7 @@ disabled_rules:
 
 excluded:
   - Pods
-  - Carthage
-  - __MIGRATE
+  - Packages
 
 variable_name:
   excluded:

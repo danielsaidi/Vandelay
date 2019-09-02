@@ -17,6 +17,6 @@ Data (to be used for more complex objects, image data etc.).
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Vandelay/**/*.{swift}'
+  s.source_files = 'Vandelay/Sources/**/*.{swift}'
 
 end

@@ -4,8 +4,13 @@
 # CUSTOM
 VandelayExample/Accounts.plist
 
-# OS X
+# SPM Defaults
 .DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+
 
 ## Build generated
 build/
