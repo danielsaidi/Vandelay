@@ -6,41 +6,44 @@ default_platform :ios
 platform :ios do
 
 
-  # Versioning **************
+  # Dependencies ***********************
+
+  desc "Resolve External Dependencies (the shell script makes Bitrise work)"
+  lane :resolve_dependencies do
+    sh("cd .. && xcodebuild -showBuildSettings -project Vandelay.xcodeproj -scheme Vandelay")
+    spm(command: "resolve")
+  end
+
+
+  # Test =======================
+  
+  desc "Run unit tests"
+  lane :test do
+    swiftlint(strict: true)
+    resolve_dependencies
+    run_tests(scheme: "Vandelay")
+  end
+
+
+  # Version ================
 
   desc "Create a new version"
   lane :version do |options|
     ensure_git_status_clean
     ensure_git_branch(branch: 'master')
     test
-    version = version_bump_podspec(path: "Vandelay.podspec", version_number: options[:name])
+    version = version_bump_podspec(path: "Vandelay.podspec", bump_type: bump_type)
     increment_version_number(version_number: version)
-    increment_build_number(build_number: `date "+%y%m%d%H%M"`)
-    
+  
     git_commit(
-      path: [
-        "Vandelay.podspec",
-        "*/Info.plist",
-        "*/*.pbxproj",
-        "Fastlane/"],
+      path: "*",
       message: "Bump to #{version}"
     )
-
+  
     add_git_tag(tag: version)
     push_git_tags()
     push_to_git_remote()
     pod_push()
   end
-
-
-  # Unit Tests ********
-
-  desc "Run unit tests"
-  lane :test do
-    scan(
-      scheme: "Vandelay",
-      devices: ["iPhone 6s"],
-      project: "Vandelay.xcodeproj"
-    )    
-  end
+  
 end

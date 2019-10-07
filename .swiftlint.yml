@@ -1,22 +1,12 @@
 disabled_rules:
-  - cyclomatic_complexity
-  - file_length
-  - function_body_length
-  - identifier_name
   - line_length
-  - opening_brace
-  - shorthand_operator
   - trailing_whitespace
-  - type_body_length
-  - type_name
   - vertical_whitespace
-  - void_return
+  
+included:
+  - Sources
+  - Tests
 
-excluded:
-  - Pods
-  - Carthage
-  - __MIGRATE
-
-variable_name:
+identifier_name:
   excluded:
     - vc
