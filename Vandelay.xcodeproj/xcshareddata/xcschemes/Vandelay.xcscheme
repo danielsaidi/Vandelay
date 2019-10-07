@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84722609234B147600283684"
+               BlueprintIdentifier = "84DAED6F234B2233003F3CD8"
                BuildableName = "VandelayDemo.app"
                BlueprintName = "VandelayDemo"
                ReferencedContainer = "container:Vandelay.xcodeproj">
@@ -68,7 +68,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "84722609234B147600283684"
+            BlueprintIdentifier = "84DAED6F234B2233003F3CD8"
             BuildableName = "VandelayDemo.app"
             BlueprintName = "VandelayDemo"
             ReferencedContainer = "container:Vandelay.xcodeproj">

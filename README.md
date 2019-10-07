@@ -89,35 +89,7 @@ You can add Dropbox support with [VandelayDropbox][VandelayDropbox]. It lets you
 
 ## Demo App
 
-Vandelay comes with an example app, that lets you export and import an easily managed collection of todo items (strings) and photos (data).
-
-Due to project setup problems, the demo app is currently disabled. The old source code can be found in the `_VandelayDemo` folder.
-
-
-### Dropbox Support
-
-The demo app has support for [VandelayDropbox][VandelayDropbox]. It's disabled by default, but can be enabled with these steps:
-
-* Add `github "danielsaidi/VandelayDropbox"` to `Cartfile`.
-* Run `carthage update --platform iOS --cache-builds`
-* Uncomment the Dropbox-specific lines in `AppDelegate.swift`
-* Uncomment the Dropbox-specific lines in `ViewController+Export.swift`
-* Uncomment the Dropbox-specific lines in `ViewController+Import.swift`
-* Add each framework to `Build Phases / [Carthage] Copy Files`.
-
-Before you can use [VandelayDropbox][VandelayDropbox], you must create a Dropbox developer account, create a Dropbox app then finally replace the Dropbox app key you find in `Accounts.plist` and `Info.plist` with your own app keys.
-
-
-### QR Code Support
-
-The example app has support for [VandelayQR][VandelayQR]. To enable it, follow these steps:
-
-* Add `github "danielsaidi/VandelayQr"` to `Cartfile`.
-* Run `carthage update --platform iOS --cache-builds`
-* Uncomment the QR-specific lines in `ViewController+Import.swift`
-* Add each framework to `Build Phases / [Carthage] Copy Files`.
-
-For QR codes, you can use the built-in `QrCodeGenerator` to generate a scannable QR code for any url you have exported data to. You can then run the example project from your phone and scan that code to import data into the app.
+This repo contains a demo app that lets you export/import todo items (strings) and photos (data). To run the demo app, open and run the `Vandelay.xcodeproj` project.
 
 
 ## Contact me

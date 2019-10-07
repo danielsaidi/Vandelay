@@ -21,6 +21,24 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		84DAED73234B2233003F3CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED72234B2233003F3CD8 /* AppDelegate.swift */; };
+		84DAED75234B2233003F3CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED74234B2233003F3CD8 /* SceneDelegate.swift */; };
+		84DAED7A234B2233003F3CD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DAED78234B2233003F3CD8 /* Main.storyboard */; };
+		84DAED7C234B2235003F3CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DAED7B234B2235003F3CD8 /* Assets.xcassets */; };
+		84DAED7F234B2235003F3CD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DAED7D234B2235003F3CD8 /* LaunchScreen.storyboard */; };
+		84DAED8F234B2929003F3CD8 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED86234B2929003F3CD8 /* TodoItem.swift */; };
+		84DAED90234B2929003F3CD8 /* TodoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED87234B2929003F3CD8 /* TodoItemViewController.swift */; };
+		84DAED91234B2929003F3CD8 /* TodoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED88234B2929003F3CD8 /* TodoItemRepository.swift */; };
+		84DAED92234B2929003F3CD8 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED8A234B2929003F3CD8 /* UIImage+Resize.swift */; };
+		84DAED93234B2929003F3CD8 /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED8B234B2929003F3CD8 /* PhotoRepository.swift */; };
+		84DAED94234B2929003F3CD8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED8C234B2929003F3CD8 /* Photo.swift */; };
+		84DAED95234B2929003F3CD8 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED8D234B2929003F3CD8 /* PhotoViewController.swift */; };
+		84DAED96234B2929003F3CD8 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED8E234B2929003F3CD8 /* PhotoCollectionViewCell.swift */; };
+		84DAED99234B2A47003F3CD8 /* ViewController+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED97234B2A46003F3CD8 /* ViewController+Export.swift */; };
+		84DAED9A234B2A47003F3CD8 /* ViewController+Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAED98234B2A46003F3CD8 /* ViewController+Import.swift */; };
+		84DAED9C234B2A5F003F3CD8 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vandelay::Vandelay::Product" /* Vandelay.framework */; };
+		84DAED9D234B2A5F003F3CD8 /* Vandelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "Vandelay::Vandelay::Product" /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84DAEDA2234B2B54003F3CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAEDA1234B2B54003F3CD8 /* ViewController.swift */; };
 		OBJ_166 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* AdapterProtocols.swift */; };
 		OBJ_167 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* AssertionDispatcher.swift */; };
 		OBJ_168 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* AssertionRecorder.swift */; };
@@ -188,11 +206,50 @@
 			remoteGlobalIDString = "Vandelay::VandelayTests";
 			remoteInfo = VandelayTests;
 		};
+		84DAED9E234B2A5F003F3CD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Vandelay::Vandelay";
+			remoteInfo = Vandelay;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84DAEDA0234B2A5F003F3CD8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84DAED9D234B2A5F003F3CD8 /* Vandelay.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		847225C9234B08C500283684 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		847225CA234B08C500283684 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		84DAED70234B2233003F3CD8 /* VandelayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VandelayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DAED72234B2233003F3CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84DAED74234B2233003F3CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84DAED79234B2233003F3CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84DAED7B234B2235003F3CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84DAED7E234B2235003F3CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84DAED80234B2235003F3CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DAED86234B2929003F3CD8 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		84DAED87234B2929003F3CD8 /* TodoItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemViewController.swift; sourceTree = "<group>"; };
+		84DAED88234B2929003F3CD8 /* TodoItemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemRepository.swift; sourceTree = "<group>"; };
+		84DAED8A234B2929003F3CD8 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		84DAED8B234B2929003F3CD8 /* PhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		84DAED8C234B2929003F3CD8 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		84DAED8D234B2929003F3CD8 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		84DAED8E234B2929003F3CD8 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		84DAED97234B2A46003F3CD8 /* ViewController+Export.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Export.swift"; sourceTree = "<group>"; };
+		84DAED98234B2A46003F3CD8 /* ViewController+Import.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Import.swift"; sourceTree = "<group>"; };
+		84DAEDA1234B2B54003F3CD8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		"Nimble::Nimble::Product" /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* DataExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExporter.swift; sourceTree = "<group>"; };
 		OBJ_100 /* ExceptionCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionCapture.swift; sourceTree = "<group>"; };
@@ -324,6 +381,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		84DAED6D234B2233003F3CD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DAED9C234B2A5F003F3CD8 /* Vandelay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_218 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -378,6 +443,61 @@
 				OBJ_160 /* Vandelay.podspec */,
 			);
 			name = "Project Files";
+			sourceTree = "<group>";
+		};
+		84DAED71234B2233003F3CD8 /* VandelayDemo */ = {
+			isa = PBXGroup;
+			children = (
+				84DAED7B234B2235003F3CD8 /* Assets.xcassets */,
+				84DAED89234B2929003F3CD8 /* Photos */,
+				84DAED85234B2929003F3CD8 /* Todo */,
+				84DAED84234B2715003F3CD8 /* Supporting Files */,
+				84DAEDA1234B2B54003F3CD8 /* ViewController.swift */,
+				84DAED97234B2A46003F3CD8 /* ViewController+Export.swift */,
+				84DAED98234B2A46003F3CD8 /* ViewController+Import.swift */,
+			);
+			path = VandelayDemo;
+			sourceTree = "<group>";
+		};
+		84DAED84234B2715003F3CD8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84DAED72234B2233003F3CD8 /* AppDelegate.swift */,
+				84DAED80234B2235003F3CD8 /* Info.plist */,
+				84DAED7D234B2235003F3CD8 /* LaunchScreen.storyboard */,
+				84DAED78234B2233003F3CD8 /* Main.storyboard */,
+				84DAED74234B2233003F3CD8 /* SceneDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84DAED85234B2929003F3CD8 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				84DAED86234B2929003F3CD8 /* TodoItem.swift */,
+				84DAED87234B2929003F3CD8 /* TodoItemViewController.swift */,
+				84DAED88234B2929003F3CD8 /* TodoItemRepository.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		84DAED89234B2929003F3CD8 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				84DAED8A234B2929003F3CD8 /* UIImage+Resize.swift */,
+				84DAED8B234B2929003F3CD8 /* PhotoRepository.swift */,
+				84DAED8C234B2929003F3CD8 /* Photo.swift */,
+				84DAED8D234B2929003F3CD8 /* PhotoViewController.swift */,
+				84DAED8E234B2929003F3CD8 /* PhotoCollectionViewCell.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		84DAED9B234B2A5F003F3CD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		OBJ_107 /* Matchers */ = {
@@ -440,6 +560,7 @@
 				"Nimble::Nimble::Product" /* Nimble.framework */,
 				"Vandelay::Vandelay::Product" /* Vandelay.framework */,
 				"Vandelay::VandelayTests::Product" /* VandelayTests.xctest */,
+				84DAED70234B2233003F3CD8 /* VandelayDemo.app */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -533,8 +654,10 @@
 				OBJ_156 /* Assets */,
 				OBJ_55 /* Dependencies */,
 				OBJ_155 /* Fastlane */,
+				84DAED71234B2233003F3CD8 /* VandelayDemo */,
 				OBJ_148 /* Products */,
 				847225C8234B08AB00283684 /* Project Files */,
+				84DAED9B234B2A5F003F3CD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -738,6 +861,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		84DAED6F234B2233003F3CD8 /* VandelayDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DAED83234B2235003F3CD8 /* Build configuration list for PBXNativeTarget "VandelayDemo" */;
+			buildPhases = (
+				84DAED6C234B2233003F3CD8 /* Sources */,
+				84DAED6D234B2233003F3CD8 /* Frameworks */,
+				84DAED6E234B2233003F3CD8 /* Resources */,
+				84DAEDA0234B2A5F003F3CD8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84DAED9F234B2A5F003F3CD8 /* PBXTargetDependency */,
+			);
+			name = VandelayDemo;
+			productName = VandelayDemo;
+			productReference = 84DAED70234B2233003F3CD8 /* VandelayDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		"Nimble::Nimble" /* Nimble */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_162 /* Build configuration list for PBXNativeTarget "Nimble" */;
@@ -876,6 +1018,12 @@
 				LastSwiftMigration = 9999;
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					84DAED6F234B2233003F3CD8 = {
+						CreatedOnToolsVersion = 11.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Vandelay" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -894,6 +1042,7 @@
 				"Vandelay::SwiftPMPackageDescription" /* VandelayPackageDescription */,
 				"Vandelay::VandelayPackageTests::ProductTarget" /* VandelayPackageTests */,
 				"Vandelay::VandelayTests" /* VandelayTests */,
+				84DAED6F234B2233003F3CD8 /* VandelayDemo */,
 				"Nimble::Nimble" /* Nimble */,
 				"Nimble::SwiftPMPackageDescription" /* NimblePackageDescription */,
 				"Quick::Quick" /* Quick */,
@@ -902,6 +1051,19 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84DAED6E234B2233003F3CD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DAED7F234B2235003F3CD8 /* LaunchScreen.storyboard in Resources */,
+				84DAED7C234B2235003F3CD8 /* Assets.xcassets in Resources */,
+				84DAED7A234B2233003F3CD8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		847225E3234B09BB00283684 /* SwiftLint */ = {
@@ -925,6 +1087,26 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		84DAED6C234B2233003F3CD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DAED9A234B2A47003F3CD8 /* ViewController+Import.swift in Sources */,
+				84DAED92234B2929003F3CD8 /* UIImage+Resize.swift in Sources */,
+				84DAED93234B2929003F3CD8 /* PhotoRepository.swift in Sources */,
+				84DAED94234B2929003F3CD8 /* Photo.swift in Sources */,
+				84DAED90234B2929003F3CD8 /* TodoItemViewController.swift in Sources */,
+				84DAED91234B2929003F3CD8 /* TodoItemRepository.swift in Sources */,
+				84DAED73234B2233003F3CD8 /* AppDelegate.swift in Sources */,
+				84DAED8F234B2929003F3CD8 /* TodoItem.swift in Sources */,
+				84DAEDA2234B2B54003F3CD8 /* ViewController.swift in Sources */,
+				84DAED75234B2233003F3CD8 /* SceneDelegate.swift in Sources */,
+				84DAED96234B2929003F3CD8 /* PhotoCollectionViewCell.swift in Sources */,
+				84DAED99234B2A47003F3CD8 /* ViewController+Export.swift in Sources */,
+				84DAED95234B2929003F3CD8 /* PhotoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_165 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -1100,6 +1282,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		84DAED9F234B2A5F003F3CD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Vandelay::Vandelay" /* Vandelay */;
+			targetProxy = 84DAED9E234B2A5F003F3CD8 /* PBXContainerItemProxy */;
+		};
 		OBJ_255 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Quick::QuickSpecBase" /* QuickSpecBase */;
@@ -1132,7 +1319,146 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		84DAED78234B2233003F3CD8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84DAED79234B2233003F3CD8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84DAED7D234B2235003F3CD8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84DAED7E234B2235003F3CD8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		84DAED81234B2235003F3CD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = VandelayDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DAED82234B2235003F3CD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = VandelayDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		OBJ_163 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1525,6 +1851,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		84DAED83234B2235003F3CD8 /* Build configuration list for PBXNativeTarget "VandelayDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DAED81234B2235003F3CD8 /* Debug */,
+				84DAED82234B2235003F3CD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_162 /* Build configuration list for PBXNativeTarget "Nimble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

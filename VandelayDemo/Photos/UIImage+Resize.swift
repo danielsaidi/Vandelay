@@ -1,6 +1,6 @@
 //
 //  UIImage_ResizeExtensions.swift
-//  iExtra
+//  VandelayDemo
 //
 //  Created by Daniel Saidi on 2016-01-21.
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
