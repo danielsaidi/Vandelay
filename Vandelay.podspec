@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Vandelay'
   s.version          = '0.9.0'
+  s.swift_versions   = ['5.1']
   s.summary          = 'Vandelay is an iOS importer/exporter.'
 
   s.description      = <<-DESC
@@ -17,6 +18,6 @@ Data (to be used for more complex objects, image data etc.).
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Vandelay/Sources/**/*.{swift}'
+  s.source_files = 'Sources/**/*.{swift}'
 
 end
