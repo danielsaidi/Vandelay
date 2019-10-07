@@ -18,7 +18,7 @@ public protocol Exporter {
     var exportMethod: ExportMethod { get }
 }
 
-public typealias ExportCompletion = (_ result: ExportResult) -> ()
+public typealias ExportCompletion = (_ result: ExportResult) -> Void
 
 public extension Exporter {
     

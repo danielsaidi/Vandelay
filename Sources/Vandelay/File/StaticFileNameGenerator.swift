@@ -21,6 +21,6 @@ public class StaticFileNameGenerator: FileNameGenerator {
     private let fileName: String
     
     public func getFileName() -> String {
-        return fileName
+        fileName
     }
 }

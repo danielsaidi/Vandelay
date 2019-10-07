@@ -5,14 +5,17 @@ import PackageDescription
 
 let package = Package(
     name: "Vandelay",
+    platforms: [
+        .iOS(.v9)
+    ],
     products: [
         .library(
             name: "Vandelay",
             targets: ["Vandelay"])
     ],
     dependencies: [
-        .package(url: "git@github.com:Quick/Quick.git", from: "2.1.0"),
-        .package(url: "git@github.com:Quick/Nimble.git", from: "8.0.2")
+        .package(url: "git@github.com:Quick/Quick.git", .upToNextMinor(from: "2.2.0")),
+        .package(url: "git@github.com:Quick/Nimble.git", .exact("8.0.2"))
     ],
     targets: [
         .target(

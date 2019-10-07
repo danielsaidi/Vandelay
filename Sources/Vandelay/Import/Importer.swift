@@ -17,4 +17,4 @@ public protocol Importer {
     var importMethod: ImportMethod { get }
 }
 
-public typealias ImportCompletion = (_ result: ImportResult) -> ()
+public typealias ImportCompletion = (_ result: ImportResult) -> Void

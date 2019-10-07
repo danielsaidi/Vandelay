@@ -17,35 +17,33 @@
 
 ## About
 
-Vandelay is an iOS importer/exporter. It supports `Codable` types, strings and data and comes with built-in support for exporting and importing strings/data to/from a bunch of data sources.
+Vandelay is a Swift-based iOS importer/exporter. It supports `Codable`, strings and data and comes with built-in support for exporting and importing strings/data to/from a bunch of data sources.
 
 
 ## Installation
 
 ### Swift Package Manager
 
-In Xcode 11 and later, the easiest way to add Vandelay to your project is to use Swift Package Manager:
+The easiest way to add Vandelay to your project is to use Swift Package Manager:
 ```
 .package(url: "git@github.com:danielsaidi/Vandelay.git" ...)
 ```
 
 ### CocoaPods
 
-If you use [CocoaPods](CocoaPods), add this line to your `Podfile` and run `pod install`:
 ```ruby
 pod "Vandelay"
 ```
 
 ### Carthage
 
-If you use [Carthage](carthage), add this line to your `Cartfile` then run `carthage update --platform iOS`:
 ```ruby
 github "danielsaidi/Vandelay"
 ```
 
 ### Manual installation
 
-To add `Vandelay` to your app without a dependency manager, clone this repository and place it somewhere on disk, then add `Vandelay.xcodeproj` to the project and `Vandelay.framework` as an embedded app binary and target dependency.
+To add `Vandelay` to your app without a dependency manager, clone this repository, add `Vandelay.xcodeproj` to your project and `Vandelay.framework` as an embedded app binary and target dependency.
 
 
 ## Exporting data
@@ -79,24 +77,26 @@ You can extend Vandelay with custom importers as well.
 When importing, the same goes as when exporting: data is more powerful, but strings are more universal.
 
 
-## Dropbox Support
-
-You can add Dropbox support with [VandelayDropbox](VandelayDropbox). It lets you export and import data to/from Dropbox.
-
-
 ## QR Code support
 
-You can add QR code scanning support with [VandelayQR](VandelayQR). It lets you import data by scanning QR codes.
+You can add QR code scanning support with [VandelayQR][VandelayQR]. It lets you import data by scanning QR codes.
+
+
+## Dropbox Support
+
+You can add Dropbox support with [VandelayDropbox][VandelayDropbox]. It lets you export and import data to/from Dropbox.
 
 
 ## Demo App
 
 Vandelay comes with an example app, that lets you export and import an easily managed collection of todo items (strings) and photos (data).
 
+Due to project setup problems, the demo app is currently disabled. The old source code can be found in the `_VandelayDemo` folder.
+
 
 ### Dropbox Support
 
-The demo app has support for [VandelayDropbox](VandelayDropbox). It's disabled by default, but can be enabled with these steps:
+The demo app has support for [VandelayDropbox][VandelayDropbox]. It's disabled by default, but can be enabled with these steps:
 
 * Add `github "danielsaidi/VandelayDropbox"` to `Cartfile`.
 * Run `carthage update --platform iOS --cache-builds`
@@ -105,12 +105,12 @@ The demo app has support for [VandelayDropbox](VandelayDropbox). It's disabled b
 * Uncomment the Dropbox-specific lines in `ViewController+Import.swift`
 * Add each framework to `Build Phases / [Carthage] Copy Files`.
 
-Before you can use [VandelayDropbox](VandelayDropbox), you must create a Dropbox developer account, create a Dropbox app then finally replace the Dropbox app key you find in `Accounts.plist` and `Info.plist` with your own app keys.
+Before you can use [VandelayDropbox][VandelayDropbox], you must create a Dropbox developer account, create a Dropbox app then finally replace the Dropbox app key you find in `Accounts.plist` and `Info.plist` with your own app keys.
 
 
 ### QR Code Support
 
-The example app has support for [VandelayQR](VandelayQR). To enable it, follow these steps:
+The example app has support for [VandelayQR][VandelayQR]. To enable it, follow these steps:
 
 * Add `github "danielsaidi/VandelayQr"` to `Cartfile`.
 * Run `carthage update --platform iOS --cache-builds`
@@ -125,15 +125,18 @@ For QR codes, you can use the built-in `QrCodeGenerator` to generate a scannable
 I hope you like this library. Feel free to reach out if you have questions or if
 you want to contribute in any way:
 
-* E-mail: [daniel.saidi@gmail.com](mailto:daniel.saidi@gmail.com)
-* Twitter: [@danielsaidi](http://www.twitter.com/danielsaidi)
-* Web site: [danielsaidi.com](http://www.danielsaidi.com)
+* E-mail: [daniel.saidi@gmail.com][Email]
+* Twitter: [@danielsaidi][Twitter]
+* Web site: [danielsaidi.com][Website]
 
 
 ## License
 
 Vandelay is available under the MIT license. See the LICENSE file for more info.
 
+[Email]: mailto:daniel.saidi@gmail.com
+[Twitter]: http://www.twitter.com/danielsaidi
+[Website]: http://www.danielsaidi.com
 
 [Carthage]: https://github.com/Carthage
 [CocoaPods]: http://cocoapods.org
