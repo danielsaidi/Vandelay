@@ -35,7 +35,7 @@ import MessageUI
  inherit from `NSObject`, since it implements protocols that
  require it to.
  */
-public class EmailExporter: NSObject, DataExporter, StringExporter {
+public class EmailExporter: DataExporter, StringExporter {
 
     
     // MARK: - Initialization
@@ -50,15 +50,10 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
         self.fileNameGenerator = fileNameGenerator
         self.emailSubject = emailSubject
         self.emailBody = emailBody
-        super.init()
-    }
-    
-    deinit {
-        print("deinit")
     }
     
     
-    // MARK: - Retainer
+    // MARK: - ComposerDelegate
     
     private class ComposerDelegate: NSObject, MFMailComposeViewControllerDelegate {
         

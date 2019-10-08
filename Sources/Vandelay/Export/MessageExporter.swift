@@ -31,7 +31,7 @@ import MessageUI
  inherit from `NSObject`, since it implements protocols that
  require it to.
  */
-public class MessageExporter: NSObject, DataExporter, StringExporter {
+public class MessageExporter: DataExporter, StringExporter {
     
     
     // MARK: - Initialization
@@ -46,7 +46,6 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
         self.fileNameGenerator = fileNameGenerator
         self.messageSubject = messageSubject
         self.messageBody = messageBody
-        super.init()
     }
     
     
@@ -64,6 +63,27 @@ public class MessageExporter: NSObject, DataExporter, StringExporter {
     private var composer: MFMessageComposeViewController?
     private let messageBody: String?
     private let messageSubject: String?
+    
+    
+    // MARK: - ComposerDelegate
+    
+    private class ComposerDelegate: NSObject, MFMessageComposeViewControllerDelegate {
+        
+        init(exporter: MessageExporter) {
+            self.exporter = exporter
+        }
+        
+        var exporter: MessageExporter
+        
+        public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+            controller.presentingViewController?.dismiss(animated: true, completion: nil)
+            let result = ExportResult(method: exporter.exportMethod, state: result.exportState)
+            exporter.completion(result)
+            ComposerDelegate.current = nil
+        }
+    
+        static var current: ComposerDelegate?
+    }
     
     
     // MARK: - Errors
@@ -106,24 +126,13 @@ private extension MessageExporter {
     
     func openMessageComposer(from vc: UIViewController, data: Data) {
         let composer = MFMessageComposeViewController()
-        self.composer = composer
-        composer.messageComposeDelegate = self
+        let delegate = ComposerDelegate(exporter: self)
+        ComposerDelegate.current = delegate
+        composer.messageComposeDelegate = delegate
         composer.subject = messageSubject
         composer.body = messageBody
         composer.addAttachmentData(data, typeIdentifier: "public.data", filename: fileNameGenerator.getFileName())
         vc.present(composer, animated: true, completion: nil)
-    }
-}
-
-
-// MARK: - MFMailComposeViewControllerDelegate
-
-extension MessageExporter: MFMessageComposeViewControllerDelegate {
-    
-    public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        controller.presentingViewController?.dismiss(animated: true, completion: nil)
-        let result = ExportResult(method: exportMethod, state: result.exportState)
-        completion(result)
     }
 }
 
