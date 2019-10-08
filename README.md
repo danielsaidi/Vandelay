@@ -17,7 +17,7 @@
 
 ## About
 
-Vandelay is a Swift-based iOS importer/exporter. It supports `Codable`, strings and data and comes with built-in support for exporting and importing strings/data to/from a bunch of data sources.
+Vandelay is a Swift-based iOS importer/exporter. It supports `Codable`, strings and data and comes with built-in support for exporting and importing strings and data to and from a bunch of data sources.
 
 
 ## Installation
@@ -120,11 +120,8 @@ Vandelay is available under the MIT license. See the LICENSE file for more info.
 [Twitter]: http://www.twitter.com/danielsaidi
 [Website]: http://www.danielsaidi.com
 
-[Carthage]: https://github.com/Carthage
-[CocoaPods]: http://cocoapods.org
-[GitHub]: https://github.com/danielsaidi/Vandelay
-[Pod]: http://cocoapods.org/pods/Vandelay
-[License]: https://github.com/danielsaidi/Vandelay/blob/master/LICENSE
-
+[Vandelay]: https://github.com/danielsaidi/Vandelay
 [VandelayDropbox]: https://github.com/danielsaidi/VandelayDropbox
 [VandelayQR]: https://github.com/danielsaidi/VandelayQr
+
+[License]: https://github.com/danielsaidi/Vandelay/blob/master/LICENSE

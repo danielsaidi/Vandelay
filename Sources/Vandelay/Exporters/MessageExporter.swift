@@ -25,11 +25,6 @@ import MessageUI
  must instead link your app with the file type you use, then
  read and import the data that is sent to the app when users
  tap the file on their devices.
- 
- IMPORTANT: Since the exporter waits for user input, it must
- be strongly referenced, to avoid deallocation. It must also
- inherit from `NSObject`, since it implements protocols that
- require it to.
  */
 public class MessageExporter: DataExporter, StringExporter {
     
