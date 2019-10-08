@@ -53,6 +53,31 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
         super.init()
     }
     
+    deinit {
+        print("deinit")
+    }
+    
+    
+    // MARK: - Retainer
+    
+    private class ComposerDelegate: NSObject, MFMailComposeViewControllerDelegate {
+        
+        init(exporter: EmailExporter) {
+            self.exporter = exporter
+        }
+        
+        var exporter: EmailExporter
+        
+        public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            controller.dismiss(animated: true, completion: nil)
+            let result = ExportResult(method: exporter.exportMethod, state: result.exportState, error: error)
+            exporter.completion?(result)
+            ComposerDelegate.current = nil
+        }
+    
+        static var current: ComposerDelegate?
+    }
+    
     
     // MARK: - Dependencies
     
@@ -65,7 +90,6 @@ public class EmailExporter: NSObject, DataExporter, StringExporter {
     public let exportMethod = ExportMethod.email
     
     private var completion: ExportCompletion!
-    private var composer: MFMailComposeViewController?
     private let emailBody: String?
     private let emailSubject: String?
     
@@ -110,24 +134,13 @@ private extension EmailExporter {
     
     func openEmailComposer(from vc: UIViewController, data: Data) {
         let composer = MFMailComposeViewController()
-        self.composer = composer
-        composer.mailComposeDelegate = self
+        let delegate = ComposerDelegate(exporter: self)
+        ComposerDelegate.current = delegate
+        composer.mailComposeDelegate = delegate
         if let subject = emailSubject { composer.setSubject(subject) }
         if let body = emailBody { composer.setMessageBody(body, isHTML: true) }
         composer.addAttachmentData(data, mimeType: "text/plain", fileName: fileNameGenerator.getFileName())
         vc.present(composer, animated: true, completion: nil)
-    }
-}
-
-
-// MARK: - MFMailComposeViewControllerDelegate
-
-extension EmailExporter: MFMailComposeViewControllerDelegate {
-    
-    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.presentingViewController?.dismiss(animated: true, completion: nil)
-        let result = ExportResult(method: exportMethod, state: result.exportState, error: error)
-        completion?(result)
     }
 }
 
