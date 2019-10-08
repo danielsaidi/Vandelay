@@ -40,12 +40,10 @@ class ViewController: UITableViewController {
     
     // MARK: - Properties
     
-    let photoFile = "photoAlbum.json"
-    var photoPath: String { return "http://danielsaidi.com/vandelay/\(photoFile)" }
-    var photoUrl: URL { return URL(string: photoPath)! }
-    let todoFile = "todoList.json"
-    var todoPath: String { return "http://danielsaidi.com/vandelay/\(todoFile)" }
-    var todoUrl: URL { return URL(string: todoPath)! }
+    let photoFile = "photoAlbum.vdl"
+    var photoUrl: URL { FileExporter(fileName: photoFile).getFileUrl()! }
+    let todoFile = "todoList.vdl"
+    var todoUrl: URL { FileExporter(fileName: todoFile).getFileUrl()! }
     
     
     // MARK: - Outlets
@@ -63,31 +61,11 @@ class ViewController: UITableViewController {
 
 extension ViewController {
     
-    func handleExportResult(_ result: ExportResult) {
-        alert(title: "Done", message: result.message)
-    }
-    
-    func handleImportResult(_ result: ImportResult) {
-        alert(title: "Done", message: result.message)
-    }
-    
     func reloadData() {
         let items = todoItemRepository.getItems()
         let photos = photoRepository.getPhotos()
         todoItemCell.detailTextLabel?.text = "\(items.count) items"
         photoAlbumCell.detailTextLabel?.text = "\(photos.count) photos"
-    }
-}
-
-
-// MARK: - Private Functions
-
-private extension ViewController {
-    
-    func alert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -105,35 +83,6 @@ extension ViewController {
         case importTodoItemsCell: importTodoList()
         case importPhotoAlbumCell: importPhotoAlbum()
         default: break
-        }
-    }
-}
-
-
-// MARK: - ExportResult Extensions
-
-extension ExportResult {
-    
-    var message: String {
-        switch state {
-        case .cancelled: return "The export was cancelled."
-        case .completed: return "The export was successfully completed."
-        case .failed: return "The export did fail: \(error?.localizedDescription ?? "No error information")."
-        case .unknown: return "The export is in an unknown state."
-        }
-    }
-}
-
-
-// MARK: - ImportResult Extensions
-
-extension ImportResult {
-    
-    var message: String {
-        switch state {
-        case .cancelled: return "The import was cancelled."
-        case .completed: return "The import was successfully completed."
-        case .failed: return "The import did fail: \(error?.localizedDescription ?? "No error information")."
         }
     }
 }

@@ -71,20 +71,23 @@ public class FileExporter: DataExporter, StringExporter {
         }
         export(data: data, completion: completion)
     }
+    
+    
+    // MARK: - Functions
+    
+    public func getFileUrl() -> URL? {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        guard paths.count > 0 else { return nil }
+        let fileName = fileNameGenerator.getFileName()
+        let filePath = "file://\(paths[0])/\(fileName)"
+        return URL(string: filePath)
+    }
 }
 
 
 // MARK: Private functions
 
 private extension FileExporter {
-    
-    func getFileUrl() -> URL? {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        guard paths.count > 0 else { return nil }
-        let fileName = fileNameGenerator.getFileName()
-        let filePath = "file://\(paths[0])/\(fileName)"
-        return URL(string: filePath)
-    }
     
     func write(data: Data, to url: URL, completion: @escaping ExportCompletion) {
         do {

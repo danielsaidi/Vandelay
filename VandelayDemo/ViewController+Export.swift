@@ -20,7 +20,6 @@ extension ViewController {
         alert.addAction(exportPhotoAlbumAction(for: FileExporter(fileName: photoFile), title: "To a local file"))
         alert.addAction(exportPhotoAlbumAction(for: EmailExporter(fromViewController: self, fileName: photoFile), title: "In an e-mail"))
         alert.addAction(exportPhotoAlbumAction(for: MessageExporter(fromViewController: self, fileName: photoFile), title: "In a message"))
-        // alert.addAction(exportPhotoAlbumAction(for: DropboxExporter(fromViewController: self, fileName: photoFile), title: "To a Dropbox file"))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -31,9 +30,8 @@ extension ViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.addAction(exportTodoListAction(for: PasteboardExporter(), title: "To the pasteboard"))
         alert.addAction(exportTodoListAction(for: FileExporter(fileName: photoFile), title: "To a local file"))
-        alert.addAction(exportTodoListAction(for: EmailExporter(fromViewController: self, fileName: photoFile), title: "In an e-mail"))
-        alert.addAction(exportTodoListAction(for: MessageExporter(fromViewController: self, fileName: photoFile), title: "In a message"))
-        // alert.addAction(exportTodoListAction(for: DropboxExporter(fromViewController: self, fileName: photoFile), title: "To a Dropbox file"))
+        alert.addAction(exportTodoListAction(for: EmailExporter(fromViewController: self, fileName: todoFile), title: "In an e-mail"))
+        alert.addAction(exportTodoListAction(for: MessageExporter(fromViewController: self, fileName: todoFile), title: "In a message"))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -47,7 +45,7 @@ private extension ViewController {
     func exportPhotoAlbum(with exporter: DataExporter) {
         let photos = photoRepository.getPhotos()
         exporter.exportData(for: photos, encoder: JSONEncoder()) { [weak self] (result) in
-            self?.handleExportResult(result)
+            self?.alertExportResult(result)
         }
     }
     
@@ -59,7 +57,7 @@ private extension ViewController {
     func exportTodoList(with exporter: StringExporter) {
         let items = todoItemRepository.getItems()
         exporter.exportString(for: items, encoder: JSONEncoder()) { [weak self] (result) in
-            self?.handleExportResult(result)
+            self?.alertExportResult(result)
         }
     }
     

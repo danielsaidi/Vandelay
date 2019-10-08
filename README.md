@@ -76,6 +76,14 @@ You can extend Vandelay with custom importers as well.
 
 When importing, the same goes as when exporting: data is more powerful, but strings are more universal.
 
+### Importing external files
+
+You can use the existing importers to import data by sharing external files to Vandelay, e.g. by tapping an e-mail attachment or sharing a file to the app.  
+
+To import files, your app must be correctly configured to handle the file type. You have to register `Document types` and `Exported Type UTIs` and implement the correct functions in `AppDelegate` (iOS 12 and earlier) or `SceneDelegate` (iOS 13+). Once the functions are triggered, you can use a `UrlImporter` to import the tapped file.
+
+Check out the demo app for an example on how this can be done.
+
 
 ## QR Code support
 
@@ -90,6 +98,8 @@ You can add Dropbox support with [VandelayDropbox][VandelayDropbox]. It lets you
 ## Demo App
 
 This repo contains a demo app that lets you export/import todo items (strings) and photos (data). To run the demo app, open and run the `Vandelay.xcodeproj` project.
+
+The demo app registers a custom file type `.vdl` which it uses to export and import data. Have a loot at its `Info.plist`, `AppDelegate` and `SceneDelegate` to see how it handles imports.
 
 
 ## Contact me

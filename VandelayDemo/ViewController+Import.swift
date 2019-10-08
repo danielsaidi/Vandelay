@@ -19,10 +19,21 @@ extension ViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.addAction(importPhotoAlbumAction(for: FileImporter(fileName: photoFile), title: "From a local file"))
         alert.addAction(importPhotoAlbumAction(for: UrlImporter(url: photoUrl), title: "From a local file URL"))
+        alert.addAction(importWithEmailImporterAction(title: "From an e-mail attachment"))
         // alert.addAction(importPhotoAlbumAction(for: QrCodeImporter(fromViewController: self), title: "By scanning a QR code"))
         // alert.addAction(importPhotoAlbumAction(for: DropboxImporter(fromViewController: self, fileName: photoFile), title: "From a Dropbox file"))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func importPhotoAlbum(with importer: DataImporter) {
+        importer.importData { [weak self] result in
+            self?.alertImportResult(result)
+            guard let data = result.data else { return }
+            let photos = try? JSONDecoder().decode([Photo].self, from: data)
+            self?.photoRepository.add(photos ?? [])
+            self?.reloadData()
+        }
     }
     
     func importTodoList() {
@@ -32,35 +43,16 @@ extension ViewController {
         alert.addAction(importTodoListAction(for: PasteboardImporter(), title: "From the pasteboard"))
         alert.addAction(importTodoListAction(for: FileImporter(fileName: photoFile), title: "From a local file"))
         alert.addAction(importTodoListAction(for: UrlImporter(url: photoUrl), title: "From a local file URL"))
+        alert.addAction(importWithEmailImporterAction(title: "From an e-mail attachment"))
         // alert.addAction(importTodoListAction(for: QrCodeImporter(fromViewController: self), title: "By scanning a QR code"))
         // alert.addAction(importTodoListAction(for: DropboxImporter(fromViewController: self, fileName: photoFile), title: "From a Dropbox file"))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-}
-
-// MARK: - Import functions
-
-private extension ViewController {
-    
-    func importPhotoAlbum(with importer: DataImporter) {
-        importer.importData { [weak self] result in
-            self?.handleImportResult(result)
-            guard let data = result.data else { return }
-            let photos = try? JSONDecoder().decode([Photo].self, from: data)
-            self?.photoRepository.add(photos ?? [])
-            self?.reloadData()
-        }
-    }
-    
-    func importPhotoAlbumAction(for importer: DataImporter, title: String) -> UIAlertAction {
-        let action: (DataImporter) -> () = { [weak self] importer in self?.importPhotoAlbum(with: importer)}
-        return UIAlertAction(title: title, style: .default) { _ in action(importer) }
-    }
     
     func importTodoList(with importer: StringImporter) {
         importer.importString { [weak self] result in
-            self?.handleImportResult(result)
+            self?.alertImportResult(result)
             guard let string = result.string else { return }
             guard let data = string.data(using: .utf8) else { return }
             let items = try? JSONDecoder().decode([TodoItem].self, from: data)
@@ -68,9 +60,25 @@ private extension ViewController {
             self?.reloadData()
         }
     }
+}
+
+// MARK: - Import functions
+
+private extension ViewController {
+    
+    func importPhotoAlbumAction(for importer: DataImporter, title: String) -> UIAlertAction {
+        let action = { [weak self] importer in self?.importPhotoAlbum(with: importer)}
+        return UIAlertAction(title: title, style: .default) { _ in action(importer) }
+    }
     
     func importTodoListAction(for importer: StringImporter, title: String) -> UIAlertAction {
-        let action: (StringImporter) -> () = { [weak self] importer in self?.importTodoList(with: importer)}
+        let action = { [weak self] importer in self?.importTodoList(with: importer)}
         return UIAlertAction(title: title, style: .default) { _ in action(importer) }
+    }
+    
+    func importWithEmailImporterAction(title: String) -> UIAlertAction {
+        UIAlertAction(title: title, style: .default) { _ in
+            self.alert(title: "Import external file", message: "You can try this by exporting data from this app to an e-mail, then tap the attached .vdl file and share it back to this app.")
+        }
     }
 }

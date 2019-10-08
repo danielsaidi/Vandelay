@@ -8,9 +8,20 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+class AppDelegate: UIResponder, UIApplicationDelegate, IncomingFileHandler {
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        performImportOnStart(from: url)
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        performImport(from: url)
+        return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        performImport(from: url)
         return true
     }
 
