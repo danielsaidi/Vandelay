@@ -595,20 +595,15 @@
 			path = File;
 			sourceTree = "<group>";
 		};
-		OBJ_24 /* Import */ = {
+		OBJ_24 /* Importers */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_25 /* DataImporter.swift */,
 				OBJ_26 /* FileImporter.swift */,
 				OBJ_27 /* ImportMethod.swift */,
-				OBJ_28 /* ImportResult.swift */,
-				OBJ_29 /* ImportState.swift */,
-				OBJ_30 /* Importer.swift */,
 				OBJ_31 /* PasteboardImporter.swift */,
-				OBJ_32 /* StringImporter.swift */,
 				OBJ_33 /* UrlImporter.swift */,
 			);
-			path = Import;
+			path = Importers;
 			sourceTree = "<group>";
 		};
 		OBJ_34 /* Tests */ = {
@@ -622,28 +617,28 @@
 		OBJ_35 /* VandelayTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_36 /* Export */,
+				OBJ_36 /* Exporters */,
 				OBJ_44 /* File */,
-				OBJ_47 /* Import */,
+				OBJ_47 /* Importers */,
 				OBJ_51 /* Mocks */,
+				OBJ_37 /* DataExporterTests.swift */,
+				OBJ_43 /* StringExporterTests.swift */,
 				OBJ_54 /* XCTestManifests.swift */,
 			);
 			name = VandelayTests;
 			path = Tests/VandelayTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_36 /* Export */ = {
+		OBJ_36 /* Exporters */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_37 /* DataExporterTests.swift */,
 				OBJ_38 /* EmailExporterTests.swift */,
 				OBJ_39 /* ExporterTests.swift */,
 				OBJ_40 /* FileExporterTests.swift */,
 				OBJ_41 /* MessageExporterTests.swift */,
 				OBJ_42 /* PasteboardExporterTests.swift */,
-				OBJ_43 /* StringExporterTests.swift */,
 			);
-			path = Export;
+			path = Exporters;
 			sourceTree = "<group>";
 		};
 		OBJ_44 /* File */ = {
@@ -655,14 +650,14 @@
 			path = File;
 			sourceTree = "<group>";
 		};
-		OBJ_47 /* Import */ = {
+		OBJ_47 /* Importers */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_48 /* FileImporterTests.swift */,
 				OBJ_49 /* PasteboardImporterTests.swift */,
 				OBJ_50 /* UrlImporterTests.swift */,
 			);
-			path = Import;
+			path = Importers;
 			sourceTree = "<group>";
 		};
 		OBJ_5 = {
@@ -775,9 +770,19 @@
 		OBJ_8 /* Vandelay */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Export */,
+				OBJ_9 /* Exporters */,
 				OBJ_20 /* File */,
-				OBJ_24 /* Import */,
+				OBJ_24 /* Importers */,
+				OBJ_15 /* Exporter.swift */,
+				OBJ_14 /* ExportState.swift */,
+				OBJ_13 /* ExportResult.swift */,
+				OBJ_30 /* Importer.swift */,
+				OBJ_29 /* ImportState.swift */,
+				OBJ_28 /* ImportResult.swift */,
+				OBJ_10 /* DataExporter.swift */,
+				OBJ_25 /* DataImporter.swift */,
+				OBJ_19 /* StringExporter.swift */,
+				OBJ_32 /* StringImporter.swift */,
 			);
 			name = Vandelay;
 			path = Sources/Vandelay;
@@ -810,21 +815,16 @@
 			name = "Nimble 8.0.2";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_9 /* Export */ = {
+		OBJ_9 /* Exporters */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_10 /* DataExporter.swift */,
 				OBJ_11 /* EmailExporter.swift */,
 				OBJ_12 /* ExportMethod.swift */,
-				OBJ_13 /* ExportResult.swift */,
-				OBJ_14 /* ExportState.swift */,
-				OBJ_15 /* Exporter.swift */,
 				OBJ_16 /* FileExporter.swift */,
 				OBJ_17 /* MessageExporter.swift */,
 				OBJ_18 /* PasteboardExporter.swift */,
-				OBJ_19 /* StringExporter.swift */,
 			);
-			path = Export;
+			path = Exporters;
 			sourceTree = "<group>";
 		};
 		OBJ_90 /* Nimble */ = {

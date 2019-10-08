@@ -23,7 +23,6 @@ class DataExporterTests: QuickSpec {
             exporter = MockDataExporter(method: .email, result: result)
         }
         
-        
         describe("exporting data for valid codable") {
             
             it("calls base function with data") {

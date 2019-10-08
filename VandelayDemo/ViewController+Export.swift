@@ -50,7 +50,7 @@ private extension ViewController {
     }
     
     func exportPhotoAlbumAction(for exporter: DataExporter, title: String) -> UIAlertAction {
-        let action: (DataExporter) -> () = { [weak self] exporter in self?.exportPhotoAlbum(with: exporter)}
+        let action = { [weak self] exporter in self?.exportPhotoAlbum(with: exporter)}
         return UIAlertAction(title: title, style: .default) { _ in action(exporter) }
     }
     
@@ -62,7 +62,7 @@ private extension ViewController {
     }
     
     func exportTodoListAction(for exporter: StringExporter, title: String) -> UIAlertAction {
-        let action: (StringExporter) -> () = { [weak self] exporter in self?.exportTodoList(with: exporter)}
+        let action = { [weak self] exporter in self?.exportTodoList(with: exporter)}
         return UIAlertAction(title: title, style: .default) { _ in action(exporter) }
     }
 }
