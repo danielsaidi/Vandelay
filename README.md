@@ -1,5 +1,5 @@
 <p align="center">
-    <img src ="Assets/logo-900.png" width="450" alt="Vandelay logo" />
+    <img src ="Resources/Logo-540.png" width="540" alt="Vandelay logo" />
 </p>
 
 <p align="center">
