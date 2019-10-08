@@ -14,12 +14,6 @@ class ViewController: UITableViewController {
     
     // MARK: - View lifecycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let image = UIImage(named: "NavBarLogo")
-        navigationItem.titleView = UIImageView(image: image)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         reloadData()
     }
