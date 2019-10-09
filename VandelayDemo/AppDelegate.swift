@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, IncomingFileHandler {
         return true
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         performImport(from: url)
         return true
     }

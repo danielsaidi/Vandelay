@@ -79,7 +79,7 @@ public class FileExporter: DataExporter, StringExporter {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         guard paths.count > 0 else { return nil }
         let fileName = fileNameGenerator.getFileName()
-        let filePath = "file://\(paths[0])/\(fileName)"
+        let filePath = "\(paths[0])/\(fileName)"
         return URL(string: filePath)
     }
 }

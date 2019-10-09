@@ -88,6 +88,6 @@ private extension FileImporter {
     
     func getFileUrl() -> URL? {
         guard let path = getFilePath() else { return nil }
-        return URL(string: "file://\(path)")
+        return URL(string: "\(path)")
     }
 }

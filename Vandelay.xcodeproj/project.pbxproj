@@ -240,6 +240,7 @@
 		84AF3E28234CFF24004E0297 /* ExportResult+AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExportResult+AlertMessage.swift"; sourceTree = "<group>"; };
 		84AF3E2A234D1233004E0297 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
 		84AF3E2C234D279A004E0297 /* IncomingFileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingFileHandler.swift; sourceTree = "<group>"; };
+		84AF3E3C234D472F004E0297 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		84DAED70234B2233003F3CD8 /* VandelayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VandelayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DAED72234B2233003F3CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DAED74234B2233003F3CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -312,7 +313,6 @@
 		OBJ_147 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/admin/Projects/Vandelay/Vandelay/.build/checkouts/Nimble/Package.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		OBJ_155 /* Fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fastlane; sourceTree = SOURCE_ROOT; };
-		OBJ_156 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = SOURCE_ROOT; };
 		OBJ_157 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_158 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_159 /* RELEASE_NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE_NOTES.md; sourceTree = "<group>"; };
@@ -666,11 +666,11 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_34 /* Tests */,
-				OBJ_156 /* Assets */,
-				OBJ_55 /* Dependencies */,
-				OBJ_155 /* Fastlane */,
 				84DAED71234B2233003F3CD8 /* VandelayDemo */,
+				OBJ_55 /* Dependencies */,
 				OBJ_148 /* Products */,
+				OBJ_155 /* Fastlane */,
+				84AF3E3C234D472F004E0297 /* Resources */,
 				847225C8234B08AB00283684 /* Project Files */,
 				84DAED9B234B2A5F003F3CD8 /* Frameworks */,
 			);
