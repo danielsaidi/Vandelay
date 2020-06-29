@@ -1,9 +1,14 @@
 # Release Notes
 
 
-## 0.9.1
+## 0.9.2
 
 This version adds support for Swift 5.2 and bumps all test dependencies.
+
+
+## 0.9.1
+
+This version makes a url calculation function public.
 
 
 ## 0.9.0
