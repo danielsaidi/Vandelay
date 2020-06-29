@@ -7,44 +7,27 @@
 //
 
 import Foundation
+import Mockery
 import Vandelay
 
-class MockDataExporter: DataExporter, StringExporter {
+class MockDataExporter: Mock, DataExporter, StringExporter {
     
-    
-    // MARK: - Initialization
     
     init(method: ExportMethod, result: ExportResult) {
         exportMethod = method
         exportResult = result
     }
     
-    
-    // MARK: - Properties
-    
-    var exportMethod: ExportMethod
-    
-    
-    // MARK: - Mock Properties
-    
-    var exportResult: ExportResult
-    var exportDataInvokeCount = 0
-    var exportDataInvokeData = [Data]()
-    var exportStringInvokeCount = 0
-    var exportStringInvokeData = [String]()
-    
-    
-    // MARK: - Functions
+    let exportMethod: ExportMethod
+    let exportResult: ExportResult
     
     func export(data: Data, completion: @escaping ExportCompletion) {
-        exportDataInvokeCount += 1
-        exportDataInvokeData.append(data)
+        invoke(export, args: (data, completion))
         completion(exportResult)
     }
     
     func export(string: String, completion: @escaping ExportCompletion) {
-        exportStringInvokeCount += 1
-        exportStringInvokeData.append(string)
+        invoke(export, args: (string, completion))
         completion(exportResult)
     }
 }

@@ -6,40 +6,26 @@
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
+import Mockery
 import Vandelay
 
-class MockDataImporter: DataImporter, StringImporter {
-    
-    
-    // MARK: - Initialization
+class MockDataImporter: Mock, DataImporter, StringImporter {
     
     init(method: ImportMethod, result: ImportResult) {
         importMethod = method
         importResult = result
     }
     
-    
-    // MARK: - Properties
-    
-    var importMethod: ImportMethod
-    
-    
-    // MARK: - Mock Properties
-    
-    var importResult: ImportResult
-    var importDataInvokeCount = 0
-    var importStringInvokeCount = 0
-    
-    
-    // MARK: - Functions
+    let importMethod: ImportMethod
+    let importResult: ImportResult
     
     func importData(completion: @escaping ImportCompletion) {
-        importDataInvokeCount += 1
+        invoke(importData, args: (completion))
         completion(importResult)
     }
     
     func importString(completion: @escaping ImportCompletion) {
-        importStringInvokeCount += 1
+        invoke(importString, args: (completion))
         completion(importResult)
     }
 }
