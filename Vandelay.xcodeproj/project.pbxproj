@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -43,86 +43,9 @@
 		84DAED9C234B2A5F003F3CD8 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vandelay::Vandelay::Product" /* Vandelay.framework */; };
 		84DAED9D234B2A5F003F3CD8 /* Vandelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "Vandelay::Vandelay::Product" /* Vandelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84DAEDA2234B2B54003F3CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAEDA1234B2B54003F3CD8 /* ViewController.swift */; };
-		OBJ_166 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* AdapterProtocols.swift */; };
-		OBJ_167 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* AssertionDispatcher.swift */; };
-		OBJ_168 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* AssertionRecorder.swift */; };
-		OBJ_169 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* NMBExpectation.swift */; };
-		OBJ_170 /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* NMBObjCMatcher.swift */; };
-		OBJ_171 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* NimbleEnvironment.swift */; };
-		OBJ_172 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* NimbleXCTestHandler.swift */; };
-		OBJ_173 /* ExceptionCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* ExceptionCapture.swift */; };
-		OBJ_174 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* DSL+Wait.swift */; };
-		OBJ_175 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* DSL.swift */; };
-		OBJ_176 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* Expectation.swift */; };
-		OBJ_177 /* ExpectationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* ExpectationMessage.swift */; };
-		OBJ_178 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* Expression.swift */; };
-		OBJ_179 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* FailureMessage.swift */; };
-		OBJ_180 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* AllPass.swift */; };
-		OBJ_181 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* Async.swift */; };
-		OBJ_182 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* BeAKindOf.swift */; };
-		OBJ_183 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* BeAnInstanceOf.swift */; };
-		OBJ_184 /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* BeCloseTo.swift */; };
-		OBJ_185 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* BeEmpty.swift */; };
-		OBJ_186 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* BeGreaterThan.swift */; };
-		OBJ_187 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* BeGreaterThanOrEqualTo.swift */; };
-		OBJ_188 /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* BeIdenticalTo.swift */; };
-		OBJ_189 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* BeLessThan.swift */; };
-		OBJ_190 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_118 /* BeLessThanOrEqual.swift */; };
-		OBJ_191 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* BeLogical.swift */; };
-		OBJ_192 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* BeNil.swift */; };
-		OBJ_193 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* BeVoid.swift */; };
-		OBJ_194 /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* BeginWith.swift */; };
-		OBJ_195 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Contain.swift */; };
-		OBJ_196 /* ContainElementSatisfying.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* ContainElementSatisfying.swift */; };
-		OBJ_197 /* ElementsEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* ElementsEqual.swift */; };
-		OBJ_198 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* EndWith.swift */; };
-		OBJ_199 /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* Equal.swift */; };
-		OBJ_200 /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* HaveCount.swift */; };
-		OBJ_201 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* Match.swift */; };
-		OBJ_202 /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_130 /* MatchError.swift */; };
-		OBJ_203 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* MatcherFunc.swift */; };
-		OBJ_204 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* MatcherProtocols.swift */; };
-		OBJ_205 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_133 /* PostNotification.swift */; };
-		OBJ_206 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* Predicate.swift */; };
-		OBJ_207 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* RaisesException.swift */; };
-		OBJ_208 /* SatisfyAllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* SatisfyAllOf.swift */; };
-		OBJ_209 /* SatisfyAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_137 /* SatisfyAnyOf.swift */; };
-		OBJ_210 /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_138 /* ThrowAssertion.swift */; };
-		OBJ_211 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_139 /* ThrowError.swift */; };
-		OBJ_212 /* ToSucceed.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_140 /* ToSucceed.swift */; };
-		OBJ_213 /* Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* Await.swift */; };
-		OBJ_214 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* Errors.swift */; };
-		OBJ_215 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_144 /* Functional.swift */; };
-		OBJ_216 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_145 /* SourceLocation.swift */; };
-		OBJ_217 /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_146 /* Stringers.swift */; };
-		OBJ_224 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_147 /* Package.swift */; };
-		OBJ_230 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Behavior.swift */; };
-		OBJ_231 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Callsite.swift */; };
-		OBJ_232 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Configuration.swift */; };
-		OBJ_233 /* QuickConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* QuickConfiguration.swift */; };
-		OBJ_234 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* DSL.swift */; };
-		OBJ_235 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* World+DSL.swift */; };
-		OBJ_236 /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ErrorUtility.swift */; };
-		OBJ_237 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Example.swift */; };
-		OBJ_238 /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* ExampleGroup.swift */; };
-		OBJ_239 /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* ExampleMetadata.swift */; };
-		OBJ_240 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* Filter.swift */; };
-		OBJ_241 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Closures.swift */; };
-		OBJ_242 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* ExampleHooks.swift */; };
-		OBJ_243 /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* HooksPhase.swift */; };
-		OBJ_244 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* SuiteHooks.swift */; };
-		OBJ_245 /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* NSBundle+CurrentTestBundle.swift */; };
-		OBJ_246 /* QuickMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* QuickMain.swift */; };
-		OBJ_247 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* QuickSelectedTestSuiteBuilder.swift */; };
-		OBJ_248 /* QuickSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* QuickSpec.swift */; };
-		OBJ_249 /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* QuickTestSuite.swift */; };
-		OBJ_250 /* String+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* String+C99ExtendedIdentifier.swift */; };
-		OBJ_251 /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* URL+FileName.swift */; };
-		OBJ_252 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* World.swift */; };
-		OBJ_254 /* QuickSpecBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Quick::QuickSpecBase::Product" /* QuickSpecBase.framework */; };
-		OBJ_262 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* Package.swift */; };
-		OBJ_267 /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* QuickSpecBase.m */; };
-		OBJ_269 /* QuickSpecBase.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* QuickSpecBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A963E2BD24A9D74F00665C6B /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A963E2BC24A9D74F00665C6B /* Nimble */; };
+		A963E2BF24A9D76100665C6B /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = A963E2BE24A9D76100665C6B /* Quick */; };
+		A963E2C224A9D77900665C6B /* Mockery in Frameworks */ = {isa = PBXBuildFile; productRef = A963E2C124A9D77900665C6B /* Mockery */; };
 		OBJ_276 /* DataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* DataExporter.swift */; };
 		OBJ_277 /* EmailExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* EmailExporter.swift */; };
 		OBJ_278 /* ExportMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ExportMethod.swift */; };
@@ -161,41 +84,10 @@
 		OBJ_327 /* MockDataExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* MockDataExporter.swift */; };
 		OBJ_328 /* MockDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* MockDataImporter.swift */; };
 		OBJ_329 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* XCTestManifests.swift */; };
-		OBJ_331 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Nimble::Nimble::Product" /* Nimble.framework */; };
-		OBJ_332 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Quick::Quick::Product" /* Quick.framework */; };
-		OBJ_333 /* QuickSpecBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Quick::QuickSpecBase::Product" /* QuickSpecBase.framework */; };
 		OBJ_334 /* Vandelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vandelay::Vandelay::Product" /* Vandelay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		847225C2234B080B00283684 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Nimble::Nimble";
-			remoteInfo = Nimble;
-		};
-		847225C3234B080B00283684 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Quick::Quick";
-			remoteInfo = Quick;
-		};
-		847225C4234B080B00283684 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Quick::QuickSpecBase";
-			remoteInfo = QuickSpecBase;
-		};
-		847225C5234B080B00283684 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Quick::QuickSpecBase";
-			remoteInfo = QuickSpecBase;
-		};
 		847225C6234B080B00283684 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -259,58 +151,11 @@
 		84DAED97234B2A46003F3CD8 /* ViewController+Export.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Export.swift"; sourceTree = "<group>"; };
 		84DAED98234B2A46003F3CD8 /* ViewController+Import.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Import.swift"; sourceTree = "<group>"; };
 		84DAEDA1234B2B54003F3CD8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		"Nimble::Nimble::Product" /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* DataExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExporter.swift; sourceTree = "<group>"; };
-		OBJ_100 /* ExceptionCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionCapture.swift; sourceTree = "<group>"; };
-		OBJ_101 /* DSL+Wait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSL+Wait.swift"; sourceTree = "<group>"; };
-		OBJ_102 /* DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL.swift; sourceTree = "<group>"; };
-		OBJ_103 /* Expectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expectation.swift; sourceTree = "<group>"; };
-		OBJ_104 /* ExpectationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectationMessage.swift; sourceTree = "<group>"; };
-		OBJ_105 /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
-		OBJ_106 /* FailureMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureMessage.swift; sourceTree = "<group>"; };
-		OBJ_108 /* AllPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPass.swift; sourceTree = "<group>"; };
-		OBJ_109 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		OBJ_11 /* EmailExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailExporter.swift; sourceTree = "<group>"; };
-		OBJ_110 /* BeAKindOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeAKindOf.swift; sourceTree = "<group>"; };
-		OBJ_111 /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeAnInstanceOf.swift; sourceTree = "<group>"; };
-		OBJ_112 /* BeCloseTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeCloseTo.swift; sourceTree = "<group>"; };
-		OBJ_113 /* BeEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeEmpty.swift; sourceTree = "<group>"; };
-		OBJ_114 /* BeGreaterThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeGreaterThan.swift; sourceTree = "<group>"; };
-		OBJ_115 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
-		OBJ_116 /* BeIdenticalTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeIdenticalTo.swift; sourceTree = "<group>"; };
-		OBJ_117 /* BeLessThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeLessThan.swift; sourceTree = "<group>"; };
-		OBJ_118 /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeLessThanOrEqual.swift; sourceTree = "<group>"; };
-		OBJ_119 /* BeLogical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeLogical.swift; sourceTree = "<group>"; };
 		OBJ_12 /* ExportMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportMethod.swift; sourceTree = "<group>"; };
-		OBJ_120 /* BeNil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeNil.swift; sourceTree = "<group>"; };
-		OBJ_121 /* BeVoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeVoid.swift; sourceTree = "<group>"; };
-		OBJ_122 /* BeginWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginWith.swift; sourceTree = "<group>"; };
-		OBJ_123 /* Contain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contain.swift; sourceTree = "<group>"; };
-		OBJ_124 /* ContainElementSatisfying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainElementSatisfying.swift; sourceTree = "<group>"; };
-		OBJ_125 /* ElementsEqual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsEqual.swift; sourceTree = "<group>"; };
-		OBJ_126 /* EndWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndWith.swift; sourceTree = "<group>"; };
-		OBJ_127 /* Equal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equal.swift; sourceTree = "<group>"; };
-		OBJ_128 /* HaveCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaveCount.swift; sourceTree = "<group>"; };
-		OBJ_129 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		OBJ_13 /* ExportResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportResult.swift; sourceTree = "<group>"; };
-		OBJ_130 /* MatchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchError.swift; sourceTree = "<group>"; };
-		OBJ_131 /* MatcherFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatcherFunc.swift; sourceTree = "<group>"; };
-		OBJ_132 /* MatcherProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatcherProtocols.swift; sourceTree = "<group>"; };
-		OBJ_133 /* PostNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotification.swift; sourceTree = "<group>"; };
-		OBJ_134 /* Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
-		OBJ_135 /* RaisesException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisesException.swift; sourceTree = "<group>"; };
-		OBJ_136 /* SatisfyAllOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatisfyAllOf.swift; sourceTree = "<group>"; };
-		OBJ_137 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatisfyAnyOf.swift; sourceTree = "<group>"; };
-		OBJ_138 /* ThrowAssertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowAssertion.swift; sourceTree = "<group>"; };
-		OBJ_139 /* ThrowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowError.swift; sourceTree = "<group>"; };
 		OBJ_14 /* ExportState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportState.swift; sourceTree = "<group>"; };
-		OBJ_140 /* ToSucceed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSucceed.swift; sourceTree = "<group>"; };
-		OBJ_142 /* Await.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Await.swift; sourceTree = "<group>"; };
-		OBJ_143 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		OBJ_144 /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
-		OBJ_145 /* SourceLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocation.swift; sourceTree = "<group>"; };
-		OBJ_146 /* Stringers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stringers.swift; sourceTree = "<group>"; };
-		OBJ_147 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/admin/Projects/Vandelay/Vandelay/.build/checkouts/Nimble/Package.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		OBJ_155 /* Fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fastlane; sourceTree = SOURCE_ROOT; };
 		OBJ_157 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -348,42 +193,7 @@
 		OBJ_52 /* MockDataExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataExporter.swift; sourceTree = "<group>"; };
 		OBJ_53 /* MockDataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataImporter.swift; sourceTree = "<group>"; };
 		OBJ_54 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_58 /* Behavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Behavior.swift; sourceTree = "<group>"; };
-		OBJ_59 /* Callsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callsite.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_61 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		OBJ_62 /* QuickConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickConfiguration.swift; sourceTree = "<group>"; };
-		OBJ_64 /* DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL.swift; sourceTree = "<group>"; };
-		OBJ_65 /* World+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "World+DSL.swift"; sourceTree = "<group>"; };
-		OBJ_66 /* ErrorUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorUtility.swift; sourceTree = "<group>"; };
-		OBJ_67 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
-		OBJ_68 /* ExampleGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleGroup.swift; sourceTree = "<group>"; };
-		OBJ_69 /* ExampleMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMetadata.swift; sourceTree = "<group>"; };
-		OBJ_70 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		OBJ_72 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
-		OBJ_73 /* ExampleHooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHooks.swift; sourceTree = "<group>"; };
-		OBJ_74 /* HooksPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HooksPhase.swift; sourceTree = "<group>"; };
-		OBJ_75 /* SuiteHooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuiteHooks.swift; sourceTree = "<group>"; };
-		OBJ_76 /* NSBundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
-		OBJ_77 /* QuickMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMain.swift; sourceTree = "<group>"; };
-		OBJ_78 /* QuickSelectedTestSuiteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSelectedTestSuiteBuilder.swift; sourceTree = "<group>"; };
-		OBJ_79 /* QuickSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSpec.swift; sourceTree = "<group>"; };
-		OBJ_80 /* QuickTestSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTestSuite.swift; sourceTree = "<group>"; };
-		OBJ_81 /* String+C99ExtendedIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+C99ExtendedIdentifier.swift"; sourceTree = "<group>"; };
-		OBJ_82 /* URL+FileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+FileName.swift"; sourceTree = "<group>"; };
-		OBJ_83 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
-		OBJ_85 /* QuickSpecBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickSpecBase.m; sourceTree = "<group>"; };
-		OBJ_87 /* QuickSpecBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickSpecBase.h; sourceTree = "<group>"; };
-		OBJ_88 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/admin/Projects/Vandelay/Vandelay/.build/checkouts/Quick/Package.swift; sourceTree = "<group>"; };
-		OBJ_92 /* AdapterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterProtocols.swift; sourceTree = "<group>"; };
-		OBJ_93 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertionDispatcher.swift; sourceTree = "<group>"; };
-		OBJ_94 /* AssertionRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertionRecorder.swift; sourceTree = "<group>"; };
-		OBJ_95 /* NMBExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMBExpectation.swift; sourceTree = "<group>"; };
-		OBJ_96 /* NMBObjCMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMBObjCMatcher.swift; sourceTree = "<group>"; };
-		OBJ_97 /* NimbleEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleEnvironment.swift; sourceTree = "<group>"; };
-		OBJ_98 /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleXCTestHandler.swift; sourceTree = "<group>"; };
-		"Quick::Quick::Product" /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Quick::QuickSpecBase::Product" /* QuickSpecBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QuickSpecBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Vandelay::Vandelay::Product" /* Vandelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Vandelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Vandelay::VandelayTests::Product" /* VandelayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = VandelayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -394,28 +204,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DAED9C234B2A5F003F3CD8 /* Vandelay.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_218 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_253 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_254 /* QuickSpecBase.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_270 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,10 +218,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_331 /* Nimble.framework in Frameworks */,
-				OBJ_332 /* Quick.framework in Frameworks */,
-				OBJ_333 /* QuickSpecBase.framework in Frameworks */,
+				A963E2BF24A9D76100665C6B /* Quick in Frameworks */,
+				A963E2C224A9D77900665C6B /* Mockery in Frameworks */,
 				OBJ_334 /* Vandelay.framework in Frameworks */,
+				A963E2BD24A9D74F00665C6B /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,64 +308,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		OBJ_107 /* Matchers */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_108 /* AllPass.swift */,
-				OBJ_109 /* Async.swift */,
-				OBJ_110 /* BeAKindOf.swift */,
-				OBJ_111 /* BeAnInstanceOf.swift */,
-				OBJ_112 /* BeCloseTo.swift */,
-				OBJ_113 /* BeEmpty.swift */,
-				OBJ_114 /* BeGreaterThan.swift */,
-				OBJ_115 /* BeGreaterThanOrEqualTo.swift */,
-				OBJ_116 /* BeIdenticalTo.swift */,
-				OBJ_117 /* BeLessThan.swift */,
-				OBJ_118 /* BeLessThanOrEqual.swift */,
-				OBJ_119 /* BeLogical.swift */,
-				OBJ_120 /* BeNil.swift */,
-				OBJ_121 /* BeVoid.swift */,
-				OBJ_122 /* BeginWith.swift */,
-				OBJ_123 /* Contain.swift */,
-				OBJ_124 /* ContainElementSatisfying.swift */,
-				OBJ_125 /* ElementsEqual.swift */,
-				OBJ_126 /* EndWith.swift */,
-				OBJ_127 /* Equal.swift */,
-				OBJ_128 /* HaveCount.swift */,
-				OBJ_129 /* Match.swift */,
-				OBJ_130 /* MatchError.swift */,
-				OBJ_131 /* MatcherFunc.swift */,
-				OBJ_132 /* MatcherProtocols.swift */,
-				OBJ_133 /* PostNotification.swift */,
-				OBJ_134 /* Predicate.swift */,
-				OBJ_135 /* RaisesException.swift */,
-				OBJ_136 /* SatisfyAllOf.swift */,
-				OBJ_137 /* SatisfyAnyOf.swift */,
-				OBJ_138 /* ThrowAssertion.swift */,
-				OBJ_139 /* ThrowError.swift */,
-				OBJ_140 /* ToSucceed.swift */,
-			);
-			path = Matchers;
-			sourceTree = "<group>";
-		};
-		OBJ_141 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_142 /* Await.swift */,
-				OBJ_143 /* Errors.swift */,
-				OBJ_144 /* Functional.swift */,
-				OBJ_145 /* SourceLocation.swift */,
-				OBJ_146 /* Stringers.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		OBJ_148 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"Quick::Quick::Product" /* Quick.framework */,
-				"Quick::QuickSpecBase::Product" /* QuickSpecBase.framework */,
-				"Nimble::Nimble::Product" /* Nimble.framework */,
 				"Vandelay::Vandelay::Product" /* Vandelay.framework */,
 				"Vandelay::VandelayTests::Product" /* VandelayTests.xctest */,
 				84DAED70234B2233003F3CD8 /* VandelayDemo.app */,
@@ -667,7 +400,6 @@
 				OBJ_7 /* Sources */,
 				OBJ_34 /* Tests */,
 				84DAED71234B2233003F3CD8 /* VandelayDemo */,
-				OBJ_55 /* Dependencies */,
 				OBJ_148 /* Products */,
 				OBJ_155 /* Fastlane */,
 				84AF3E3C234D472F004E0297 /* Resources */,
@@ -685,69 +417,6 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		OBJ_55 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_56 /* Quick 2.2.0 */,
-				OBJ_89 /* Nimble 8.0.2 */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		OBJ_56 /* Quick 2.2.0 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_57 /* Quick */,
-				OBJ_84 /* QuickSpecBase */,
-				OBJ_88 /* Package.swift */,
-			);
-			name = "Quick 2.2.0";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_57 /* Quick */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_58 /* Behavior.swift */,
-				OBJ_59 /* Callsite.swift */,
-				OBJ_60 /* Configuration */,
-				OBJ_63 /* DSL */,
-				OBJ_66 /* ErrorUtility.swift */,
-				OBJ_67 /* Example.swift */,
-				OBJ_68 /* ExampleGroup.swift */,
-				OBJ_69 /* ExampleMetadata.swift */,
-				OBJ_70 /* Filter.swift */,
-				OBJ_71 /* Hooks */,
-				OBJ_76 /* NSBundle+CurrentTestBundle.swift */,
-				OBJ_77 /* QuickMain.swift */,
-				OBJ_78 /* QuickSelectedTestSuiteBuilder.swift */,
-				OBJ_79 /* QuickSpec.swift */,
-				OBJ_80 /* QuickTestSuite.swift */,
-				OBJ_81 /* String+C99ExtendedIdentifier.swift */,
-				OBJ_82 /* URL+FileName.swift */,
-				OBJ_83 /* World.swift */,
-			);
-			name = Quick;
-			path = .build/checkouts/Quick/Sources/Quick;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_60 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_61 /* Configuration.swift */,
-				OBJ_62 /* QuickConfiguration.swift */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-		OBJ_63 /* DSL */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_64 /* DSL.swift */,
-				OBJ_65 /* World+DSL.swift */,
-			);
-			path = DSL;
-			sourceTree = "<group>";
-		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,17 +424,6 @@
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_71 /* Hooks */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_72 /* Closures.swift */,
-				OBJ_73 /* ExampleHooks.swift */,
-				OBJ_74 /* HooksPhase.swift */,
-				OBJ_75 /* SuiteHooks.swift */,
-			);
-			path = Hooks;
-			sourceTree = "<group>";
 		};
 		OBJ_8 /* Vandelay */ = {
 			isa = PBXGroup;
@@ -788,33 +446,6 @@
 			path = Sources/Vandelay;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_84 /* QuickSpecBase */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_85 /* QuickSpecBase.m */,
-				OBJ_86 /* include */,
-			);
-			name = QuickSpecBase;
-			path = .build/checkouts/Quick/Sources/QuickSpecBase;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_86 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_87 /* QuickSpecBase.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		OBJ_89 /* Nimble 8.0.2 */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_90 /* Nimble */,
-				OBJ_147 /* Package.swift */,
-			);
-			name = "Nimble 8.0.2";
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_9 /* Exporters */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,58 +458,7 @@
 			path = Exporters;
 			sourceTree = "<group>";
 		};
-		OBJ_90 /* Nimble */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_91 /* Adapters */,
-				OBJ_101 /* DSL+Wait.swift */,
-				OBJ_102 /* DSL.swift */,
-				OBJ_103 /* Expectation.swift */,
-				OBJ_104 /* ExpectationMessage.swift */,
-				OBJ_105 /* Expression.swift */,
-				OBJ_106 /* FailureMessage.swift */,
-				OBJ_107 /* Matchers */,
-				OBJ_141 /* Utils */,
-			);
-			name = Nimble;
-			path = .build/checkouts/Nimble/Sources/Nimble;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_91 /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_92 /* AdapterProtocols.swift */,
-				OBJ_93 /* AssertionDispatcher.swift */,
-				OBJ_94 /* AssertionRecorder.swift */,
-				OBJ_95 /* NMBExpectation.swift */,
-				OBJ_96 /* NMBObjCMatcher.swift */,
-				OBJ_97 /* NimbleEnvironment.swift */,
-				OBJ_98 /* NimbleXCTestHandler.swift */,
-				OBJ_99 /* NonObjectiveC */,
-			);
-			path = Adapters;
-			sourceTree = "<group>";
-		};
-		OBJ_99 /* NonObjectiveC */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_100 /* ExceptionCapture.swift */,
-			);
-			path = NonObjectiveC;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		OBJ_268 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_269 /* QuickSpecBase.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		84DAED6F234B2233003F3CD8 /* VandelayDemo */ = {
@@ -899,84 +479,6 @@
 			productName = VandelayDemo;
 			productReference = 84DAED70234B2233003F3CD8 /* VandelayDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		"Nimble::Nimble" /* Nimble */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_162 /* Build configuration list for PBXNativeTarget "Nimble" */;
-			buildPhases = (
-				OBJ_165 /* Sources */,
-				OBJ_218 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Nimble;
-			productName = Nimble;
-			productReference = "Nimble::Nimble::Product" /* Nimble.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Nimble::SwiftPMPackageDescription" /* NimblePackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_220 /* Build configuration list for PBXNativeTarget "NimblePackageDescription" */;
-			buildPhases = (
-				OBJ_223 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NimblePackageDescription;
-			productName = NimblePackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"Quick::Quick" /* Quick */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_226 /* Build configuration list for PBXNativeTarget "Quick" */;
-			buildPhases = (
-				OBJ_229 /* Sources */,
-				OBJ_253 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_255 /* PBXTargetDependency */,
-			);
-			name = Quick;
-			productName = Quick;
-			productReference = "Quick::Quick::Product" /* Quick.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Quick::QuickSpecBase" /* QuickSpecBase */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_263 /* Build configuration list for PBXNativeTarget "QuickSpecBase" */;
-			buildPhases = (
-				OBJ_266 /* Sources */,
-				OBJ_268 /* Headers */,
-				OBJ_270 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = QuickSpecBase;
-			productName = QuickSpecBase;
-			productReference = "Quick::QuickSpecBase::Product" /* QuickSpecBase.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Quick::SwiftPMPackageDescription" /* QuickPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_258 /* Build configuration list for PBXNativeTarget "QuickPackageDescription" */;
-			buildPhases = (
-				OBJ_261 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = QuickPackageDescription;
-			productName = QuickPackageDescription;
-			productType = "com.apple.product-type.framework";
 		};
 		"Vandelay::SwiftPMPackageDescription" /* VandelayPackageDescription */ = {
 			isa = PBXNativeTarget;
@@ -1005,6 +507,8 @@
 			dependencies = (
 			);
 			name = Vandelay;
+			packageProductDependencies = (
+			);
 			productName = Vandelay;
 			productReference = "Vandelay::Vandelay::Product" /* Vandelay.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1019,12 +523,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_335 /* PBXTargetDependency */,
-				OBJ_336 /* PBXTargetDependency */,
-				OBJ_337 /* PBXTargetDependency */,
 				OBJ_338 /* PBXTargetDependency */,
 			);
 			name = VandelayTests;
+			packageProductDependencies = (
+				A963E2BC24A9D74F00665C6B /* Nimble */,
+				A963E2BE24A9D76100665C6B /* Quick */,
+				A963E2C124A9D77900665C6B /* Mockery */,
+			);
 			productName = VandelayTests;
 			productReference = "Vandelay::VandelayTests::Product" /* VandelayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1055,6 +561,11 @@
 				Base,
 			);
 			mainGroup = OBJ_5;
+			packageReferences = (
+				A963E2B824A9D73400665C6B /* XCRemoteSwiftPackageReference "Quick" */,
+				A963E2BB24A9D74F00665C6B /* XCRemoteSwiftPackageReference "Nimble" */,
+				A963E2C024A9D77900665C6B /* XCRemoteSwiftPackageReference "Mockery" */,
+			);
 			productRefGroup = OBJ_148 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1064,11 +575,6 @@
 				"Vandelay::VandelayPackageTests::ProductTarget" /* VandelayPackageTests */,
 				"Vandelay::VandelayTests" /* VandelayTests */,
 				84DAED6F234B2233003F3CD8 /* VandelayDemo */,
-				"Nimble::Nimble" /* Nimble */,
-				"Nimble::SwiftPMPackageDescription" /* NimblePackageDescription */,
-				"Quick::Quick" /* Quick */,
-				"Quick::SwiftPMPackageDescription" /* QuickPackageDescription */,
-				"Quick::QuickSpecBase" /* QuickSpecBase */,
 			);
 		};
 /* End PBXProject section */
@@ -1129,119 +635,6 @@
 				84DAED96234B2929003F3CD8 /* PhotoCollectionViewCell.swift in Sources */,
 				84DAED99234B2A47003F3CD8 /* ViewController+Export.swift in Sources */,
 				84DAED95234B2929003F3CD8 /* PhotoViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_165 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_166 /* AdapterProtocols.swift in Sources */,
-				OBJ_167 /* AssertionDispatcher.swift in Sources */,
-				OBJ_168 /* AssertionRecorder.swift in Sources */,
-				OBJ_169 /* NMBExpectation.swift in Sources */,
-				OBJ_170 /* NMBObjCMatcher.swift in Sources */,
-				OBJ_171 /* NimbleEnvironment.swift in Sources */,
-				OBJ_172 /* NimbleXCTestHandler.swift in Sources */,
-				OBJ_173 /* ExceptionCapture.swift in Sources */,
-				OBJ_174 /* DSL+Wait.swift in Sources */,
-				OBJ_175 /* DSL.swift in Sources */,
-				OBJ_176 /* Expectation.swift in Sources */,
-				OBJ_177 /* ExpectationMessage.swift in Sources */,
-				OBJ_178 /* Expression.swift in Sources */,
-				OBJ_179 /* FailureMessage.swift in Sources */,
-				OBJ_180 /* AllPass.swift in Sources */,
-				OBJ_181 /* Async.swift in Sources */,
-				OBJ_182 /* BeAKindOf.swift in Sources */,
-				OBJ_183 /* BeAnInstanceOf.swift in Sources */,
-				OBJ_184 /* BeCloseTo.swift in Sources */,
-				OBJ_185 /* BeEmpty.swift in Sources */,
-				OBJ_186 /* BeGreaterThan.swift in Sources */,
-				OBJ_187 /* BeGreaterThanOrEqualTo.swift in Sources */,
-				OBJ_188 /* BeIdenticalTo.swift in Sources */,
-				OBJ_189 /* BeLessThan.swift in Sources */,
-				OBJ_190 /* BeLessThanOrEqual.swift in Sources */,
-				OBJ_191 /* BeLogical.swift in Sources */,
-				OBJ_192 /* BeNil.swift in Sources */,
-				OBJ_193 /* BeVoid.swift in Sources */,
-				OBJ_194 /* BeginWith.swift in Sources */,
-				OBJ_195 /* Contain.swift in Sources */,
-				OBJ_196 /* ContainElementSatisfying.swift in Sources */,
-				OBJ_197 /* ElementsEqual.swift in Sources */,
-				OBJ_198 /* EndWith.swift in Sources */,
-				OBJ_199 /* Equal.swift in Sources */,
-				OBJ_200 /* HaveCount.swift in Sources */,
-				OBJ_201 /* Match.swift in Sources */,
-				OBJ_202 /* MatchError.swift in Sources */,
-				OBJ_203 /* MatcherFunc.swift in Sources */,
-				OBJ_204 /* MatcherProtocols.swift in Sources */,
-				OBJ_205 /* PostNotification.swift in Sources */,
-				OBJ_206 /* Predicate.swift in Sources */,
-				OBJ_207 /* RaisesException.swift in Sources */,
-				OBJ_208 /* SatisfyAllOf.swift in Sources */,
-				OBJ_209 /* SatisfyAnyOf.swift in Sources */,
-				OBJ_210 /* ThrowAssertion.swift in Sources */,
-				OBJ_211 /* ThrowError.swift in Sources */,
-				OBJ_212 /* ToSucceed.swift in Sources */,
-				OBJ_213 /* Await.swift in Sources */,
-				OBJ_214 /* Errors.swift in Sources */,
-				OBJ_215 /* Functional.swift in Sources */,
-				OBJ_216 /* SourceLocation.swift in Sources */,
-				OBJ_217 /* Stringers.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_223 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_224 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_229 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_230 /* Behavior.swift in Sources */,
-				OBJ_231 /* Callsite.swift in Sources */,
-				OBJ_232 /* Configuration.swift in Sources */,
-				OBJ_233 /* QuickConfiguration.swift in Sources */,
-				OBJ_234 /* DSL.swift in Sources */,
-				OBJ_235 /* World+DSL.swift in Sources */,
-				OBJ_236 /* ErrorUtility.swift in Sources */,
-				OBJ_237 /* Example.swift in Sources */,
-				OBJ_238 /* ExampleGroup.swift in Sources */,
-				OBJ_239 /* ExampleMetadata.swift in Sources */,
-				OBJ_240 /* Filter.swift in Sources */,
-				OBJ_241 /* Closures.swift in Sources */,
-				OBJ_242 /* ExampleHooks.swift in Sources */,
-				OBJ_243 /* HooksPhase.swift in Sources */,
-				OBJ_244 /* SuiteHooks.swift in Sources */,
-				OBJ_245 /* NSBundle+CurrentTestBundle.swift in Sources */,
-				OBJ_246 /* QuickMain.swift in Sources */,
-				OBJ_247 /* QuickSelectedTestSuiteBuilder.swift in Sources */,
-				OBJ_248 /* QuickSpec.swift in Sources */,
-				OBJ_249 /* QuickTestSuite.swift in Sources */,
-				OBJ_250 /* String+C99ExtendedIdentifier.swift in Sources */,
-				OBJ_251 /* URL+FileName.swift in Sources */,
-				OBJ_252 /* World.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_261 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_262 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_266 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_267 /* QuickSpecBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1312,30 +705,10 @@
 			target = "Vandelay::Vandelay" /* Vandelay */;
 			targetProxy = 84DAED9E234B2A5F003F3CD8 /* PBXContainerItemProxy */;
 		};
-		OBJ_255 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Quick::QuickSpecBase" /* QuickSpecBase */;
-			targetProxy = 847225C4234B080B00283684 /* PBXContainerItemProxy */;
-		};
 		OBJ_309 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Vandelay::VandelayTests" /* VandelayTests */;
 			targetProxy = 847225C7234B080C00283684 /* PBXContainerItemProxy */;
-		};
-		OBJ_335 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Nimble::Nimble" /* Nimble */;
-			targetProxy = 847225C2234B080B00283684 /* PBXContainerItemProxy */;
-		};
-		OBJ_336 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Quick::Quick" /* Quick */;
-			targetProxy = 847225C3234B080B00283684 /* PBXContainerItemProxy */;
-		};
-		OBJ_337 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Quick::QuickSpecBase" /* QuickSpecBase */;
-			targetProxy = 847225C5234B080B00283684 /* PBXContainerItemProxy */;
 		};
 		OBJ_338 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1415,7 +788,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = VandelayDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayDemo;
@@ -1473,7 +849,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = VandelayDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.VandelayDemo;
@@ -1481,210 +860,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		OBJ_163 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Vandelay.xcodeproj/Nimble_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Nimble;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Nimble;
-			};
-			name = Debug;
-		};
-		OBJ_164 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Vandelay.xcodeproj/Nimble_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Nimble;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Nimble;
-			};
-			name = Release;
-		};
-		OBJ_221 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_222 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_227 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/Quick/Sources/QuickSpecBase/include",
-				);
-				INFOPLIST_FILE = Vandelay.xcodeproj/Quick_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Quick;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Quick;
-			};
-			name = Debug;
-		};
-		OBJ_228 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/Quick/Sources/QuickSpecBase/include",
-				);
-				INFOPLIST_FILE = Vandelay.xcodeproj/Quick_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Quick;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Quick;
-			};
-			name = Release;
-		};
-		OBJ_259 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_260 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_264 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/Quick/Sources/QuickSpecBase/include",
-				);
-				INFOPLIST_FILE = Vandelay.xcodeproj/QuickSpecBase_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = QuickSpecBase;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				TARGET_NAME = QuickSpecBase;
-			};
-			name = Debug;
-		};
-		OBJ_265 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/.build/checkouts/Quick/Sources/QuickSpecBase/include",
-				);
-				INFOPLIST_FILE = Vandelay.xcodeproj/QuickSpecBase_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = QuickSpecBase;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				TARGET_NAME = QuickSpecBase;
 			};
 			name = Release;
 		};
@@ -1699,7 +874,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Vandelay.xcodeproj/Vandelay_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -1724,7 +902,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Vandelay.xcodeproj/Vandelay_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -1812,7 +993,11 @@
 					"$(SRCROOT)/.build/checkouts/Quick/Sources/QuickSpecBase/include",
 				);
 				INFOPLIST_FILE = Vandelay.xcodeproj/VandelayTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -1836,7 +1021,11 @@
 					"$(SRCROOT)/.build/checkouts/Quick/Sources/QuickSpecBase/include",
 				);
 				INFOPLIST_FILE = Vandelay.xcodeproj/VandelayTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -1866,7 +1055,8 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TVOS_DEPLOYMENT_TARGET = 13.0;
 				USE_HEADERMAP = NO;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -1885,56 +1075,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_162 /* Build configuration list for PBXNativeTarget "Nimble" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_163 /* Debug */,
-				OBJ_164 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		OBJ_2 /* Build configuration list for PBXProject "Vandelay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_3 /* Debug */,
 				OBJ_4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_220 /* Build configuration list for PBXNativeTarget "NimblePackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_221 /* Debug */,
-				OBJ_222 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_226 /* Build configuration list for PBXNativeTarget "Quick" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_227 /* Debug */,
-				OBJ_228 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_258 /* Build configuration list for PBXNativeTarget "QuickPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_259 /* Debug */,
-				OBJ_260 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_263 /* Build configuration list for PBXNativeTarget "QuickSpecBase" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_264 /* Debug */,
-				OBJ_265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1976,6 +1121,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A963E2B824A9D73400665C6B /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		A963E2BB24A9D74F00665C6B /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
+		A963E2C024A9D77900665C6B /* XCRemoteSwiftPackageReference "Mockery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielsaidi/Mockery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A963E2BC24A9D74F00665C6B /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A963E2BB24A9D74F00665C6B /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		A963E2BE24A9D76100665C6B /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A963E2B824A9D73400665C6B /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		A963E2C124A9D77900665C6B /* Mockery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A963E2C024A9D77900665C6B /* XCRemoteSwiftPackageReference "Mockery" */;
+			productName = Mockery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
