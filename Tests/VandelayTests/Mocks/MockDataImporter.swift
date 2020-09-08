@@ -16,16 +16,19 @@ class MockDataImporter: Mock, DataImporter, StringImporter {
         importResult = result
     }
     
+    lazy var importDataRef = MockReference(importData)
+    lazy var importStringRef = MockReference(importString)
+    
     let importMethod: ImportMethod
     let importResult: ImportResult
     
     func importData(completion: @escaping ImportCompletion) {
-        invoke(importData, args: (completion))
+        invoke(importDataRef, args: (completion))
         completion(importResult)
     }
     
     func importString(completion: @escaping ImportCompletion) {
-        invoke(importString, args: (completion))
+        invoke(importStringRef, args: (completion))
         completion(importResult)
     }
 }

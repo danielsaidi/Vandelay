@@ -27,7 +27,7 @@ class DataExporterTests: QuickSpec {
             
             it("calls base function with data") {
                 exporter.exportData(for: TestClass(), encoder: JSONEncoder()) { (_) in }
-                let inv = exporter.invokations(of: exporter.export as (Data, @escaping ExportCompletion) -> Void)
+                let inv = exporter.invokations(of: exporter.exportDataRef)
                 expect(inv.count).to(equal(1))
                 expect(inv[0].arguments.0).toNot(beNil())
             }

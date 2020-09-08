@@ -90,22 +90,16 @@ Check out the demo app for an example on how this can be done.
 You can add QR code scanning support with [VandelayQR][VandelayQR]. It lets you import data by scanning QR codes.
 
 
-## Dropbox Support
-
-You can add Dropbox support with [VandelayDropbox][VandelayDropbox]. It lets you export and import data to/from Dropbox.
-
-
 ## Demo App
 
 This repo contains a demo app that lets you export/import todo items (strings) and photos (data). To run the demo app, open and run the `Vandelay.xcodeproj` project.
 
-The demo app registers a custom file type `.vdl` which it uses to export and import data. Have a loot at its `Info.plist`, `AppDelegate` and `SceneDelegate` to see how it handles imports.
+The demo app registers a custom file type `.vdl` which it uses to export and import data. Have a look at `Info.plist`, `AppDelegate` and `SceneDelegate` to see how it handles imports.
 
 
 ## Contact me
 
-I hope you like this library. Feel free to reach out if you have questions or if
-you want to contribute in any way:
+Feel free to reach out if you have questions or if you want to contribute in any way:
 
 * E-mail: [daniel.saidi@gmail.com][Email]
 * Twitter: [@danielsaidi][Twitter]

@@ -6,7 +6,7 @@
 //  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
-#if !os(macOS)
+#if os(iOS)
 import UIKit
 
 /**

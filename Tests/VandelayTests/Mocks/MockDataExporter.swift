@@ -18,16 +18,19 @@ class MockDataExporter: Mock, DataExporter, StringExporter {
         exportResult = result
     }
     
+    lazy var exportDataRef = MockReference(export as (Data, @escaping ExportCompletion) -> Void)
+    lazy var exportStringRef = MockReference(export as (String, @escaping ExportCompletion) -> Void)
+    
     let exportMethod: ExportMethod
     let exportResult: ExportResult
     
     func export(data: Data, completion: @escaping ExportCompletion) {
-        invoke(export, args: (data, completion))
+        invoke(exportDataRef, args: (data, completion))
         completion(exportResult)
     }
     
     func export(string: String, completion: @escaping ExportCompletion) {
-        invoke(export, args: (string, completion))
+        invoke(exportStringRef, args: (string, completion))
         completion(exportResult)
     }
 }
