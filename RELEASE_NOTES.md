@@ -1,6 +1,11 @@
 # Release Notes
 
 
+## 1.0.0
+
+This version adds QR code support from `VandelayQr`, which now is deprecated and no longer imported.
+
+
 ## 0.9.4
 
 This version makes Vandelay build on all platforms.
