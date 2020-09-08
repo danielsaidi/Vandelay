@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Vandelay'
-  s.version          = '0.9.3'
+  s.version          = '0.9.4'
   s.swift_versions   = ['5.2']
   s.summary          = 'Vandelay is an iOS importer/exporter.'
 
