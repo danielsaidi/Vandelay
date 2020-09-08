@@ -1,6 +1,16 @@
 # Release Notes
 
 
+## 0.9.4
+
+This version makes Vandelay build on all platforms.
+
+
+## 0.9.3
+
+This version just updates external dependencies.
+
+
 ## 0.9.2
 
 This version adds support for Swift 5.2 and bumps all test dependencies.
