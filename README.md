@@ -15,9 +15,11 @@
 </p>
 
 
+
 ## About
 
 Vandelay is a Swift-based iOS importer/exporter. It supports `Codable`, strings and data and comes with built-in support for exporting and importing strings and data to and from a bunch of data sources.
+
 
 
 ## Installation
@@ -46,6 +48,7 @@ github "danielsaidi/Vandelay"
 To add `Vandelay` to your app without a dependency manager, clone this repository, add `Vandelay.xcodeproj` to your project and `Vandelay.framework` as an embedded app binary and target dependency.
 
 
+
 ## Exporting data
 
 Vandelay uses `exporters` to let you export strings, data and `Encodable`.
@@ -60,6 +63,7 @@ Vandelay comes with the following built-in exporters:
 You can extend Vandelay with custom exporters as well.
 
 Use `string` exporters if you want platform-agnostic, readable exports. Use a `data` exporters when you only have `Data` or when a type can't be serialized.
+
 
 
 ## Importing data
@@ -85,9 +89,11 @@ To import files, your app must be correctly configured to handle the file type. 
 Check out the demo app for an example on how this can be done.
 
 
+
 ## QR Code support
 
-You can add QR code scanning support with [VandelayQR][VandelayQR]. It lets you import data by scanning QR codes.
+You can generate QR codes with the `QrCodeGenerator` implementations in this library. You can import data from a scanned QR code with a `UrlImporter`.
+
 
 
 ## Demo App
@@ -97,6 +103,7 @@ This repo contains a demo app that lets you export/import todo items (strings) a
 The demo app registers a custom file type `.vdl` which it uses to export and import data. Have a look at `Info.plist`, `AppDelegate` and `SceneDelegate` to see how it handles imports.
 
 
+
 ## Contact me
 
 Feel free to reach out if you have questions or if you want to contribute in any way:
@@ -104,6 +111,7 @@ Feel free to reach out if you have questions or if you want to contribute in any
 * E-mail: [daniel.saidi@gmail.com][Email]
 * Twitter: [@danielsaidi][Twitter]
 * Web site: [danielsaidi.com][Website]
+
 
 
 ## License
