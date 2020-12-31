@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Mockery
+import MockingKit
 import Vandelay
 
 class MockDataExporter: Mock, DataExporter, StringExporter {

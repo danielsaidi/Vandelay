@@ -6,7 +6,7 @@
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
-import Mockery
+import MockingKit
 import Vandelay
 
 class MockDataImporter: Mock, DataImporter, StringImporter {
